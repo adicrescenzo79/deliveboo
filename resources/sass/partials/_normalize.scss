@@ -1,0 +1,67 @@
+// GRID-SYSTEM RULES
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 85%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-fluid{
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row{
+  margin: 0 -15px;
+}
+
+[class*="col-"]{
+  float: left;
+  padding: 0 15px;
+}
+
+.float-right{
+  float: right;
+  padding: 0 15px;
+}
+
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media all and (max-width: 1199px){
+  .container{
+    max-width: 970px;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .container{
+    width: 95%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .container{
+    max-width: 90%;
+  }
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}

@@ -1,0 +1,25 @@
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin py($dimension){
+  padding-top: #{$dimension};
+  padding-bottom: #{$dimension};
+}
+
+@mixin px($dimension){
+  padding-right: #{$dimension};
+  padding-left: #{$dimension};
+}
+
+@mixin ptb($dimensionT, $dimensionB){
+  padding-top: #{$dimensionT};
+  padding-bottom: #{$dimensionB};
+}
+
+@mixin plr($dimensionL, $dimensionR){
+  padding-top: #{$dimensionL};
+  padding-bottom: #{$dimensionR};
+}
