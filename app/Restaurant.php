@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Restaurant extends Model
 {
-  protected $fillable = [
+    protected $fillable = [
     'name',
     'slug',
     'telephone',
@@ -15,4 +15,14 @@ class Restaurant extends Model
     'logo',
     'cover_image'
   ];
+
+    public function dishes()
+    {
+        return $this->hasMany('App\Dish');
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany('App\Category', 'restaurant_category');
+    }
 }
