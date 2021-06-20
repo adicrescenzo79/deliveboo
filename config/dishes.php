@@ -918,5 +918,4 @@ return $dishes = [
     "visibility" => 1,
     "restaurant_id" => 20,
   ],
-]
-?>
+];
