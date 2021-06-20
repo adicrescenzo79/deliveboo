@@ -7,3 +7,5 @@ return $users = [
     "email" => ""
   ],
 ]
+
+?>
