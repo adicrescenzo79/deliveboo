@@ -12,18 +12,20 @@ class RestaurantSeeder extends Seeder
      */
     public function run()
     {
-      $restaurants = config(restaurants);
+      $restaurants = config('restaurants');
+
+      $restaurant_category = config('restaurant_category');
 
       foreach ($restaurants as $restaurant) {
         $newRestaurant = new Restaurant();
-        $newRestaurant->name = $restaurant['name'];
-        $newRestaurant->slug = $restaurant['slug'];
-        $newRestaurant->telephone = $restaurant['telephone'];
-        $newRestaurant->address = $restaurant['address'];
-        $newRestaurant->p_iva = $restaurant['p_iva'];
-        $newRestaurant->logo = $restaurant['logo'];
-        $newRestaurant->cover_image = $restaurant['cover_image'];
-        $newStudent->save();
+        $newRestaurant->fill($restaurant)->save();
+        $newRestaurant->save();
+
+        foreach ($restaurant_category as $key) {
+          if ($key["restaurant_id"] === $newRestaurant->id) {
+            $newRestaurant->categories()->attach([$key["category_id"]]);
+          }
+        }
       }
     }
 }
