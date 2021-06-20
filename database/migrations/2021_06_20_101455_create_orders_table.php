@@ -25,6 +25,12 @@ class CreateOrdersTable extends Migration
             // $table->string('counter')->nullable();
             $table->unsignedBigInteger("restaurant_id");
             $table->timestamps();
+
+            $table->foreign("restaurant_id")
+                  ->references("id")
+                  ->on("restaurants")
+                  ->onDelete("cascade");
+
         });
     }
 
