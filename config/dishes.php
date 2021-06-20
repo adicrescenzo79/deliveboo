@@ -402,7 +402,264 @@ return $dishes = [
     "image" => "https://res.cloudinary.com/glovoapp/w_100,c_fit,f_auto,q_auto/Products/msavqzewlukkowcpsl4z",
     "visibility" => 1,
   ],
-
+  //ITALIANO
+  [
+    "name" => "Pasta fresca alla Valtellina", //char
+    "description" => "Zafferano, zucchine, speck e panna", //string
+    "price" => 10.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 1, //smallinteger
+  ],
+  [
+    "name" => "Gnocchi al Pesto Genovese", //char
+    "description" => "Fagiolini, patate e pesto", //string
+    "price" => 9.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 1, //smallinteger
+  ],
+  [
+    "name" => "Paccheri al Tricolore", //char
+    "description" => "Pomodoro, basilico, pistacchio e burrata", //string
+    "price" => 12.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 1, //smallinteger
+  ],
+  [
+    "name" => "Risotto del Molo", //char
+    "description" => "Gamberi, Scampi, zucchine e pistacchio", //string
+    "price" => 11.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 1, //smallinteger
+  ],
+  [
+    "name" => "Gran grigliata di Pesce", //char
+    "description" => "Gamberone, Pesce spada, Salmone, Branzino", //string
+    "price" => 15.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 2, //smallinteger
+  ],
+  [
+    "name" => "Penne al ragù", //char
+    "description" => "", //string
+    "price" => 10.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 2, //smallinteger
+  ],
+  [
+    "name" => "Lasagna all’Emiliana", //char
+    "description" => "", //string
+    "price" => 10.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 2, //smallinteger
+  ],
+  [
+    "name" => "Risotto al Nero di Seppia", //char
+    "description" => "", //string
+    "price" => 10.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 2, //smallinteger
+  ],
+  [
+    "name" => "Pollo alla Cacciatore", //char
+    "description" => "Pollo, sale, pepe, rosmarino, aglio, aveto e vino bianco", //string
+    "price" => 4.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 3, //smallinteger
+  ],
+  [
+    "name" => "Polpette al sugo", //char
+    "description" => "Macinato di manzo, aglio, cipolla, olio, sedano, uovo, carota", //string
+    "price" => 4.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 3, //smallinteger
+  ],
+  [
+    "name" => "Seppie e piselli", //char
+    "description" => "Seppie, aglio, scalogno, olio, prezzemolo, piselli e pomodoro", //string
+    "price" => 4.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 3, //smallinteger
+  ],
+  [
+    "name" => "Doppia panna", //char
+    "description" => "Panna sotto e sopra, stracciatella di burrata con alici", //string
+    "price" => 4.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 3, //smallinteger
+  ],
+  [
+    "name" => "Tagliere goloso", //char
+    "description" => "Salumi, formaggi e gnocco fritto", //string
+    "price" => 14.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 4, //smallinteger
+  ],
+  [
+    "name" => "Tagliatelle ai porcini", //char
+    "description" => "Tagliatelle ai funghi porcini", //string
+    "price" => 14.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 4, //smallinteger
+  ],
+  [
+    "name" => "Gnocchi alla Sorrentina", //char
+    "description" => "", //string
+    "price" => 10.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 4, //smallinteger
+  ],
+  [
+    "name" => "Spaghetti alla Carbonara", //char
+    "description" => "", //string
+    "price" => 12.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 4, //smallinteger
+  ],
+  //PIZZA
+  [
+    "name" => "Bianca Wurstel e Patatine", //char
+    "description" => "Mozzarella, wurstel e patatine fritte", //string
+    "price" => 6.50,//number
+    "image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,h_100,w_134,dpr_1.0/v1/it/dishes/212124/bianca-wurstel-e-patatine.jpg",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 13, //smallinteger
+  ],
+  [
+    "name" => "Bianca Pomodoro pachino e Alici", //char
+    "description" => "Mozzarella, pachino e Alici", //string
+    "price" => 5.90,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 13, //smallinteger
+  ],
+  [
+    "name" => "Italia", //char
+    "description" => "Bresaola, rughetta e parmigiano", //string
+    "price" => 6.50,//number
+    "image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,h_100,w_134,dpr_1.0/v1/it/dishes/212124/italia.jpg",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 13, //smallinteger
+  ],
+  [
+    "name" => "Mediterranea", //char
+    "description" => "Verdure miste e mozzarella", //string
+    "price" => 5.70,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 13, //smallinteger
+  ],
+  [
+    "name" => "Bolognese", //char
+    "description" => "Pomodoro, mozzarella, ragù, grana e origano", //string
+    "price" => 7.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 14, //smallinteger
+  ],
+  [
+    "name" => "Braccio di Ferro", //char
+    "description" => "Mozzarella, spinaci, scamorza e ricotta", //string
+    "price" => 7.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 14, //smallinteger
+  ],
+  [
+    "name" => "Campagnola", //char
+    "description" => "Pomodoro, mozzarella, scamorza affumicata, trevisana e speck", //string
+    "price" => 6.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 14, //smallinteger
+  ],
+  [
+    "name" => "Capricciosa", //char
+    "description" => "Pomodoro, mozzarella, prosciutto, funghi, carciofi capperi e origano", //string
+    "price" => 7.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 14, //smallinteger
+  ],
+  [
+    "name" => "Marinara", //char
+    "description" => "Pomodoro, origano, aglio e olio", //string
+    "price" => 3.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 15, //smallinteger
+  ],
+  [
+    "name" => "Margherita", //char
+    "description" => "Pomodoro, mozzarella e basilico", //string
+    "price" => 4.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 15, //smallinteger
+  ],
+  [
+    "name" => "Napoli", //char
+    "description" => "Pomodoro, mozzarella, acciughe e origano", //string
+    "price" => 5.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 15, //smallinteger
+  ],
+  [
+    "name" => "Tirolese", //char
+    "description" => "Pomodoro, mozzarella e wurstel", //string
+    "price" => 5.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 15, //smallinteger
+  ],
+  [
+    "name" => "Bufala", //char
+    "description" => "Pomodoro e mozzarella di bufala", //string
+    "price" => 6.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 16, //smallinteger
+  ],
+  [
+    "name" => "Calabrese", //char
+    "description" => "Pomodoro, mozzarella, salame piccante, cipolla e tonno", //string
+    "price" => 7.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 16, //smallinteger
+  ],
+  [
+    "name" => "Cesano", //char
+    "description" => "Pomodoro, mozzarella, gorgonzola, funghi, salame piccante e olive", //string
+    "price" => 7.50,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 16, //smallinteger
+  ],
+  [
+    "name" => "Crudo", //char
+    "description" => "Pomodoro, mozzarella e prosciutto crudo", //string
+    "price" => 6.00,//number
+    "image" => "",//link
+    "visibility" => 1,// 0-1
+    "restaurant_id" => 16, //smallinteger
+  ],
 
 
 ]
