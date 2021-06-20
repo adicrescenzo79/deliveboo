@@ -15,15 +15,14 @@ class DishSeeder extends Seeder
         $dishes = config('dishes');
 
         for ($i = 0; $i < count($dishes); $i++) {
-            $dish = $dishs[$i];
+            $dish = $dishes[$i];
             $dish_obj = new Dish();
-            $dish_obj->title = $dish['title'];
+            $dish_obj->name = $dish['name'];
             $dish_obj->description = $dish['description'];
-            $dish_obj->thumb = $dish['thumb'];
+            $dish_obj->image = $dish['image'];
             $dish_obj->price = $dish['price'];
-            $dish_obj->series = $dish['series'];
-            $dish_obj->sale_date = $dish['sale_date'];
-            $dish_obj->type = $dish['type'];
+            $dish_obj->visibility = $dish['visibility'];
+            $dish_obj->restaurant_id = $dish['restaurant_id'];
             $dish_obj->save();
         }
     }
