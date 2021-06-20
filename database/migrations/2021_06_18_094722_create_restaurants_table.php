@@ -15,6 +15,7 @@ class CreateRestaurantsTable extends Migration
     {
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("user_id");
             $table->string('name', 50);
             $table->string('slug', 50)->unique();
             $table->string('telephone', 15);
@@ -23,6 +24,11 @@ class CreateRestaurantsTable extends Migration
             $table->text('logo');
             $table->text('cover_image')->nullable();
             $table->timestamps();
+
+            $table->foreign("user_id")
+                  ->references("id")
+                  ->on("users")
+                  ->onDelete("cascade");
         });
     }
 
