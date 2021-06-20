@@ -6,29 +6,29 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateRestaurantCategoryTable extends Migration
 {
-  /**
-  * Run the migrations.
-  *
-  * @return void
-  */
-  public function up()
-  {
-    Schema::create('restaurant_category', function (Blueprint $table) {
-      $table->id();
-      $table->unsignedBigInteger('restaurant_id');
-      $table->unsignedBigInteger('category_id');
+    /**
+    * Run the migrations.
+    *
+    * @return void
+    */
+    public function up()
+    {
+        Schema::create('restaurant_category', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('restaurant_id');
+            $table->unsignedBigInteger('category_id');
 
-      $table->foreign('restaurant_id')
-      ->references('id')
-      ->on('restaurants')
-      ->onDelete('cascade');
-      
-      $table->foreign('category_id')
-      ->references('id')
-      ->on('categories')
-      ->onDelete('cascade');
-    });
-  }
+            $table->foreign('restaurant_id')
+            ->references('id')
+            ->on('restaurants')
+            ->onDelete('cascade');
+
+            $table->foreign('category_id')
+            ->references('id')
+            ->on('categories')
+            ->onDelete('cascade');
+        });
+    }
 
     /**
     * Reverse the migrations.
@@ -37,6 +37,6 @@ class CreateRestaurantCategoryTable extends Migration
     */
     public function down()
     {
-      Schema::dropIfExists('restaurant_category');
+        Schema::dropIfExists('restaurant_category');
     }
-  }
+}
