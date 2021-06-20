@@ -3,6 +3,7 @@
 $restaurants = [
   //ITALIANO
   [
+    "user_id" => 1,
     "name" => "Ristorante il Molo",
     "slug" => "ristorante_il_molo",
     "telephone" => "+39025487921",
@@ -12,6 +13,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-1.jpg/v1/it/restaurants/214091.jpg",
   ],
   [
+    "user_id" => 2,
     "name" => "Ci ritorno alle terrazze",
     "slug" => "ci_ritorno_alle_terrazze",
     "telephone" => "+390254521",
@@ -21,6 +23,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:italiano-1.jpg/v1/it/restaurants/241491.jpg",
   ],
   [
+    "user_id" => 3,
     "name" => "Trapizzino",
     "slug" => "trapizzino",
     "telephone" => "+390254521",
@@ -30,6 +33,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:panini-2.jpg/v1/it/restaurants/244582.jpg",
   ],
   [
+    "user_id" => 4,
     "name" => "Peccati di gola",
     "slug" => "peccati_di_gola",
     "telephone" => "+390254521",
@@ -40,6 +44,7 @@ $restaurants = [
   ],
   //GIAPPONESE
   [
+    "user_id" => 1,
     "name" => "Ristorante Kobe",
     "slug" => "ristorante_kobe",
     "telephone" => "+390254521",
@@ -49,6 +54,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:giapponese-0.jpg/v1/it/restaurants/206620.jpg",
   ],
   [
+    "user_id" => 2,
     "name" => "Fujiyama Hot",
     "slug" => "fujiyama_hot",
     "telephone" => "+390254521",
@@ -58,6 +64,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:giapponese-0.jpg/v1/it/restaurants/215840.jpg",
   ],
   [
+    "user_id" => 3,
     "name" => "Sushi 2Mi",
     "slug" => "sushi_2mi",
     "telephone" => "+390254521",
@@ -67,6 +74,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:giapponese-0.jpg/v1/it/restaurants/234400.jpg",
   ],
   [
+    "user_id" => 4,
     "name" => "Ichiro",
     "slug" => "ichiro",
     "telephone" => "+390254521",
@@ -77,6 +85,7 @@ $restaurants = [
   ],
   //MESSICANO
   [
+    "user_id" => 1,
     "name" => "Ciapa El Taco",
     "slug" => "ciapa_el_taco",
     "telephone" => "+390254521",
@@ -86,6 +95,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:messicano-4.jpg/v1/it/restaurants/236834.jpg",
   ],
   [
+    "user_id" => 2,
     "name" => "Burrito Bar",
     "slug" => "burrito_bar",
     "telephone" => "+390254521",
@@ -95,6 +105,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:messicano-3.jpg/v1/it/restaurants/225963.jpg",
   ],
   [
+    "user_id" => 3,
     "name" => "Mexicali - Ortles",
     "slug" => "mexicali_ortles",
     "telephone" => "+390254521",
@@ -104,6 +115,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:messicano-3.jpg/v1/it/restaurants/202983.jpg",
   ],
   [
+    "user_id" => 4,
     "name" => "Viva Nachos",
     "slug" => "viva_nachos",
     "telephone" => "+390254521",
@@ -114,6 +126,7 @@ $restaurants = [
   ],
   //PIZZA
   [
+    "user_id" => 1,
     "name" => "Mary Pizza",
     "slug" => "mary_pizza",
     "telephone" => "+390254521",
@@ -123,6 +136,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-4.jpg/v1/it/restaurants/212124.jpg",
   ],
   [
+    "user_id" => 2,
     "name" => "Pizzeria Sant'Elena",
     "slug" => "mary_pizza",
     "telephone" => "+390254521",
@@ -132,6 +146,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-3.jpg/v1/it/restaurants/221623.jpg",
   ],
   [
+    "user_id" => 3,
     "name" => "Pizzeria Focacceria Pugliese",
     "slug" => "pizzeria_focacceria_pugliese",
     "telephone" => "+390254521",
@@ -141,6 +156,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-2.jpg/v1/it/restaurants/203902.jpg",
   ],
   [
+    "user_id" => 4,
     "name" => "Ristorante Pizzeria Santander",
     "slug" => "ristorante_pizzeria_santander",
     "telephone" => "+390254521",
@@ -151,6 +167,7 @@ $restaurants = [
   ],
   //CINESE
   [
+    "user_id" => 1,
     "name" => "Casa del Ramen",
     "slug" => "casa_del_ramen",
     "telephone" => "+390254521",
@@ -160,6 +177,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:cinese-3.jpg/v1/it/restaurants/241883.jpg",
   ],
   [
+    "user_id" => 2,
     "name" => "Trattoria la Muraglia",
     "slug" => "casa_del_ramen",
     "telephone" => "+390254521",
@@ -169,6 +187,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:cinese-7.jpg/v1/it/restaurants/225867.jpg",
   ],
   [
+    "user_id" => 3,
     "name" => "Lo's",
     "slug" => "los",
     "telephone" => "+390254521",
@@ -178,6 +197,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:cinese-6.jpg/v1/it/restaurants/214916.jpg",
   ],
   [
+    "user_id" => 4,
     "name" => "Wang Jiao",
     "slug" => "wang_jiao",
     "telephone" => "+390254521",
@@ -189,6 +209,7 @@ $restaurants = [
 
   //FAST-FOOD
   [
+    "user_id" => 1,
     "name" => "Zoo Burger",
     "slug" => "zoo_burger",
     "telephone" => "+390254521",
@@ -198,6 +219,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:hamburger-5.jpg/v1/it/restaurants/237955.jpg",
   ],
   [
+    "user_id" => 2,
     "name" => "Mama Burger",
     "slug" => "mama_burger",
     "telephone" => "+390254521",
@@ -207,6 +229,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1600,h_350,d_it:cuisines:hamburger-1.jpg/v1/it/restaurants/239321.jpg",
   ],
   [
+    "user_id" => 3,
     "name" => "Burgez",
     "slug" => "burgez",
     "telephone" => "+390254521",
@@ -216,6 +239,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:hamburger-7.jpg/v1/it/restaurants/224627.jpg",
   ],
   [
+    "user_id" => 4,
     "name" => "McDonald's",
     "slug" => "mcdonalds",
     "telephone" => "+390254521",
@@ -226,8 +250,9 @@ $restaurants = [
   ],
   //INDIANO
   [
-    "name" => "Indian Vegetaria Food",
-    "slug" => "indian_vegetaria_food",
+    "user_id" => 1,
+    "name" => "Indian Vegetarian Food",
+    "slug" => "indian_vegetarian_food",
     "telephone" => "+390254521",
     "address" => "Via Giuseppe Ripamonti 15, Milano, 20136",
     "p_iva" => "12345678912",
@@ -235,6 +260,7 @@ $restaurants = [
     "cover_image" => "",
   ],
   [
+    "user_id" => 2,
     "name" => "Al Noor 1",
     "slug" => "al_noor_1",
     "telephone" => "+390254521",
@@ -244,6 +270,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:indiano-4.jpg/v1/it/restaurants/201104.jpg",
   ],
   [
+    "user_id" => 3,
     "name" => "Raj",
     "slug" => "raj",
     "telephone" => "+390254521",
@@ -253,6 +280,7 @@ $restaurants = [
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:indiano-2.jpg/v1/it/restaurants/201562.jpg",
   ],
   [
+    "user_id" => 4,
     "name" => "Indianapolis",
     "slug" => "indianapolis",
     "telephone" => "+390254521",
