@@ -225,7 +225,7 @@ return $dishes = [
         "visibility" => "true",
       ],
       [
-        "restaurant_id" => "11" ,  //smallinteger
+        "restaurant_id" => 11 ,  //smallinteger
         "name" => "Nachos", //char
         "description" => "110gr di nachos di mais conditi con chili con carne, jalapenos, panna acida e crema di cheddar",
         "price" => , 10.90, //number
