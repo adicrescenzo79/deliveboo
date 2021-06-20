@@ -288,7 +288,7 @@ return $dishes = [
       "visibility" => "true",
   ],
   [
-      restaurant_id" => 21,
+      "restaurant_id" => 21,
       "name" => "Whopper",
       "description" => "Classico irresistibile. La ricetta del leggendario Whopper®: carne di manzo alla griglia e ingredienti freschi per un sapore ineguagliabile.",
       "price" => 5.60,
@@ -297,7 +297,7 @@ return $dishes = [
       ],
       [
 
-      restaurant_id" => 21,
+      "restaurant_id" => 21,
       "name" => "Plant Based Whopper",
       "description" => "L’iconico Whopper con una nuova patty a base vegetale, per un gusto 100% Whopper, 0% carne.",
       "price" => 5.90,
@@ -305,7 +305,7 @@ return $dishes = [
       "visibility" => "true",
   ],
     [
-      restaurant_id" => 21,
+      "restaurant_id" => 21,
       "name" => "Crispy chicken",
       "description" => "L’iconico Whopper con una nuova patty a base vegetale, per un gusto 100% Whopper, 0% carne.",
       "price" => 4.50,
@@ -324,15 +324,15 @@ return $dishes = [
       ],
       [
 
-      restaurant_id" => 22,
+      "restaurant_id" => 22,
       "name" => "Crispy chicken",
       "description" => "Semplicità color oro. Filetto di pollo in croccante panatura speziata. Pomodoro, lattuga e maionese.",
       "price" => 4.50,
       "image" => "https://res.cloudinary.com/glovoapp/w_100,c_fit,f_auto,q_auto/Products/bqt9nsz4nt3gduqzqx9i",
       "visibility" => "true",
-  ],
-  [
-      restaurant_id" => 22,
+     ],
+     [
+      "restaurant_id" => 22,
       "name" => "Double cheeseburger",
       "description" => "Golosità compatta. Compatto, semplice ma unico. Per la merenda o un pranzo più light, gusto assicurato!",
       "price" => 3.90,
@@ -341,7 +341,7 @@ return $dishes = [
       ],
       [
 
-      restaurant_id" => 22,
+      "restaurant_id" => 22,
       "name" => "Big King",
       "description" => "Non mi basta.Il nostro Big King con doppia carne di manzo alla griglia, doppio formaggio e deliziosa salsa King.",
       "price" => 5.20,
@@ -359,7 +359,7 @@ return $dishes = [
       "visibility" => "true",
   ],
   [
-      restaurant_id" => 23,
+      "restaurant_id" => 23,
       "name" => "Chicken royale",
       "description" => "Croccante leggerezza. Usiamo solo il nostro panino al sesamo extralungo, con tanto petto di pollo dorato.",
       "price" => 5.20,
@@ -368,7 +368,7 @@ return $dishes = [
   ],
   [
 
-      restaurant_id" => 23,
+      "restaurant_id" => 23,
       "name" => "Wrap di Pollo Grigliato",
       "description" => "Piadina con ripieno di pollo grigliato, maionese, lattuga fresca e pomodoro",
       "price" => 5.40,
@@ -377,7 +377,7 @@ return $dishes = [
       ],
       [
 
-      restaurant_id" => 23,
+      "restaurant_id" => 23,
       "name" => "Plant Based Whopper",
       "description" => "L’iconico Whopper con una nuova patty a base vegetale, per un gusto 100% Whopper, 0% carne.",
       "price" => 5.90,
@@ -397,7 +397,7 @@ return $dishes = [
       ],
       [
 
-      restaurant_id" => 24,
+      "restaurant_id" => 24,
       "name" => "Double Krunch",
       "description" => "La morbida croccantezza raddoppia con 2 Tenders Crispy! Pane con semi di sesamo, due Tenders Crispy, insalata, cheddar e salsa al pepe nero.",
       "price" => 5.25,
@@ -406,7 +406,7 @@ return $dishes = [
       ],
       [
 
-      restaurant_id" => 24,
+      "restaurant_id" => 24,
       "name" => "Colonel's Burger",
       "description" => "Il burger del Colonnello. Bacon, formaggio, insalata, salsa barbecue, maionese e un irresistibile filetto Original Recipe, preparato secondo la sua leggendaria ricetta, con il mix segreto di 11 erbe e spezie.",
       "price" => 5.70,
@@ -415,7 +415,7 @@ return $dishes = [
       ],
       [
 
-      restaurant_id" => 24,
+      "restaurant_id" => 24,
       "name" => "Double cheeseburger",
       "description" => "Golosità compatta. Compatto, semplice ma unico. Per la merenda o un pranzo più light, gusto assicurato!",
       "price" => 3.90,
