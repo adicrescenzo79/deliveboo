@@ -25,6 +25,7 @@ class OrderSeeder extends Seeder
             $newOrder->total_paid = $faker->randomFloat(2, 25, 150);
             $newOrder->total_paid = $faker->randomFloat(2, 25, 150);
             $newOrder->restaurant_id = $faker->numberBetween(1, 28);
+            $newOrder->created_at = $faker->dateTimeInInterval('-2 years', '+2 years');
             $newOrder->updated_at = $newOrder['created_at'];
             $newOrder->save();
         }
