@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Restaurant;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
@@ -54,7 +55,21 @@ class RestaurantController extends Controller
       $restaurant->fill($data);
       $restaurant['slug'] = $this->generateSlug($data['name']);
 
+      $logo = NULL;
+      if (array_key_exists('logo', $data)) {
+          $logo = Storage::put('uploads', $data['logo']);
+          $restaurant->logo = 'storage/' . $logo;
+      }
+
+      $cover = NULL;
+      if (array_key_exists('cover_image', $data)) {
+          $cover = Storage::put('uploads', $data['cover_image']);
+          $restaurant->cover_image = 'storage/' . $cover;
+      }
+
       $restaurant->save();
+
+
 
       // $data['slug'] = $this->generateSlug($data['name'], $data['name'] != $restaurant->name, $restaurant->slug);
       // $restaurant = new Restaurant();
@@ -107,6 +122,18 @@ class RestaurantController extends Controller
       $data = $request->all();
       //$data['slug'] = $this->generateSlug($data['name'], $restaurant['name'] != $data['name'], $restaurant->slug);
       $data['slug'] = $this->generateSlug($data['name'], $data['name'] != $restaurant->name, $restaurant->slug);
+
+      if (array_key_exists('logo', $data)) {
+          $logo = Storage::put('uploads', $data['logo']);
+          $data['logo'] = 'storage/' . $logo;
+      }
+
+
+      if (array_key_exists('cover_image', $data)) {
+          $cover = Storage::put('uploads', $data['cover_image']);
+          $data['cover_image'] = 'storage/' . $cover;
+      }
+
       $restaurant->update($data);
       return redirect()->route('admin.restaurants.show', compact('restaurant'));
 
