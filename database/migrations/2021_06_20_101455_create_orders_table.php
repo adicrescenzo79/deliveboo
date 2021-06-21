@@ -19,7 +19,8 @@ class CreateOrdersTable extends Migration
             $table->string('customer_email', 50)->required();
             $table->string('customer_telephone', 15)->required();
             $table->string('delivery_address', 50)->required();
-            $table->dateTime('delivery_time', 0)->required();
+            $table->time('delivery_time')->required();
+            $table->text('delivery_notes')->nullable();
             $table->char('order_number',6)->required(); // #00000
             $table->float('total_paid',5,2)->required();
             // $table->string('counter')->nullable();

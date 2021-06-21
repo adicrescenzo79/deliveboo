@@ -12,6 +12,7 @@ class Order extends Model
   'customer_telephone',
   'delivery_address',
   'delivery_time',
+  'delivery_notes',
   'order_number',
   'total_paid',
   'restaurant_id',
@@ -21,7 +22,7 @@ class Order extends Model
 
   public function restaurant()
   {
-    return $this->belongsTo('App\Reastaurant');
+    return $this->belongsTo('App\Restaurant');
   }
 
 }
