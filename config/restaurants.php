@@ -9,7 +9,7 @@ return $restaurants = [
     "telephone" => "+39025487921",
     "address" => "Via Mincio, 9, Milano, 20139",
     "p_iva" => "12345678912",
-    "logo" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-1.jpg/v1/it/restaurants/214091.jpg",
+    "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/214091.gif",
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-1.jpg/v1/it/restaurants/214091.jpg",
   ],
   [
@@ -235,7 +235,7 @@ return $restaurants = [
     "telephone" => "+390254521",
     "address" => "Corso Como 2, Milano, 20154",
     "p_iva" => "12345678912",
-    "logo" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1600,h_350,d_it:cuisines:hamburger-7.jpg/v1/it/restaurants/224627.jpg",
+    "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/224645.gif",
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:hamburger-7.jpg/v1/it/restaurants/224627.jpg",
   ],
   [
@@ -256,8 +256,8 @@ return $restaurants = [
     "telephone" => "+390254521",
     "address" => "Via Giuseppe Ripamonti 15, Milano, 20136",
     "p_iva" => "12345678912",
-    "logo" => "https://www.justeat.it/restaurants-mcdonalds---paolo-sarpi-milano/menu",
-    "cover_image" => "",
+    "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/224561.gif",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:indiano-1.jpg/v1/it/restaurants/224561.jpg",
   ],
   [
     "user_id" => 2,
