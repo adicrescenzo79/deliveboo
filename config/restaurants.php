@@ -5,17 +5,17 @@ return $restaurants = [
   [
     "user_id" => 1,
     "name" => "Ristorante il Molo",
-    "slug" => "ristorante_il_molo",
+    "slug" => "ristorante-il-molo",
     "telephone" => "+39025487921",
     "address" => "Via Mincio, 9, Milano, 20139",
     "p_iva" => "12345678912",
-    "logo" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-1.jpg/v1/it/restaurants/214091.jpg",
+    "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/214091.gif",
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-1.jpg/v1/it/restaurants/214091.jpg",
   ],
   [
     "user_id" => 2,
     "name" => "Ci ritorno alle terrazze",
-    "slug" => "ci_ritorno_alle_terrazze",
+    "slug" => "ci-ritorno-alle-terrazze",
     "telephone" => "+390254521",
     "address" => "Via Giuseppe Ripamonti 132, Milano, 20141",
     "p_iva" => "12345678912",
@@ -35,7 +35,7 @@ return $restaurants = [
   [
     "user_id" => 4,
     "name" => "Peccati di gola",
-    "slug" => "peccati_di_gola",
+    "slug" => "peccati-di-gola",
     "telephone" => "+390254521",
     "address" => "Via Dante Alighieri 29, Opera, 20090",
     "p_iva" => "12345678912",
@@ -46,7 +46,7 @@ return $restaurants = [
   [
     "user_id" => 1,
     "name" => "Ristorante Kobe",
-    "slug" => "ristorante_kobe",
+    "slug" => "ristorante-kobe",
     "telephone" => "+390254521",
     "address" => "Porta Lodovica, 5, Milano, 20136",
     "p_iva" => "12345678912",
@@ -56,7 +56,7 @@ return $restaurants = [
   [
     "user_id" => 2,
     "name" => "Fujiyama Hot",
-    "slug" => "fujiyama_hot",
+    "slug" => "fujiyama-hot",
     "telephone" => "+390254521",
     "address" => "Via Giorgio Washington, 107, Milano, 20144",
     "p_iva" => "12345678912",
@@ -66,7 +66,7 @@ return $restaurants = [
   [
     "user_id" => 3,
     "name" => "Sushi 2Mi",
-    "slug" => "sushi_2mi",
+    "slug" => "sushi-2mi",
     "telephone" => "+390254521",
     "address" => "Via Vetere 10, Milano, 20123",
     "p_iva" => "12345678912",
@@ -87,7 +87,7 @@ return $restaurants = [
   [
     "user_id" => 1,
     "name" => "Ciapa El Taco",
-    "slug" => "ciapa_el_taco",
+    "slug" => "ciapa-el-taco",
     "telephone" => "+390254521",
     "address" => "Via Francesco Brioschi 16, Milano, 20136",
     "p_iva" => "12345678912",
@@ -97,7 +97,7 @@ return $restaurants = [
   [
     "user_id" => 2,
     "name" => "Burrito Bar",
-    "slug" => "burrito_bar",
+    "slug" => "burrito-bar",
     "telephone" => "+390254521",
     "address" => "Viale Bligny 36, Milano, 20136",
     "p_iva" => "12345678912",
@@ -107,7 +107,7 @@ return $restaurants = [
   [
     "user_id" => 3,
     "name" => "Mexicali - Ortles",
-    "slug" => "mexicali_ortles",
+    "slug" => "mexicali-ortles",
     "telephone" => "+390254521",
     "address" => "Viale Ortles, 62, Milano, 20139",
     "p_iva" => "12345678912",
@@ -117,7 +117,7 @@ return $restaurants = [
   [
     "user_id" => 4,
     "name" => "Viva Nachos",
-    "slug" => "viva_nachos",
+    "slug" => "viva-nachos",
     "telephone" => "+390254521",
     "address" => "Viale Bligny 36, Milano, 20136",
     "p_iva" => "12345678912",
@@ -128,7 +128,7 @@ return $restaurants = [
   [
     "user_id" => 1,
     "name" => "Mary Pizza",
-    "slug" => "mary_pizza",
+    "slug" => "mary-pizza",
     "telephone" => "+390254521",
     "address" => "Via Carlo Sereni 14, Milano, 20137",
     "p_iva" => "12345678912",
@@ -138,7 +138,7 @@ return $restaurants = [
   [
     "user_id" => 2,
     "name" => "Pizzeria Sant'Elena",
-    "slug" => "Pizzeria_sant_elena",
+    "slug" => "Pizzeria-sant-elena",
     "telephone" => "+390254521",
     "address" => "Via Filippo Turati, 1/G, Milano, 20094",
     "p_iva" => "12345678912",
@@ -148,7 +148,7 @@ return $restaurants = [
   [
     "user_id" => 3,
     "name" => "Pizzeria Focacceria Pugliese",
-    "slug" => "pizzeria_focacceria_pugliese",
+    "slug" => "pizzeria-focacceria-pugliese",
     "telephone" => "+390254521",
     "address" => "Via Roma, 46, Milano, 20090",
     "p_iva" => "12345678912",
@@ -158,7 +158,7 @@ return $restaurants = [
   [
     "user_id" => 4,
     "name" => "Ristorante Pizzeria Santander",
-    "slug" => "ristorante_pizzeria_santander",
+    "slug" => "ristorante-pizzeria-santander",
     "telephone" => "+390254521",
     "address" => "Via Filippo Turati, 16,Milano, 20090",
     "p_iva" => "12345678912",
@@ -169,7 +169,7 @@ return $restaurants = [
   [
     "user_id" => 1,
     "name" => "Casa del Ramen",
-    "slug" => "casa_del_ramen",
+    "slug" => "casa-del-ramen",
     "telephone" => "+390254521",
     "address" => "Via Vigevano 22, Milano, 20144",
     "p_iva" => "12345678912",
@@ -179,7 +179,7 @@ return $restaurants = [
   [
     "user_id" => 2,
     "name" => "Trattoria la Muraglia",
-    "slug" => "trattoria_la_muraglia",
+    "slug" => "trattoria-la-muraglia",
     "telephone" => "+390254521",
     "address" => "Viale Toscana 19, Milano, 20141",
     "p_iva" => "12345678912",
@@ -199,7 +199,7 @@ return $restaurants = [
   [
     "user_id" => 4,
     "name" => "Wang Jiao",
-    "slug" => "wang_jiao",
+    "slug" => "wang-jiao",
     "telephone" => "+390254521",
     "address" => "Viale Col di Lana 14, Milano, 20136",
     "p_iva" => "12345678912",
@@ -211,7 +211,7 @@ return $restaurants = [
   [
     "user_id" => 1,
     "name" => "Zoo Burger",
-    "slug" => "zoo_burger",
+    "slug" => "zoo-burger",
     "telephone" => "+390254521",
     "address" => "Corso Garibaldi 17, Milano, 20121",
     "p_iva" => "12345678912",
@@ -221,7 +221,7 @@ return $restaurants = [
   [
     "user_id" => 2,
     "name" => "Mama Burger",
-    "slug" => "mama_burger",
+    "slug" => "mama-burger",
     "telephone" => "+390254521",
     "address" => "Via Agnello 18, Milano, 20121",
     "p_iva" => "12345678912",
@@ -235,7 +235,7 @@ return $restaurants = [
     "telephone" => "+390254521",
     "address" => "Corso Como 2, Milano, 20154",
     "p_iva" => "12345678912",
-    "logo" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1600,h_350,d_it:cuisines:hamburger-7.jpg/v1/it/restaurants/224627.jpg",
+    "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/224645.gif",
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:hamburger-7.jpg/v1/it/restaurants/224627.jpg",
   ],
   [
@@ -252,7 +252,7 @@ return $restaurants = [
   [
     "user_id" => 1,
     "name" => "Indian Vegetarian Food",
-    "slug" => "indian_vegetarian_food",
+    "slug" => "indian-vegetarian-food",
     "telephone" => "+390254521",
     "address" => "Via Giuseppe Ripamonti 15, Milano, 20136",
     "p_iva" => "12345678912",
@@ -262,7 +262,7 @@ return $restaurants = [
   [
     "user_id" => 2,
     "name" => "Al Noor 1",
-    "slug" => "al_noor_1",
+    "slug" => "al-noor-1",
     "telephone" => "+390254521",
     "address" => "Via Giuseppe Ripamonti, 15, Milano, 20136",
     "p_iva" => "12345678912",
