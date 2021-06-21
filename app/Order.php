@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-  protected $fillable = [
+    protected $fillable = [
   'customer_name',
   'customer_email',
   'customer_telephone',
@@ -16,13 +16,10 @@ class Order extends Model
   'order_number',
   'total_paid',
   'restaurant_id',
-  'created_at',
-  'updated_at'
 ];
 
-  public function restaurant()
-  {
-    return $this->belongsTo('App\Restaurant');
-  }
-
+    public function restaurant()
+    {
+        return $this->belongsTo('App\Restaurant');
+    }
 }
