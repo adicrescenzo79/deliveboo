@@ -21,7 +21,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('telephone', 15);
             $table->string('address', 50);
             $table->string('p_iva', 15);
-            $table->text('logo');
+            $table->text('logo')->nullable();
             $table->text('cover_image')->nullable();
             $table->timestamps();
 
