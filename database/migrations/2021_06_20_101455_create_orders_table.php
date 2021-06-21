@@ -21,8 +21,8 @@ class CreateOrdersTable extends Migration
             $table->string('delivery_address', 50)->required();
             $table->time('delivery_time')->required();
             $table->text('delivery_notes')->nullable();
-            $table->char('order_number',6)->required(); // #00000
-            $table->float('total_paid',5,2)->required();
+            $table->char('order_number', 6)->required(); // #00000
+            $table->float('total_paid', 5, 2)->required();
             // $table->string('counter')->nullable();
             $table->unsignedBigInteger("restaurant_id");
             $table->timestamps();
@@ -31,7 +31,6 @@ class CreateOrdersTable extends Migration
                   ->references("id")
                   ->on("restaurants")
                   ->onDelete("cascade");
-
         });
     }
 

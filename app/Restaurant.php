@@ -14,7 +14,7 @@ class Restaurant extends Model
     'address',
     'p_iva',
     'logo',
-    'cover_image'
+    'cover_image',
   ];
 
     public function dishes()
@@ -31,5 +31,4 @@ class Restaurant extends Model
     {
         return $this->hasMany('App\Order');
     }
-
 }
