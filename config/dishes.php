@@ -8,8 +8,6 @@ return $dishes = [
     "image" => "",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 25, //smallinteger
-    "created_at" => '2020-03-12 19:47:42',
-    "updated_at" => '2020-03-12 19:47:42'
   ],
   [
     "name" => "vegetarian curry", //char
