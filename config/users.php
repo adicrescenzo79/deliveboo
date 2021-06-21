@@ -7,7 +7,7 @@ return $users = [
     "email" => "limone79@gmail.com"
   ],
   [
-    "name" => "VsevolodCerneavschi",
+    "name" => "Vsevolod Cerneavschi",
     "password" => "password",
     "email" => "cerneavschivsevolod@gmail.com"
   ],

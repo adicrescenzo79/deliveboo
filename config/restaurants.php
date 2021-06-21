@@ -1,6 +1,6 @@
 <?php
 
-$restaurants = [
+return $restaurants = [
   //ITALIANO
   [
     "user_id" => 1,
@@ -138,7 +138,7 @@ $restaurants = [
   [
     "user_id" => 2,
     "name" => "Pizzeria Sant'Elena",
-    "slug" => "mary_pizza",
+    "slug" => "Pizzeria_sant_elena",
     "telephone" => "+390254521",
     "address" => "Via Filippo Turati, 1/G, Milano, 20094",
     "p_iva" => "12345678912",
@@ -179,7 +179,7 @@ $restaurants = [
   [
     "user_id" => 2,
     "name" => "Trattoria la Muraglia",
-    "slug" => "casa_del_ramen",
+    "slug" => "trattoria_la_muraglia",
     "telephone" => "+390254521",
     "address" => "Viale Toscana 19, Milano, 20141",
     "p_iva" => "12345678912",
