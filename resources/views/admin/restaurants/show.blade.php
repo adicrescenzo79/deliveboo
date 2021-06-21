@@ -5,9 +5,9 @@
 
   <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-8">
           <div class="card">
-            <div class="card-header">{{$restaurant->name}}</div>
+            <div class="card-header"><h5>{{$restaurant->name}}</h5></div>
             <div class="card-body">
               @if($restaurant->logo)
               <img src="{{asset($restaurant->logo)}}" alt="{{$restaurant->logo}}">
@@ -21,11 +21,6 @@
             </div>
           </div>
         </div>
-      <div class="col-md-6">
-        <div class="card">
-
-        </div>
-      </div>
     </div>
   </div>
 </div>

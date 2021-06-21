@@ -50,7 +50,7 @@ return $restaurants = [
     "telephone" => "+390254521",
     "address" => "Porta Lodovica, 5, Milano, 20136",
     "p_iva" => "12345678912",
-    "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/234400.gif",
+    "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/202926.gif",
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:giapponese-0.jpg/v1/it/restaurants/206620.jpg",
   ],
   [
@@ -245,7 +245,7 @@ return $restaurants = [
     "telephone" => "+390254521",
     "address" => "Via Paolo Sarpi 48, Milano, 20154",
     "p_iva" => "12345678912",
-    "logo" => "https://www.justeat.it/restaurants-mcdonalds---paolo-sarpi-milano/menu",
+    "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/236762.gif",
     "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:hamburger-2.jpg/v1/it/restaurants/236762.jpg",
   ],
   //INDIANO
@@ -256,8 +256,8 @@ return $restaurants = [
     "telephone" => "+390254521",
     "address" => "Via Giuseppe Ripamonti 15, Milano, 20136",
     "p_iva" => "12345678912",
-    "logo" => "https://www.justeat.it/restaurants-mcdonalds---paolo-sarpi-milano/menu",
-    "cover_image" => "",
+    "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/224561.gif",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:indiano-1.jpg/v1/it/restaurants/224561.jpg",
   ],
   [
     "user_id" => 2,

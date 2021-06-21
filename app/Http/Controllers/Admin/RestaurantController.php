@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Auth;
 use App\Restaurant;
+use App\Category;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
@@ -29,7 +31,9 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        return view('admin.restaurants.create');
+      $categories = Category::all();
+
+        return view('admin.restaurants.create', compact('categories'));
     }
 
     /**
@@ -45,11 +49,14 @@ class RestaurantController extends Controller
         'telephone' => 'string',
         'address' => 'required|string|max:100',
         'p_iva' => 'required|string|max:15',
-        'logo' => 'image|max:100|nullable',
-        'cover_image' => 'image|max:100|nullable',
+        'logo' => 'image|max:5000|nullable',
+        'cover_image' => 'image|max:5000|nullable',
+        'category_ids.*' => 'exists:categories,id',
+
       ]);
 
       $data = $request->all();
+
       $restaurant = new Restaurant();
       $data['user_id'] = Auth::id();
       $restaurant->fill($data);
@@ -69,11 +76,10 @@ class RestaurantController extends Controller
 
       $restaurant->save();
 
+      if (array_key_exists('category_ids', $data)) {
+        $restaurant->categories()->attach($data['category_ids']);
+      }
 
-
-      // $data['slug'] = $this->generateSlug($data['name'], $data['name'] != $restaurant->name, $restaurant->slug);
-      // $restaurant = new Restaurant();
-      // $restaurant->create($data);
       return redirect()->route('admin.restaurants.index');
 
     }
