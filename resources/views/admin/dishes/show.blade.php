@@ -7,17 +7,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="card">
-            <div class="card-header"><h5>{{$restaurant->name}}</h5></div>
+            <div class="card-header"><h5>{{$dish->name}}</h5></div>
             <div class="card-body">
-              @if($restaurant->logo)
-              <img src="{{asset($restaurant->logo)}}" alt="{{$restaurant->logo}}">
+              @if($dish->image)
+              <img src="{{asset($dish->image)}}" alt="{{$dish->image}}">
               @endif
-              @if($restaurant->cover_image)
-              <img src="{{asset($restaurant->cover_image)}}" alt="{{$restaurant->cover_image}}">
-              @endif
-
-
-              {{--<a href="{{ route('restaurants.show', ['slug' => $restaurant->slug])}}">Read more</a>--}}
             </div>
           </div>
         </div>

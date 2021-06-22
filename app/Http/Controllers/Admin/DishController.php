@@ -46,7 +46,7 @@ class DishController extends Controller
         'name' => 'required|string|max:50',
         'description' => 'string|max:500|nullable',
         'price' => 'required|numeric',
-        'image' => 'image|nullable',
+        'image' => 'image|nullable|max:5000',
         'visibility' => 'required|boolean',
       ]);
 
@@ -74,6 +74,7 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
+        return view('admin.dishes.show', compact('dish'));
     }
 
     /**
@@ -84,7 +85,7 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
-        //
+        return view('admin.dishes.edit', compact('dish'));
     }
 
     /**
@@ -96,7 +97,24 @@ class DishController extends Controller
      */
     public function update(Request $request, Dish $dish)
     {
-        //
+        $request->validate([
+      'name' => 'required|string|max:50',
+      'description' => 'string|max:500|nullable',
+      'price' => 'required|numeric',
+      'image' => 'image|nullable|max:5000',
+      'visibility' => 'required|boolean',
+    ]);
+
+        $data = $request->all();
+
+        if (array_key_exists('image', $data)) {
+            $cover = Storage::put('uploads', $data['image']);
+            $dish->image = 'storage/' . $cover;
+        }
+
+        $dish->update($data);
+
+        return redirect()->route(' admin.dishes.show', compact('dish'));
     }
 
     /**
@@ -107,6 +125,9 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
-        //
+        $restaurant = $dish->restaurant_id;
+        $dish->delete();
+
+        return redirect()->route('admin.restaurants.dishes.index', compact('restaurant'));
     }
 }
