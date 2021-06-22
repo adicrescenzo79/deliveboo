@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\Storage;
 use App\Restaurant;
 use App\Dish;
 use App\Http\Controllers\Controller;
@@ -30,7 +31,7 @@ class DishController extends Controller
      */
     public function create($restaurant)
     {
-        //
+        return view('admin.dishes.create', compact('restaurant'));
     }
 
     /**
@@ -39,9 +40,30 @@ class DishController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $restaurant)
     {
-        //
+        $request->validate([
+        'name' => 'required|string|max:50',
+        'description' => 'string|max:500|nullable',
+        'price' => 'required|numeric',
+        'image' => 'image|nullable',
+        'visibility' => 'required|boolean',
+      ]);
+
+        $data = $request->all();
+        $dish = new Dish();
+        $data['restaurant_id'] = $restaurant;
+        $dish->fill($data);
+
+        $cover = null;
+        if (array_key_exists('image', $data)) {
+            $cover = Storage::put('uploads', $data['image']);
+            $dish->image = 'storage/' . $cover;
+        }
+
+        $dish->save();
+
+        return redirect()->route('admin.restaurants.dishes.index', compact('restaurant'));
     }
 
     /**

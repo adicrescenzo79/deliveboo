@@ -21,7 +21,7 @@
           </div>
         </div>
       @endforeach
-      {{-- <a href="{{route('admin.restaurants.dishes.create', ['restaurant' => $restaurant->id])}}"><button class="btn btn-primary" type="button" name="button">Crea</button></a> --}}
+      <a href="{{route('admin.restaurants.dishes.create', ['restaurant' => $dish->restaurant_id])}}"><button class="btn btn-primary" type="button" name="button">Crea</button></a>
 
       <div class="col-md-6">
         <div class="card">
