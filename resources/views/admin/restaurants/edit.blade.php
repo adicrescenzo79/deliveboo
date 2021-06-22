@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
       <div class="col-md-8">
             <h3>Modifica Ristorante</h3>
-            <form action="{{route('admin.restaurants.store')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('admin.restaurants.update', ['restaurant' => $restaurant->id])}}" method="post" enctype="multipart/form-data">
               @csrf
               @method('PATCH')
 
@@ -44,7 +44,14 @@
               </div>
 
               <div class="form-group">
+
                 <label for="logo">Logo</label>
+                @if ($restaurant->logo)
+                  <div class="">
+                    <img style="width: 50px;" class="logo" src="{{asset($restaurant->logo)}}" alt="">
+                    <small class="text-danger">Attuale</small>
+                  </div>
+                @endif
                 <input class="form-control @error('logo') is-invalid @enderror" id="logo" type="file" name="logo" value="{{old('logo', $restaurant->logo)}}" placeholder="Logo">
                   @error('logo')
                     <small class="text-danger">{{ $message }}</small>
@@ -52,7 +59,14 @@
               </div>
 
               <div class="form-group">
+
                 <label for="cover_image">Immagine di copertina</label>
+                @if ($restaurant->cover_image)
+                  <div class="">
+                    <img style="width: 50px;" class="cover_image" src="{{asset($restaurant->cover_image)}}" alt="">
+                    <small class="text-danger">Attuale</small>
+                  </div>
+                @endif
                 <input class="form-control @error('cover_image') is-invalid @enderror" id="cover_image" type="file" name="cover_image" value="{{old('cover_image', $restaurant->cover_image)}}" placeholder="Immagine Cover">
                   @error('cover_image')
                     <small class="text-danger">{{ $message }}</small>
