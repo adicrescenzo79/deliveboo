@@ -24,5 +24,5 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')
     ->group(function () {
         Route::get('/', 'HomeController@index')->name('index');
         Route::resource('restaurants', 'RestaurantController');
-        // Route::resource('categories', 'CategoryController');
+        Route::resource('restaurants.dishes', 'DishController')->shallow();
     });

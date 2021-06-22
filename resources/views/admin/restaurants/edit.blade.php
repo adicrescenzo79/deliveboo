@@ -52,7 +52,7 @@
                     <small class="text-danger">Attuale</small>
                   </div>
                 @endif
-                <input class="form-control @error('logo') is-invalid @enderror" id="logo" type="file" name="logo" value="{{old('logo', $restaurant->logo)}}" placeholder="Logo">
+                <input class="form-control @error('logo') is-invalid @enderror" id="logo" type="file" name="logo"  placeholder="Logo">
                   @error('logo')
                     <small class="text-danger">{{ $message }}</small>
                   @enderror
