@@ -17,7 +17,7 @@
               @endif
 
 
-              <a href="{{ route('admin.restaurants.dishes.index', ['restaurant' => $restaurant->id]) }}">Vedi i piatti disponibili</a>
+              {{--<a href="{{ route('restaurants.show', ['slug' => $restaurant->slug])}}">Read more</a>--}}
             </div>
           </div>
         </div>
