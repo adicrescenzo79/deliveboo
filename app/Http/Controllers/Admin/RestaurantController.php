@@ -103,7 +103,9 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
-      return view('admin.restaurants.edit', compact('restaurant'));
+      $categories = Category::all();
+
+      return view('admin.restaurants.edit', compact('restaurant', 'categories'));
 
     }
 
@@ -121,8 +123,8 @@ class RestaurantController extends Controller
         'telephone' => 'string',
         'address' => 'required|string|max:100',
         'p_iva' => 'required|string|max:15',
-        'logo' => 'image|max:100|nullable',
-        'cover_image' => 'image|max:100|nullable',
+        'logo' => 'image|max:5000|nullable',
+        'cover_image' => 'image|max:5000|nullable',
       ]);
 
       $data = $request->all();

@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="telephone">MNumero di telefono</label>
+                  <label for="telephone">Numero di telefono</label>
                   <input class="form-control @error('telephone') is-invalid @enderror" id="telephone" type="text" name="telephone" value="{{old('telephone')}}" placeholder="Telefono">
                     @error('telephone')
                       <small class="text-danger">{{ $message }}</small>
@@ -77,11 +77,6 @@
                 <input class="btn btn-primary" type="submit" name="" value="Crea">
               </form>
         </div>
-      <div class="col-md-6">
-        <div class="card">
-
-        </div>
-      </div>
     </div>
   </div>
 </div>
