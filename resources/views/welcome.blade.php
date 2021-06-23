@@ -22,7 +22,7 @@
         <div class="col-md-12">
           <div class="content-categories">
             <ul>
-              <li>Categorie</li>
+              <li v-for="category in categories">@{{category.name}}</li>
             </ul>
           </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="col-md-12">
           <div class="content-restaurants">
             <ul>
-              <li>Restaurants</li>
+              <li v-for="restaurant in restaurants">@{{restaurant.name}}</li>
             </ul>
           </div>
         </div>
@@ -45,4 +45,9 @@
   </section>
 </div>
 
+@endsection
+
+@section('foot-script')
+  {{-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> --}}
+  <script src="{{asset('js/welcome.js')}}" charset="utf-8"></script>
 @endsection
