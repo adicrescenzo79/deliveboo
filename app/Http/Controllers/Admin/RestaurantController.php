@@ -125,6 +125,8 @@ class RestaurantController extends Controller
         'p_iva' => 'required|string|max:15',
         'logo' => 'image|max:5000|nullable',
         'cover_image' => 'image|max:5000|nullable',
+        'category_ids.*' => 'exists:categories,id',
+
       ]);
 
       $data = $request->all();
@@ -143,6 +145,13 @@ class RestaurantController extends Controller
       }
 
       $restaurant->update($data);
+
+      if (array_key_exists('category_ids', $data)) {
+        $restaurant->categories()->sync($data['category_ids']);
+      } else {
+        $restaurant->categories()->detach($data['category_ids']);
+      }
+
       return redirect()->route('admin.restaurants.show', compact('restaurant'));
 
     }
