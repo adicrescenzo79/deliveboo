@@ -98,16 +98,20 @@ var app = new Vue({
   el: '#main-welcome',
   data: {
     restaurants: [],
-    categories: []
+    categories: [],
+    restaurant: 4,
+    dishes: [],
+    categoryIndex: ''
   },
   created: function created() {
     var _this = this;
 
-    axios.get('http://localhost:8000/api/restaurants', {}).then(function (response) {
-      _this.restaurants = response.data.data; // console.log(response.data.data);
-    });
+    this.allRestaurants();
     axios.get('http://localhost:8000/api/categories', {}).then(function (response) {
       _this.categories = response.data.data; // console.log(response.data.data);
+    });
+    axios.get("http://localhost:8000/api/dishes/".concat(this.restaurant), {}).then(function (response) {
+      _this.dishes = response.data.data; // console.log(response.data.data);
     }); // Inizializzazione Slick
 
     $(document).ready(function () {
@@ -143,6 +147,26 @@ var app = new Vue({
         ]
       });
     });
+  },
+  methods: {
+    //al click vediamo tutti i ristoranti della categoria selezionata
+    restaurantByCategory: function restaurantByCategory(category) {
+      var _this2 = this;
+
+      this.categoryIndex = category;
+      axios.get("http://localhost:8000/api/restaurants/".concat(this.categoryIndex), {}).then(function (response) {
+        _this2.restaurants = response.data.data; // console.log(response.data.data);
+      });
+    },
+    //al click vediamo tutti i ristoranti
+    allRestaurants: function allRestaurants() {
+      var _this3 = this;
+
+      this.categoryIndex = '';
+      axios.get('http://localhost:8000/api/restaurants', {}).then(function (response) {
+        _this3.restaurants = response.data.data; // console.log(response.data.data);
+      });
+    }
   }
 });
 
@@ -155,7 +179,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })

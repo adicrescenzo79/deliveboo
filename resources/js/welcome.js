@@ -4,18 +4,24 @@ let app = new Vue({
   data:{
     restaurants: [],
     categories: [],
+    restaurant: 4,
+    dishes: [],
+    categoryIndex: '',
 
   },
   created(){
-    axios.get('http://localhost:8000/api/restaurants',{
-    }).then((response)=>{
-      this.restaurants = response.data.data;
-      // console.log(response.data.data);
-    });
+
+    this.allRestaurants();
 
     axios.get('http://localhost:8000/api/categories',{
     }).then((response)=>{
       this.categories = response.data.data;
+      // console.log(response.data.data);
+    });
+
+    axios.get(`http://localhost:8000/api/dishes/${this.restaurant}`,{
+    }).then((response)=>{
+      this.dishes = response.data.data;
       // console.log(response.data.data);
     });
 
@@ -57,5 +63,30 @@ let app = new Vue({
         ]
       });
     });
+
+  },
+
+  methods: {
+    //al click vediamo tutti i ristoranti della categoria selezionata
+    restaurantByCategory: function(category){
+      this.categoryIndex = category;
+      axios.get(`http://localhost:8000/api/restaurants/${this.categoryIndex}`,{
+      }).then((response)=>{
+        this.restaurants = response.data.data;
+        // console.log(response.data.data);
+      });
+
+    },
+    //al click vediamo tutti i ristoranti
+    allRestaurants: function() {
+      this.categoryIndex = '';
+      axios.get('http://localhost:8000/api/restaurants',{
+      }).then((response)=>{
+        this.restaurants = response.data.data;
+        // console.log(response.data.data);
+      });
+
+    }
   }
+
 });
