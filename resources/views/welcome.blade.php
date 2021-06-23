@@ -45,6 +45,21 @@
   </section>
 </div>
 
+
+<div class="container">
+  <div class="responsive">
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+  </div>
+</div>
+
 @endsection
 
 @section('foot-script')
