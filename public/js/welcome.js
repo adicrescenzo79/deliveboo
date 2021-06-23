@@ -179,7 +179,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })
