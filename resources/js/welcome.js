@@ -4,6 +4,9 @@ let app = new Vue({
   data:{
     restaurants: [],
     categories: [],
+    restaurant: 4,
+    dishes: [],
+    categoryIndex: '',
 
   },
   created(){
@@ -16,6 +19,12 @@ let app = new Vue({
     axios.get('http://localhost:8000/api/categories',{
     }).then((response)=>{
       this.categories = response.data.data;
+      // console.log(response.data.data);
+    });
+
+    axios.get(`http://localhost:8000/api/dishes/${this.restaurant}`,{
+    }).then((response)=>{
+      this.dishes = response.data.data;
       // console.log(response.data.data);
     });
 
@@ -57,5 +66,19 @@ let app = new Vue({
         ]
       });
     });
+
+  },
+  methods: {
+    restaurantByCategory: function(category){
+      console.log('ciao');
+      this.categoryIndex = category;
+      axios.get(`http://localhost:8000/api/restaurants/${this.categoryIndex}`,{
+      }).then((response)=>{
+        this.restaurants = response.data.data;
+        // console.log(response.data.data);
+      });
+
+    }
   }
+
 });
