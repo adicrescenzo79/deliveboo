@@ -10,11 +10,8 @@ let app = new Vue({
 
   },
   created(){
-    axios.get('http://localhost:8000/api/restaurants',{
-    }).then((response)=>{
-      this.restaurants = response.data.data;
-      // console.log(response.data.data);
-    });
+
+    this.allRestaurants();
 
     axios.get('http://localhost:8000/api/categories',{
     }).then((response)=>{
@@ -68,11 +65,22 @@ let app = new Vue({
     });
 
   },
+
   methods: {
+    //al click vediamo tutti i ristoranti della categoria selezionata
     restaurantByCategory: function(category){
-      console.log('ciao');
       this.categoryIndex = category;
       axios.get(`http://localhost:8000/api/restaurants/${this.categoryIndex}`,{
+      }).then((response)=>{
+        this.restaurants = response.data.data;
+        // console.log(response.data.data);
+      });
+
+    },
+    //al click vediamo tutti i ristoranti
+    allRestaurants: function() {
+      this.categoryIndex = '';
+      axios.get('http://localhost:8000/api/restaurants',{
       }).then((response)=>{
         this.restaurants = response.data.data;
         // console.log(response.data.data);

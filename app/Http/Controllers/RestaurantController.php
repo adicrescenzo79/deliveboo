@@ -21,9 +21,10 @@ class RestaurantController extends Controller
   public function restaurantByCategory($categoryIndex)
   {
     // $restaurants = Restaurant::all();
-    $restaurants = Restaurant::with('categories')->where('id', '=', $categoryIndex)->get();
+    $category = Category::with('restaurants')->where('id', '=', $categoryIndex)->first();
+
     return response()->json([
-      'data' => $restaurants,
+      'data' => $category->restaurants,
       'success' => true,
     ]);
 

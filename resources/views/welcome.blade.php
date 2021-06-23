@@ -18,6 +18,9 @@
   {{-- slider --}}
   <div class="container">
     <div class="responsive">
+      <div @click="allRestaurants()" class="">
+        All
+      </div>
       <div v-for="category in categories" @click="restaurantByCategory(category.id)">
         <img :src="category.icon" alt="@{{category.name}}">
         <span>@{{category.name}}</span>

@@ -106,9 +106,7 @@ var app = new Vue({
   created: function created() {
     var _this = this;
 
-    axios.get('http://localhost:8000/api/restaurants', {}).then(function (response) {
-      _this.restaurants = response.data.data; // console.log(response.data.data);
-    });
+    this.allRestaurants();
     axios.get('http://localhost:8000/api/categories', {}).then(function (response) {
       _this.categories = response.data.data; // console.log(response.data.data);
     });
@@ -151,13 +149,22 @@ var app = new Vue({
     });
   },
   methods: {
+    //al click vediamo tutti i ristoranti della categoria selezionata
     restaurantByCategory: function restaurantByCategory(category) {
       var _this2 = this;
 
-      console.log('ciao');
       this.categoryIndex = category;
       axios.get("http://localhost:8000/api/restaurants/".concat(this.categoryIndex), {}).then(function (response) {
         _this2.restaurants = response.data.data; // console.log(response.data.data);
+      });
+    },
+    //al click vediamo tutti i ristoranti
+    allRestaurants: function allRestaurants() {
+      var _this3 = this;
+
+      this.categoryIndex = '';
+      axios.get('http://localhost:8000/api/restaurants', {}).then(function (response) {
+        _this3.restaurants = response.data.data; // console.log(response.data.data);
       });
     }
   }
