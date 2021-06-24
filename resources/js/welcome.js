@@ -29,6 +29,7 @@ let app = new Vue({
     // Inizializzazione Slick
     $(document).ready(function(){
       $('.responsive').slick({
+        variableWidth: true,
         dots: true,
         infinite: false,
         speed: 300,

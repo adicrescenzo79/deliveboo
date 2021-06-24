@@ -16,13 +16,14 @@
         </div>
       </div>
     </section>
+
     {{-- slider --}}
     <div class="container">
-      <div class="responsive">
-        <div @click="allRestaurants()" class="">
+      <div class="slider responsive">
+        <div @click="allRestaurants()" class="slick-card">
           All
         </div>
-        <div v-for="category in categories" @click="restaurantByCategory(category.id)">
+        <div class="slick-card" v-for="category in categories" @click="restaurantByCategory(category.id)">
           <img :src="category.icon" alt="@{{category.name}}">
           <span>@{{category.name}}</span>
         </div>

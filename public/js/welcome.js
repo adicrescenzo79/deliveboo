@@ -129,6 +129,7 @@ var app = new Vue({
 
     $(document).ready(function () {
       $('.responsive').slick({
+        variableWidth: true,
         dots: true,
         infinite: false,
         speed: 300,
@@ -195,7 +196,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })
