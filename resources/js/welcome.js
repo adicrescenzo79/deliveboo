@@ -3,6 +3,7 @@ let app = new Vue({
   el: '#main-welcome',
   data:{
     restaurants: [],
+    skip: 0,
     categories: [],
     restaurant: 4,
     dishes: [],
@@ -80,12 +81,14 @@ let app = new Vue({
     //al click vediamo tutti i ristoranti
     allRestaurants: function() {
       this.categoryIndex = '';
-      axios.get('http://localhost:8000/api/restaurants',{
+      axios.get(`http://localhost:8000/api/restaurants/nr/${this.skip}`,{
       }).then((response)=>{
-        this.restaurants = response.data.data;
-        // console.log(response.data.data);
-      });
+        // this.restaurants.push(response.data.data);
+        this.restaurants = [...this.restaurants, ...response.data.data];
 
+        console.log(this.restaurants);
+      });
+      this.skip += 8;
     }
   }
 
