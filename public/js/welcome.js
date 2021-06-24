@@ -182,7 +182,7 @@ var app = new Vue({
         _this3.restaurants = [].concat(_toConsumableArray(_this3.restaurants), _toConsumableArray(response.data.data));
         console.log(_this3.restaurants);
       });
-      this.skip += 10;
+      this.skip += 8;
     }
   }
 });
@@ -196,7 +196,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })

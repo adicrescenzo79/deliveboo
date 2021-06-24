@@ -106,8 +106,11 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
       $categories = Category::all();
-
-      return view('admin.restaurants.edit', compact('restaurant', 'categories'));
+      if ($restaurant->user_id == Auth::id()) {
+        return view('admin.restaurants.edit', compact('restaurant', 'categories'));
+      } else {
+        return view('security');
+      }
 
     }
 
