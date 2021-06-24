@@ -98,6 +98,8 @@ var app = new Vue({
   el: '#main-welcome',
   data: {
     restaurants: [],
+    skip: 0,
+    restaurantsNr: 10,
     categories: [],
     restaurant: 4,
     dishes: [],
@@ -163,7 +165,7 @@ var app = new Vue({
       var _this3 = this;
 
       this.categoryIndex = '';
-      axios.get('http://localhost:8000/api/restaurants', {}).then(function (response) {
+      axios.get("http://localhost:8000/api/restaurants/nr/".concat(this.skip, "/").concat(this.restaurantsNr), {}).then(function (response) {
         _this3.restaurants = response.data.data; // console.log(response.data.data);
       });
     }
@@ -179,7 +181,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })
