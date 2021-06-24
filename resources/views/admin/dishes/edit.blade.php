@@ -6,6 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h3>Modifica Piatto</h3>
+                <h5>Ristorante {{$dish->restaurant->name}}</h5>
                 <form action="{{route('admin.dishes.update', ['dish' => $dish->id] )}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
