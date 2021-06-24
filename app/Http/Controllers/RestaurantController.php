@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-  public function restaurantsNr($skip, $nr)
+  public function restaurantsNr($skip)
   {
-    $restaurants = Restaurant::skip($skip)->limit($nr)->get();
+    $restaurants = Restaurant::skip($skip)->limit(8)->get();
 
     return response()->json([
       'data' => $restaurants,

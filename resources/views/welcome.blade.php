@@ -31,6 +31,7 @@
     {{-- Sezione dei ristoranti --}}
     <section id="restaurants">
       <div class="container">
+
         <div class="row justify-content-center">
           <div v-for="restaurant in restaurants" class="col-md-3">
             <div class="card" style="width: 18rem;">
@@ -42,6 +43,17 @@
             </div>
           </div>
         </div>
+
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <button @click="allRestaurants" class="btn btn-primary" type="button" name="button">Carica altri ristoranti</button>
+            </div>
+          </div>
+
+        </div>
+
+
       </div>
     </div>
   </section>
