@@ -114,7 +114,9 @@ var app = new Vue({
     categories: [],
     restaurant: 4,
     dishes: [],
-    categoryIndex: ''
+    categoryIndex: '',
+    filteredRestaurants: [],
+    unfiltered: true
   },
   created: function created() {
     var _this = this;
@@ -167,22 +169,26 @@ var app = new Vue({
     restaurantByCategory: function restaurantByCategory(category) {
       var _this2 = this;
 
+      this.restaurants = [];
+      this.skip = 0;
+      this.unfiltered = false;
       this.categoryIndex = category;
       axios.get("http://localhost:8000/api/restaurants/".concat(this.categoryIndex), {}).then(function (response) {
-        _this2.restaurants = response.data.data; // console.log(response.data.data);
+        _this2.filteredRestaurants = [].concat(_toConsumableArray(_this2.filteredRestaurants), _toConsumableArray(response.data.data)); // console.log(response.data.data);
       });
     },
     //al click vediamo tutti i ristoranti
     allRestaurants: function allRestaurants() {
       var _this3 = this;
 
+      this.filteredRestaurants = [];
+      this.unfiltered = true;
       this.categoryIndex = '';
       axios.get("http://localhost:8000/api/restaurants/nr/".concat(this.skip), {}).then(function (response) {
         // this.restaurants.push(response.data.data);
-        _this3.restaurants = [].concat(_toConsumableArray(_this3.restaurants), _toConsumableArray(response.data.data));
-        console.log(_this3.restaurants);
+        _this3.restaurants = [].concat(_toConsumableArray(_this3.restaurants), _toConsumableArray(response.data.data)); //console.log(this.restaurants);
       });
-      this.skip += 10;
+      this.skip += 8;
     }
   }
 });
@@ -196,7 +202,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })

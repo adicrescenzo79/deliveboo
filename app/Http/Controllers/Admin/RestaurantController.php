@@ -46,9 +46,9 @@ class RestaurantController extends Controller
     {
       $request->validate([
         'name' => 'required|string|max:50',
-        'telephone' => 'string',
+        'telephone' => 'numeric|digits_between:8,14',
         'address' => 'required|string|max:100',
-        'p_iva' => 'required|string|max:15',
+        'p_iva' => 'required|numeric|digits:11',
         'logo' => 'image|max:5000|nullable',
         'cover_image' => 'image|max:5000|nullable',
         'category_ids.*' => 'exists:categories,id',
@@ -107,7 +107,11 @@ class RestaurantController extends Controller
     {
       $categories = Category::all();
 
-      return view('admin.restaurants.edit', compact('restaurant', 'categories'));
+      if ($restaurant->user_id == Auth::id()) {
+        return view('admin.restaurants.edit', compact('restaurant', 'categories'));
+      } else {
+        return view('security');
+      }
 
     }
 
@@ -122,9 +126,9 @@ class RestaurantController extends Controller
     {
       $request->validate([
         'name' => 'required|string|max:50',
-        'telephone' => 'string',
+        'telephone' => 'numeric|digits_between:8,14',
         'address' => 'required|string|max:100',
-        'p_iva' => 'required|string|max:15',
+        'p_iva' => 'required|numeric|digits:11',
         'logo' => 'image|max:5000|nullable',
         'cover_image' => 'image|max:5000|nullable',
         'category_ids.*' => 'exists:categories,id',

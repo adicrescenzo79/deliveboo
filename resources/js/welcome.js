@@ -8,7 +8,8 @@ let app = new Vue({
     restaurant: 4,
     dishes: [],
     categoryIndex: '',
-
+    filteredRestaurants: [],
+    unfiltered: true,
   },
   created(){
 
@@ -71,23 +72,27 @@ let app = new Vue({
   methods: {
     //al click vediamo tutti i ristoranti della categoria selezionata
     restaurantByCategory: function(category){
+      this.restaurants = [];
+      this.skip = 0;
+      this.unfiltered = false;
       this.categoryIndex = category;
       axios.get(`http://localhost:8000/api/restaurants/${this.categoryIndex}`,{
       }).then((response)=>{
-        this.restaurants = response.data.data;
+        this.filteredRestaurants = [...this.filteredRestaurants, ...response.data.data];
         // console.log(response.data.data);
       });
 
     },
     //al click vediamo tutti i ristoranti
     allRestaurants: function() {
+      this.filteredRestaurants = [];
+      this.unfiltered = true;
       this.categoryIndex = '';
       axios.get(`http://localhost:8000/api/restaurants/nr/${this.skip}`,{
       }).then((response)=>{
         // this.restaurants.push(response.data.data);
         this.restaurants = [...this.restaurants, ...response.data.data];
-
-        console.log(this.restaurants);
+        //console.log(this.restaurants);
       });
       this.skip += 8;
     }

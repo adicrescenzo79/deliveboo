@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use App\Restaurant;
 use App\Dish;
@@ -31,7 +31,14 @@ class DishController extends Controller
      */
     public function create($restaurant)
     {
+      $currRestaurant = Restaurant::where('id', '=', $restaurant)->first();
+
+      if ($currRestaurant->user_id == Auth::id()) {
         return view('admin.dishes.create', compact('restaurant'));
+      } else {
+        return view('security');
+      }
+
     }
 
     /**
@@ -85,7 +92,12 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
+      if ($dish->restaurant->user_id == Auth::id()) {
         return view('admin.dishes.edit', compact('dish'));
+      } else {
+        return view('security');
+      }
+
     }
 
     /**
@@ -97,7 +109,7 @@ class DishController extends Controller
      */
     public function update(Request $request, Dish $dish)
     {
-        $request->validate([
+      $request->validate([
       'name' => 'required|string|max:50',
       'description' => 'string|max:500|nullable',
       'price' => 'required|numeric',

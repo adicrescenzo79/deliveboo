@@ -18,9 +18,9 @@ class CreateRestaurantsTable extends Migration
             $table->unsignedBigInteger("user_id");
             $table->string('name', 50);
             $table->string('slug', 50)->unique();
-            $table->string('telephone', 15);
+            $table->number('telephone', 15);
             $table->string('address', 50);
-            $table->string('p_iva', 15);
+            $table->number('p_iva', 11);
             $table->text('logo')->nullable();
             $table->text('cover_image')->nullable();
             $table->timestamps();
