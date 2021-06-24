@@ -114,7 +114,7 @@ class DishController extends Controller
 
         $dish->update($data);
 
-        return redirect()->route(' admin.dishes.show', compact('dish'));
+        return redirect()->route('admin.dishes.show', compact('dish'));
     }
 
     /**
