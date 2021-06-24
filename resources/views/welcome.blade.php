@@ -15,13 +15,14 @@
         </div>
       </div>
     </section>
+
     {{-- slider --}}
     <div class="container">
-      <div class="responsive">
-        <div @click="allRestaurants()" class="">
+      <div class="slider responsive">
+        <div @click="allRestaurants()" class="slick-card">
           All
         </div>
-        <div v-for="category in categories" @click="restaurantByCategory(category.id)">
+        <div class="slick-card" v-for="category in categories" @click="restaurantByCategory(category.id)">
           <img :src="category.icon" alt="@{{category.name}}">
           <span>@{{category.name}}</span>
         </div>
@@ -33,10 +34,10 @@
         <div class="row justify-content-center">
           <div v-for="restaurant in restaurants" class="col-md-3">
             <div class="card" style="width: 18rem;">
-            <img class="card-img-top" :src="..." alt="Card image cap">
+            <img class="card-img-top" :src="restaurant.logo" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">@{{restaurant.name}}</h5>
+              {{-- <p class="card-text">@{{restaurant.name}}</p> --}}
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>

@@ -11031,3 +11031,7 @@ ul {
   text-transform: capitalize;
 }
 
+#main-welcome .slider .slick-card img {
+  width: 100%;
+}
+
