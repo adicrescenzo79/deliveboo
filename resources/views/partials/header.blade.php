@@ -41,6 +41,11 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
+
+                            {{-- <a href="{{route('')}}">Area personale</a> --}}
+
+                            <a class="dropdown-item" href="{{route('admin.restaurants.index')}}">I tuoi ristoranti</a>
+
                         </div>
                     </li>
                 @endguest
