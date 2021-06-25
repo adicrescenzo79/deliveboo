@@ -11031,7 +11031,16 @@ ul {
   text-transform: capitalize;
 }
 
+#main-welcome .slider .slick-card {
+  height: 50px;
+  width: 100px;
+}
+
 #main-welcome .slider .slick-card img {
-  width: 100%;
+  width: 100px;
+}
+
+#main-welcome a {
+  display: block;
 }
 

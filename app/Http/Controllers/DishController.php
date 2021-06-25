@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 use App\Dish;
+use App\Restaurant;
+
 use Illuminate\Http\Request;
 
 class DishController extends Controller
 {
-  public function dishesByRestaurant($restaurant)
+  public function dishesByRestaurant(string $slug)
   {
     // dd($restaurant);
-    $dishes = Dish::where('restaurant_id', '=', $restaurant)->get();
+    $restaurant = Restaurant::where('slug', '=', $slug)->first();
+
+    $dishes = Dish::where('restaurant_id', '=', $restaurant->id)->get();
     // $dishes = Dish::all();
 
     return response()->json([
@@ -17,4 +21,6 @@ class DishController extends Controller
       'success' => true,
     ]);
   }
+
+
 }

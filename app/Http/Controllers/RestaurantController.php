@@ -29,4 +29,25 @@ class RestaurantController extends Controller
 
   }
 
+  public function restaurantBySlug(string $slug)
+  {
+    $restaurant = Restaurant::where('slug', '=', $slug)->first();
+
+    return response()->json([
+      'data' => $restaurant,
+      'success' => true,
+    ]);
+
+  }
+
+
+  public function menu(string $slug)
+  {
+    // $restaurant = Restaurant::where('slug', '=', $slug)->first();
+
+    return view('guests.restaurants.menu');
+
+  }
+
+
 }

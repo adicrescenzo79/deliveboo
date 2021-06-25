@@ -20,6 +20,9 @@ Route::get('/security', function () {
     return view('security');
 });
 
+Route::get('restaurants/{slug}', 'RestaurantController@menu')->name('restaurants.menu');
+
+
 
 Auth::routes();
 

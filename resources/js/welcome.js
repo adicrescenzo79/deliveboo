@@ -21,12 +21,6 @@ let app = new Vue({
       // console.log(response.data.data);
     });
 
-    axios.get(`http://localhost:8000/api/dishes/${this.restaurant}`,{
-    }).then((response)=>{
-      this.dishes = response.data.data;
-      // console.log(response.data.data);
-    });
-
     // Inizializzazione Slick
     $(document).ready(function(){
       $('.responsive').slick({
