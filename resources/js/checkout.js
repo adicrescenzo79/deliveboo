@@ -5,16 +5,21 @@ let app = new Vue({
     restaurant: {},
     currentUrl: window.location.href,
     dishes: [],
-    slug: '',
     cart: [],
+    // slug: localStorage.getItem('slug'),
+    // cart: localStorage.getItem('cart'),
   },
   created(){
+    // console.log(JSON.parse(localStorage.getItem('session')));
+    let actualCart = JSON.parse(localStorage.getItem('session'));
+    this.cart = actualCart;
+    localStorage.clear();
 
-    let stringSplitted = this.currentUrl.split('/');
+    // let stringSplitted = this.currentUrl.split('/');
     // console.log(stringSplitterd[4]);
-    this.slug = stringSplitted[4];
+    // this.slug = stringSplitted[4];
 
-    this.restaurantBySlug();
+    // this.restaurantBySlug();
 
     // axios.get('http://localhost:8000/api/categories',{
     // }).then((response)=>{
@@ -22,15 +27,15 @@ let app = new Vue({
     //   // console.log(response.data.data);
     // });
 
-    axios.get(`http://localhost:8000/api/dishes/${this.slug}`,{
-    }).then((response)=>{
-      let dishes = response.data.data;
-      dishes.forEach((item, i) => {
-      dishes[i].quantity = 0;
-      this.dishes.push(dishes[i])
-      });
-      // console.log(this.dishes);
-    });
+    // axios.get(`http://localhost:8000/api/dishes/${this.slug}`,{
+    // }).then((response)=>{
+    //   let dishes = response.data.data;
+    //   dishes.forEach((item, i) => {
+    //   dishes[i].quantity = 0;
+    //   this.dishes.push(dishes[i])
+    //   });
+    //   // console.log(this.dishes);
+    // });
 
   },
 
@@ -84,13 +89,7 @@ let app = new Vue({
       //     slug: this.slug
       //   }
       // });
-      localStorage.clear();
-      // this.cart.forEach((dish, i) => {
-      //   localStorage.setItem(`${cart[i]}`, dish);
-      // });
-      // localStorage.setItem('slug', this.slug);
-      //
-      localStorage.setItem('session', JSON.stringify(this.cart));
+
     }
   }
 

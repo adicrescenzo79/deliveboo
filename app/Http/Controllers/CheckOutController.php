@@ -6,14 +6,21 @@ use Illuminate\Http\Request;
 
 class CheckOutController extends Controller
 {
-    public function cart(Request $re)
+    public function cart(Request $request)
     {
-      return view('checkout');
+      $data = $request->all();
+
+
+      return response()->json([
+        'data' => $data,
+        'success' => true,
+      ]);
+
     }
 
-    public function checkOut()
+    public function checkout()
     {
-
+      return view('guests.checkout');
     }
 
 }

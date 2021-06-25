@@ -173,14 +173,21 @@ var app = new Vue({
     prova: function prova() {
       // let products = JSON.stringify(this.cart, this.slug);
       // axios.post(`http://localhost:8000/api/restaurants/`)
-      axios({
-        method: 'post',
-        url: 'http://localhost:8000/api/checkOut/',
-        data: {
-          cart: this.cart,
-          slug: this.slug
-        }
-      });
+      // axios({
+      //   method: 'post',
+      //   url: 'http://localhost:8000/api/checkout/',
+      //   data: {
+      //     cart: this.cart,
+      //     slug: this.slug
+      //   }
+      // });
+      localStorage.clear(); // this.cart.forEach((dish, i) => {
+      //   localStorage.setItem(`${cart[i]}`, dish);
+      // });
+      // localStorage.setItem('slug', this.slug);
+      //
+
+      localStorage.setItem('session', JSON.stringify(this.cart));
     }
   }
 });
@@ -194,7 +201,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\menu.js */"./resources/js/menu.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\menu.js */"./resources/js/menu.js");
 
 
 /***/ })

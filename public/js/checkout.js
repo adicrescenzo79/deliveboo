@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/welcome.js":
-/*!*********************************!*\
-  !*** ./resources/js/welcome.js ***!
-  \*********************************/
+/***/ "./resources/js/checkout.js":
+/*!**********************************!*\
+  !*** ./resources/js/checkout.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -107,99 +107,96 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 Vue.config.devtools = true;
 var app = new Vue({
-  el: '#main-welcome',
+  el: '#main_menu',
   data: {
-    restaurants: [],
-    skip: 0,
-    categories: [],
-    restaurant: 4,
+    restaurant: {},
+    currentUrl: window.location.href,
     dishes: [],
-    categoryIndex: '',
-    filteredRestaurants: [],
-    unfiltered: true
+    cart: [] // slug: localStorage.getItem('slug'),
+    // cart: localStorage.getItem('cart'),
+
   },
   created: function created() {
-    var _this = this;
-
-    this.allRestaurants();
-    axios.get('http://localhost:8000/api/categories', {}).then(function (response) {
-      _this.categories = response.data.data; // console.log(response.data.data);
-    }); // Inizializzazione Slick
-
-    $(document).ready(function () {
-      $('.responsive').slick({
-        variableWidth: true,
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [{
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        }, {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        }, {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        } // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-        ]
-      });
-    });
+    // console.log(JSON.parse(localStorage.getItem('session')));
+    var actualCart = JSON.parse(localStorage.getItem('session'));
+    this.cart = actualCart;
+    localStorage.clear(); // let stringSplitted = this.currentUrl.split('/');
+    // console.log(stringSplitterd[4]);
+    // this.slug = stringSplitted[4];
+    // this.restaurantBySlug();
+    // axios.get('http://localhost:8000/api/categories',{
+    // }).then((response)=>{
+    //   this.categories = response.data.data;
+    //   // console.log(response.data.data);
+    // });
+    // axios.get(`http://localhost:8000/api/dishes/${this.slug}`,{
+    // }).then((response)=>{
+    //   let dishes = response.data.data;
+    //   dishes.forEach((item, i) => {
+    //   dishes[i].quantity = 0;
+    //   this.dishes.push(dishes[i])
+    //   });
+    //   // console.log(this.dishes);
+    // });
   },
   methods: {
     //al click vediamo tutti i ristoranti della categoria selezionata
-    restaurantByCategory: function restaurantByCategory(category) {
-      var _this2 = this;
+    restaurantBySlug: function restaurantBySlug() {
+      var _this = this;
 
-      this.restaurants = [];
-      this.skip = 0;
-      this.unfiltered = false;
-      this.categoryIndex = category;
-      axios.get("http://localhost:8000/api/restaurants/".concat(this.categoryIndex), {}).then(function (response) {
-        _this2.filteredRestaurants = [].concat(_toConsumableArray(_this2.filteredRestaurants), _toConsumableArray(response.data.data)); // console.log(response.data.data);
+      axios.get("http://localhost:8000/api/restaurants/slug/".concat(this.slug), {}).then(function (response) {
+        _this.restaurant = response.data.data; // console.log(response.data.data);
       });
     },
     //al click vediamo tutti i ristoranti
     allRestaurants: function allRestaurants() {
-      var _this3 = this;
+      var _this2 = this;
 
       this.filteredRestaurants = [];
       this.unfiltered = true;
       this.categoryIndex = '';
       axios.get("http://localhost:8000/api/restaurants/nr/".concat(this.skip), {}).then(function (response) {
         // this.restaurants.push(response.data.data);
-        _this3.restaurants = [].concat(_toConsumableArray(_this3.restaurants), _toConsumableArray(response.data.data)); //console.log(this.restaurants);
+        _this2.restaurants = [].concat(_toConsumableArray(_this2.restaurants), _toConsumableArray(response.data.data)); //console.log(this.restaurants);
       });
       this.skip += 8;
+    },
+    //Aggiunta al carrello
+    addCart: function addCart(dish) {
+      var cartDish = dish;
+
+      if (!this.cart.includes(cartDish)) {
+        //Pusho il contenuto nell'array
+        this.cart.push(cartDish); // console.log(this.cart);
+      } //Aumento la quantità del piatto
+
+
+      this.cart[this.cart.indexOf(cartDish)].quantity += 1;
+    },
+    prova: function prova() {// let products = JSON.stringify(this.cart, this.slug);
+      // axios.post(`http://localhost:8000/api/restaurants/`)
+      // axios({
+      //   method: 'post',
+      //   url: 'http://localhost:8000/api/checkout/',
+      //   data: {
+      //     cart: this.cart,
+      //     slug: this.slug
+      //   }
+      // });
     }
   }
 });
 
 /***/ }),
 
-/***/ 1:
-/*!***************************************!*\
-  !*** multi ./resources/js/welcome.js ***!
-  \***************************************/
+/***/ 3:
+/*!****************************************!*\
+  !*** multi ./resources/js/checkout.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\checkout.js */"./resources/js/checkout.js");
 
 
 /***/ })
