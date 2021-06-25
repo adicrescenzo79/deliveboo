@@ -6,6 +6,7 @@ let app = new Vue({
     currentUrl: window.location.href,
     dishes: [],
     slug: '',
+    cart: [],
   },
   created(){
 
@@ -23,8 +24,12 @@ let app = new Vue({
 
     axios.get(`http://localhost:8000/api/dishes/${this.slug}`,{
     }).then((response)=>{
-      this.dishes = response.data.data;
-      console.log(response.data.data);
+      let dishes = response.data.data;
+      dishes.forEach((item, i) => {
+      dishes[i].quantity = 0;
+      this.dishes.push(dishes[i])
+      });
+      // console.log(this.dishes);
     });
 
   },
@@ -35,7 +40,7 @@ let app = new Vue({
       axios.get(`http://localhost:8000/api/restaurants/slug/${this.slug}`,{
       }).then((response)=>{
         this.restaurant = response.data.data;
-        console.log(response.data.data);
+        // console.log(response.data.data);
       });
 
     },
@@ -51,6 +56,21 @@ let app = new Vue({
         //console.log(this.restaurants);
       });
       this.skip += 8;
+    },
+
+    //Aggiunta al carrello
+    addCart: function(dish) {
+      let cartDish = dish;
+
+      if (!this.cart.includes(cartDish)) {
+        //Pusho il contenuto nell'array
+        this.cart.push(cartDish);
+        // console.log(this.cart);
+      }
+
+      //Aumento la quantità del piatto
+      this.cart[this.cart.indexOf(cartDish)].quantity += 1;
+
     }
   }
 
