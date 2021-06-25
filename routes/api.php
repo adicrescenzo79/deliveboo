@@ -22,4 +22,5 @@ Route::get('/restaurants', 'RestaurantController@index');
 Route::get('/restaurants/nr/{skip}', 'RestaurantController@restaurantsNr');
 Route::get('/restaurants/{categoryIndex}', 'RestaurantController@restaurantByCategory');
 Route::get('/categories', 'CategoryController@index');
-Route::get('/dishes/{restaurant}', 'DishController@dishesByRestaurant');
+Route::get('/dishes/{slug}', 'DishController@dishesByRestaurant');
+Route::get('/restaurants/slug/{slug}', 'RestaurantController@restaurantBySlug');

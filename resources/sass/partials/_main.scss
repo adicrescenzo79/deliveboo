@@ -1,11 +1,14 @@
 #main-welcome {
-    .slider {
-        .slick-card {
-          // height: 100px;
-          // width: calc(100% / 4 - 15px);
-          img{
-            width: 100%;
-          }
-        }
+  .slider {
+    .slick-card {
+      height: 50px;
+      width: 100px;
+      img{
+        width: 100px;
+      }
     }
+  }
+  a{
+    display: block;
+  }
 }
