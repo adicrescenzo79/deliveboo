@@ -6,6 +6,7 @@ let app = new Vue({
     currentUrl: window.location.href,
     dishes: [],
     slug: '',
+    cart: [],
   },
   created(){
 
@@ -24,7 +25,7 @@ let app = new Vue({
     axios.get(`http://localhost:8000/api/dishes/${this.slug}`,{
     }).then((response)=>{
       this.dishes = response.data.data;
-      console.log(response.data.data);
+      // console.log(response.data.data, this.dishes);
     });
 
   },
@@ -35,7 +36,7 @@ let app = new Vue({
       axios.get(`http://localhost:8000/api/restaurants/slug/${this.slug}`,{
       }).then((response)=>{
         this.restaurant = response.data.data;
-        console.log(response.data.data);
+        // console.log(response.data.data);
       });
 
     },
@@ -51,6 +52,13 @@ let app = new Vue({
         //console.log(this.restaurants);
       });
       this.skip += 8;
+    },
+
+    //Aggiunta al carrello
+    addCart: function(dish) {
+      let cartDish = dish;
+      this.cart.push(cartDish);
+      console.log(this.cart);
     }
   }
 

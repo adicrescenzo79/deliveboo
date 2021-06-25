@@ -112,7 +112,8 @@ var app = new Vue({
     restaurant: {},
     currentUrl: window.location.href,
     dishes: [],
-    slug: ''
+    slug: '',
+    cart: []
   },
   created: function created() {
     var _this = this;
@@ -127,8 +128,7 @@ var app = new Vue({
     // });
 
     axios.get("http://localhost:8000/api/dishes/".concat(this.slug), {}).then(function (response) {
-      _this.dishes = response.data.data;
-      console.log(response.data.data);
+      _this.dishes = response.data.data; // console.log(response.data.data, this.dishes);
     });
   },
   methods: {
@@ -137,8 +137,7 @@ var app = new Vue({
       var _this2 = this;
 
       axios.get("http://localhost:8000/api/restaurants/slug/".concat(this.slug), {}).then(function (response) {
-        _this2.restaurant = response.data.data;
-        console.log(response.data.data);
+        _this2.restaurant = response.data.data; // console.log(response.data.data);
       });
     },
     //al click vediamo tutti i ristoranti
@@ -153,6 +152,12 @@ var app = new Vue({
         _this3.restaurants = [].concat(_toConsumableArray(_this3.restaurants), _toConsumableArray(response.data.data)); //console.log(this.restaurants);
       });
       this.skip += 8;
+    },
+    //Aggiunta al carrello
+    addCart: function addCart(dish) {
+      var cartDish = dish;
+      this.cart.push(cartDish);
+      console.log(this.cart);
     }
   }
 });
@@ -166,7 +171,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\menu.js */"./resources/js/menu.js");
+module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/menu.js */"./resources/js/menu.js");
 
 
 /***/ })
