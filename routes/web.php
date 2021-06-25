@@ -21,7 +21,7 @@ Route::get('/security', function () {
 });
 
 Route::get('restaurants/{slug}', 'RestaurantController@menu')->name('restaurants.menu');
-
+Route::get('checkOut, checkOutController@checkOut')->name('checkout');
 
 
 Auth::routes();

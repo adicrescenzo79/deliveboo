@@ -31,6 +31,7 @@
             </ul>
           </div>
         </div>
+        <button @click="prova" href="{{route('checkOut')}}" type="button" name="button">PROVA</button>
       </div>
     </section>
 

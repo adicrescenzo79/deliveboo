@@ -24,3 +24,4 @@ Route::get('/restaurants/{categoryIndex}', 'RestaurantController@restaurantByCat
 Route::get('/categories', 'CategoryController@index');
 Route::get('/dishes/{slug}', 'DishController@dishesByRestaurant');
 Route::get('/restaurants/slug/{slug}', 'RestaurantController@restaurantBySlug');
+Route::post('/checkOut', 'checkOutController@cart');
