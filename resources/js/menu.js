@@ -71,6 +71,20 @@ let app = new Vue({
       //Aumento la quantità del piatto
       this.cart[this.cart.indexOf(cartDish)].quantity += 1;
 
+    },
+
+    prova: function() {
+      // let products = JSON.stringify(this.cart, this.slug);
+      // axios.post(`http://localhost:8000/api/restaurants/`)
+      axios({
+        method: 'post',
+        url: 'http://localhost:8000/api/checkOut/',
+        data: {
+          cart: this.cart,
+          slug: this.slug
+        }
+      });
+
     }
   }
 
