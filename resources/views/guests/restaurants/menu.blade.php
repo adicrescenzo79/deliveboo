@@ -31,7 +31,7 @@
             </ul>
           </div>
         </div>
-        <button @click="prova" href="{{route('checkOut')}}" type="button" name="button">PROVA</button>
+        <a class="btn btn-primary" @click="prova" href="{{route('checkout')}}" type="button" name="button">PROVA</a>
       </div>
     </section>
 
