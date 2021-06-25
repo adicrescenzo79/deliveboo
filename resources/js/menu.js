@@ -24,8 +24,12 @@ let app = new Vue({
 
     axios.get(`http://localhost:8000/api/dishes/${this.slug}`,{
     }).then((response)=>{
-      this.dishes = response.data.data;
-      // console.log(response.data.data, this.dishes);
+      let dishes = response.data.data;
+      dishes.forEach((item, i) => {
+      dishes[i].quantity = 0;
+      this.dishes.push(dishes[i])
+      });
+      // console.log(this.dishes);
     });
 
   },
@@ -57,8 +61,16 @@ let app = new Vue({
     //Aggiunta al carrello
     addCart: function(dish) {
       let cartDish = dish;
-      this.cart.push(cartDish);
-      console.log(this.cart);
+
+      if (!this.cart.includes(cartDish)) {
+        //Pusho il contenuto nell'array
+        this.cart.push(cartDish);
+        // console.log(this.cart);
+      }
+
+      //Aumento la quantità del piatto
+      this.cart[this.cart.indexOf(cartDish)].quantity += 1;
+
     }
   }
 

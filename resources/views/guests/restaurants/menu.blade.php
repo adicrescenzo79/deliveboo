@@ -19,6 +19,20 @@
         </div>
       </div>
     </section>
+    <section id="cart">
+      <div class="container">
+        <div class="row">
+          <div class="content-cart">
+            <ul>
+              <li v-for="dish in cart">@{{dish.name}}
+                <span>@{{dish.quantity}}</span>
+                <span>@{{dish.price}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </div>
 @endsection

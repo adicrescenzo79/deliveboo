@@ -128,7 +128,12 @@ var app = new Vue({
     // });
 
     axios.get("http://localhost:8000/api/dishes/".concat(this.slug), {}).then(function (response) {
-      _this.dishes = response.data.data; // console.log(response.data.data, this.dishes);
+      var dishes = response.data.data;
+      dishes.forEach(function (item, i) {
+        dishes[i].quantity = 0;
+
+        _this.dishes.push(dishes[i]);
+      }); // console.log(this.dishes);
     });
   },
   methods: {
@@ -156,8 +161,14 @@ var app = new Vue({
     //Aggiunta al carrello
     addCart: function addCart(dish) {
       var cartDish = dish;
-      this.cart.push(cartDish);
-      console.log(this.cart);
+
+      if (!this.cart.includes(cartDish)) {
+        //Pusho il contenuto nell'array
+        this.cart.push(cartDish); // console.log(this.cart);
+      } //Aumento la quantità del piatto
+
+
+      this.cart[this.cart.indexOf(cartDish)].quantity += 1;
     }
   }
 });
