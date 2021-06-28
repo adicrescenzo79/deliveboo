@@ -8,8 +8,8 @@ let app = new Vue({
     restaurant: 4,
     dishes: [],
     categoryIndex: '',
-    filteredRestaurants: [],
-    unfiltered: true,
+    categorySelected: [],
+    more: true,
   },
   created(){
 
@@ -21,45 +21,6 @@ let app = new Vue({
       // console.log(response.data.data);
     });
 
-    // Inizializzazione Slick
-    $(document).ready(function(){
-      $('.responsive').slick({
-        variableWidth: true,
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-        ]
-      });
-    });
 
   },
 
@@ -67,21 +28,50 @@ let app = new Vue({
     //al click vediamo tutti i ristoranti della categoria selezionata
     restaurantByCategory: function(category){
       this.restaurants = [];
-      this.skip = 0;
-      this.unfiltered = false;
-      this.categoryIndex = category;
-      axios.get(`http://localhost:8000/api/restaurants/${this.categoryIndex}`,{
-      }).then((response)=>{
-        this.filteredRestaurants = [...this.filteredRestaurants, ...response.data.data];
-        // console.log(response.data.data);
-      });
+      this.more = false;
+      // let cat_obj = {cat: category}
+      if (this.categorySelected.includes(category)) {
+        this.categorySelected.splice(this.categorySelected.indexOf(category), 1);
+      } else {
+        this.categorySelected.push(category);
+      }
 
+      let categorySelectedJson = JSON.stringify(this.categorySelected);
+
+      // console.log(categorySelectedJson);
+
+      axios.get(`http://localhost:8000/api/restaurants/${categorySelectedJson}`,{
+      }).then((response)=>{
+        // console.log(response.data.data);
+        let categoryResponse = response.data.data;
+
+        categoryResponse.forEach((item, i) => {
+          item.restaurants.forEach((restaurant, j) => {
+            this.restaurants.push(restaurant);
+            // console.log(restaurant);
+          });
+        });
+
+      });
     },
     //al click vediamo tutti i ristoranti
     allRestaurants: function() {
-      this.filteredRestaurants = [];
-      this.unfiltered = true;
-      this.categoryIndex = '';
+      this.categorySelected = [];
+      this.restaurants = [];
+      this.skip = 0;
+      this.more = true;
+      axios.get(`http://localhost:8000/api/restaurants/nr/${this.skip}`,{
+      }).then((response)=>{
+        // this.restaurants.push(response.data.data);
+        this.restaurants = [...this.restaurants, ...response.data.data];
+        //console.log(this.restaurants);
+      });
+      this.skip += 8;
+    },
+
+    //al click carichiamo altri ristoranti
+    allRestaurantsPlus: function() {
+      this.more = true;
       axios.get(`http://localhost:8000/api/restaurants/nr/${this.skip}`,{
       }).then((response)=>{
         // this.restaurants.push(response.data.data);
