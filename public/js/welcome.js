@@ -123,7 +123,7 @@ var app = new Vue({
 
     this.allRestaurants();
     axios.get('http://localhost:8000/api/categories', {}).then(function (response) {
-      _this.categories = response.data.data; // console.log(response.data.data);
+      _this.categories = response.data.data;
     });
   },
   methods: {
