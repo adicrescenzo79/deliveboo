@@ -10948,71 +10948,6 @@ a.text-dark:focus {
   box-sizing: border-box;
 }
 
-.container {
-  width: 85%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.row {
-  margin: 0 -15px;
-}
-
-[class*=col-] {
-  float: left;
-  padding: 0 15px;
-}
-
-.float-right {
-  float: right;
-  padding: 0 15px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media all and (max-width: 1199px) {
-  .container {
-    max-width: 970px;
-  }
-}
-
-@media all and (max-width: 991px) {
-  .container {
-    width: 95%;
-  }
-}
-
-@media all and (max-width: 767px) {
-  .container {
-    max-width: 90%;
-  }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
 .flex {
   display: flex;
 }
@@ -11031,6 +10966,40 @@ ul {
   text-transform: capitalize;
 }
 
+nav {
+  height: 100px;
+}
+
+nav .container .navbar-brand img {
+  width: 160px;
+}
+
+nav .container ul li {
+  margin-left: 20px;
+}
+
+nav .container ul li a.my-btn {
+  font-size: 13px;
+  color: #fff;
+  background: #000;
+  padding: 18px 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.2s;
+}
+
+nav .container ul li a.my-btn:hover {
+  text-decoration: none;
+  background-color: #1DC959;
+}
+
+main {
+  margin-top: 100px;
+}
+
 #main-welcome .slider .slick-card {
   height: 50px;
   width: 100px;
@@ -11042,5 +11011,37 @@ ul {
 
 #main-welcome a {
   display: block;
+}
+
+footer {
+  margin-top: 150px;
+  height: 400px;
+  width: 100%;
+  background-color: #000;
+}
+
+footer .container-footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer .container-footer ul.social-icon li {
+  display: inline-block;
+}
+
+footer .container-footer ul.social-icon li i {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0 10px;
+}
+
+footer .container-footer ul.social-icon li i:hover {
+  opacity: 0.7;
 }
 

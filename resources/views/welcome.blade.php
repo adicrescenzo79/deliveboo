@@ -2,7 +2,6 @@
 
 @section('content')
   <div id="main-welcome">
-    ciao
     <section id="jumbo">
       <div class="container-fluid">
         <div class="row justify-content-center">

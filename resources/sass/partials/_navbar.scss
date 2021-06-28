@@ -1,0 +1,33 @@
+nav {
+  height: 100px;
+  .container {
+    .navbar-brand {
+      img {
+        width: 160px;
+      }
+    }
+    ul {
+      li {
+        margin-left: 20px;
+        a {
+          &.my-btn {
+            font-size: 13px;
+            color: #fff;
+            background: #000;
+            padding: 18px 45px;
+            text-transform: uppercase;
+            // border-radius: 5px;
+            cursor: pointer;
+            width: fit-content;
+            transition: 0.2s;
+            &:hover {
+              text-decoration: none;
+              //opacity: 0.8;
+              background-color: #1DC959;
+            }
+          }
+        }
+      }
+    }
+  }
+}
