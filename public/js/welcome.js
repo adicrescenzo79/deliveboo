@@ -115,8 +115,7 @@ var app = new Vue({
     restaurant: 4,
     dishes: [],
     categoryIndex: '',
-    filteredRestaurants: [],
-    unfiltered: true
+    categorySelected: []
   },
   created: function created() {
     var _this = this;
@@ -124,41 +123,6 @@ var app = new Vue({
     this.allRestaurants();
     axios.get('http://localhost:8000/api/categories', {}).then(function (response) {
       _this.categories = response.data.data; // console.log(response.data.data);
-    }); // Inizializzazione Slick
-
-    $(document).ready(function () {
-      $('.responsive').slick({
-        variableWidth: true,
-        dots: true,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [{
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        }, {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        }, {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        } // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-        ]
-      });
     });
   },
   methods: {
@@ -167,19 +131,23 @@ var app = new Vue({
       var _this2 = this;
 
       this.restaurants = [];
-      this.skip = 0;
-      this.unfiltered = false;
-      this.categoryIndex = category;
-      axios.get("http://localhost:8000/api/restaurants/".concat(this.categoryIndex), {}).then(function (response) {
-        _this2.filteredRestaurants = [].concat(_toConsumableArray(_this2.filteredRestaurants), _toConsumableArray(response.data.data)); // console.log(response.data.data);
+
+      if (this.categorySelected.includes(category)) {
+        this.categorySelected.splice(this.categorySelected.indexOf(category), 1);
+      } else {
+        this.categorySelected.push(category);
+      }
+
+      var categorySelectedJson = JSON.stringify(this.categorySelected);
+      console.log(categorySelectedJson);
+      axios.get("http://localhost:8000/api/restaurants/".concat(categorySelectedJson), {}).then(function (response) {
+        _this2.restaurants = [].concat(_toConsumableArray(_this2.restaurants), _toConsumableArray(response.data.data)); // console.log(response.data.data);
       });
     },
     //al click vediamo tutti i ristoranti
     allRestaurants: function allRestaurants() {
       var _this3 = this;
 
-      this.filteredRestaurants = [];
-      this.unfiltered = true;
       this.categoryIndex = '';
       axios.get("http://localhost:8000/api/restaurants/nr/".concat(this.skip), {}).then(function (response) {
         // this.restaurants.push(response.data.data);
@@ -199,7 +167,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })
