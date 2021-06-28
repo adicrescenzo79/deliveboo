@@ -59,10 +59,10 @@
           </div>
 
 
-          <div class="container">
+          <div class="container" v-if="more">
             <div class="row justify-content-center">
               <div class="col-md-8">
-                <button @click="allRestaurants" class="btn btn-primary" type="button" name="button">Carica altri ristoranti</button>
+                <button @click="allRestaurantsPlus" class="btn btn-primary" type="button" name="button">Carica altri ristoranti</button>
               </div>
             </div>
           </div>

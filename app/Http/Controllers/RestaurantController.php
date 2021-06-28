@@ -21,16 +21,20 @@ class RestaurantController extends Controller
   public function restaurantByCategory($categorySelectedJson)
   {
 
-    $categories = array();
+    $categories = [];
     $categorySelected = json_decode($categorySelectedJson, true);
 
-    foreach ($categorySelected as $key => $value) {
-      $category = Category::with('restaurants')->where('id', '=', $value)->first();
-      array_push($categories, $category);
-    }
+      // foreach ($categorySelected as $key => $value) {
+        $category = Category::whereIn('id', $categorySelected)->with('restaurants')->get();
+        // $categories = [...$category];
+        // array_push($categories, $category);
+        // $myArray[] = (object) ['name' => 'My name'];
+
+      // }
+
 
     return response()->json([
-      'data' => $categories->restaurants,
+      'data' => $category,
       'success' => true,
     ]);
 
