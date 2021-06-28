@@ -18,7 +18,6 @@ let app = new Vue({
     axios.get('http://localhost:8000/api/categories',{
     }).then((response)=>{
       this.categories = response.data.data;
-      // console.log(response.data.data);
     });
 
 

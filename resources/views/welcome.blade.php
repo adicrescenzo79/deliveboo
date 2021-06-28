@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-  <div id="main-welcome">
+<div id="main-welcome">
     ciao
     <section id="jumbo">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-md-12">
-            <div class="content-jumbo">
-              <img src="" alt="">
-              <h1>Immagine per il jumbo</h1>
-              {{-- <input type="text" name="" value=""> --}}
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="content-jumbo">
+                        <img src="" alt="">
+                        <h1>Immagine per il jumbo</h1>
+                        {{-- <input type="text" name="" value=""> --}}
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     {{-- slider --}}
@@ -58,6 +58,11 @@
             </div>
           </div>
 
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a :href="'/restaurants/'+restaurant.slug" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
 
           <div class="container" v-if="more">
             <div class="row justify-content-center">
@@ -65,9 +70,7 @@
                 <button @click="allRestaurantsPlus" class="btn btn-primary" type="button" name="button">Carica altri ristoranti</button>
               </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     {{-- <section id="restaurants" v-else>
@@ -97,10 +100,10 @@
 
 
 
-  </div>{{-- chiusura Vue --}}
+</div>{{-- chiusura Vue --}}
 
 @endsection
 
 @section('foot-script')
-  <script src="{{asset('js/welcome.js')}}" charset="utf-8"></script>
+<script src="{{asset('js/welcome.js')}}" charset="utf-8"></script>
 @endsection
