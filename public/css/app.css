@@ -10971,7 +10971,7 @@ nav {
 }
 
 nav .container .navbar-brand img {
-  width: 180px;
+  width: 160px;
 }
 
 nav .container ul li {
@@ -10988,13 +10988,12 @@ nav .container ul li a.my-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 nav .container ul li a.my-btn:hover {
   text-decoration: none;
-  background-color: #00C444;
-  color: #000;
+  opacity: 0.8;
 }
 
 #main-welcome .slider .slick-card {
