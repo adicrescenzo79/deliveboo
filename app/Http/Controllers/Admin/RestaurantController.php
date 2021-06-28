@@ -46,7 +46,7 @@ class RestaurantController extends Controller
     {
       $request->validate([
         'name' => 'required|string|max:50',
-        'telephone' => 'numeric|digits_between:8,14',
+        'telephone' => 'numeric|digits_between:7,14',
         'address' => 'required|string|max:100',
         'p_iva' => 'required|numeric|digits:11',
         'logo' => 'image|max:5000|nullable',
@@ -126,7 +126,7 @@ class RestaurantController extends Controller
     {
       $request->validate([
         'name' => 'required|string|max:50',
-        'telephone' => 'numeric|digits_between:8,14',
+        'telephone' => 'numeric|digits_between:7,14',
         'address' => 'required|string|max:100',
         'p_iva' => 'required|numeric|digits:11',
         'logo' => 'image|max:5000|nullable',
