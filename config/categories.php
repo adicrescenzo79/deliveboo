@@ -27,7 +27,7 @@ return $categories = [
   ],
   [
     "name" => "Indiano",
-    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/pizza.png",
+    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/indian.png",
   ],
   [
     "name" => "Asiatico",
