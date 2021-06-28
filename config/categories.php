@@ -3,32 +3,37 @@
 return $categories = [
   [
     "name" => "Italiano",
-    "icon" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,h_180,q_auto,w_290/v1/it/cuisine-icons/italiano",
+    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/italian.png",
   ],
   [
     "name" => "Pizza",
-    "icon" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,h_180,q_auto,w_290/v1/it/cuisine-icons/pizza",
+    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/pizza.png",
   ],
   [
     "name" => "Cinese",
-    "icon" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,h_180,q_auto,w_290/v1/it/cuisine-icons/cinese",
+    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/chinese.png",
   ],
   [
     "name" => "Giapponese",
-    "icon" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,h_180,q_auto,w_290/v1/it/cuisine-icons/sushi",
+    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/sushi.png",
   ],
   [
     "name" => "Fast Food",
-    "icon" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,h_180,q_auto,w_290/v1/it/cuisine-icons/hamburger",
+    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/fastfood.png",
   ],
   [
     "name" => "Messicano",
-    "icon" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,h_180,q_auto,w_290/v1/it/cuisine-icons/messicano",
+    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/mexican.png",
   ],
   [
     "name" => "Indiano",
-    "icon" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,h_180,q_auto,w_290/v1/it/cuisine-icons/indiano",
+    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/pizza.png",
   ],
+  [
+    "name" => "Asiatico",
+    "icon" => "https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/asian.png",
+  ],
+
 
 ];
 

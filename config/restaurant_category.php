@@ -120,4 +120,56 @@ return $restaurant_category = [
     "restaurant_id" => 28,
     "category_id" => 7,
   ],
+  //asiatici
+  [
+    "restaurant_id" => 17,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 18,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 19,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 20,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 5,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 6,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 7,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 8,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 25,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 26,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 27,
+    "category_id" => 8,
+  ],
+  [
+    "restaurant_id" => 28,
+    "category_id" => 8,
+  ],
+
+
+
 ];
