@@ -24,14 +24,18 @@
         <div class="row">
           <div class="content-cart">
             <ul>
-              <li v-for="dish in cart">@{{dish.name}}
+              <li v-for="dish in cart" v-if="dish.restaurantSlug == slug">
+                <span><i class="fas fa-minus" @click="minusCart(dish)"></i></span>
+                @{{dish.name}}
                 <span>@{{dish.quantity}}</span>
                 <span>@{{dish.price}}</span>
+
+                <span><i class="fas fa-plus" @click="addCart(dish)"></i></span>
               </li>
             </ul>
           </div>
         </div>
-        <a class="btn btn-primary" @click="prova" href="{{route('checkout')}}" type="button" name="button">PROVA</a>
+        <a class="btn btn-primary" @click="completeOrder" href="{{route('checkout')}}" v-if="completeButton" type="button" name="button">Completa ordine</a>
       </div>
     </section>
 

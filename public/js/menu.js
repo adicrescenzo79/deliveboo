@@ -113,7 +113,9 @@ var app = new Vue({
     currentUrl: window.location.href,
     dishes: [],
     slug: '',
-    cart: []
+    cart: [],
+    actualCart: [],
+    completeButton: false
   },
   created: function created() {
     var _this = this;
@@ -121,20 +123,25 @@ var app = new Vue({
     var stringSplitted = this.currentUrl.split('/'); // console.log(stringSplitterd[4]);
 
     this.slug = stringSplitted[4];
-    this.restaurantBySlug(); // axios.get('http://localhost:8000/api/categories',{
-    // }).then((response)=>{
-    //   this.categories = response.data.data;
-    //   // console.log(response.data.data);
-    // });
-
+    this.restaurantBySlug();
     axios.get("http://localhost:8000/api/dishes/".concat(this.slug), {}).then(function (response) {
       var dishes = response.data.data;
       dishes.forEach(function (item, i) {
         dishes[i].quantity = 0;
+        dishes[i].restaurantSlug = _this.slug;
 
         _this.dishes.push(dishes[i]);
       }); // console.log(this.dishes);
     });
+
+    if (sessionStorage.length != 0) {
+      this.cart = JSON.parse(sessionStorage.getItem('session'));
+      this.cart.forEach(function (dish, i) {
+        if (dish.restaurantSlug == _this.slug) {
+          _this.completeButton = true;
+        }
+      });
+    }
   },
   methods: {
     //al click vediamo tutti i ristoranti della categoria selezionata
@@ -160,6 +167,8 @@ var app = new Vue({
     },
     //Aggiunta al carrello
     addCart: function addCart(dish) {
+      var _this4 = this;
+
       var cartDish = dish;
 
       if (!this.cart.includes(cartDish)) {
@@ -168,10 +177,32 @@ var app = new Vue({
       } //Aumento la quantità del piatto
 
 
-      this.cart[this.cart.indexOf(cartDish)].quantity += 1;
+      this.cart[this.cart.indexOf(cartDish)].quantity += 1; //Controllo per attivazione bottone
+
+      this.cart.forEach(function (dish, i) {
+        if (dish.restaurantSlug == _this4.slug) {
+          _this4.completeButton = true;
+        }
+      }); //Aggiorna local Storage
+
+      sessionStorage.setItem('session', JSON.stringify(this.cart)); // console.log(sessionStorage);
     },
-    prova: function prova() {
-      // let products = JSON.stringify(this.cart, this.slug);
+    //Togliere dal carrello
+    minusCart: function minusCart(dish) {
+      var cartDish = dish; // console.log(this.cart);
+      //Diminuisco la quantità del piatto
+
+      this.cart[this.cart.indexOf(cartDish)].quantity -= 1;
+
+      if (cartDish.quantity == 0) {
+        this.cart.splice(this.cart.indexOf(cartDish), 1);
+      } //Aggiorna local Storage
+
+
+      sessionStorage.setItem('session', JSON.stringify(this.cart)); // console.log(sessionStorage);
+    },
+    completeOrder: function completeOrder() {
+      sessionStorage.setItem('slug', this.slug); // let products = JSON.stringify(this.cart, this.slug);
       // axios.post(`http://localhost:8000/api/restaurants/`)
       // axios({
       //   method: 'post',
@@ -181,13 +212,13 @@ var app = new Vue({
       //     slug: this.slug
       //   }
       // });
-      localStorage.clear(); // this.cart.forEach((dish, i) => {
-      //   localStorage.setItem(`${cart[i]}`, dish);
+      // sessionStorage.clear();
+      // this.cart.forEach((dish, i) => {
+      //   sessionStorage.setItem(`${cart[i]}`, dish);
       // });
-      // localStorage.setItem('slug', this.slug);
+      // sessionStorage.setItem('slug', this.slug);
       //
-
-      localStorage.setItem('session', JSON.stringify(this.cart));
+      // sessionStorage.setItem('session', JSON.stringify(this.cart));
     }
   }
 });
@@ -201,7 +232,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\menu.js */"./resources/js/menu.js");
+module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/menu.js */"./resources/js/menu.js");
 
 
 /***/ })

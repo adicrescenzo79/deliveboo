@@ -123,7 +123,7 @@ var app = new Vue({
 
     this.allRestaurants();
     axios.get('http://localhost:8000/api/categories', {}).then(function (response) {
-      _this.categories = response.data.data; // console.log(response.data.data);
+      _this.categories = response.data.data;
     });
   },
   methods: {
@@ -190,7 +190,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })
