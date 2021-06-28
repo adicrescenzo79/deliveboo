@@ -1,0 +1,34 @@
+nav {
+  height: 100px;
+  .container {
+    .navbar-brand {
+      img {
+        width: 180px;
+      }
+    }
+    ul {
+      li {
+        margin-left: 20px;
+        a {
+          &.my-btn {
+            font-size: 13px;
+            color: #fff;
+            background: #000;
+            padding: 18px 45px;
+            text-transform: uppercase;
+            // border-radius: 25px;
+            cursor: pointer;
+            width: fit-content;
+            transition: 0.3s;
+            &:hover {
+              // background: linear-gradient(271deg,#0c0c0c 0%,#474747 100%);
+              text-decoration: none;
+              background-color: #00C444;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

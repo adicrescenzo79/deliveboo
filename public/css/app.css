@@ -10948,71 +10948,6 @@ a.text-dark:focus {
   box-sizing: border-box;
 }
 
-.container {
-  width: 85%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.row {
-  margin: 0 -15px;
-}
-
-[class*=col-] {
-  float: left;
-  padding: 0 15px;
-}
-
-.float-right {
-  float: right;
-  padding: 0 15px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media all and (max-width: 1199px) {
-  .container {
-    max-width: 970px;
-  }
-}
-
-@media all and (max-width: 991px) {
-  .container {
-    width: 95%;
-  }
-}
-
-@media all and (max-width: 767px) {
-  .container {
-    max-width: 90%;
-  }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
 .flex {
   display: flex;
 }
@@ -11029,6 +10964,37 @@ ul {
 
 .txt-capitalize {
   text-transform: capitalize;
+}
+
+nav {
+  height: 100px;
+}
+
+nav .container .navbar-brand img {
+  width: 180px;
+}
+
+nav .container ul li {
+  margin-left: 20px;
+}
+
+nav .container ul li a.my-btn {
+  font-size: 13px;
+  color: #fff;
+  background: #000;
+  padding: 18px 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+nav .container ul li a.my-btn:hover {
+  text-decoration: none;
+  background-color: #00C444;
+  color: #000;
 }
 
 #main-welcome .slider .slick-card {
