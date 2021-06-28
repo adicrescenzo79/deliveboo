@@ -22,22 +22,19 @@ main {
   margin: 20px 0;
   .container {
     .row {
-      .categories {
-        .content-category {
+      .content-category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon-category {
+          width: calc(100%/9);
           display: flex;
-          justify-content: center;
+          flex-direction: column;
           align-items: center;
-          .icon-category {
-            width: calc(100%/9);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            img {
-              width: 55%;
-            }
-            span {
-
-            }
+          img {
+            width: 55%;
+          }
+          span {
           }
         }
       }
@@ -51,7 +48,7 @@ main {
     .row {
       .restaurants {
         .content-restaurants {
-          
+
         }
       }
     }

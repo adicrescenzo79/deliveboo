@@ -7,6 +7,7 @@ let app = new Vue({
     dishes: [],
     slug: '',
     cart: [],
+    actualCart: [],
   },
   created(){
 
@@ -27,11 +28,20 @@ let app = new Vue({
       let dishes = response.data.data;
       dishes.forEach((item, i) => {
       dishes[i].quantity = 0;
+      dishes[i].restaurantSlug = this.slug;
       this.dishes.push(dishes[i])
       });
       // console.log(this.dishes);
     });
 
+    if (sessionStorage.length != 0) {
+      this.cart = JSON.parse(sessionStorage.getItem('session'));
+    }
+    
+    // this.cart = this.actualCart.filter(obj => obj.restaurantSlug == this.slug);
+    // this.actualCart = this.actualCart.filter(obj => obj.restaurantSlug != this.slug);
+    // // console.log(this.cart);
+    // console.log(sessionStorage);
   },
 
   methods: {
@@ -71,6 +81,10 @@ let app = new Vue({
       //Aumento la quantità del piatto
       this.cart[this.cart.indexOf(cartDish)].quantity += 1;
 
+      //Aggiorna local Storage
+      // sessionStorage.clear();
+      sessionStorage.setItem('session', JSON.stringify(this.cart));
+      // console.log(sessionStorage);
     },
 
     prova: function() {
@@ -84,13 +98,13 @@ let app = new Vue({
       //     slug: this.slug
       //   }
       // });
-      localStorage.clear();
+      // sessionStorage.clear();
       // this.cart.forEach((dish, i) => {
-      //   localStorage.setItem(`${cart[i]}`, dish);
+      //   sessionStorage.setItem(`${cart[i]}`, dish);
       // });
-      // localStorage.setItem('slug', this.slug);
+      // sessionStorage.setItem('slug', this.slug);
       //
-      localStorage.setItem('session', JSON.stringify(this.cart));
+      // sessionStorage.setItem('session', JSON.stringify(this.cart));
     }
   }
 

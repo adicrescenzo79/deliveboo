@@ -24,7 +24,8 @@
         <div class="row">
           <div class="content-cart">
             <ul>
-              <li v-for="dish in cart">@{{dish.name}}
+              <li v-for="dish in cart" v-if="dish.restaurantSlug == slug">
+                @{{dish.name}}
                 <span>@{{dish.quantity}}</span>
                 <span>@{{dish.price}}</span>
               </li>
