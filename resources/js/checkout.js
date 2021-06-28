@@ -6,37 +6,22 @@ let app = new Vue({
     currentUrl: window.location.href,
     dishes: [],
     cart: [],
-    // slug: localStorage.getItem('slug'),
-    // cart: localStorage.getItem('cart'),
+    slug: '',
+    actualCart: [],
+    // cart: sessionStorage.getItem('cart'),
   },
   created(){
-    // console.log(JSON.parse(localStorage.getItem('session')));
-    let actualCart = JSON.parse(localStorage.getItem('session'));
-    this.cart = actualCart;
-    localStorage.clear();
+    this.actualCart = JSON.parse(sessionStorage.getItem('session'));
+    console.log(this.actualCart);
+    this.slug = sessionStorage.getItem('slug');
 
-    // let stringSplitted = this.currentUrl.split('/');
-    // console.log(stringSplitterd[4]);
-    // this.slug = stringSplitted[4];
+    this.cart = this.actualCart.filter(obj => obj.restaurantSlug == this.slug);
 
-    // this.restaurantBySlug();
+    // sessionStorage.removeItem('slug');
 
-    // axios.get('http://localhost:8000/api/categories',{
-    // }).then((response)=>{
-    //   this.categories = response.data.data;
-    //   // console.log(response.data.data);
-    // });
+    console.log(this.slug, this.cart);
 
-    // axios.get(`http://localhost:8000/api/dishes/${this.slug}`,{
-    // }).then((response)=>{
-    //   let dishes = response.data.data;
-    //   dishes.forEach((item, i) => {
-    //   dishes[i].quantity = 0;
-    //   this.dishes.push(dishes[i])
-    //   });
-    //   // console.log(this.dishes);
-    // });
-
+    //RICORDARSI DI TOGLIERE DALLA SESSION STORAGE I PIATTI CHE PAGIAMO E ANCHE DI RIMUOVERE LO SLUG DEI PIATTI CHE PAGHIAMO
   },
 
   methods: {
@@ -77,6 +62,7 @@ let app = new Vue({
       this.cart[this.cart.indexOf(cartDish)].quantity += 1;
 
     },
+
 
     prova: function() {
       // let products = JSON.stringify(this.cart, this.slug);
