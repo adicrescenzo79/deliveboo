@@ -18,11 +18,12 @@ let app = new Vue({
     axios.get('http://localhost:8000/api/categories',{
     }).then((response)=>{
       this.categories = response.data.data;
-      // console.log(response.data.data);
     });
+
 
     // Inizializzazione Slick
     $(document).ready(function(){
+
       $('.responsive').slick({
         variableWidth: true,
         dots: true,
@@ -89,7 +90,7 @@ let app = new Vue({
         //console.log(this.restaurants);
       });
       this.skip += 8;
-    }
-  }
+    },
+  },
 
 });

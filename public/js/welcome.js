@@ -123,7 +123,7 @@ var app = new Vue({
 
     this.allRestaurants();
     axios.get('http://localhost:8000/api/categories', {}).then(function (response) {
-      _this.categories = response.data.data; // console.log(response.data.data);
+      _this.categories = response.data.data;
     }); // Inizializzazione Slick
 
     $(document).ready(function () {
@@ -199,7 +199,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })
