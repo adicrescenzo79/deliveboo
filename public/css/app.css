@@ -10996,6 +10996,27 @@ nav .container ul li a.my-btn:hover {
   background-color: #1DC959;
 }
 
+nav .container .dropdown-menu {
+  background-color: #000;
+}
+
+nav .container .dropdown-menu .dropdown-item {
+  color: #fff;
+  transition: 0.2s;
+}
+
+nav .container .dropdown-menu .dropdown-item:hover {
+  background-color: #000;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 767px) {
+  nav .container ul li a.my-btn {
+    float: right;
+    margin-bottom: 10px;
+  }
+}
+
 main {
   margin-top: 100px;
 }
@@ -11017,20 +11038,20 @@ main {
   margin: 20px 0;
 }
 
-#categories .container .row .content-category {
+#categories .container .row .categories .content-category {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#categories .container .row .content-category .icon-category {
+#categories .container .row .categories .content-category .icon-category {
   width: calc(100%/9);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#categories .container .row .content-category .icon-category img {
+#categories .container .row .categories .content-category .icon-category img {
   width: 55%;
 }
 
@@ -11039,10 +11060,38 @@ footer {
   height: 400px;
   width: 100%;
   background-color: #000;
+  color: #fff;
 }
 
-footer .container-footer {
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  padding-bottom: 6px;
+}
+
+footer .container {
+  height: 100%;
+}
+
+footer .container .container-footer {
   width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+footer .container .container-footer h5 {
+  margin-top: 110px;
+  color: #1DC959;
+}
+
+footer .container .container-footer .left-footer {
+  width: calc(100% / 3);
+}
+
+footer .container .container-footer .central-footer {
+  width: calc(100% / 3);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -11050,11 +11099,11 @@ footer .container-footer {
   align-items: center;
 }
 
-footer .container-footer ul.social-icon li {
+footer .container .container-footer .central-footer ul.social-icon li {
   display: inline-block;
 }
 
-footer .container-footer ul.social-icon li i {
+footer .container .container-footer .central-footer ul.social-icon li i {
   color: #fff;
   font-size: 25px;
   cursor: pointer;
@@ -11062,7 +11111,15 @@ footer .container-footer ul.social-icon li i {
   margin: 0 10px;
 }
 
-footer .container-footer ul.social-icon li i:hover {
+footer .container .container-footer .central-footer ul.social-icon li i:hover {
   opacity: 0.7;
+}
+
+footer .container .container-footer .right-footer {
+  width: calc(100% / 3);
+}
+
+footer .container .container-footer .right-footer ul {
+  float: right;
 }
 
