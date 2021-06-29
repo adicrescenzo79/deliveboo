@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Auth;
 use App\Restaurant;
 use App\Category;
+use App\Order;
+
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
@@ -96,6 +98,8 @@ class RestaurantController extends Controller
 
       return view('admin.restaurants.show', compact('restaurant', 'categories'));
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
