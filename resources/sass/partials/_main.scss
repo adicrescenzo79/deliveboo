@@ -1,3 +1,7 @@
+main {
+  margin-top: 100px;
+}
+
 #main-welcome {
   .slider {
     .slick-card {
@@ -10,5 +14,43 @@
   }
   a{
     display: block;
+  }
+}
+
+//Homepage section categories
+#categories {
+  margin: 20px 0;
+  .container {
+    .row {
+      .content-category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon-category {
+          width: calc(100%/9);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img {
+            width: 55%;
+          }
+          span {
+          }
+        }
+      }
+    }
+  }
+}
+
+//Homepage section restaurants
+#restaurants {
+  .container {
+    .row {
+      .restaurants {
+        .content-restaurants {
+
+        }
+      }
+    }
   }
 }
