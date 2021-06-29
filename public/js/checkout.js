@@ -112,52 +112,42 @@ var app = new Vue({
     restaurant: {},
     currentUrl: window.location.href,
     dishes: [],
-    cart: [] // slug: localStorage.getItem('slug'),
-    // cart: localStorage.getItem('cart'),
+    cart: [],
+    slug: '',
+    actualCart: [] // cart: sessionStorage.getItem('cart'),
 
   },
   created: function created() {
-    // console.log(JSON.parse(localStorage.getItem('session')));
-    var actualCart = JSON.parse(localStorage.getItem('session'));
-    this.cart = actualCart;
-    localStorage.clear(); // let stringSplitted = this.currentUrl.split('/');
-    // console.log(stringSplitterd[4]);
-    // this.slug = stringSplitted[4];
-    // this.restaurantBySlug();
-    // axios.get('http://localhost:8000/api/categories',{
-    // }).then((response)=>{
-    //   this.categories = response.data.data;
-    //   // console.log(response.data.data);
-    // });
-    // axios.get(`http://localhost:8000/api/dishes/${this.slug}`,{
-    // }).then((response)=>{
-    //   let dishes = response.data.data;
-    //   dishes.forEach((item, i) => {
-    //   dishes[i].quantity = 0;
-    //   this.dishes.push(dishes[i])
-    //   });
-    //   // console.log(this.dishes);
-    // });
+    var _this = this;
+
+    this.actualCart = JSON.parse(sessionStorage.getItem('session'));
+    console.log(this.actualCart);
+    this.slug = sessionStorage.getItem('slug');
+    this.cart = this.actualCart.filter(function (obj) {
+      return obj.restaurantSlug == _this.slug;
+    }); // sessionStorage.removeItem('slug');
+
+    console.log(this.slug, this.cart); //RICORDARSI DI TOGLIERE DALLA SESSION STORAGE I PIATTI CHE PAGIAMO E ANCHE DI RIMUOVERE LO SLUG DEI PIATTI CHE PAGHIAMO
   },
   methods: {
     //al click vediamo tutti i ristoranti della categoria selezionata
     restaurantBySlug: function restaurantBySlug() {
-      var _this = this;
+      var _this2 = this;
 
       axios.get("http://localhost:8000/api/restaurants/slug/".concat(this.slug), {}).then(function (response) {
-        _this.restaurant = response.data.data; // console.log(response.data.data);
+        _this2.restaurant = response.data.data; // console.log(response.data.data);
       });
     },
     //al click vediamo tutti i ristoranti
     allRestaurants: function allRestaurants() {
-      var _this2 = this;
+      var _this3 = this;
 
       this.filteredRestaurants = [];
       this.unfiltered = true;
       this.categoryIndex = '';
       axios.get("http://localhost:8000/api/restaurants/nr/".concat(this.skip), {}).then(function (response) {
         // this.restaurants.push(response.data.data);
-        _this2.restaurants = [].concat(_toConsumableArray(_this2.restaurants), _toConsumableArray(response.data.data)); //console.log(this.restaurants);
+        _this3.restaurants = [].concat(_toConsumableArray(_this3.restaurants), _toConsumableArray(response.data.data)); //console.log(this.restaurants);
       });
       this.skip += 8;
     },
@@ -196,7 +186,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\checkout.js */"./resources/js/checkout.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\checkout.js */"./resources/js/checkout.js");
 
 
 /***/ })

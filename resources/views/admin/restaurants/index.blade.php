@@ -17,6 +17,8 @@
                 <input type="submit" name="" value="Cancella">
               </form>
               <a href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->id])}}">Vedi Dettaglio</a>
+              {{-- <a href="{{ route('admin.restaurants.stats', ['restaurant' => $restaurant->id])}}">Vedi Statistiche</a> --}}
+
             </div>
           </div>
         </div>
