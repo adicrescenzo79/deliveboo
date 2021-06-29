@@ -24,9 +24,7 @@
           <label for="customer_name">Totale transazione</label>
           <h6>€ @{{orderForm.total_paid}}</h6>
         </div>
-        <div id="dropin-container">
-
-        </div>
+        <div id="dropin-container"></div>
         <button  id="submit-button">Request payment method</button>
       </div>
     </div>
