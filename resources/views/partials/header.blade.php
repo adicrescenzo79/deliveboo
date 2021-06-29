@@ -45,6 +45,8 @@
                             {{-- <a href="{{route('')}}">Area personale</a> --}}
 
                             <a class="dropdown-item" href="{{route('admin.restaurants.index')}}">I tuoi ristoranti</a>
+                            <a href="{{route('admin.statistics.index')}}">Le tue statistiche oridni</a>
+
 
                         </div>
                     </li>
