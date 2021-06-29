@@ -20,13 +20,11 @@ Route::get('/security', function () {
     return view('security');
 });
 
-Route::get('/payment', function () {
-    return view('guests.payment');
-})->name('payment');
-
 
 Route::get('restaurants/{slug}', 'RestaurantController@menu')->name('restaurants.menu');
-Route::get('checkout', 'CheckoutController@checkout')->name('checkout');
+Route::get('/checkout', function () {
+    return view('guests.checkout');
+});
 
 
 
@@ -42,4 +40,4 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')
 
     });
 
-Route::get('/payment/make', 'PaymentController@make')->name('payment.make');
+// Route::get('/payment/make', 'PaymentController@make')->name('payment.make');

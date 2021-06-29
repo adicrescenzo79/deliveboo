@@ -52,24 +52,27 @@
 
 </main>
 <script type="text/javascript">
-var button = document.querySelector('#submit-button');
+  $( document ).ready(function() {
+    var button = document.querySelector('#submit-button');
 
-braintree.dropin.create({
-  authorization: "{{ Braintree\ClientToken::generate() }}",
-  container: '#dropin-container'
-}, function (createErr, instance) {
-  button.addEventListener('click', function () {
-    instance.requestPaymentMethod(function (err, payload) {
-      $.get('{{ route('payment.make') }}', {payload}, function (response) {
-        if (response.success) {
-          alert('Payment successfull!');
-        } else {
-          alert('Payment failed');
-        }
-      }, 'json');
+    braintree.dropin.create({
+      authorization: "{{ Braintree\ClientToken::generate() }}",
+      container: '#dropin-container'
+    }, function (createErr, instance) {
+      button.addEventListener('click', function () {
+        instance.requestPaymentMethod(function (err, payload) {
+          $.get('{{ route('payment.make',['amount' => $restaurant->id]) }}', {payload}, function (response) {
+            if (response.success) {
+              alert('Payment successfull!');
+            } else {
+              alert('Payment failed');
+            }
+          }, 'json');
+        });
+      });
     });
+
   });
-});
 
 </script>
 @endsection
