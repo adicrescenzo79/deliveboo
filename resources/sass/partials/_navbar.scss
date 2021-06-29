@@ -11,6 +11,7 @@ nav {
         margin-left: 20px;
         a {
           &.my-btn {
+            text-align: center;
             font-size: 13px;
             color: #fff;
             background: #000;
@@ -22,7 +23,7 @@ nav {
             &:hover {
               text-decoration: none;
               //opacity: 0.8;
-              background-color: #1DC959;
+              background-color: $my-green;
             }
           }
         }
@@ -46,6 +47,6 @@ nav {
 @media screen and (max-width: 767px) {
   nav .container ul li a.my-btn {
     float: right;
-    margin-bottom: 10px;
+    min-width: 163px;
   }
 }

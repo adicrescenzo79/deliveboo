@@ -7,7 +7,7 @@ footer {
   ul {
     list-style: none;
     li {
-      padding-bottom: 6px; 
+      padding-bottom: 4px;
     }
   }
   .container {
@@ -30,6 +30,11 @@ footer {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        .logo-footer {
+          img {
+            width: 160px;
+          }
+        }
         ul.social-icon {
           li {
             display: inline-block;
