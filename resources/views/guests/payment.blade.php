@@ -15,7 +15,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <div id="dropin-container"></div>
+        <div class="form-group">
+          <label for="customer_name">Nome e Cognome</label>
+          <input class="form-control" id="customer_name" type="text" name="customer_name" v-model="orderForm.customer_name" placeholder="Nome e Cognome">
+        </div>
+        <div id="dropin-container">
+
+        </div>
         <button id="submit-button">Request payment method</button>
       </div>
     </div>

@@ -20,9 +20,9 @@ Route::get('/security', function () {
     return view('security');
 });
 
-Route::get('/para', function () {
-    return view('welcomepar');
-});
+Route::get('/payment', function () {
+    return view('guests.payment');
+})->name('payment');
 
 
 Route::get('restaurants/{slug}', 'RestaurantController@menu')->name('restaurants.menu');
@@ -38,7 +38,7 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')
         Route::get('/', 'HomeController@index')->name('index');
         Route::resource('restaurants', 'RestaurantController');
         Route::resource('restaurants.dishes', 'DishController')->shallow();
-        Route::resource('restaurants.statistics', 'StatiticController');
+        Route::resource('restaurants.statistics', 'StatisticController');
 
     });
 
