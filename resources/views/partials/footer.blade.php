@@ -13,7 +13,7 @@
 
       <div class="central-footer">
         <div class="logo-footer">
-          <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/c266ad32e5e88af804b3a1b6b60098f9.svg" alt="">
+          <img src="./img/logo-seven-eats-white.png" alt="">
         </div>
         <ul class="social-icon">
           <li><i class="fab fa-facebook-square"></i></li>
@@ -28,6 +28,8 @@
           <li>Raffaele Giammario</li>
           <li>Alessandro Lodigiani</li>
           <li>Fabrizio Mastrobattista</li>
+          <li>Donato Riccio</li>
+          <li>Simone Taccori</li>
         </ul>
       </div>
 
