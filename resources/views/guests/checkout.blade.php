@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form class="" action="{{route('payment')}}" method="get">
+          <form class="" action="" method="post">
 
             <div class="form-group">
               <label for="customer_name">Nome e Cognome</label>
@@ -36,9 +36,7 @@
               <label for="delivery_notes">Orario di consegna</label>
               <textarea rows="8" cols="80" class="form-control" id="delivery_notes" type="text" name="delivery_notes" v-model="orderForm.delivery_notes" placeholder="Orario di consegna">
               </textarea>
-              
-            {{-- RENDERE ATTIVO SOLAMENTE SE TUTTI I CAMPI OBBLIGATORI SONO COMPILATI --}}
-              <input class="btn btn-dark"  type="submit" @click="payForm" name="button" value="Paga">
+              <a class="btn btn-dark" href="{{route('payment')}}" type="button" @click="payForm" name="button">Paga</a>
             </div>
 
           </form>
