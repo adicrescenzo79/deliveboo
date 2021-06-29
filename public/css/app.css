@@ -10950,8 +10950,6 @@ a.text-dark:focus {
 
 .flex {
   display: flex;
-<<<<<<< HEAD
-=======
 }
 
 .flex-center {
@@ -11005,7 +11003,6 @@ nav .container .dropdown-menu {
 nav .container .dropdown-menu .dropdown-item {
   color: #fff;
   transition: 0.2s;
->>>>>>> dev
 }
 
 nav .container .dropdown-menu .dropdown-item:hover {
@@ -11041,20 +11038,20 @@ main {
   margin: 20px 0;
 }
 
-#categories .container .row .categories .content-category {
+#categories .container .row .content-category {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#categories .container .row .categories .content-category .icon-category {
+#categories .container .row .content-category .icon-category {
   width: calc(100%/9);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#categories .container .row .categories .content-category .icon-category img {
+#categories .container .row .content-category .icon-category img {
   width: 55%;
 }
 
