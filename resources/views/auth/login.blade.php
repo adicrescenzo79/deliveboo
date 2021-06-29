@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div id="main-login" class="container pt-5">
+  <div id="main-login" class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card">
@@ -62,7 +62,9 @@
                           {{ __('Forgot Your Password?') }}
                         </a>
                       @endif --}}
-                      <p>ciao</p>
+                    <div class="col-md-12 offset-md-3 mt-2">
+                      <p>Non hai un account? <a href="{{ route('register') }}">Crea un account</a> </p>
+                    </div>
                     </div>
                   </div>
                 </form>

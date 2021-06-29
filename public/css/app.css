@@ -11016,6 +11016,10 @@ nav .container .dropdown-menu .dropdown-item:hover {
     float: right;
     min-width: 163px;
   }
+
+  .navbar-nav.ml-auto {
+    padding-top: 15px;
+  }
 }
 
 main {
@@ -11054,6 +11058,10 @@ main {
 
 #categories .container .row .categories .content-category .icon-category img {
   width: 55%;
+}
+
+#main-login {
+  padding-top: 100px;
 }
 
 #main-login .card {
