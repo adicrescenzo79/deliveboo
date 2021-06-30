@@ -11044,24 +11044,24 @@ main {
   display: block;
 }
 
-#categories {
+#main-welcome #categories {
   margin: 20px 0;
 }
 
-#categories .container .row .content-category {
+#main-welcome #categories .container .row .content-category {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#categories .container .row .content-category .icon-category {
+#main-welcome #categories .container .row .content-category .icon-category {
   width: calc(100%/9);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#categories .container .row .content-category .icon-category img {
+#main-welcome #categories .container .row .content-category .icon-category img {
   width: 55%;
 }
 
@@ -11111,7 +11111,6 @@ main {
 #main-log-reg .card .card-body .my-btn-main:hover {
   background-color: #000;
   border-color: #000;
-}
 
 #main-admin-restaurants .my-btn-create {
   color: #fff;

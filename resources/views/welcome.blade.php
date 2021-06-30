@@ -26,7 +26,7 @@
               <span>All</span>
             </div>
             <div class="icon-category selected" v-for="category in categories" @click="restaurantByCategory(category.id)">
-              <img :src="category.icon" alt="@{{category.name}}">
+              <img :src="category.icon" :alt="category.name">
               <span>@{{category.name}}</span>
             </div>
           </div>

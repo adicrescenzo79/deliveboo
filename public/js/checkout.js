@@ -93,66 +93,171 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 Vue.config.devtools = true;
 var app = new Vue({
-  el: '#main_menu',
+  el: '#main_checkout',
   data: {
     restaurant: {},
-    currentUrl: window.location.href,
+    // currentUrl: window.location.href,
     dishes: [],
     cart: [],
     slug: '',
-    actualCart: [] // cart: sessionStorage.getItem('cart'),
+    actualCart: [],
+    validationcustomer_name: null,
+    validationcustomer_email: null,
+    validationdelivery_address: null,
+    validationcustomer_telephone: null,
+    validationdelivery_time: null,
+    orderForm: {
+      customer_name: '',
+      customer_email: '',
+      customer_telephone: '',
+      delivery_address: '',
+      delivery_time: '',
+      delivery_notes: '',
+      total_paid: null,
+      //prima di creare il json per l'api, calcolare il totale
+      restaurant_id: null,
+      credit_card: {
+        card_number: '4111111111111111',
+        cvv: '123',
+        expirationDate: '12/29'
+      }
+    } // this.cart: sessionStorage.getItem('cart'),
 
   },
   created: function created() {
     var _this = this;
 
-    this.actualCart = JSON.parse(sessionStorage.getItem('session'));
-    console.log(this.actualCart);
+    this.actualCart = JSON.parse(sessionStorage.getItem('session')); // console.log(this.actualCart);
+
     this.slug = sessionStorage.getItem('slug');
     this.cart = this.actualCart.filter(function (obj) {
       return obj.restaurantSlug == _this.slug;
-    }); // sessionStorage.removeItem('slug');
-
-    console.log(this.slug, this.cart); //RICORDARSI DI TOGLIERE DALLA SESSION STORAGE I PIATTI CHE PAGIAMO E ANCHE DI RIMUOVERE LO SLUG DEI PIATTI CHE PAGHIAMO
+    });
+    this.orderForm.restaurant_id = this.cart[0].restaurant_id;
+    this.total(); // sessionStorage.removeItem('slug');
+    // console.log(this.slug, this.cart);
+    // console.log(this.cart[0].restaurant_id);
+    //RICORDARSI DI TOGLIERE DALLA SESSION STORAGE I PIATTI CHE PAGIAMO E ANCHE DI RIMUOVERE LO SLUG DEI PIATTI CHE PAGHIAMO
   },
   methods: {
-    //al click vediamo tutti i ristoranti della categoria selezionata
-    restaurantBySlug: function restaurantBySlug() {
+    total: function total() {
+      // this.cart.forEach((dish, i) => {
+      //   dish.price = dish.price.toFixed(2);
+      //   console.log(dish.price);
+      // });
+      var total = 0;
+      this.cart.forEach(function (dish, i) {
+        total += dish.price * dish.quantity;
+      });
+      this.orderForm.total_paid = total.toFixed(2);
+      return this.orderForm.total_paid;
+    },
+    sendData: function sendData() {
+      var dati = JSON.stringify({
+        'cart': this.cart,
+        'orderForm': this.orderForm
+      }); // console.log(dati);
+      // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
+      // axios.post('http://localhost:8000/api/order', dati)
+      // .thien(risposta) => {
+      //
+      // }
+    },
+    pay: function pay() {
       var _this2 = this;
 
-      axios.get("http://localhost:8000/api/restaurants/slug/".concat(this.slug), {}).then(function (response) {
-        _this2.restaurant = response.data.data; // console.log(response.data.data);
+      this.total();
+      this.validationcustomer_name = null;
+      this.validationcustomer_email = null;
+      this.validationdelivery_address = null;
+      this.validationcustomer_telephone = null;
+      this.validationdelivery_time = null;
+      var pay = JSON.stringify({
+        'customer_name': this.orderForm.customer_name,
+        'customer_email': this.orderForm.customer_email,
+        'delivery_address': this.orderForm.delivery_address,
+        'customer_telephone': this.orderForm.customer_telephone,
+        'delivery_time': this.orderForm.delivery_time,
+        'delivery_notes': this.orderForm.delivery_notes,
+        'total_paid': this.orderForm.total_paid,
+        'restaurant_id': this.orderForm.restaurant_id,
+        'creditCard': {
+          card_name: this.orderForm.customer_name,
+          card_number: this.orderForm.credit_card.card_number,
+          cvv: this.orderForm.credit_card.cvv,
+          expirationDate: this.orderForm.credit_card.expirationDate
+        }
       });
-    },
-    //al click vediamo tutti i ristoranti
-    allRestaurants: function allRestaurants() {
-      var _this3 = this;
+      axios.post('http://localhost:8000/api/checkout', pay).then(function (risposta) {
+        console.log(risposta.data);
 
-      this.filteredRestaurants = [];
-      this.unfiltered = true;
-      this.categoryIndex = '';
-      axios.get("http://localhost:8000/api/restaurants/nr/".concat(this.skip), {}).then(function (response) {
-        // this.restaurants.push(response.data.data);
-        _this3.restaurants = [].concat(_toConsumableArray(_this3.restaurants), _toConsumableArray(response.data.data)); //console.log(this.restaurants);
+        if (risposta.data.success) {// this.sendData();
+        } else {
+          if (risposta.data.validation) {
+            var validate = risposta.data.validation;
+
+            if (validate.customer_name) {
+              _this2.validationcustomer_name = validate.customer_name[0];
+            }
+
+            if (validate.customer_telephone) {
+              _this2.validationcustomer_telephone = validate.customer_telephone[0];
+            }
+
+            if (validate.customer_email) {
+              _this2.validationcustomer_email = validate.customer_email[0];
+            }
+
+            if (validate.delivery_address) {
+              _this2.validationdelivery_address = validate.delivery_address[0];
+            }
+
+            if (validate.delivery_time) {
+              _this2.validationdelivery_time = validate.delivery_time[0];
+            }
+          }
+
+          if (risposta.data.errors) {
+            alert("Pagamento rifiutato, ricontrolla i dati della carta di credito");
+          }
+        }
       });
-      this.skip += 8;
     },
+    // payForm: function(){
+    //   this.orderForm.restaurant_id = this.cart[0].restaurant_id;
+    //   this.orderForm.total_paid = this.total();
+    //
+    //   sessionStorage.setItem('order', JSON.stringify(this.orderForm));
+    //   console.log(sessionStorage);
+    // },
+    //al click vediamo tutti i ristoranti della categoria selezionata
+    // restaurantBySlug: function(){
+    //   axios.get(`http://localhost:8000/api/restaurants/slug/${this.slug}`,{
+    //   }).then((response)=>{
+    //     this.restaurant = response.data.data;
+    //     // console.log(response.data.data);
+    //   });
+    //
+    // },
+    //al click vediamo tutti i ristoranti
+    // allRestaurants: function() {
+    //   this.filteredRestaurants = [];
+    //   this.unfiltered = true;
+    //   this.categoryIndex = '';
+    //   axios.get(`http://localhost:8000/api/restaurants/nr/${this.skip}`,{
+    //   }).then((response)=>{
+    //     // this.restaurants.push(response.data.data);
+    //     this.restaurants = [...this.restaurants, ...response.data.data];
+    //     //console.log(this.restaurants);
+    //   });
+    //   this.skip += 8;
+    // },
     //Aggiunta al carrello
     addCart: function addCart(dish) {
+      var _this3 = this;
+
       var cartDish = dish;
 
       if (!this.cart.includes(cartDish)) {
@@ -161,18 +266,28 @@ var app = new Vue({
       } //Aumento la quantità del piatto
 
 
-      this.cart[this.cart.indexOf(cartDish)].quantity += 1;
+      this.cart[this.cart.indexOf(cartDish)].quantity += 1; //Controllo per attivazione bottone
+
+      this.cart.forEach(function (dish, i) {
+        if (dish.restaurantSlug == _this3.slug) {
+          _this3.completeButton = true;
+        }
+      }); //Aggiorna local Storage
+
+      sessionStorage.setItem('session', JSON.stringify(this.cart)); // console.log(sessionStorage);
     },
-    prova: function prova() {// let products = JSON.stringify(this.cart, this.slug);
-      // axios.post(`http://localhost:8000/api/restaurants/`)
-      // axios({
-      //   method: 'post',
-      //   url: 'http://localhost:8000/api/checkout/',
-      //   data: {
-      //     cart: this.cart,
-      //     slug: this.slug
-      //   }
-      // });
+    minusCart: function minusCart(dish) {
+      var cartDish = dish; // console.log(this.cart);
+      //Diminuisco la quantità del piatto
+
+      this.cart[this.cart.indexOf(cartDish)].quantity -= 1;
+
+      if (cartDish.quantity == 0) {
+        this.cart.splice(this.cart.indexOf(cartDish), 1);
+      } //Aggiorna local Storage
+
+
+      sessionStorage.setItem('session', JSON.stringify(this.cart)); // console.log(sessionStorage);
     }
   }
 });
