@@ -24,5 +24,5 @@ Route::get('/restaurants/{categorySelectedJson}', 'RestaurantController@restaura
 Route::get('/categories', 'CategoryController@index');
 Route::get('/dishes/{slug}', 'DishController@dishesByRestaurant');
 Route::get('/restaurants/slug/{slug}', 'RestaurantController@restaurantBySlug');
-Route::post('/checkout', 'CheckoutController@cart');
-Route::get('/checkout', 'CheckoutController@cart');
+Route::post('checkout', 'CheckoutController@pay');
+Route::post('orders', 'OrderController@store');

@@ -1,30 +1,6 @@
 main {
-    margin-top: 100px;
+  margin-top: 100px;
 }
-//Homepage section categories
-
-//Homepage section restaurants
-
-#main_checkout{
-  .container {
-    max-width: 960px;
-  }
-
-  .lh-condensed { line-height: 1.25; }
-
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-
 #main-welcome {
     margin-top: -1.5rem;
 
@@ -413,52 +389,6 @@ main {
                     text-decoration: none;
                     //opacity: 0.8;
                     background-color: $my-green;
-                }
-            }
-        }
-    }
-}
-//login page
-
-#main-login {
-    padding-top: 100px;
-
-    .card {
-        border: none;
-        background-color: $body-bg;
-
-        .card-header {
-            background-color: $body-bg;
-            font-size: 30px;
-            font-weight: 700;
-            color: #262626;
-            border-bottom: none;
-        }
-
-        .card-body {
-            .form-control {
-                background-color: $body-bg;
-                border-radius: 0;
-                font-size: 16px!important;
-                height: 48px!important;
-                line-height: 24px!important;
-                color: #262626!important;
-                border: 1px solid #E0E0E0!important;
-            }
-
-            .my-btn-login {
-                color: #fff;
-                width: 100%;
-                background-color: $my-green;
-                border-color: $my-green;
-                height: 48px;
-                font-size: 16px;
-                border-style: none;
-                transition: 0.2s;
-
-                &:hover {
-                    background-color: #000;
-                    border-color: #000;
                 }
             }
         }

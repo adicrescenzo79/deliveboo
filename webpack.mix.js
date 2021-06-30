@@ -19,3 +19,4 @@ mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/welcome.js', 'public/js');
 mix.js('resources/js/menu.js', 'public/js');
 mix.js('resources/js/checkout.js', 'public/js');
+mix.js('resources/js/payment.js', 'public/js');

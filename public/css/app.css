@@ -10032,6 +10032,10 @@ nav {
 nav .container .navbar-brand img {
   width: 160px;
 }
+nav .container ul {
+  position: absolute;
+  right: 0px;
+}
 nav .container ul li {
   margin-left: 20px;
 }
@@ -10394,44 +10398,6 @@ main {
   }
 }
 
-#main-login {
-  padding-top: 100px;
-}
-#main-login .card {
-  border: none;
-  background-color: #f8fafc;
-}
-#main-login .card .card-header {
-  background-color: #f8fafc;
-  font-size: 30px;
-  font-weight: 700;
-  color: #262626;
-  border-bottom: none;
-}
-#main-login .card .card-body .form-control {
-  background-color: #f8fafc;
-  border-radius: 0;
-  font-size: 16px !important;
-  height: 48px !important;
-  line-height: 24px !important;
-  color: #262626 !important;
-  border: 1px solid #E0E0E0 !important;
-}
-#main-login .card .card-body .my-btn-login {
-  color: #fff;
-  width: 100%;
-  background-color: #3e9920;
-  border-color: #3e9920;
-  height: 48px;
-  font-size: 16px;
-  border-style: none;
-  transition: 0.2s;
-}
-#main-login .card .card-body .my-btn-login:hover {
-  background-color: #000;
-  border-color: #000;
-}
-
 footer {
   margin-top: 150px;
   height: 400px;
@@ -10489,4 +10455,15 @@ footer .container .container-footer .right-footer {
 }
 footer .container .container-footer .right-footer ul {
   float: right;
+}
+
+@media screen and (max-width: 767px) {
+  .left-footer,
+.right-footer {
+    display: none;
+  }
+
+  footer .container .container-footer .central-footer {
+    width: 100%;
+  }
 }
