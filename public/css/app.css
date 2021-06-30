@@ -11065,33 +11065,6 @@ main {
   width: 55%;
 }
 
-#main_checkout1 {
-  display: none;
-}
-
-#main_checkout .container {
-  max-width: 960px;
-}
-
-#main_checkout .lh-condensed {
-  line-height: 1.25;
-}
-
-#main_checkout .bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  #main_checkout .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
 #main-log-reg {
   padding-top: 100px;
 }
@@ -11248,6 +11221,29 @@ main {
   #main-admin-restaurants .card .card-body .card-img {
     display: flex;
     justify-content: center;
+  }
+}
+
+#main_checkout .container {
+  max-width: 960px;
+}
+
+#main_checkout .lh-condensed {
+  line-height: 1.25;
+}
+
+#main_checkout .bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  #main_checkout .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
 }
 
