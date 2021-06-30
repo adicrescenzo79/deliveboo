@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light shadow-sm bg-light fixed-top">
   <div class="container">
     <a class="navbar-brand" href="{{ url('/') }}">
-      <img src="https://loghi-famosi.com/wp-content/uploads/2021/01/Uber-Eats-Logo.png" alt="">
+      <img src="./img/logo-seven-eats.png" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
       <span class="navbar-toggler-icon"></span>

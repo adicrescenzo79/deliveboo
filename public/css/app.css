@@ -10979,6 +10979,7 @@ nav .container ul li {
 }
 
 nav .container ul li a.my-btn {
+  text-align: center;
   font-size: 13px;
   color: #fff;
   background: #000;
@@ -10993,7 +10994,7 @@ nav .container ul li a.my-btn {
 
 nav .container ul li a.my-btn:hover {
   text-decoration: none;
-  background-color: #1DC959;
+  background-color: #3e9920;
 }
 
 nav .container .dropdown-menu {
@@ -11013,7 +11014,11 @@ nav .container .dropdown-menu .dropdown-item:hover {
 @media screen and (max-width: 767px) {
   nav .container ul li a.my-btn {
     float: right;
-    margin-bottom: 10px;
+    min-width: 163px;
+  }
+
+  .navbar-nav.ml-auto {
+    padding-top: 15px;
   }
 }
 
@@ -11055,32 +11060,75 @@ main {
   width: 55%;
 }
 
-#main_checkout1 {
-  display: none;
+#main-login {
+  padding-top: 100px;
 }
 
-#main_checkout .container {
-  max-width: 960px;
+#main-login .card {
+  border: none;
+  background-color: #f8fafc;
 }
 
-#main_checkout .lh-condensed {
-  line-height: 1.25;
+#main-login .card .card-header {
+  background-color: #f8fafc;
+  font-size: 30px;
+  font-weight: 700;
+  color: #262626;
+  border-bottom: none;
 }
 
-#main_checkout .bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+#main-login .card .card-body .form-control {
+  background-color: #f8fafc;
+  border-radius: 0;
+  font-size: 16px !important;
+  height: 48px !important;
+  line-height: 24px !important;
+  color: #262626 !important;
+  border: 1px solid #E0E0E0 !important;
 }
 
-@media (min-width: 768px) {
-  #main_checkout .bd-placeholder-img-lg {
-    font-size: 3.5rem;
+#main-login .card .card-body .my-btn-login {
+  color: #fff;
+  width: 100%;
+  background-color: #3e9920;
+  border-color: #3e9920;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+
+#main-login .card .card-body .my-btn-login:hover {
+  background-color: #000;
+  border-color: #000;
+
+  #main_checkout1 {
+    display: none;
   }
-}
+
+  #main_checkout .container {
+    max-width: 960px;
+  }
+
+  #main_checkout .lh-condensed {
+    line-height: 1.25;
+  }
+
+  #main_checkout .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    #main_checkout .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+
+  }
 
 footer {
   margin-top: 150px;
@@ -11095,7 +11143,7 @@ footer ul {
 }
 
 footer ul li {
-  padding-bottom: 6px;
+  padding-bottom: 4px;
 }
 
 footer .container {
@@ -11110,7 +11158,7 @@ footer .container .container-footer {
 
 footer .container .container-footer h5 {
   margin-top: 110px;
-  color: #1DC959;
+  color: #3e9920;
 }
 
 footer .container .container-footer .left-footer {
@@ -11124,6 +11172,10 @@ footer .container .container-footer .central-footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+footer .container .container-footer .central-footer .logo-footer img {
+  width: 160px;
 }
 
 footer .container .container-footer .central-footer ul.social-icon li {
@@ -11149,4 +11201,3 @@ footer .container .container-footer .right-footer {
 footer .container .container-footer .right-footer ul {
   float: right;
 }
-
