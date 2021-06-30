@@ -13,7 +13,7 @@
 
       <div class="central-footer">
         <div class="logo-footer">
-          <img src="./img/logo-seven-eats-white.png" alt="">
+          <img src="{{ asset('img/logo-seven-eats-white.png')}}" alt="">
         </div>
         <ul class="social-icon">
           <li><i class="fab fa-facebook-square"></i></li>

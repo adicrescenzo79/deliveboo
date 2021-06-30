@@ -10974,6 +10974,11 @@ nav .container .navbar-brand img {
   width: 160px;
 }
 
+nav .container ul {
+  position: absolute;
+  right: 0px;
+}
+
 nav .container ul li {
   margin-left: 20px;
 }
@@ -11060,25 +11065,25 @@ main {
   width: 55%;
 }
 
-#main-login {
+#main-log-reg {
   padding-top: 100px;
 }
 
-#main-login .card {
+#main-log-reg .card {
   border: none;
-  background-color: #f8fafc;
+  background-color: #fff;
 }
 
-#main-login .card .card-header {
-  background-color: #f8fafc;
+#main-log-reg .card .card-header {
+  background-color: #fff;
   font-size: 30px;
   font-weight: 700;
   color: #262626;
   border-bottom: none;
 }
 
-#main-login .card .card-body .form-control {
-  background-color: #f8fafc;
+#main-log-reg .card .card-body .form-control {
+  background-color: #fff !important;
   border-radius: 0;
   font-size: 16px !important;
   height: 48px !important;
@@ -11087,7 +11092,12 @@ main {
   border: 1px solid #E0E0E0 !important;
 }
 
-#main-login .card .card-body .my-btn-login {
+#main-log-reg .card .card-body .form-control:focus {
+  border-color: #262626 !important;
+  box-shadow: none;
+}
+
+#main-log-reg .card .card-body .my-btn-main {
   color: #fff;
   width: 100%;
   background-color: #3e9920;
@@ -11098,9 +11108,120 @@ main {
   transition: 0.2s;
 }
 
-#main-login .card .card-body .my-btn-login:hover {
+#main-log-reg .card .card-body .my-btn-main:hover {
   background-color: #000;
   border-color: #000;
+}
+
+#main-admin-restaurants .my-btn-create {
+  color: #fff;
+  width: 200px;
+  background-color: #3e9920;
+  border-color: #3e9920;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+
+#main-admin-restaurants .my-btn-create:hover {
+  opacity: 0.7;
+}
+
+#main-admin-restaurants .card {
+  border: 1px solid #000;
+  border-radius: 0;
+  margin-top: 5px;
+}
+
+#main-admin-restaurants .card .card-body .card-img img {
+  width: 100%;
+}
+
+#main-admin-restaurants .card .card-body ul {
+  list-style: none;
+  font-size: 16px;
+}
+
+#main-admin-restaurants .card .card-body ul strong {
+  font-size: 18px;
+}
+
+#main-admin-restaurants .card .card-body .my-btn-card {
+  min-width: 118px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  border: none;
+  background: #000;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.2s;
+}
+
+#main-admin-restaurants .card .card-body .my-btn-card:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons i {
+  opacity: 0.7;
+  border: none;
+  font-size: 27px;
+  transition: 0.2s;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-utensils {
+  color: #f6993f;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons i.far.fa-chart-bar {
+  color: #3490dc;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-edit {
+  color: #3e9920;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons i:hover {
+  opacity: 1;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons form input.trash-icon {
+  color: #f00;
+  opacity: 0.7;
+  border: none;
+  font-size: 27px;
+  transition: 0.2s;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons form input.trash-icon:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+  #main-admin-restaurants .card .card-body .container-buttons {
+    flex-direction: row;
+  }
+
+  #main-admin-restaurants .card .card-body .card-img img {
+    width: 100px;
+  }
+
+  #main-admin-restaurants .card .card-body .card-img {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 footer {
@@ -11173,5 +11294,16 @@ footer .container .container-footer .right-footer {
 
 footer .container .container-footer .right-footer ul {
   float: right;
+}
+
+@media screen and (max-width: 767px) {
+  .left-footer,
+  .right-footer {
+    display: none;
+  }
+
+  footer .container .container-footer .central-footer {
+    width: 100%;
+  }
 }
 
