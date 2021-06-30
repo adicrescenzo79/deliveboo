@@ -10,7 +10,7 @@ return $restaurants = [
     "address" => "Via Mincio, 9, Milano, 20139",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/214091.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-1.jpg/v1/it/restaurants/214091.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:pizza-1.jpg/v1/it/restaurants/214091.jpg",
   ],
   [
     "user_id" => 2,
@@ -20,17 +20,17 @@ return $restaurants = [
     "address" => "Via Giuseppe Ripamonti 132, Milano, 20141",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/241491.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:italiano-1.jpg/v1/it/restaurants/241491.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:italiano-1.jpg/v1/it/restaurants/241491.jpg",
   ],
   [
     "user_id" => 3,
     "name" => "Trapizzino",
     "slug" => "trapizzino",
-    "telephone" => "0254521",
+    "telephone" => "025452132",
     "address" => "Corso Lodi 1, Milano, 20135",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/244582.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:panini-2.jpg/v1/it/restaurants/244582.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:panini-2.jpg/v1/it/restaurants/244582.jpg",
   ],
   [
     "user_id" => 4,
@@ -40,7 +40,7 @@ return $restaurants = [
     "address" => "Via Dante Alighieri 29, Opera, 20090",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/227426.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-6.jpg/v1/it/restaurants/227426.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:pizza-6.jpg/v1/it/restaurants/227426.jpg",
   ],
   //GIAPPONESE
   [
@@ -133,7 +133,7 @@ return $restaurants = [
     "address" => "Via Carlo Sereni 14, Milano, 20137",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/212124.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-4.jpg/v1/it/restaurants/212124.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:pizza-4.jpg/v1/it/restaurants/212124.jpg",
   ],
   [
     "user_id" => 2,
@@ -143,7 +143,7 @@ return $restaurants = [
     "address" => "Via Filippo Turati, 1/G, Milano, 20094",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/221623.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-3.jpg/v1/it/restaurants/221623.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:pizza-3.jpg/v1/it/restaurants/221623.jpg",
   ],
   [
     "user_id" => 3,
@@ -153,7 +153,7 @@ return $restaurants = [
     "address" => "Via Roma, 46, Milano, 20090",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/203902.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-2.jpg/v1/it/restaurants/203902.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:pizza-2.jpg/v1/it/restaurants/203902.jpg",
   ],
   [
     "user_id" => 4,
@@ -163,7 +163,7 @@ return $restaurants = [
     "address" => "Via Filippo Turati, 16,Milano, 20090",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/214010.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:pizza-0.jpg/v1/it/restaurants/214010.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:pizza-0.jpg/v1/it/restaurants/214010.jpg",
   ],
   //CINESE
   [
@@ -174,7 +174,7 @@ return $restaurants = [
     "address" => "Via Vigevano 22, Milano, 20144",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/241883.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:cinese-3.jpg/v1/it/restaurants/241883.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:cinese-3.jpg/v1/it/restaurants/241883.jpg",
   ],
   [
     "user_id" => 2,
@@ -184,7 +184,7 @@ return $restaurants = [
     "address" => "Viale Toscana 19, Milano, 20141",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/225867.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:cinese-7.jpg/v1/it/restaurants/225867.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:cinese-7.jpg/v1/it/restaurants/225867.jpg",
   ],
   [
     "user_id" => 3,
@@ -194,7 +194,7 @@ return $restaurants = [
     "address" => "Via Mercato, 14, Milano, 20121",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/214916.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:cinese-6.jpg/v1/it/restaurants/214916.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:cinese-6.jpg/v1/it/restaurants/214916.jpg",
   ],
   [
     "user_id" => 4,
@@ -204,7 +204,7 @@ return $restaurants = [
     "address" => "Viale Col di Lana 14, Milano, 20136",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/239020.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:cinese-0.jpg/v1/it/restaurants/239020.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:cinese-0.jpg/v1/it/restaurants/239020.jpg",
   ],
 
   //FAST-FOOD
@@ -216,7 +216,7 @@ return $restaurants = [
     "address" => "Corso Garibaldi 17, Milano, 20121",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/237955.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:hamburger-5.jpg/v1/it/restaurants/237955.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:hamburger-5.jpg/v1/it/restaurants/237955.jpg",
   ],
   [
     "user_id" => 2,
@@ -226,7 +226,7 @@ return $restaurants = [
     "address" => "Via Agnello 18, Milano, 20121",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/239321.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1600,h_350,d_it:cuisines:hamburger-1.jpg/v1/it/restaurants/239321.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:hamburger-1.jpg/v1/it/restaurants/239321.jpg",
   ],
   [
     "user_id" => 3,
@@ -236,7 +236,7 @@ return $restaurants = [
     "address" => "Corso Como 2, Milano, 20154",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/224645.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:hamburger-7.jpg/v1/it/restaurants/224627.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:hamburger-7.jpg/v1/it/restaurants/224627.jpg",
   ],
   [
     "user_id" => 4,
@@ -246,7 +246,7 @@ return $restaurants = [
     "address" => "Via Paolo Sarpi 48, Milano, 20154",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/236762.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:hamburger-2.jpg/v1/it/restaurants/236762.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:hamburger-2.jpg/v1/it/restaurants/236762.jpg",
   ],
   //INDIANO
   [
@@ -257,7 +257,7 @@ return $restaurants = [
     "address" => "Via Giuseppe Ripamonti 15, Milano, 20136",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/224561.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:indiano-1.jpg/v1/it/restaurants/224561.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:indiano-1.jpg/v1/it/restaurants/224561.jpg",
   ],
   [
     "user_id" => 2,
@@ -267,7 +267,7 @@ return $restaurants = [
     "address" => "Via Giuseppe Ripamonti, 15, Milano, 20136",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/201104.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:indiano-4.jpg/v1/it/restaurants/201104.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:indiano-4.jpg/v1/it/restaurants/201104.jpg",
   ],
   [
     "user_id" => 3,
@@ -277,7 +277,7 @@ return $restaurants = [
     "address" => "Via Lodovico Il Moro, 13, Milano, 20143",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/201562.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:indiano-2.jpg/v1/it/restaurants/201562.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:indiano-2.jpg/v1/it/restaurants/201562.jpg",
   ],
   [
     "user_id" => 4,
@@ -287,7 +287,7 @@ return $restaurants = [
     "address" => "Via Privata Belgirate 13, Milano, 20125",
     "p_iva" => "12345678912",
     "logo" => "https://d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/224036.gif",
-    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_414,h_300,d_it:cuisines:indiano-6.jpg/v1/it/restaurants/224036.jpg",
+    "cover_image" => "https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1025,h_450,d_it:cuisines:indiano-6.jpg/v1/it/restaurants/224036.jpg",
   ],
 
 ];
