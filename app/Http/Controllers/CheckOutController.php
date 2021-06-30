@@ -45,26 +45,44 @@ class CheckoutController extends Controller
 
         //Creazione nuovo cliente (verrà visualizzato in sandbox
         $cliente = $gateway->customer()->create([
-            'name' => $data['customer_name'],
+            'firstName' => $data['customer_name'],
+            'lastName' => $data['customer_name'],
             'email' => $data['customer_email'],
             'phone' => $data['customer_telephone'],
             'paymentMethodNonce' => $nonceFromTheClient
         ]);
 
+
+// prova
+//         foreach($cliente->errors->deepAll() AS $error) {
+//     print_r($error->attribute . ": " . $error->code . " " . $error->message . "\n");
+// }
+//
+// foreach($cliente->errors->forKey('customer')->shallowAll() AS $error) {
+//     print_r($error->attribute . ": " . $error->code . " " . $error->message . "\n");
+// }
+//
+// foreach($cliente->errors->forKey('customer')->forKey('creditCard')->shallowAll() AS $error) {
+//     print_r($error->attribute . ": " . $error->code . " " . $error->message . "\n");
+// }
+
+        // fine prova
         //creazione nuova transazione di vendita
         $result = $gateway->transaction()->sale([
             'amount' => $data['total_paid'],
             'customerId' => $cliente->customer->id,
             'creditCard' => [
-                'number' => $data['credit_card']['card_number'],
-                'cardholderName' => $data['credit_card']['card_name'],
-                'expirationDate' => $data['credit_card']['expirationDate'],
-                'cvv' => $data['credit_card']['cvv']
+                'number' => $data['creditCard']['card_number'],
+                'cardholderName' => $data['creditCard']['card_name'],
+                'expirationDate' => $data['creditCard']['expirationDate'],
+                'cvv' => $data['creditCard']['cvv']
             ],
             'options' => [
                 'submitForSettlement' => True
             ]
         ]);
+        // return response()->json([$result]);
+
 
         if ($result->success) {
             return response()->json([

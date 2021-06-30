@@ -5,6 +5,7 @@
   <div id="main_checkout">
     <div class="container">
       <div class="row">
+        {{-- CART --}}
         <div class="col-md-4 order-md-2 mb-4">
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Your cart</span>
@@ -26,7 +27,10 @@
             </li>
           </ul>
 
+
         </div>
+
+        {{-- TRANSAZIONE --}}
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Dati per la transazione</h4>
           <form class="needs-validation" novalidate>
@@ -74,7 +78,6 @@
 
 
 
-{{-- dopo --}}
             <h4 class="mb-3">Payment</h4>
 
             <div class="d-block my-3">
@@ -86,7 +89,7 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="cc-number">Credit card number</label>
-                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <input type="text" v-model="orderForm.credit_card.card_number" class="form-control" id="cc-number" placeholder="" required>
                 <div class="invalid-feedback">
                   Credit card number is required
                 </div>
@@ -95,21 +98,22 @@
             <div class="row">
               <div class="col-md-3 mb-3">
                 <label for="cc-expiration">Expiration</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                <input type="text" v-model="orderForm.credit_card.expirationDate" class="form-control" id="cc-expiration" placeholder="" required>
                 <div class="invalid-feedback">
                   Expiration date required
                 </div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="cc-cvv">CVV</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                <input type="text" v-model="orderForm.credit_card.cvv" class="form-control" id="cc-cvv" placeholder="" required>
                 <div class="invalid-feedback">
                   Security code required
                 </div>
               </div>
             </div>
             <hr class="mb-4">
-            <button class="btn btn-dark btn-lg btn-block" @click="pay" type="submit">Continue to checkout</button>
+            <a class="btn btn-dark btn-md btn-block" @click="pay">Continue to checkout</a>
+            <button @click="sendData" type="button" name="button">prova</button>
           </form>
         </div>
       </div>

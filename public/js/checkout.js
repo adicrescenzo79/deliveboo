@@ -98,7 +98,7 @@ var app = new Vue({
   el: '#main_checkout',
   data: {
     restaurant: {},
-    currentUrl: window.location.href,
+    // currentUrl: window.location.href,
     dishes: [],
     cart: [],
     slug: '',
@@ -119,9 +119,9 @@ var app = new Vue({
       //prima di creare il json per l'api, calcolare il totale
       restaurant_id: null,
       credit_card: {
-        card_number: '',
-        cvv: '',
-        expirationDate: ''
+        card_number: '4111111111111111',
+        cvv: '123',
+        expirationDate: '12/29'
       }
     } // this.cart: sessionStorage.getItem('cart'),
 
@@ -135,7 +135,8 @@ var app = new Vue({
     this.cart = this.actualCart.filter(function (obj) {
       return obj.restaurantSlug == _this.slug;
     });
-    this.orderForm.restaurant_id = this.cart[0].restaurant_id; // sessionStorage.removeItem('slug');
+    this.orderForm.restaurant_id = this.cart[0].restaurant_id;
+    this.total(); // sessionStorage.removeItem('slug');
     // console.log(this.slug, this.cart);
     // console.log(this.cart[0].restaurant_id);
     //RICORDARSI DI TOGLIERE DALLA SESSION STORAGE I PIATTI CHE PAGIAMO E ANCHE DI RIMUOVERE LO SLUG DEI PIATTI CHE PAGHIAMO
@@ -150,18 +151,24 @@ var app = new Vue({
       this.cart.forEach(function (dish, i) {
         total += dish.price * dish.quantity;
       });
-      return this.total_paid = total.toFixed(2);
+      this.orderForm.total_paid = total.toFixed(2);
+      return this.orderForm.total_paid;
     },
     sendData: function sendData() {
       var dati = JSON.stringify({
         'cart': this.cart,
         'orderForm': this.orderForm
-      }); // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
+      }); // console.log(dati);
+      // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
       // axios.post('http://localhost:8000/api/order', dati)
+      // .thien(risposta) => {
+      //
+      // }
     },
     pay: function pay() {
       var _this2 = this;
 
+      this.total();
       this.validationcustomer_name = null;
       this.validationcustomer_email = null;
       this.validationdelivery_address = null;
@@ -176,7 +183,7 @@ var app = new Vue({
         'delivery_notes': this.orderForm.delivery_notes,
         'total_paid': this.orderForm.total_paid,
         'restaurant_id': this.orderForm.restaurant_id,
-        'credit_card': {
+        'creditCard': {
           card_name: this.orderForm.customer_name,
           card_number: this.orderForm.credit_card.card_number,
           cvv: this.orderForm.credit_card.cvv,
@@ -186,15 +193,13 @@ var app = new Vue({
       axios.post('http://localhost:8000/api/checkout', pay).then(function (risposta) {
         console.log(risposta.data);
 
-        if (risposta.data.success) {
-          _this2.sendData();
+        if (risposta.data.success) {// this.sendData();
         } else {
           if (risposta.data.validation) {
             var validate = risposta.data.validation;
 
             if (validate.customer_name) {
               _this2.validationcustomer_name = validate.customer_name[0];
-              console.log(_this2.validationcustomer_name);
             }
 
             if (validate.customer_telephone) {

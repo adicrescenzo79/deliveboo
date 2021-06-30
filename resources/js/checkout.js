@@ -3,7 +3,7 @@ let app = new Vue({
   el: '#main_checkout',
   data:{
     restaurant: {},
-    currentUrl: window.location.href,
+    // currentUrl: window.location.href,
     dishes: [],
     cart: [],
     slug: '',
@@ -23,9 +23,9 @@ let app = new Vue({
       total_paid: null, //prima di creare il json per l'api, calcolare il totale
       restaurant_id: null,
       credit_card:{
-        card_number: '',
-        cvv: '',
-        expirationDate: ''
+        card_number: '4111111111111111',
+        cvv: '123',
+        expirationDate: '12/29'
       },
 
 
@@ -42,6 +42,8 @@ let app = new Vue({
 
 
     this.orderForm.restaurant_id = this.cart[0].restaurant_id;
+
+    this.total();
 
     // sessionStorage.removeItem('slug');
 
@@ -62,7 +64,8 @@ let app = new Vue({
       this.cart.forEach((dish, i) => {
         total += (dish.price * dish.quantity);
       });
-      return this.total_paid = total.toFixed(2);
+      this.orderForm.total_paid = total.toFixed(2);
+      return this.orderForm.total_paid;
 
     },
     sendData: function(){
@@ -70,12 +73,18 @@ let app = new Vue({
         'cart': this.cart,
         'orderForm': this.orderForm
       })
+      // console.log(dati);
       // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
       // axios.post('http://localhost:8000/api/order', dati)
+      // .thien(risposta) => {
+      //
+      // }
 
     },
 
     pay: function(){
+      this.total();
+
       this.validationcustomer_name = null
       this.validationcustomer_email = null
       this.validationdelivery_address = null
@@ -90,7 +99,7 @@ let app = new Vue({
         'delivery_notes': this.orderForm.delivery_notes,
         'total_paid': this.orderForm.total_paid,
         'restaurant_id': this.orderForm.restaurant_id,
-        'credit_card' : {
+        'creditCard' : {
           card_name: this.orderForm.customer_name,
           card_number: this.orderForm.credit_card.card_number,
           cvv: this.orderForm.credit_card.cvv,
@@ -99,16 +108,15 @@ let app = new Vue({
       })
       axios.post('http://localhost:8000/api/checkout', pay)
       .then((risposta) => {
-        console.log(risposta.data)
+        console.log(risposta.data);
         if (risposta.data.success){
-          this.sendData();
+          // this.sendData();
         } else {
           if (risposta.data.validation){
             let validate = risposta.data.validation
 
             if (validate.customer_name){
               this.validationcustomer_name = validate.customer_name[0]
-              console.log(this.validationcustomer_name);
 
             }
             if (validate.customer_telephone){

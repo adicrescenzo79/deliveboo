@@ -25,4 +25,4 @@ Route::get('/categories', 'CategoryController@index');
 Route::get('/dishes/{slug}', 'DishController@dishesByRestaurant');
 Route::get('/restaurants/slug/{slug}', 'RestaurantController@restaurantBySlug');
 Route::post('checkout', 'CheckoutController@pay');
-// Route::get('/checkout', 'CheckoutController@cart');
+Route::post('orders', 'OrderController@store');
