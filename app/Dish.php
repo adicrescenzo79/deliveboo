@@ -19,4 +19,11 @@ class Dish extends Model
     {
         return $this->belongsTo('App\Restaurant');
     }
+
+    public function orders()
+    {
+      return $this->belongsToMany('App\Order', 'order_dish');
+      // ->withPivot('dish_quantity')
+    }
+
 }
