@@ -155,15 +155,15 @@ var app = new Vue({
       return this.orderForm.total_paid;
     },
     sendData: function sendData() {
+      console.log(this.orderForm.restaurant_id);
       var dati = JSON.stringify({
         'cart': this.cart,
         'orderForm': this.orderForm
-      }); // console.log(dati);
-      // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
-      // axios.post('http://localhost:8000/api/order', dati)
-      // .thien(risposta) => {
-      //
-      // }
+      }); // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
+
+      axios.post('http://localhost:8000/api/orders', dati).then(function (risposta) {
+        console.log(risposta);
+      });
     },
     pay: function pay() {
       var _this2 = this;
@@ -191,9 +191,8 @@ var app = new Vue({
         }
       });
       axios.post('http://localhost:8000/api/checkout', pay).then(function (risposta) {
-        console.log(risposta.data);
-
-        if (risposta.data.success) {// this.sendData();
+        if (risposta.data.success) {
+          _this2.sendData();
         } else {
           if (risposta.data.validation) {
             var validate = risposta.data.validation;

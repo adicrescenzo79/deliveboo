@@ -69,16 +69,16 @@ let app = new Vue({
 
     },
     sendData: function(){
+      console.log(this.orderForm.restaurant_id);
       const dati = JSON.stringify({
         'cart': this.cart,
         'orderForm': this.orderForm
       })
-      // console.log(dati);
       // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
-      // axios.post('http://localhost:8000/api/order', dati)
-      // .thien(risposta) => {
-      //
-      // }
+      axios.post('http://localhost:8000/api/orders', dati)
+      .then((risposta)=> {
+        console.log(risposta);
+      })
 
     },
 
@@ -108,9 +108,8 @@ let app = new Vue({
       })
       axios.post('http://localhost:8000/api/checkout', pay)
       .then((risposta) => {
-        console.log(risposta.data);
         if (risposta.data.success){
-          // this.sendData();
+          this.sendData();
         } else {
           if (risposta.data.validation){
             let validate = risposta.data.validation
