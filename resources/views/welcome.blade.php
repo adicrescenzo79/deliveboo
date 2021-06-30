@@ -33,7 +33,7 @@
             </div>
             <div class="icon-category selected" v-for="category in categories" @click="restaurantByCategory(category.id)">
               <div class="img-div-icon">
-                <img :src="category.icon" alt="@{{category.name}}">
+                <img :src="category.icon" :alt="category.name">
               </div>
               <span>
                 @{{category.name}}
