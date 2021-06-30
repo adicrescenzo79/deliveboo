@@ -1,99 +1,441 @@
 main {
-  margin-top: 100px;
+    margin-top: 100px;
 }
 
 #main-welcome {
-  .slider {
-    .slick-card {
-      height: 50px;
-      width: 100px;
-      img{
-        width: 100px;
-      }
-    }
-  }
-  a{
-    display: block;
-  }
-}
+    margin-top: -1.5rem;
 
-//Homepage section categories
-#categories {
-  margin: 20px 0;
-  .container {
-    .row {
-      .content-category {
+    #jumbo {
         display: flex;
-        justify-content: center;
         align-items: center;
-        .icon-category {
-          width: calc(100%/9);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          img {
-            width: 55%;
-          }
-          span {
-          }
+        position: relative;
+        background-image: url("../img/jumbo.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 150px;
+
+        .text-jumbo {
+            // position: absolute;
+            // z-index: 10;
+            // top: 15px;
+            // left: 0;
+            p {
+                text-shadow: 0 0 0 #2e068e;
+                font-size: 19px;
+                font-weight: 900;
+            }
+
+            h1 {
+                font-size: 24px;
+                font-weight: 900;
+                text-shadow: 1px 1px 4px #000000;
+                color: white;
+            }
         }
-      }
-    }
-  }
-}
 
-//Homepage section restaurants
-#restaurants {
-  .container {
-    .row {
-      .restaurants {
-        .content-restaurants {
-
+        .square-nice-blue {
+            display: none;
+            left: 17px;
+            border-top-left-radius: 50px;
+            background-color: #32325a;
+            height: 120px;
+            top: 16px;
+            width: 70px;
+            position: absolute;
         }
-      }
     }
-  }
-}
 
-//login page
-#main-login {
-  padding-top: 100px;
-  .card {
-    border: none;
-    background-color: $body-bg;
-    .card-header {
-      background-color: $body-bg;
-      font-size: 30px;
-      font-weight: 700;
-      color: #262626;
-      border-bottom: none;
+    #categories {
+        .content-category {
+            display: flex;
+            overflow-x: scroll;
+            width: 93%;
+
+            .icon-category {
+                padding: 30px 24px;
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 60px;
+                }
+            }
+        }
     }
-    .card-body{
-      .form-control {
-        background-color: $body-bg;
-        border-radius: 0;
-        font-size: 16px!important;
-        height: 48px!important;
-        line-height: 24px!important;
-        color: #262626!important;
-        border: 1px solid #E0E0E0!important;
-      }
-      .my-btn-login {
+
+    #restaurants {
+        .row {
+            padding: 0 20px;
+
+            .content-restaurants {
+                display: flex;
+                justify-content: center;
+                padding: 0 15px;
+
+                .card {
+                    margin: 23px 10px 40px;
+                    border: none;
+                    box-shadow: 0 0 30px -15px #888888;
+
+                    a {
+                        text-decoration: none;
+                        // height: 296px;
+                        .card-title {
+                            height: 42px;
+                            color: #292929;
+                            font-weight: 900;
+
+                            &:hover {
+                                cursor: pointer;
+                                opacity: 0.7;
+                            }
+                        }
+
+                        .card-text {
+                            color: black;
+                            opacity: 0.7;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+
+                            .card-text fas .fa-mapmarker-alt {
+                                color: #7B7B7B;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .my-btn {
+        text-align: center;
+        font-size: 13px;
         color: #fff;
-        width: 100%;
+        background: #000;
+        padding: 18px 45px;
+        text-transform: uppercase;
+        cursor: pointer;
+        width: fit-content;
+        transition: 0.2s;
+    }
+
+    .my-btn-create {
+        color: #fff;
+        width: 200px;
         background-color: $my-green;
         border-color: $my-green;
         height: 48px;
         font-size: 16px;
         border-style: none;
         transition: 0.2s;
+
         &:hover {
-          background-color: #000;
-          border-color: #000;
-
+            opacity: 0.7;
         }
-      }
     }
-  }
+    @media (min-width: 576px) {}
+    @media (min-width: 768px) {
+        #jumbo {
+            .text-jumbo {
+                p {
+                    text-shadow: 0 0 0 #2e068e;
+                    font-size: 19px;
+                    font-weight: 900;
+                }
 
+                h1 {
+                    font-size: 24px;
+                    font-weight: 900;
+                    text-shadow: 1px 1px 4px #000000;
+                    color: white;
+                }
+            }
+        }
+
+        #restaurants .card {
+            height: 296px;
+
+            a {
+                text-decoration: none;
+                height: 296px;
+
+                .card-title {
+                    height: 42px;
+                    color: #292929;
+                    font-weight: 900;
+
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.7;
+                    }
+                }
+
+                .card-text {
+                    color: black;
+                    opacity: 0.7;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    .card-text fas .fa-mapmarker-alt {
+                        color: #7B7B7B;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        #categories {
+            .content-category {
+                display: flex;
+                overflow-x: unset;
+                width: 93%;
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        margin-top: -1.5rem;
+
+        #jumbo {
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-image: url("../img/jumbo.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 300px;
+
+            .square-nice-blue {
+                display: block;
+                border-top-left-radius: 50px;
+                background-color: #32325a;
+                height: 235px;
+                left: 575px;
+                top: 35px;
+                width: 100px;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .text-jumbo {
+                position: absolute;
+                z-index: 10;
+                top: 64px;
+                left: 725px;
+
+                .content-jumbo {
+                    h1 {
+                        color: white;
+                        font-size: 42px;
+                        font-weight: 900;
+                    }
+
+                    p {
+                        color: #ffa5a5;
+                        font-size: 29px;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+        //Homepage section categories
+        #categories {
+            margin: 20px 0;
+            padding-bottom: 30px;
+
+            .row {
+                .content-category {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon-category.all {
+                        color: #585858;
+                        font-weight: 900;
+                        text-align: center;
+                        justify-content: center;
+                        display: flex;
+                        width: 124px;
+                        height: 75px;
+
+                        &:hover {
+                            color: $my-green;
+                            cursor: pointer;
+                        }
+
+                        &:hover .img-div {
+                            background: #AAA;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+
+                        .img-div {
+                            img {
+                                width: 90px;
+                            }
+                        }
+                    }
+
+                    .icon-category {
+                        width: calc(100%/9);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        color: #585858;
+                        font-weight: 900;
+                        padding: 5px;
+                        margin: 19px;
+
+                        &:hover .img-div-icon {
+                            opacity: 0.7;
+                            background: #AAA;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+
+                        &:hover {
+                            color: $my-green;
+                            cursor: pointer;
+                        }
+
+                        .img-div-icon {
+                            text-align: center;
+
+                            &:hover {
+                                opacity: 0.7;
+                                background: #AAA;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+
+                            img {
+                                width: 90px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #restaurants {
+            div.card {
+                width: 100%;
+                margin-bottom: 40px;
+                border: none;
+                box-shadow: 0 0 30px -15px #888888;
+
+                a {
+                    text-decoration: none;
+
+                    .img-cover-image {
+                        height: 30%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    h5.card-title {
+                        color: #292929;
+                        font-weight: 900;
+
+                        &:hover {
+                            cursor: pointer;
+                            opacity: 0.7;
+                        }
+                    }
+
+                    .card-text {
+                        color: black;
+                        opacity: 0.7;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        .card-text fas .fa-mapmarker-alt {
+                            color: #7B7B7B;
+                        }
+                    }
+                }
+            }
+
+            .my-btn {
+                text-align: center;
+                font-size: 13px;
+                color: #fff;
+                background: #000;
+                padding: 18px 45px;
+                text-transform: uppercase;
+                cursor: pointer;
+                width: fit-content;
+                transition: 0.2s;
+
+                &:hover {
+                    text-decoration: none;
+                    //opacity: 0.8;
+                    background-color: $my-green;
+                }
+            }
+        }
+    }
+}
+//login page
+
+#main-login {
+    padding-top: 100px;
+
+    .card {
+        border: none;
+        background-color: $body-bg;
+
+        .card-header {
+            background-color: $body-bg;
+            font-size: 30px;
+            font-weight: 700;
+            color: #262626;
+            border-bottom: none;
+        }
+
+        .card-body {
+            .form-control {
+                background-color: $body-bg;
+                border-radius: 0;
+                font-size: 16px!important;
+                height: 48px!important;
+                line-height: 24px!important;
+                color: #262626!important;
+                border: 1px solid #E0E0E0!important;
+            }
+
+            .my-btn-login {
+                color: #fff;
+                width: 100%;
+                background-color: $my-green;
+                border-color: $my-green;
+                height: 48px;
+                font-size: 16px;
+                border-style: none;
+                transition: 0.2s;
+
+                &:hover {
+                    background-color: #000;
+                    border-color: #000;
+                }
+            }
+        }
+    }
 }
