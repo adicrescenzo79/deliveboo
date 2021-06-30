@@ -14,12 +14,12 @@ let app = new Vue({
     validationcustomer_telephone: null,
     validationdelivery_time: null,
     orderForm: {
-      customer_name: '',
-      customer_email: '',
-      customer_telephone: '',
-      delivery_address: '',
-      delivery_time: '',
-      delivery_notes: '',
+      customer_name: 'alessandro',
+      customer_email: 'limone79@gmail.com',
+      customer_telephone: '076631575',
+      delivery_address: 'via ciao, 7 00053 civitavecchia (rm)',
+      delivery_time: '17:53',
+      delivery_notes: 'ciaone',
       total_paid: null, //prima di creare il json per l'api, calcolare il totale
       restaurant_id: null,
       credit_card:{
@@ -54,6 +54,9 @@ let app = new Vue({
   },
 
   methods: {
+    prova: function(){
+    },
+
     total: function(){
       // this.cart.forEach((dish, i) => {
       //   dish.price = dish.price.toFixed(2);
@@ -69,11 +72,30 @@ let app = new Vue({
 
     },
     sendData: function(){
-      console.log(this.orderForm.restaurant_id);
+      let newCart = [];
+      this.cart.forEach((item, i) => {
+        let dish = {
+          'dish_id': item.id,
+          'dish_quantity': item.quantity
+        }
+        newCart.push(dish);
+      });
+
+      let dish_ids = [];
+      let dish_quantities = [];
+      this.cart.forEach((item, i) => {
+        dish_ids.push(item.id);
+        dish_quantities.push(item.quantity);
+      });
+
+
       const dati = JSON.stringify({
-        'cart': this.cart,
-        'orderForm': this.orderForm
+        'cart': newCart,
+        'orderForm': this.orderForm,
+        'dish_ids': dish_ids,
+        'dish_quantities': dish_quantities
       })
+
       // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
       axios.post('http://localhost:8000/api/orders', dati)
       .then((risposta)=> {

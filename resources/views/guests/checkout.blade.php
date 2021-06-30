@@ -113,7 +113,7 @@
             </div>
             <hr class="mb-4">
             <a class="btn btn-dark btn-md btn-block" @click="pay">Continue to checkout</a>
-            <button @click="sendData" type="button" name="button">prova</button>
+            <button @click="prova" type="button" name="button">prova</button>
           </form>
         </div>
       </div>

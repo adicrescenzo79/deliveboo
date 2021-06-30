@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Order;
 use App\Dish;
+
 use Illuminate\Support\Facades\Validator;
 
 
@@ -34,6 +35,7 @@ class OrderController extends Controller
       'orderForm.delivery_notes' => 'nullable|string|max:500',
       'orderForm.total_paid' => 'required|numeric',
       'orderForm.restaurant_id' => 'exists:restaurants,id',
+      'dish_ids.*' => 'exists:dishes,id',
 
     ]);
     if ($validator->fails()){
@@ -48,6 +50,8 @@ class OrderController extends Controller
     // }
 
     $dataOrder = $data['orderForm'];
+
+
       // return response()->json([$dataOrder]);
 
     // $comic_obj = new Comic();
@@ -75,7 +79,20 @@ class OrderController extends Controller
     $order->restaurant_id = $dataOrder['restaurant_id'];
     $order->save();
 
-    return response()->json([$order]);
+    // if (array_key_exists('dish_ids', $data)){
+    //   $order->dishes()->attach($data['dish_ids']);
+    // }
+
+    // $cart = $data['cart'];
+
+    // return response()->json(['ok']);
+
+
+
+
+
+
+
 
 
 
