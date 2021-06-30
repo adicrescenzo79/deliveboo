@@ -10032,6 +10032,13 @@ nav {
 nav .container .navbar-brand img {
   width: 160px;
 }
+<<<<<<< HEAD
+=======
+nav .container ul {
+  position: absolute;
+  right: 0px;
+}
+>>>>>>> dev
 nav .container ul li {
   margin-left: 20px;
 }
@@ -10079,17 +10086,25 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 #main-log-reg .card {
   border: none;
-  background-color: #f8fafc;
+  background-color: #fff;
 }
 #main-log-reg .card .card-header {
+<<<<<<< HEAD
   background-color: #f8fafc;
+=======
+  background-color: #fff;
+>>>>>>> dev
   font-size: 30px;
   font-weight: 700;
   color: #262626;
   border-bottom: none;
 }
 #main-log-reg .card .card-body .form-control {
+<<<<<<< HEAD
   background-color: #f8fafc !important;
+=======
+  background-color: #fff !important;
+>>>>>>> dev
   border-radius: 0;
   font-size: 16px !important;
   height: 48px !important;
@@ -10298,7 +10313,10 @@ main {
   text-decoration: none;
 }
 #main-welcome #restaurants .row .content-restaurants .card a .card-title {
+<<<<<<< HEAD
   height: 42px;
+=======
+>>>>>>> dev
   color: #292929;
   font-weight: 900;
 }
@@ -10354,6 +10372,7 @@ main {
     text-shadow: 1px 1px 4px #000000;
     color: white;
   }
+<<<<<<< HEAD
   #main-welcome #restaurants .card {
     height: 296px;
   }
@@ -10363,6 +10382,13 @@ main {
   }
   #main-welcome #restaurants .card a .card-title {
     height: 42px;
+=======
+  #main-welcome #restaurants .card a {
+    text-decoration: none;
+  }
+  #main-welcome #restaurants .card a .card-title {
+    padding-bottom: 15px;
+>>>>>>> dev
     color: #292929;
     font-weight: 900;
   }
@@ -10428,6 +10454,7 @@ main {
     color: white;
     font-size: 42px;
     font-weight: 900;
+<<<<<<< HEAD
   }
   #main-welcome #jumbo .text-jumbo .content-jumbo p {
     color: #ffa5a5;
@@ -10542,6 +10569,122 @@ main {
     width: fit-content;
     transition: 0.2s;
   }
+=======
+  }
+  #main-welcome #jumbo .text-jumbo .content-jumbo p {
+    color: #ffa5a5;
+    font-size: 29px;
+    font-weight: 900;
+  }
+  #main-welcome #categories {
+    margin: 20px 0;
+    padding-bottom: 30px;
+  }
+  #main-welcome #categories .row .content-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #main-welcome #categories .row .content-category .icon-category.all {
+    color: #585858;
+    font-weight: 900;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 124px;
+    height: 75px;
+  }
+  #main-welcome #categories .row .content-category .icon-category.all:hover {
+    color: #3e9920;
+    cursor: pointer;
+  }
+  #main-welcome #categories .row .content-category .icon-category.all:hover .img-div {
+    background: #AAA;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #main-welcome #categories .row .content-category .icon-category.all .img-div img {
+    width: 90px;
+  }
+  #main-welcome #categories .row .content-category .icon-category {
+    width: calc(100%/9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #585858;
+    font-weight: 900;
+    padding: 5px;
+    margin: 19px;
+  }
+  #main-welcome #categories .row .content-category .icon-category:hover .img-div-icon {
+    opacity: 0.7;
+    background: #AAA;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #main-welcome #categories .row .content-category .icon-category:hover {
+    color: #3e9920;
+    cursor: pointer;
+  }
+  #main-welcome #categories .row .content-category .icon-category .img-div-icon {
+    text-align: center;
+  }
+  #main-welcome #categories .row .content-category .icon-category .img-div-icon:hover {
+    opacity: 0.7;
+    background: #AAA;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  #main-welcome #categories .row .content-category .icon-category .img-div-icon img {
+    width: 90px;
+  }
+  #main-welcome #restaurants div.card {
+    width: 100%;
+    margin-bottom: 40px;
+    border: none;
+    box-shadow: 0 0 30px -15px #888888;
+  }
+  #main-welcome #restaurants div.card a {
+    text-decoration: none;
+  }
+  #main-welcome #restaurants div.card a .img-cover-image {
+    height: 30%;
+  }
+  #main-welcome #restaurants div.card a .img-cover-image img {
+    width: 100%;
+  }
+  #main-welcome #restaurants div.card a h5.card-title {
+    color: #292929;
+    font-weight: 900;
+  }
+  #main-welcome #restaurants div.card a h5.card-title:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  #main-welcome #restaurants div.card a .card-text {
+    color: black;
+    opacity: 0.7;
+  }
+  #main-welcome #restaurants div.card a .card-text:hover {
+    opacity: 1;
+  }
+  #main-welcome #restaurants div.card a .card-text .card-text fas .fa-mapmarker-alt {
+    color: #7B7B7B;
+  }
+  #main-welcome #restaurants .my-btn {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    background: #000;
+    padding: 18px 45px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: 0.2s;
+  }
+>>>>>>> dev
   #main-welcome #restaurants .my-btn:hover {
     text-decoration: none;
     background-color: #3e9920;
@@ -10605,4 +10748,18 @@ footer .container .container-footer .right-footer {
 }
 footer .container .container-footer .right-footer ul {
   float: right;
+<<<<<<< HEAD
+=======
+}
+
+@media screen and (max-width: 767px) {
+  .left-footer,
+.right-footer {
+    display: none;
+  }
+
+  footer .container .container-footer .central-footer {
+    width: 100%;
+  }
+>>>>>>> dev
 }

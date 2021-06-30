@@ -85,7 +85,7 @@ main {
                         text-decoration: none;
                         // height: 296px;
                         .card-title {
-                            height: 42px;
+                            // height: 42px;
                             color: #292929;
                             font-weight: 900;
 
@@ -159,14 +159,15 @@ main {
         }
 
         #restaurants .card {
-            height: 296px;
+            // height: 296px;
 
             a {
                 text-decoration: none;
-                height: 296px;
+                // height: 296px;
 
                 .card-title {
-                    height: 42px;
+                    // height: 42px;
+                    padding-bottom: 15px;
                     color: #292929;
                     font-weight: 900;
 
