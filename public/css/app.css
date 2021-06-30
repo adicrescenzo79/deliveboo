@@ -10974,6 +10974,11 @@ nav .container .navbar-brand img {
   width: 160px;
 }
 
+nav .container ul {
+  position: absolute;
+  right: 0px;
+}
+
 nav .container ul li {
   margin-left: 20px;
 }
@@ -11129,16 +11134,17 @@ main {
   margin-top: 5px;
 }
 
-#main-admin-restaurants .card .card-body .card-img.col-md-2 {
-  padding: 0;
-}
-
 #main-admin-restaurants .card .card-body .card-img img {
   width: 100%;
 }
 
 #main-admin-restaurants .card .card-body ul {
   list-style: none;
+  font-size: 16px;
+}
+
+#main-admin-restaurants .card .card-body ul strong {
+  font-size: 18px;
 }
 
 #main-admin-restaurants .card .card-body .my-btn-card {
@@ -11162,52 +11168,59 @@ main {
   opacity: 0.8;
 }
 
-#main-admin-restaurants .card .card-body .container-buttons,
-#main-admin-restaurants .card .card-body .container-icon-edit-trash {
+#main-admin-restaurants .card .card-body .container-buttons {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
-#main-admin-restaurants .card .card-body .container-buttons i,
-#main-admin-restaurants .card .card-body .container-icon-edit-trash i {
-  padding-left: 4px;
-  color: #3e9920;
+#main-admin-restaurants .card .card-body .container-buttons i {
   opacity: 0.7;
   border: none;
-  font-size: 25px;
+  font-size: 27px;
   transition: 0.2s;
 }
 
-#main-admin-restaurants .card .card-body .container-buttons i:hover,
-#main-admin-restaurants .card .card-body .container-icon-edit-trash i:hover {
+#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-utensils {
+  color: #f6993f;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons i.far.fa-chart-bar {
+  color: #3490dc;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-edit {
+  color: #3e9920;
+}
+
+#main-admin-restaurants .card .card-body .container-buttons i:hover {
   opacity: 1;
 }
 
-#main-admin-restaurants .card .card-body .container-buttons input.trash-icon,
-#main-admin-restaurants .card .card-body .container-icon-edit-trash input.trash-icon {
+#main-admin-restaurants .card .card-body .container-buttons form input.trash-icon {
   color: #f00;
   opacity: 0.7;
   border: none;
-  font-size: 25px;
+  font-size: 27px;
   transition: 0.2s;
 }
 
-#main-admin-restaurants .card .card-body .container-buttons input.trash-icon:hover,
-#main-admin-restaurants .card .card-body .container-icon-edit-trash input.trash-icon:hover {
+#main-admin-restaurants .card .card-body .container-buttons form input.trash-icon:hover {
   opacity: 1;
 }
 
 @media screen and (max-width: 767px) {
-  #main-admin-restaurants .container-buttons .my-btn-card {
-    margin-top: 5px;
+  #main-admin-restaurants .card .card-body .container-buttons {
+    flex-direction: row;
   }
-}
 
-@media screen and (max-width: 992px) {
-  #main-admin-restaurants .card-img {
-    display: none;
+  #main-admin-restaurants .card .card-body .card-img img {
+    width: 100px;
+  }
+
+  #main-admin-restaurants .card .card-body .card-img {
+    display: flex;
+    justify-content: center;
   }
 }
 

@@ -122,15 +122,16 @@ main {
     margin-top: 5px;
     .card-body {
       .card-img {
-        &.col-md-2 {
-          padding: 0;
-        }
         img {
           width: 100%;
         }
       }
       ul {
         list-style: none;
+        font-size: 16px;
+        strong {
+          font-size: 18px;
+        }
       }
       .my-btn-card {
         min-width: 118px;
@@ -147,51 +148,88 @@ main {
         &:hover {
           text-decoration: none;
           opacity: 0.8;
-          // background-color: $my-green;
         }
       }
-      .container-buttons,
-      .container-icon-edit-trash {
+      .container-buttons {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
         i {
-          padding-left: 4px;
-          color: $my-green;
           opacity: 0.7;
           border: none;
-          font-size: 25px;
+          font-size: 27px;
           transition: 0.2s;
+          &.fas.fa-utensils {
+            color: $orange;
+          }
+          &.far.fa-chart-bar {
+            color: $blue;
+          }
+          &.fas.fa-edit {
+            color:  $my-green;
+          }
           &:hover {
             opacity: 1;
           }
         }
-        input.trash-icon {
+        form input.trash-icon {
           color: #f00;
           opacity: 0.7;
           border: none;
-          font-size: 25px;
+          font-size: 27px;
           transition: 0.2s;
           &:hover {
             opacity: 1;
           }
         }
       }
+      // .container-icon-edit-trash {
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
+      //   justify-content: space-evenly;
+      //   i {
+      //     padding-left: 4px;
+      //     color: $my-green;
+      //     opacity: 0.7;
+      //     border: none;
+      //     font-size: 25px;
+      //     transition: 0.2s;
+      //     &:hover {
+      //       opacity: 1;
+      //     }
+      //   }
+      //   input.trash-icon {
+      //     color: #f00;
+      //     opacity: 0.7;
+      //     border: none;
+      //     font-size: 25px;
+      //     transition: 0.2s;
+      //     &:hover {
+      //       opacity: 1;
+      //     }
+      //   }
+      // }
     }
   }
   // Small devices (landscape phones, less than 768px)
   @media screen and (max-width: 767px) {
-    .container-buttons .my-btn-card {
-      margin-top: 5px;
+    .card .card-body .container-buttons {
+      flex-direction: row;
     }
+    .card .card-body .card-img img {
+      width: 100px;
+    }
+    .card .card-body .card-img {
+      display: flex;
+      justify-content: center;
+    }
+
   }
 
   // Medium devices (landscape phones, less than 992px)
   @media screen and (max-width: 992px) {
-    .card-img {
-      display: none;
-    }
+
   }
 
 }
