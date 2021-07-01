@@ -10026,6 +10026,10 @@ h3 {
   text-transform: capitalize;
 }
 
+.my-b-none {
+  background: none;
+}
+
 nav .container .navbar-brand img {
   width: 160px;
 }
@@ -10296,9 +10300,12 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-restaurants-show .jumbo-restaurants-show {
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 350px;
 }
 #main-restaurants-show .container .card {
+  margin-top: -120px;
+  border-radius: 0;
+  font-size: 16px;
   margin-bottom: 150px;
 }
 #main-restaurants-show .container .card .card-body .img-overflow {
@@ -10333,6 +10340,27 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 #main-restaurants-show .container .card .card-body .container-icon form input.trash-icon:hover {
   opacity: 1;
+}
+#main-restaurants-show .container .card .my-btn-main {
+  color: #fff;
+  width: 100%;
+  background-color: #000;
+  border-color: #000;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+#main-restaurants-show .container .card .my-btn-main:hover {
+  background-color: #3e9920;
+}
+@media screen and (max-width: 767px) {
+  #main-restaurants-show .jumbo-restaurants-show {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    transition: 0.2s;
+  }
 }
 
 #main_checkout .container {
@@ -10860,6 +10888,10 @@ footer .container .container-footer .right-footer ul {
 }
 
 @media screen and (max-width: 767px) {
+  footer {
+    height: 200px;
+  }
+
   .left-footer,
 .right-footer {
     display: none;

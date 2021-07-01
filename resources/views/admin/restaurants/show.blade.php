@@ -35,19 +35,19 @@
               <p class="card-text">Tel: {{$restaurant->telephone}}</p>
               <p class="card-text">Partita IVA: {{$restaurant->p_iva}}</p>
               <div class="container-icon d-flex justify-content-center">
-                <a class="mx-4" href="{{route('admin.restaurants.edit', ['restaurant'=>$restaurant->id])}}"><i class="fas fa-edit" title="Modifica"></i></a>
+                <a class="m-4" href="{{route('admin.restaurants.edit', ['restaurant'=>$restaurant->id])}}"><i class="fas fa-edit" title="Modifica"></i></a>
 
-                <form class="form-delete mx-4" action="{{route('admin.restaurants.destroy', ['restaurant'=>$restaurant->id])}}" method="POST">
+                <form class="form-delete m-4" action="{{route('admin.restaurants.destroy', ['restaurant'=>$restaurant->id])}}" method="POST">
                   @csrf
                   @method('DELETE')
-                  <input class="fa trash-icon" title="Cancella" type="submit" name="" value="&#xf1f8;">
+                  <input class="fa trash-icon my-b-none" title="Cancella" type="submit" name="" value="&#xf1f8;">
                 </form>
 
               </div>
 
             </div>
-            <div class="card-footer text-muted">
-              <a href="{{ route('admin.restaurants.dishes.index', ['restaurant' => $restaurant->id]) }}">Gestisci il tuo menù</a>
+            <div class="text-muted">
+              <a href="{{ route('admin.restaurants.dishes.index', ['restaurant' => $restaurant->id]) }}"><button class="my-btn-main" type="button" name="button">Gestisci il tuo menù</button></a>
             </div>
           </div>
 
