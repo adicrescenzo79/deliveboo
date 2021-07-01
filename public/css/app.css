@@ -10248,33 +10248,48 @@ main {
   background-repeat: no-repeat;
   height: 150px;
 }
-#main-welcome #jumbo .text-jumbo p {
+#main-welcome #jumbo .middle-jumbo {
+  position: relative;
+  height: 100%;
+}
+#main-welcome #jumbo .middle-jumbo .square-nice-blue {
+  left: 33px;
+  border-top-left-radius: 50px;
+  background-color: #32325a;
+  height: 122px;
+  top: -63px;
+  width: 60px;
+  position: absolute;
+}
+#main-welcome #jumbo .middle-jumbo .text-jumbo {
+  position: absolute;
+  z-index: 10;
+  top: -51px;
+  left: 68px;
+}
+#main-welcome #jumbo .middle-jumbo .text-jumbo p {
+  height: 150px;
+  color: #ffa5a5;
   text-shadow: 0 0 0 #2e068e;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 900;
 }
-#main-welcome #jumbo .text-jumbo h1 {
-  font-size: 24px;
+#main-welcome #jumbo .middle-jumbo .text-jumbo h1 {
+  font-size: 20px;
   font-weight: 900;
   text-shadow: 1px 1px 4px #000000;
   color: white;
 }
-#main-welcome #jumbo .square-nice-blue {
-  display: none;
-  left: 17px;
-  border-top-left-radius: 50px;
-  background-color: #32325a;
-  height: 120px;
-  top: 16px;
-  width: 70px;
-  position: absolute;
+#main-welcome #categories .row {
+  margin-right: 0;
+  margin-left: 0;
 }
-#main-welcome #categories .content-category {
+#main-welcome #categories .row .content-category {
   display: flex;
   overflow-x: scroll;
   width: 93%;
 }
-#main-welcome #categories .content-category .icon-category {
+#main-welcome #categories .row .content-category .icon-category {
   padding: 30px 24px;
   font-size: 12px;
   display: flex;
@@ -10282,16 +10297,16 @@ main {
   flex-direction: column;
   align-items: center;
 }
-#main-welcome #categories .content-category .icon-category img {
+#main-welcome #categories .row .content-category .icon-category img {
   width: 60px;
 }
-#main-welcome #restaurants .row {
-  padding: 0 20px;
+#main-welcome #restaurants [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
 }
 #main-welcome #restaurants .row .content-restaurants {
   display: flex;
   justify-content: center;
-  padding: 0 15px;
 }
 #main-welcome #restaurants .row .content-restaurants .card {
   margin: 23px 10px 40px;
@@ -10345,13 +10360,60 @@ main {
 #main-welcome .my-btn-create:hover {
   opacity: 0.7;
 }
-@media (min-width: 768px) {
-  #main-welcome #jumbo .text-jumbo p {
+@media (min-width: 576px) {
+  #main-welcome #jumbo .middle-jumbo .square-nice-blue {
+    left: 33px;
+    border-top-left-radius: 50px;
+    background-color: #32325a;
+    height: 122px;
+    top: -63px;
+    width: 60px;
+    position: absolute;
+  }
+  #main-welcome .text-jumbo {
+    position: absolute;
+    z-index: 10;
+    top: -51px;
+    left: 68px;
+  }
+  #main-welcome .text-jumbo h1 {
+    font-size: 24px;
+    font-weight: 900;
+    text-shadow: 1px 1px 4px #000000;
+    color: white;
+  }
+  #main-welcome .text-jumbo p {
+    height: 150px;
+    color: #ffa5a5;
     text-shadow: 0 0 0 #2e068e;
     font-size: 19px;
     font-weight: 900;
   }
-  #main-welcome #jumbo .text-jumbo h1 {
+}
+@media (min-width: 768px) {
+  #main-welcome #jumbo .middle-jumbo .square-nice-blue {
+    left: 33px;
+    border-top-left-radius: 50px;
+    background-color: #32325a;
+    height: 122px;
+    top: -63px;
+    width: 60px;
+    position: absolute;
+  }
+  #main-welcome .text-jumbo {
+    position: absolute;
+    z-index: 10;
+    top: -51px;
+    left: 68px;
+  }
+  #main-welcome .text-jumbo p {
+    height: 150px;
+    color: #ffa5a5;
+    text-shadow: 0 0 0 #2e068e;
+    font-size: 19px;
+    font-weight: 900;
+  }
+  #main-welcome .text-jumbo h1 {
     font-size: 24px;
     font-weight: 900;
     text-shadow: 1px 1px 4px #000000;
@@ -10381,9 +10443,41 @@ main {
   }
 }
 @media (min-width: 992px) {
+  #main-welcome #jumbo .middle-jumbo {
+    position: relative;
+    height: 100%;
+  }
+  #main-welcome #jumbo .middle-jumbo .square-nice-blue {
+    left: 90px;
+    border-top-left-radius: 50px;
+    background-color: #32325a;
+    height: 122px;
+    top: -63px;
+    width: 60px;
+    position: absolute;
+  }
+  #main-welcome #jumbo .middle-jumbo .text-jumbo {
+    position: absolute;
+    z-index: 10;
+    top: -51px;
+    left: 127px;
+  }
+  #main-welcome #jumbo .middle-jumbo .text-jumbo h1 {
+    font-size: 24px;
+    font-weight: 900;
+    text-shadow: 1px 1px 4px #000000;
+    color: white;
+  }
+  #main-welcome #jumbo .middle-jumbo .text-jumbo p {
+    height: 150px;
+    color: #ffa5a5;
+    text-shadow: 0 0 0 #2e068e;
+    font-size: 19px;
+    font-weight: 900;
+  }
   #main-welcome #categories .content-category {
     display: flex;
-    overflow-x: unset;
+    overflow-x: scroll;
     width: 93%;
   }
 }
@@ -10400,15 +10494,6 @@ main {
     background-repeat: no-repeat;
     height: 300px;
   }
-  #main-welcome #jumbo .square-nice-blue {
-    display: block;
-    border-top-left-radius: 50px;
-    background-color: #32325a;
-    height: 235px;
-    left: 575px;
-    top: 35px;
-    width: 100px;
-  }
   #main-welcome #jumbo .overlay {
     position: absolute;
     top: 0;
@@ -10417,18 +10502,31 @@ main {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  #main-welcome #jumbo .text-jumbo {
+  #main-welcome #jumbo .middle-jumbo {
+    position: relative;
+    height: 100%;
+  }
+  #main-welcome #jumbo .middle-jumbo .square-nice-blue {
+    left: -2px;
+    border-top-left-radius: 50px;
+    background-color: #32325a;
+    height: 218px;
+    top: -115px;
+    width: 100px;
+    position: absolute;
+  }
+  #main-welcome #jumbo .middle-jumbo .text-jumbo {
     position: absolute;
     z-index: 10;
-    top: 64px;
-    left: 725px;
+    top: -93px;
+    left: 60px;
   }
-  #main-welcome #jumbo .text-jumbo .content-jumbo h1 {
+  #main-welcome #jumbo .middle-jumbo .text-jumbo .content-jumbo h1 {
     color: white;
     font-size: 42px;
     font-weight: 900;
   }
-  #main-welcome #jumbo .text-jumbo .content-jumbo p {
+  #main-welcome #jumbo .middle-jumbo .text-jumbo .content-jumbo p {
     color: #ffa5a5;
     font-size: 29px;
     font-weight: 900;
@@ -10441,6 +10539,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: scroll;
   }
   #main-welcome #categories .row .content-category .icon-category.all {
     color: #585858;
