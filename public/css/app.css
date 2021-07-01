@@ -10569,6 +10569,16 @@ main {
   text-align: center;
 }
 
+#main_menu .card-dish {
+  padding: 0 10px;
+}
+#main_menu .card-dish img {
+  width: 100px;
+}
+#main_menu .card-dish span {
+  padding: 35px 0;
+}
+
 footer {
   margin-top: 150px;
   height: 400px;
