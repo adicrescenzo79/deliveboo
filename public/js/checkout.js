@@ -157,10 +157,6 @@ var app = new Vue({
       sessionStorage.setItem('session', JSON.stringify(currentCart));
     },
     total: function total() {
-      // this.cart.forEach((dish, i) => {
-      //   dish.price = dish.price.toFixed(2);
-      //   console.log(dish.price);
-      // });
       var total = 0;
       this.cart.forEach(function (dish, i) {
         total += dish.price * dish.quantity;

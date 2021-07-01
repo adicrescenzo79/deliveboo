@@ -10701,7 +10701,7 @@ main {
   transform: translate(-50%, -50%);
 }
 #main_success .msg h1 {
-  font-size: 200px;
+  font-size: 15vw;
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 4px #000;
@@ -10710,14 +10710,21 @@ main {
   text-align: center;
 }
 
-#main_menu .card-dish {
+#main_menu #dishes .menu-dish .card {
   padding: 0 10px;
 }
-#main_menu .card-dish img {
+#main_menu #dishes .menu-dish .card:hover {
+  cursor: pointer;
+}
+#main_menu #dishes .menu-dish .card img {
   width: 100px;
 }
-#main_menu .card-dish span {
+#main_menu #dishes .menu-dish .card span {
   padding: 35px 0;
+}
+#main_menu #cart input {
+  width: 60px;
+  padding-left: 10px;
 }
 
 footer {

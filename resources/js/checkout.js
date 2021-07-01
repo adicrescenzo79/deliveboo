@@ -70,11 +70,6 @@ let app = new Vue({
     },
 
     total: function(){
-      // this.cart.forEach((dish, i) => {
-      //   dish.price = dish.price.toFixed(2);
-      //   console.log(dish.price);
-      // });
-
       let total = 0;
       this.cart.forEach((dish, i) => {
         total += (dish.price * dish.quantity);

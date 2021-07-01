@@ -26,8 +26,6 @@
               <strong>€ @{{total()}}</strong>
             </li>
           </ul>
-
-
         </div>
 
         {{-- TRANSAZIONE --}}
