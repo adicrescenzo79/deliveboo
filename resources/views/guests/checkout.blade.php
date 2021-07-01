@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <div id="main_checkout">
+  <div id="main_checkout" >
     <div class="container">
       <div class="row">
         {{-- CART --}}
@@ -115,10 +115,15 @@
         </div>
       </div>
     </div>
+    <div v-if="wait" class="wheel flex-row flex-center justify-content-center align-items-center">
+      <i class="ex-10-icon fas fa-circle-notch"></i>
+    </div>
+  </div>
 
 
-  @endsection
 
-  @section('foot-script')
-    <script src="{{asset('js/checkout.js')}}" charset="utf-8"></script>
-  @endsection
+@endsection
+
+@section('foot-script')
+  <script src="{{asset('js/checkout.js')}}" charset="utf-8"></script>
+@endsection

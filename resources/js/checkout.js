@@ -13,6 +13,7 @@ let app = new Vue({
     validationdelivery_address: null,
     validationcustomer_telephone: null,
     validationdelivery_time: null,
+    wait: false,
     orderForm: {
       customer_name: 'alessandro',
       customer_email: 'limone79@gmail.com',
@@ -116,6 +117,7 @@ let app = new Vue({
     },
 
     pay: function(){
+      this.wait = true;
       this.total();
 
       this.validationcustomer_name = null

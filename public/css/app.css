@@ -10268,6 +10268,47 @@ nav .container .dropdown-menu .dropdown-item:hover {
   -ms-user-select: none;
   user-select: none;
 }
+#main_checkout .wheel {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+@-webkit-keyframes ex10 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes ex10 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+#main_checkout .wheel .ex-10-icon {
+  -webkit-animation-name: ex10;
+          animation-name: ex10;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  font-size: 20vw;
+  color: white;
+  opacity: 0.5;
+}
 @media (min-width: 768px) {
   #main_checkout .bd-placeholder-img-lg {
     font-size: 3.5rem;
@@ -10701,7 +10742,7 @@ main {
   transform: translate(-50%, -50%);
 }
 #main_success .msg h1 {
-  font-size: 15vw;
+  font-size: 10vw;
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 4px #000;
