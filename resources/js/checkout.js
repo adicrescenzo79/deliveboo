@@ -13,6 +13,7 @@ let app = new Vue({
     validationdelivery_address: null,
     validationcustomer_telephone: null,
     validationdelivery_time: null,
+    wait: false,
     orderForm: {
       customer_name: 'alessandro',
       customer_email: 'limone79@gmail.com',
@@ -45,6 +46,13 @@ let app = new Vue({
 
     this.total();
 
+
+// da cancelllare dopo
+    // this.cartDelete();
+
+    // cancellazione carrello
+
+
     // sessionStorage.removeItem('slug');
 
     // console.log(this.slug, this.cart);
@@ -54,15 +62,15 @@ let app = new Vue({
   },
 
   methods: {
-    prova: function(){
+    cartDelete: function(){
+      let currentCart = JSON.parse(sessionStorage.getItem('session'));
+      currentCart = currentCart.filter(obj => obj.restaurantSlug != this.slug);
+      console.log(sessionStorage);
+      window.sessionStorage.clear();
+      sessionStorage.setItem('session', JSON.stringify(currentCart));
     },
 
     total: function(){
-      // this.cart.forEach((dish, i) => {
-      //   dish.price = dish.price.toFixed(2);
-      //   console.log(dish.price);
-      // });
-
       let total = 0;
       this.cart.forEach((dish, i) => {
         total += (dish.price * dish.quantity);
@@ -101,7 +109,7 @@ let app = new Vue({
       .then((risposta)=> {
         console.log(risposta);
         if (risposta.data.success) {
-          // window.location.href = 'localhost:8000/success';
+          this.cartDelete;
           window.location.href = '/success';
         }
       })
@@ -109,6 +117,7 @@ let app = new Vue({
     },
 
     pay: function(){
+      this.wait = true;
       this.total();
 
       this.validationcustomer_name = null

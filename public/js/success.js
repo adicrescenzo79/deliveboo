@@ -93,7 +93,14 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+Vue.config.devtools = true;
+var app = new Vue({
+  el: '#main_success',
+  data: {},
+  created: function created() {
+    window.sessionStorage.clear();
+  }
+});
 
 /***/ }),
 
