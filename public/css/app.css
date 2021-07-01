@@ -10030,6 +10030,53 @@ h3 {
   background: none;
 }
 
+.my-btn-main {
+  color: #fff;
+  width: 100%;
+  background-color: #3e9920;
+  border-color: #3e9920;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+.my-btn-main:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
+a.my-btn {
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  background: #000;
+  padding: 16px 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.2s;
+}
+a.my-btn:hover {
+  text-decoration: none;
+  background-color: #3e9920;
+}
+
+.my-btn-create {
+  color: #fff;
+  width: 200px;
+  background-color: #3e9920;
+  border-color: #3e9920;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+.my-btn-create:hover {
+  opacity: 0.7;
+}
+
 nav .container .navbar-brand img {
   width: 160px;
 }
@@ -10437,7 +10484,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 93px;
 }
 
 #main-welcome {
