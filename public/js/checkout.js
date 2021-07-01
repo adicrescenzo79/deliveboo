@@ -109,12 +109,12 @@ var app = new Vue({
     validationcustomer_telephone: null,
     validationdelivery_time: null,
     orderForm: {
-      customer_name: '',
-      customer_email: '',
-      customer_telephone: '',
-      delivery_address: '',
-      delivery_time: '',
-      delivery_notes: '',
+      customer_name: 'alessandro',
+      customer_email: 'limone79@gmail.com',
+      customer_telephone: '076631575',
+      delivery_address: 'via ciao, 7 00053 civitavecchia (rm)',
+      delivery_time: '17:53',
+      delivery_notes: 'ciaone',
       total_paid: null,
       //prima di creare il json per l'api, calcolare il totale
       restaurant_id: null,
@@ -142,6 +142,7 @@ var app = new Vue({
     //RICORDARSI DI TOGLIERE DALLA SESSION STORAGE I PIATTI CHE PAGIAMO E ANCHE DI RIMUOVERE LO SLUG DEI PIATTI CHE PAGHIAMO
   },
   methods: {
+    prova: function prova() {},
     total: function total() {
       // this.cart.forEach((dish, i) => {
       //   dish.price = dish.price.toFixed(2);
@@ -155,15 +156,35 @@ var app = new Vue({
       return this.orderForm.total_paid;
     },
     sendData: function sendData() {
+      var newCart = [];
+      this.cart.forEach(function (item, i) {
+        var dish = {
+          'dish_id': item.id,
+          'dish_quantity': item.quantity
+        };
+        newCart.push(dish);
+      });
+      var dish_ids = [];
+      var dish_quantities = [];
+      this.cart.forEach(function (item, i) {
+        dish_ids.push(item.id);
+        dish_quantities.push(item.quantity);
+      });
       var dati = JSON.stringify({
-        'cart': this.cart,
-        'orderForm': this.orderForm
-      }); // console.log(dati);
-      // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
-      // axios.post('http://localhost:8000/api/order', dati)
-      // .thien(risposta) => {
-      //
-      // }
+        'cart': newCart,
+        'orderForm': this.orderForm,
+        'dish_ids': dish_ids,
+        'dish_quantities': dish_quantities
+      }); // gestire la chiamata axios post per scrivere nella tabella ordini e nella tabella pivot del database
+
+      axios.post('http://localhost:8000/api/orders', dati).then(function (risposta) {
+        console.log(risposta);
+
+        if (risposta.data.success) {
+          // window.location.href = 'localhost:8000/success';
+          window.location.href = '/success';
+        }
+      });
     },
     pay: function pay() {
       var _this2 = this;
@@ -191,9 +212,8 @@ var app = new Vue({
         }
       });
       axios.post('http://localhost:8000/api/checkout', pay).then(function (risposta) {
-        console.log(risposta.data);
-
-        if (risposta.data.success) {// this.sendData();
+        if (risposta.data.success) {
+          _this2.sendData();
         } else {
           if (risposta.data.validation) {
             var validate = risposta.data.validation;
@@ -225,36 +245,14 @@ var app = new Vue({
         }
       });
     },
-    // payForm: function(){
-    //   this.orderForm.restaurant_id = this.cart[0].restaurant_id;
-    //   this.orderForm.total_paid = this.total();
-    //
-    //   sessionStorage.setItem('order', JSON.stringify(this.orderForm));
-    //   console.log(sessionStorage);
-    // },
-    //al click vediamo tutti i ristoranti della categoria selezionata
-    // restaurantBySlug: function(){
-    //   axios.get(`http://localhost:8000/api/restaurants/slug/${this.slug}`,{
-    //   }).then((response)=>{
-    //     this.restaurant = response.data.data;
-    //     // console.log(response.data.data);
-    //   });
-    //
-    // },
-    //al click vediamo tutti i ristoranti
-    // allRestaurants: function() {
-    //   this.filteredRestaurants = [];
-    //   this.unfiltered = true;
-    //   this.categoryIndex = '';
-    //   axios.get(`http://localhost:8000/api/restaurants/nr/${this.skip}`,{
-    //   }).then((response)=>{
-    //     // this.restaurants.push(response.data.data);
-    //     this.restaurants = [...this.restaurants, ...response.data.data];
-    //     //console.log(this.restaurants);
-    //   });
-    //   this.skip += 8;
-    // },
     //Aggiunta al carrello
+    totDishes: function totDishes() {
+      var tot = 0;
+      this.cart.forEach(function (dish, i) {
+        tot += dish.quantity;
+      });
+      return tot;
+    },
     addCart: function addCart(dish) {
       var _this3 = this;
 

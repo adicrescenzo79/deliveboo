@@ -10590,6 +10590,38 @@ main {
   }
 }
 
+#main_success {
+  position: relative;
+}
+#main_success img {
+  width: 100%;
+}
+#main_success .msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#main_success .msg h1 {
+  font-size: 200px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000;
+}
+#main_success .msg a {
+  text-align: center;
+}
+
+#main_menu .card-dish {
+  padding: 0 10px;
+}
+#main_menu .card-dish img {
+  width: 100px;
+}
+#main_menu .card-dish span {
+  padding: 35px 0;
+}
+
 footer {
   margin-top: 150px;
   height: 400px;

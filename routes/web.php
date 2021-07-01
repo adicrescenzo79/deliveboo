@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 Route::get('/security', function () {
     return view('security');
 });
@@ -25,6 +25,11 @@ Route::get('restaurants/{slug}', 'RestaurantController@menu')->name('restaurants
 Route::get('checkout', function () {
     return view('guests.checkout');
 })->name('checkout');
+
+Route::get('success', function () {
+    return view('guests.success');
+})->name('success');
+
 
 
 
