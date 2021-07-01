@@ -85,7 +85,9 @@ class OrderController extends Controller
 
     // $cart = $data['cart'];
 
-    // return response()->json(['ok']);
+    return response()->json([
+        'success' => true,
+    ]);
 
 
 

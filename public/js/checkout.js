@@ -179,6 +179,11 @@ var app = new Vue({
 
       axios.post('http://localhost:8000/api/orders', dati).then(function (risposta) {
         console.log(risposta);
+
+        if (risposta.data.success) {
+          // window.location.href = 'localhost:8000/success';
+          window.location.href = '/success';
+        }
       });
     },
     pay: function pay() {
@@ -240,36 +245,14 @@ var app = new Vue({
         }
       });
     },
-    // payForm: function(){
-    //   this.orderForm.restaurant_id = this.cart[0].restaurant_id;
-    //   this.orderForm.total_paid = this.total();
-    //
-    //   sessionStorage.setItem('order', JSON.stringify(this.orderForm));
-    //   console.log(sessionStorage);
-    // },
-    //al click vediamo tutti i ristoranti della categoria selezionata
-    // restaurantBySlug: function(){
-    //   axios.get(`http://localhost:8000/api/restaurants/slug/${this.slug}`,{
-    //   }).then((response)=>{
-    //     this.restaurant = response.data.data;
-    //     // console.log(response.data.data);
-    //   });
-    //
-    // },
-    //al click vediamo tutti i ristoranti
-    // allRestaurants: function() {
-    //   this.filteredRestaurants = [];
-    //   this.unfiltered = true;
-    //   this.categoryIndex = '';
-    //   axios.get(`http://localhost:8000/api/restaurants/nr/${this.skip}`,{
-    //   }).then((response)=>{
-    //     // this.restaurants.push(response.data.data);
-    //     this.restaurants = [...this.restaurants, ...response.data.data];
-    //     //console.log(this.restaurants);
-    //   });
-    //   this.skip += 8;
-    // },
     //Aggiunta al carrello
+    totDishes: function totDishes() {
+      var tot = 0;
+      this.cart.forEach(function (dish, i) {
+        tot += dish.quantity;
+      });
+      return tot;
+    },
     addCart: function addCart(dish) {
       var _this3 = this;
 
@@ -316,7 +299,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/checkout.js */"./resources/js/checkout.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\checkout.js */"./resources/js/checkout.js");
 
 
 /***/ })

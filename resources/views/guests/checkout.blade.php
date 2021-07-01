@@ -9,7 +9,7 @@
         <div class="col-md-4 order-md-2 mb-4">
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Your cart</span>
-            <span class="badge badge-secondary badge-pill">3</span>
+            <span class="badge badge-secondary badge-pill">@{{totDishes()}}</span>
           </h4>
           <ul class="list-group mb-3">
             <li v-for="dish in cart" class="list-group-item d-flex justify-content-between lh-condensed">
@@ -113,7 +113,6 @@
             </div>
             <hr class="mb-4">
             <a class="btn btn-dark btn-md btn-block" @click="pay">Continue to checkout</a>
-            <button @click="prova" type="button" name="button">prova</button>
           </form>
         </div>
       </div>
