@@ -23,8 +23,8 @@
     {{-- slider --}}
     <section id="categories">
       <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="content-category col-md-12 justify-content-center">
+        <div class="row">
+          <div class="content-category col-md-12">
             <div class="icon-category all" @click="allRestaurants()">
               <div class="img-div">
                 <img src="https://d4p17acsd5wyj.cloudfront.net/shortcuts/deals.png" alt="All Restaurants">

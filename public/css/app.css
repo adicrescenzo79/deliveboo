@@ -10026,11 +10026,14 @@ h3 {
   text-transform: capitalize;
 }
 
-nav {
-  height: 100px;
-}
 nav .container .navbar-brand img {
   width: 160px;
+}
+nav .container .navbar-toggler {
+  border: none;
+}
+nav .container .custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 nav .container ul {
   position: absolute;
@@ -10044,7 +10047,7 @@ nav .container ul li a.my-btn {
   font-size: 13px;
   color: #fff;
   background: #000;
-  padding: 18px 45px;
+  padding: 16px 45px;
   text-transform: uppercase;
   cursor: pointer;
   width: -webkit-fit-content;
@@ -10212,6 +10215,46 @@ nav .container .dropdown-menu .dropdown-item:hover {
     justify-content: center;
   }
 }
+#main-restaurants-create {
+  font-size: 16px;
+  padding-top: 100px;
+}
+#main-restaurants-create .container h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #262626;
+}
+#main-restaurants-create .container form {
+  padding-top: 30px;
+}
+#main-restaurants-create .container form .form-group .form-control {
+  background-color: #fff !important;
+  border-radius: 0;
+  font-size: 16px !important;
+  height: 48px !important;
+  line-height: 24px !important;
+  color: #262626 !important;
+  border: 1px solid #E0E0E0 !important;
+}
+#main-restaurants-create .container form .form-group .form-control:focus {
+  border-color: #262626 !important;
+  box-shadow: none;
+}
+#main-restaurants-create .container form .my-btn-create {
+  text-align: center;
+  color: #fff;
+  width: 200px;
+  background-color: #3e9920;
+  border-color: #3e9920;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+#main-restaurants-create .container form .my-btn-create:hover {
+  opacity: 0.7;
+}
+
 #main_checkout .container {
   max-width: 960px;
 }
@@ -10233,7 +10276,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 93px;
 }
 
 #main-welcome {
