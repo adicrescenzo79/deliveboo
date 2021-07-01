@@ -12,6 +12,8 @@ let app = new Vue({
   },
   created(){
 
+
+
     let stringSplitted = this.currentUrl.split('/');
     // console.log(stringSplitterd[4]);
     this.slug = stringSplitted[4];
@@ -29,6 +31,8 @@ let app = new Vue({
       // console.log(this.dishes);
     });
 
+    // let totalCart = JSON.parse(sessionStorage.getItem)
+    // console.log(sessionStorage.getItem('session'));
 
     if (sessionStorage.length != 0) {
       this.cart = JSON.parse(sessionStorage.getItem('session'));
@@ -39,6 +43,9 @@ let app = new Vue({
       });
     }
 
+    console.log(this.dishes);
+
+
   },
 
   methods: {
@@ -47,7 +54,7 @@ let app = new Vue({
       axios.get(`http://localhost:8000/api/restaurants/slug/${this.slug}`,{
       }).then((response)=>{
         this.restaurant = response.data.data;
-        // console.log(response.data.data);
+        console.log(response.data.data);
       });
 
     },

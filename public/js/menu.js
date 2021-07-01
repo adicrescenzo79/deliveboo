@@ -132,7 +132,8 @@ var app = new Vue({
 
         _this.dishes.push(dishes[i]);
       }); // console.log(this.dishes);
-    });
+    }); // let totalCart = JSON.parse(sessionStorage.getItem)
+    // console.log(sessionStorage.getItem('session'));
 
     if (sessionStorage.length != 0) {
       this.cart = JSON.parse(sessionStorage.getItem('session'));
@@ -142,6 +143,8 @@ var app = new Vue({
         }
       });
     }
+
+    console.log(this.dishes);
   },
   methods: {
     //al click vediamo tutti i ristoranti della categoria selezionata
@@ -149,7 +152,8 @@ var app = new Vue({
       var _this2 = this;
 
       axios.get("http://localhost:8000/api/restaurants/slug/".concat(this.slug), {}).then(function (response) {
-        _this2.restaurant = response.data.data; // console.log(response.data.data);
+        _this2.restaurant = response.data.data;
+        console.log(response.data.data);
       });
     },
     //al click vediamo tutti i ristoranti
@@ -232,7 +236,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\menu.js */"./resources/js/menu.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\menu.js */"./resources/js/menu.js");
 
 
 /***/ })

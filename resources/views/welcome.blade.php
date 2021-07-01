@@ -81,6 +81,7 @@
             </div>
         </div>
     </section>
+    <button @click="prova()" type="button" name="button">prova</button>
 </div>{{-- chiusura Vue --}}
 
 @endsection

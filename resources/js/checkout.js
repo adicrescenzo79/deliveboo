@@ -45,6 +45,13 @@ let app = new Vue({
 
     this.total();
 
+
+// da cancelllare dopo
+    // this.cartDelete();
+
+    // cancellazione carrello
+
+
     // sessionStorage.removeItem('slug');
 
     // console.log(this.slug, this.cart);
@@ -54,7 +61,12 @@ let app = new Vue({
   },
 
   methods: {
-    prova: function(){
+    cartDelete: function(){
+      let currentCart = JSON.parse(sessionStorage.getItem('session'));
+      currentCart = currentCart.filter(obj => obj.restaurantSlug != this.slug);
+      console.log(sessionStorage);
+      window.sessionStorage.clear();
+      sessionStorage.setItem('session', JSON.stringify(currentCart));
     },
 
     total: function(){
@@ -101,7 +113,7 @@ let app = new Vue({
       .then((risposta)=> {
         console.log(risposta);
         if (risposta.data.success) {
-          // window.location.href = 'localhost:8000/success';
+          this.cartDelete;
           window.location.href = '/success';
         }
       })
