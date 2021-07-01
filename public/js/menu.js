@@ -132,7 +132,7 @@ var app = new Vue({
 
         _this.dishes.push(dishes[i]);
       }); // console.log(this.dishes);
-    }); // let totalCart = JSON.parse(sessionStorage.getItem)
+    }); // let totalCart = JSON.parse(sessionStor\age.getItem)
     // console.log(sessionStorage.getItem('session'));
 
     if (sessionStorage.length != 0) {
@@ -147,82 +147,84 @@ var app = new Vue({
     console.log(this.dishes);
   },
   methods: {
-    //al click vediamo tutti i ristoranti della categoria selezionata
-    restaurantBySlug: function restaurantBySlug() {
+    total: function total() {
+      var total = 0;
+      this.cart.forEach(function (dish, i) {
+        total += dish.price * dish.quantity;
+      });
+      return total;
+    },
+    totDishes: function totDishes() {
       var _this2 = this;
 
+      var cart = this.cart.filter(function (obj) {
+        return obj.restaurantSlug == _this2.slug;
+      });
+      var tot = 0;
+      cart.forEach(function (dish, i) {
+        tot += dish.quantity;
+        console.log(dish.quantity);
+      });
+      sessionStorage.setItem('session', JSON.stringify(this.cart));
+      return tot;
+    },
+    //al click vediamo tutti i ristoranti della categoria selezionata
+    restaurantBySlug: function restaurantBySlug() {
+      var _this3 = this;
+
       axios.get("http://localhost:8000/api/restaurants/slug/".concat(this.slug), {}).then(function (response) {
-        _this2.restaurant = response.data.data;
+        _this3.restaurant = response.data.data;
         console.log(response.data.data);
       });
     },
     //al click vediamo tutti i ristoranti
     allRestaurants: function allRestaurants() {
-      var _this3 = this;
+      var _this4 = this;
 
       this.filteredRestaurants = [];
       this.unfiltered = true;
       this.categoryIndex = '';
       axios.get("http://localhost:8000/api/restaurants/nr/".concat(this.skip), {}).then(function (response) {
         // this.restaurants.push(response.data.data);
-        _this3.restaurants = [].concat(_toConsumableArray(_this3.restaurants), _toConsumableArray(response.data.data)); //console.log(this.restaurants);
+        _this4.restaurants = [].concat(_toConsumableArray(_this4.restaurants), _toConsumableArray(response.data.data)); //console.log(this.restaurants);
       });
       this.skip += 8;
     },
     //Aggiunta al carrello
     addCart: function addCart(dish) {
-      var _this4 = this;
+      var _this5 = this;
 
       var cartDish = dish;
 
       if (!this.cart.includes(cartDish)) {
         //Pusho il contenuto nell'array
-        this.cart.push(cartDish); // console.log(this.cart);
+        this.cart.push(cartDish);
       } //Aumento la quantità del piatto
 
 
       this.cart[this.cart.indexOf(cartDish)].quantity += 1; //Controllo per attivazione bottone
 
       this.cart.forEach(function (dish, i) {
-        if (dish.restaurantSlug == _this4.slug) {
-          _this4.completeButton = true;
+        if (dish.restaurantSlug == _this5.slug) {
+          _this5.completeButton = true;
         }
       }); //Aggiorna local Storage
 
-      sessionStorage.setItem('session', JSON.stringify(this.cart)); // console.log(sessionStorage);
+      sessionStorage.setItem('session', JSON.stringify(this.cart));
     },
     //Togliere dal carrello
     minusCart: function minusCart(dish) {
-      var cartDish = dish; // console.log(this.cart);
-      //Diminuisco la quantità del piatto
-
+      var cartDish = dish;
       this.cart[this.cart.indexOf(cartDish)].quantity -= 1;
 
       if (cartDish.quantity == 0) {
         this.cart.splice(this.cart.indexOf(cartDish), 1);
-      } //Aggiorna local Storage
+      }
 
-
-      sessionStorage.setItem('session', JSON.stringify(this.cart)); // console.log(sessionStorage);
+      sessionStorage.setItem('session', JSON.stringify(this.cart));
     },
     completeOrder: function completeOrder() {
-      sessionStorage.setItem('slug', this.slug); // let products = JSON.stringify(this.cart, this.slug);
-      // axios.post(`http://localhost:8000/api/restaurants/`)
-      // axios({
-      //   method: 'post',
-      //   url: 'http://localhost:8000/api/checkout/',
-      //   data: {
-      //     cart: this.cart,
-      //     slug: this.slug
-      //   }
-      // });
-      // sessionStorage.clear();
-      // this.cart.forEach((dish, i) => {
-      //   sessionStorage.setItem(`${cart[i]}`, dish);
-      // });
-      // sessionStorage.setItem('slug', this.slug);
-      //
-      // sessionStorage.setItem('session', JSON.stringify(this.cart));
+      sessionStorage.setItem('slug', this.slug);
     }
   }
 });

@@ -1,11 +1,26 @@
 #main_menu{
-  .card-dish{
-    padding: 0 10px;
-    img{
-      width: 100px;
-    }
-    span{
-      padding: 35px 0;
+  #dishes{
+
+    .menu-dish{
+      .card{
+        &:hover{
+          cursor: pointer;
+        }
+        padding: 0 10px;
+        img{
+          width: 100px;
+        }
+        span{
+          padding: 35px 0;
+        }
+      }
     }
   }
+  #cart{
+    input{
+      width: 60px;
+      padding-left: 10px;
+    }
+  }
+
 }
