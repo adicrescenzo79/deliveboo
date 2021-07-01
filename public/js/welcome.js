@@ -116,7 +116,8 @@ var app = new Vue({
     dishes: [],
     categoryIndex: '',
     categorySelected: [],
-    more: true
+    more: true,
+    active: false
   },
   created: function created() {
     var _this = this;
@@ -131,6 +132,8 @@ var app = new Vue({
     restaurantByCategory: function restaurantByCategory(category) {
       var _this2 = this;
 
+      this.active = true;
+      console.log(this.active);
       this.restaurants = [];
       this.more = false; // let cat_obj = {cat: category}
 
@@ -157,6 +160,7 @@ var app = new Vue({
     allRestaurants: function allRestaurants() {
       var _this3 = this;
 
+      this.active = true;
       this.categorySelected = [];
       this.restaurants = [];
       this.skip = 0;
