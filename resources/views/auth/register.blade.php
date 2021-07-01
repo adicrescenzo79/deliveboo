@@ -66,8 +66,8 @@
                         <button type="submit" class="my-btn-main">
                           {{ __('Registrati') }}
                         </button>
-                        <div class="col-md-12 offset-md-3 mt-2">
-                          <p>Hai già un account? <a href="{{ route('login') }}">Accedi al tuo account</a> </p>
+                        <div class="col-md-12 text-center mt-2">
+                          <p class="mt-3">Hai già un account? <a class="my-link" href="{{ route('login') }}">Accedi al tuo account</a> </p>
                         </div>
                       </div>
                     </div>

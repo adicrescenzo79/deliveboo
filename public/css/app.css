@@ -10087,6 +10087,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-log-reg .card {
   border: none;
   background-color: #fff;
+  margin-bottom: 150px;
 }
 #main-log-reg .card .card-header {
   background-color: #fff;
@@ -10121,6 +10122,12 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-log-reg .card .card-body .my-btn-main:hover {
   background-color: #000;
   border-color: #000;
+}
+#main-log-reg .card .card-body .my-link {
+  color: #3e9920;
+}
+#main-log-reg .card .card-body .my-link:hover {
+  font-weight: bold;
 }
 
 #main-admin-restaurants .my-btn-create {
