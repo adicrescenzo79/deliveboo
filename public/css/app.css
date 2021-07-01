@@ -10126,9 +10126,6 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-log-reg .card .card-body .my-link {
   color: #3e9920;
 }
-#main-log-reg .card .card-body .my-link:hover {
-  font-weight: bold;
-}
 
 #main-admin-restaurants .my-btn-create {
   color: #fff;
@@ -10144,9 +10141,13 @@ nav .container .dropdown-menu .dropdown-item:hover {
   opacity: 0.7;
 }
 #main-admin-restaurants .card {
-  border: 1px solid #000;
+  border: 1px solid #e2e2e2;
   border-radius: 0;
   margin-top: 5px;
+  margin-bottom: 25px;
+}
+#main-admin-restaurants .card:hover {
+  border: 1px solid black;
 }
 #main-admin-restaurants .card .card-body .card-img img {
   width: 100%;
@@ -10190,18 +10191,22 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 #main-admin-restaurants .card .card-body .container-buttons i.fas.fa-utensils {
   color: #f6993f;
+  background: none;
 }
 #main-admin-restaurants .card .card-body .container-buttons i.far.fa-chart-bar {
   color: #3490dc;
+  background: none;
 }
 #main-admin-restaurants .card .card-body .container-buttons i.fas.fa-edit {
   color: #3e9920;
+  background: none;
 }
 #main-admin-restaurants .card .card-body .container-buttons i:hover {
   opacity: 1;
 }
 #main-admin-restaurants .card .card-body .container-buttons form input.trash-icon {
   color: #f00;
+  background: none;
   opacity: 0.7;
   border: none;
   font-size: 27px;
