@@ -100,6 +100,10 @@ let app = new Vue({
       axios.post('http://localhost:8000/api/orders', dati)
       .then((risposta)=> {
         console.log(risposta);
+        if (risposta.data.success) {
+          // window.location.href = 'localhost:8000/success';
+          window.location.href = '/success';
+        }
       })
 
     },
@@ -163,37 +167,15 @@ let app = new Vue({
       })
     },
 
-    // payForm: function(){
-    //   this.orderForm.restaurant_id = this.cart[0].restaurant_id;
-    //   this.orderForm.total_paid = this.total();
-    //
-    //   sessionStorage.setItem('order', JSON.stringify(this.orderForm));
-    //   console.log(sessionStorage);
-    // },
-    //al click vediamo tutti i ristoranti della categoria selezionata
-    // restaurantBySlug: function(){
-    //   axios.get(`http://localhost:8000/api/restaurants/slug/${this.slug}`,{
-    //   }).then((response)=>{
-    //     this.restaurant = response.data.data;
-    //     // console.log(response.data.data);
-    //   });
-    //
-    // },
-    //al click vediamo tutti i ristoranti
-    // allRestaurants: function() {
-    //   this.filteredRestaurants = [];
-    //   this.unfiltered = true;
-    //   this.categoryIndex = '';
-    //   axios.get(`http://localhost:8000/api/restaurants/nr/${this.skip}`,{
-    //   }).then((response)=>{
-    //     // this.restaurants.push(response.data.data);
-    //     this.restaurants = [...this.restaurants, ...response.data.data];
-    //     //console.log(this.restaurants);
-    //   });
-    //   this.skip += 8;
-    // },
-
     //Aggiunta al carrello
+    totDishes: function(){
+      let tot = 0;
+      this.cart.forEach((dish, i) => {
+        tot += dish.quantity;
+      });
+      return tot;
+    },
+
     addCart: function(dish) {
       let cartDish = dish;
 
@@ -212,6 +194,8 @@ let app = new Vue({
           this.completeButton = true;
         }
       });
+
+
 
       //Aggiorna local Storage
       sessionStorage.setItem('session', JSON.stringify(this.cart));

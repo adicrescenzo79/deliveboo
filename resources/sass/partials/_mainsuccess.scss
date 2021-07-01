@@ -1,0 +1,22 @@
+#main_success{
+  position: relative;
+  img{
+    width: 100%;
+  }
+  .msg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1{
+      font-size: 200px;
+      color: #fff;
+      text-align: center;
+      text-shadow:   2px  2px 4px #000;
+    }
+    a{
+      text-align: center;
+    }
+  }
+}
