@@ -74,7 +74,7 @@ main {
 
                     &.selected {
                         .img-div-icon {
-                            opacity: 0.7;
+
                             background: #AAA;
                             border-radius: 50%;
                             cursor: pointer;
@@ -109,7 +109,7 @@ main {
 
                     &.selected {
                         .img-div-icon {
-                            opacity: 0.7;
+
                             background: #AAA;
                             border-radius: 50%;
                             cursor: pointer;
@@ -117,7 +117,7 @@ main {
                     }
 
                     &:hover .img-div-icon {
-                        opacity: 0.7;
+
                         box-shadow: 1px 1px 8px #888888;
                         border-radius: 50%;
                         cursor: pointer;
@@ -128,19 +128,16 @@ main {
                         cursor: pointer;
                     }
 
+                    &:hover .img-div-icon {
 
+                        box-shadow: 1px 1px 8px #888888;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
 
-                        &:hover .img-div-icon{
-                            opacity: 0.7;
-                            box-shadow: 1px 1px 8px #888888;
-                            border-radius: 50%;
-                            cursor: pointer;
-                        }
-
-                        img {
-                            width: 60px;
-                        }
-
+                    img {
+                        width: 60px;
+                    }
                 }
             }
         }
@@ -159,13 +156,14 @@ main {
                 }
 
                 ul {
-                  padding: 0 10px;
+                    padding: 0 10px;
                     list-style: none;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    li{
-                      padding-right: 15px;
+
+                    li {
+                        padding-right: 15px;
                     }
                 }
             }
@@ -183,23 +181,16 @@ main {
                         text-decoration: none;
                         // height: 296px;
                         .card-title {
-                            // height: 42px;
                             color: #292929;
                             font-weight: 900;
 
-                            &:hover {
-                                cursor: pointer;
-                                opacity: 0.7;
-                            }
+
                         }
 
                         .card-text {
                             color: black;
-                            opacity: 0.7;
 
-                            &:hover {
-                                opacity: 1;
-                            }
+
 
                             .card-text fas .fa-mapmarker-alt {
                                 color: #7B7B7B;
@@ -234,7 +225,7 @@ main {
         transition: 0.2s;
 
         &:hover {
-            opacity: 0.7;
+          opacity: 0.7;
         }
     }
     @media (min-width: 576px) {
@@ -313,20 +304,10 @@ main {
                     color: #292929;
                     font-weight: 900;
 
-                    &:hover {
-                        cursor: pointer;
-                        opacity: 0.7;
-                    }
                 }
 
                 .card-text {
                     color: black;
-                    opacity: 0.7;
-
-                    &:hover {
-                        opacity: 1;
-                    }
-
                     .card-text fas .fa-mapmarker-alt {
                         color: #7B7B7B;
                     }
@@ -448,7 +429,7 @@ main {
                 .content-category {
                     display: flex;
                     align-items: center;
-                    overflow-x: scroll;
+                    overflow-x: unset;
 
                     .icon-category.all {
                         color: #585858;
@@ -461,7 +442,7 @@ main {
 
                         &.selected {
                             .img-div-icon {
-                                opacity: 0.7;
+
                                 background: #AAA;
                                 border-radius: 50%;
                                 cursor: pointer;
@@ -473,15 +454,17 @@ main {
                             cursor: pointer;
                         }
 
-                        &:hover .img-div {
+                        &:hover .img-div-icon {
                             box-shadow: 1px 1px 8px #888888;
                             border-radius: 50%;
                             cursor: pointer;
                         }
 
-                        .img-div {
+                        .img-div-icon {
+                            padding: 5px;
+
                             img {
-                                width: 90px;
+                                width: 51px;
                             }
                         }
                     }
@@ -498,7 +481,7 @@ main {
 
                         &.selected {
                             .img-div-icon {
-                                opacity: 0.7;
+
                                 background: #AAA;
                                 border-radius: 50%;
                                 cursor: pointer;
@@ -506,7 +489,7 @@ main {
                         }
 
                         &:hover .img-div-icon {
-                            opacity: 0.7;
+
                             box-shadow: 1px 1px 8px #888888;
                             border-radius: 50%;
                             cursor: pointer;
@@ -521,14 +504,14 @@ main {
                             text-align: center;
 
                             &:hover {
-                                opacity: 0.7;
+
                                 box-shadow: 1px 1px 8px #888888;
                                 border-radius: 50%;
                                 cursor: pointer;
                             }
 
                             img {
-                                width: 90px;
+                                width: 60px;
                             }
                         }
                     }
@@ -537,6 +520,11 @@ main {
         }
 
         #restaurants {
+            h3 {
+                font-weight: 900;
+                color: #3c3b48;
+            }
+
             div.card {
                 width: 100%;
                 margin-bottom: 40px;
@@ -557,20 +545,10 @@ main {
                     h5.card-title {
                         color: #292929;
                         font-weight: 900;
-
-                        &:hover {
-                            cursor: pointer;
-                            opacity: 0.7;
-                        }
                     }
 
                     .card-text {
                         color: black;
-                        opacity: 0.7;
-
-                        &:hover {
-                            opacity: 1;
-                        }
 
                         .card-text fas .fa-mapmarker-alt {
                             color: #7B7B7B;
@@ -592,7 +570,6 @@ main {
 
                 &:hover {
                     text-decoration: none;
-                    //opacity: 0.8;
                     background-color: $my-green;
                 }
             }
