@@ -1,5 +1,5 @@
 footer {
-  margin-top: 150px;
+  //margin-top: 150px;
   height: 400px;
   width: 100%;
   background-color: #000;
@@ -62,6 +62,9 @@ footer {
 }
 // Small devices (landscape phones, less than 768px)
 @media screen and (max-width: 767px) {
+  footer {
+    height: 200px;
+  }
   .left-footer,
   .right-footer {
     display: none;
