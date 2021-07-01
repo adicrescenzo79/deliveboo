@@ -62,8 +62,8 @@
                           {{ __('Forgot Your Password?') }}
                         </a>
                       @endif --}}
-                      <div class="col-md-12 offset-md-3 mt-2">
-                        <p>Non hai un account? <a href="{{ route('register') }}">Crea un account</a> </p>
+                      <div class="col-md-12 text-center mt-2">
+                        <p class="mt-3">Non hai un account? <a class="my-link" href="{{ route('register') }}">Crea un account</a> </p>
                       </div>
                     </div>
                   </div>

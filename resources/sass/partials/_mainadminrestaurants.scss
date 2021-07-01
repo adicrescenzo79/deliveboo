@@ -14,9 +14,13 @@
     }
   }
   .card {
-    border: 1px solid #000;
+    border: 1px solid rgb(226, 226, 226);
     border-radius: 0;
     margin-top: 5px;
+    margin-bottom: 25px;
+    &:hover {
+      border: 1px solid black;
+    }
     .card-body {
       .card-img {
         img {
@@ -58,12 +62,15 @@
           transition: 0.2s;
           &.fas.fa-utensils {
             color: $orange;
+            background: none;
           }
           &.far.fa-chart-bar {
             color: $blue;
+            background: none;
           }
           &.fas.fa-edit {
             color:  $my-green;
+            background: none;
           }
           &:hover {
             opacity: 1;
@@ -71,6 +78,7 @@
         }
         form input.trash-icon {
           color: #f00;
+          background: none;
           opacity: 0.7;
           border: none;
           font-size: 27px;

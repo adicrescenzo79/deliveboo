@@ -4,6 +4,7 @@
   .card {
     border: none;
     background-color: $body-bg;
+    margin-bottom: 150px;
     .card-header {
       background-color: $body-bg;
       font-size: 30px;
@@ -39,6 +40,9 @@
           border-color: #000;
 
         }
+      }
+      .my-link {
+        color: $my-green;
       }
     }
   }
