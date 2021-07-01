@@ -6,7 +6,7 @@
     <section id="dishes">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-6" v-for="dish in dishes">
+          <div class="col-md-6" v-for="dish in dishes" v-if="dish.visibility">
             <div class="card flex-row justify-content-between align-items-center">
               <img :src="dish.image" alt="">
               <span class="text-capitalize">@{{dish.name}}</span>

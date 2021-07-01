@@ -136,13 +136,26 @@ var app = new Vue({
       return obj.restaurantSlug == _this.slug;
     });
     this.orderForm.restaurant_id = this.cart[0].restaurant_id;
-    this.total(); // sessionStorage.removeItem('slug');
+    this.total(); // da cancelllare dopo
+    // this.cartDelete();
+    // cancellazione carrello
+    // sessionStorage.removeItem('slug');
     // console.log(this.slug, this.cart);
     // console.log(this.cart[0].restaurant_id);
     //RICORDARSI DI TOGLIERE DALLA SESSION STORAGE I PIATTI CHE PAGIAMO E ANCHE DI RIMUOVERE LO SLUG DEI PIATTI CHE PAGHIAMO
   },
   methods: {
-    prova: function prova() {},
+    cartDelete: function cartDelete() {
+      var _this2 = this;
+
+      var currentCart = JSON.parse(sessionStorage.getItem('session'));
+      currentCart = currentCart.filter(function (obj) {
+        return obj.restaurantSlug != _this2.slug;
+      });
+      console.log(sessionStorage);
+      window.sessionStorage.clear();
+      sessionStorage.setItem('session', JSON.stringify(currentCart));
+    },
     total: function total() {
       // this.cart.forEach((dish, i) => {
       //   dish.price = dish.price.toFixed(2);
@@ -156,6 +169,8 @@ var app = new Vue({
       return this.orderForm.total_paid;
     },
     sendData: function sendData() {
+      var _this3 = this;
+
       var newCart = [];
       this.cart.forEach(function (item, i) {
         var dish = {
@@ -181,13 +196,13 @@ var app = new Vue({
         console.log(risposta);
 
         if (risposta.data.success) {
-          // window.location.href = 'localhost:8000/success';
+          _this3.cartDelete;
           window.location.href = '/success';
         }
       });
     },
     pay: function pay() {
-      var _this2 = this;
+      var _this4 = this;
 
       this.total();
       this.validationcustomer_name = null;
@@ -213,29 +228,29 @@ var app = new Vue({
       });
       axios.post('http://localhost:8000/api/checkout', pay).then(function (risposta) {
         if (risposta.data.success) {
-          _this2.sendData();
+          _this4.sendData();
         } else {
           if (risposta.data.validation) {
             var validate = risposta.data.validation;
 
             if (validate.customer_name) {
-              _this2.validationcustomer_name = validate.customer_name[0];
+              _this4.validationcustomer_name = validate.customer_name[0];
             }
 
             if (validate.customer_telephone) {
-              _this2.validationcustomer_telephone = validate.customer_telephone[0];
+              _this4.validationcustomer_telephone = validate.customer_telephone[0];
             }
 
             if (validate.customer_email) {
-              _this2.validationcustomer_email = validate.customer_email[0];
+              _this4.validationcustomer_email = validate.customer_email[0];
             }
 
             if (validate.delivery_address) {
-              _this2.validationdelivery_address = validate.delivery_address[0];
+              _this4.validationdelivery_address = validate.delivery_address[0];
             }
 
             if (validate.delivery_time) {
-              _this2.validationdelivery_time = validate.delivery_time[0];
+              _this4.validationdelivery_time = validate.delivery_time[0];
             }
           }
 
@@ -254,7 +269,7 @@ var app = new Vue({
       return tot;
     },
     addCart: function addCart(dish) {
-      var _this3 = this;
+      var _this5 = this;
 
       var cartDish = dish;
 
@@ -267,8 +282,8 @@ var app = new Vue({
       this.cart[this.cart.indexOf(cartDish)].quantity += 1; //Controllo per attivazione bottone
 
       this.cart.forEach(function (dish, i) {
-        if (dish.restaurantSlug == _this3.slug) {
-          _this3.completeButton = true;
+        if (dish.restaurantSlug == _this5.slug) {
+          _this5.completeButton = true;
         }
       }); //Aggiorna local Storage
 
@@ -299,7 +314,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\checkout.js */"./resources/js/checkout.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\checkout.js */"./resources/js/checkout.js");
 
 
 /***/ })

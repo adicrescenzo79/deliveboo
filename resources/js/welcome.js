@@ -24,6 +24,12 @@ let app = new Vue({
   },
 
   methods: {
+    prova: function(){
+      console.log(sessionStorage);
+      window.sessionStorage.clear();
+      console.log(sessionStorage);
+
+    },
     //al click vediamo tutti i ristoranti della categoria selezionata
     restaurantByCategory: function(category){
       this.restaurants = [];

@@ -29,11 +29,11 @@ class DishController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($restaurant)
+    public function create($restaurantId)
     {
-      $currRestaurant = Restaurant::where('id', '=', $restaurant)->first();
+      $restaurant = Restaurant::where('id', '=', $restaurantId)->first();
 
-      if ($currRestaurant->user_id == Auth::id()) {
+      if ($restaurant->user_id == Auth::id()) {
         return view('admin.dishes.create', compact('restaurant'));
       } else {
         return view('security');
