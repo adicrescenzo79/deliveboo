@@ -27,13 +27,13 @@
         <div class="container">
             <div class="row">
                 <div class="content-category col-md-12">
-                    <div class="icon-category all" @click="allRestaurants()">
-                        <div class="img-div">
+                    <div class="icon-category all" @click="allRestaurants()" :class="(categorySelected.length == 0) ? 'selected' : '' ">
+                        <div class="img-div-icon">
                             <img src="https://d4p17acsd5wyj.cloudfront.net/shortcuts/deals.png" alt="All Restaurants">
                         </div>
                         All
                     </div>
-                    <div class="icon-category selected" v-for="category in categories" @click="restaurantByCategory(category.id)">
+                    <div class="icon-category" v-for="category in categories"  @click="restaurantByCategory(category.id)" :class="(categorySelected.includes(category.id)) ? 'selected' : '' ">
                         <div class="img-div-icon">
                             <img :src="category.icon" :alt="category.name">
                         </div>
@@ -50,6 +50,12 @@
     <section id="restaurants">
         <div class="container">
             <div class="row justify-content-center">
+              <div class="col-12 catecory-selected">
+                <h3>Le categorie selezionate</h3>
+                <ul>
+                  <li v-for="category in categories" v-if="(categorySelected.includes(category.id))">@{{category.name}}</li>
+                </ul>
+              </div>
                 <div class="content-restaurants  col-sm-6 col-md-6 col-lg-4" v-for="restaurant in restaurants">
                     <div class="card">
                         <a :href="'/restaurants/'+restaurant.slug" class="">

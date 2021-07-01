@@ -10,22 +10,20 @@ let app = new Vue({
     categoryIndex: '',
     categorySelected: [],
     more: true,
+    active: false,
   },
   created(){
-
     this.allRestaurants();
-
     axios.get('http://localhost:8000/api/categories',{
     }).then((response)=>{
       this.categories = response.data.data;
     });
-
-
   },
-
   methods: {
     //al click vediamo tutti i ristoranti della categoria selezionata
     restaurantByCategory: function(category){
+      this.active = true;
+      console.log(this.active);
       this.restaurants = [];
       this.more = false;
       // let cat_obj = {cat: category}
@@ -34,16 +32,12 @@ let app = new Vue({
       } else {
         this.categorySelected.push(category);
       }
-
       let categorySelectedJson = JSON.stringify(this.categorySelected);
-
       // console.log(categorySelectedJson);
-
       axios.get(`http://localhost:8000/api/restaurants/${categorySelectedJson}`,{
       }).then((response)=>{
         // console.log(response.data.data);
         let categoryResponse = response.data.data;
-
         categoryResponse.forEach((item, i) => {
           item.restaurants.forEach((restaurant, j) => {
             this.restaurants.push(restaurant);
@@ -55,6 +49,7 @@ let app = new Vue({
     },
     //al click vediamo tutti i ristoranti
     allRestaurants: function() {
+    this.active = true;
       this.categorySelected = [];
       this.restaurants = [];
       this.skip = 0;
@@ -67,7 +62,6 @@ let app = new Vue({
       });
       this.skip += 8;
     },
-
     //al click carichiamo altri ristoranti
     allRestaurantsPlus: function() {
       this.more = true;
@@ -80,5 +74,4 @@ let app = new Vue({
       this.skip += 8;
     }
   }
-
 });

@@ -104,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/success.js */"./resources/js/success.js");
+module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\success.js */"./resources/js/success.js");
 
 
 /***/ })
