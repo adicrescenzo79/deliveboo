@@ -10030,6 +10030,18 @@ h3 {
   background: none;
 }
 
+.btn-dark {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  outline: #000;
+}
+.btn-dark:hover {
+  color: #fff;
+  background-color: #3e9920;
+  border-color: #3e9920;
+}
+
 nav .container .navbar-brand img {
   width: 160px;
 }
@@ -10946,23 +10958,82 @@ main {
   text-align: center;
 }
 
+#main_menu .jumbo {
+  height: 115px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#main_menu .jumbo .logo {
+  border-radius: 50%;
+}
+#main_menu .jumbo h1 {
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  font-size: 25px;
+}
 #main_menu #dishes .menu-dish .card {
   padding: 0 10px;
 }
 #main_menu #dishes .menu-dish .card:hover {
   cursor: pointer;
+  border: 2px solid #000;
 }
 #main_menu #dishes .menu-dish .card img {
   width: 100px;
 }
-#main_menu #dishes .menu-dish .card span {
-  padding: 35px 0;
+#main_menu #dishes .menu-dish .card .flex-column {
+  flex-direction: column;
 }
 #main_menu #cart input {
   width: 60px;
   padding-left: 10px;
 }
 
+@media (min-width: 767px) {
+  .jumbo {
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .jumbo .logo {
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 15%;
+  }
+  .jumbo h1 {
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    font-size: 35px;
+    position: absolute;
+    top: 90%;
+    left: 15%;
+  }
+}
+@media (min-width: 992px) {
+  .jumbo {
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .jumbo .logo {
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 15%;
+  }
+  .jumbo h1 {
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    font-size: 35px;
+    position: absolute;
+    top: 90%;
+    left: 15%;
+  }
+}
 footer {
   height: 400px;
   width: 100%;

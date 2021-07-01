@@ -1,22 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-  <div id="main_menu">
+  <div id="main_menu" class="pb-5">
+    <div class="jumbo flex flex-row justify-content-center align-items-center" :style="background">
+      <img class="logo" :src="restaurant.logo" alt="logo">
+      <h1>@{{restaurant.name}}</h1>
+    </div>
     {{-- Sezione dei piatti --}}
-    <section id="dishes">
+    <section id="dishes" class="pt-5">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6 order-md-2 mb-4 mt-3 flex-row flex-center">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
-              <span class="text-muted">Cosa vorresti mangiare?</span>
+              <span class="">Cosa vorresti mangiare?</span>
             </h4>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6 menu-dish mt-1" v-for="dish in dishes" v-if="dish.visibility">
-            <div @click="addCart(dish)" class="card flex-row justify-content-between align-items-center">
+            <div @click="addCart(dish)" class="card flex-column justify-content-between align-items-center">
               <img :src="dish.image" alt="">
-              <span class="text-capitalize">@{{dish.name}}</span>
+                <span class="text-capitalize d-block"><strong>@{{dish.name}}</strong></span>
+                <span class="text-capitalize d-block">@{{dish.description}}</span>
               <span class="text-capitalize"><strong>€ @{{dish.price.toFixed(2)}}</strong></span>
             </div>
           </div>
