@@ -13,6 +13,7 @@ let app = new Vue({
     validationdelivery_address: null,
     validationcustomer_telephone: null,
     validationdelivery_time: null,
+    wait: false,
     orderForm: {
       customer_name: 'alessandro',
       customer_email: 'limone79@gmail.com',
@@ -70,11 +71,6 @@ let app = new Vue({
     },
 
     total: function(){
-      // this.cart.forEach((dish, i) => {
-      //   dish.price = dish.price.toFixed(2);
-      //   console.log(dish.price);
-      // });
-
       let total = 0;
       this.cart.forEach((dish, i) => {
         total += (dish.price * dish.quantity);
@@ -121,6 +117,7 @@ let app = new Vue({
     },
 
     pay: function(){
+      this.wait = true;
       this.total();
 
       this.validationcustomer_name = null

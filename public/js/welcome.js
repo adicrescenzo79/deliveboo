@@ -116,7 +116,8 @@ var app = new Vue({
     dishes: [],
     categoryIndex: '',
     categorySelected: [],
-    more: true
+    more: true,
+    active: false
   },
   created: function created() {
     var _this = this;
@@ -136,6 +137,8 @@ var app = new Vue({
     restaurantByCategory: function restaurantByCategory(category) {
       var _this2 = this;
 
+      this.active = true;
+      console.log(this.active);
       this.restaurants = [];
       this.more = false; // let cat_obj = {cat: category}
 
@@ -162,6 +165,7 @@ var app = new Vue({
     allRestaurants: function allRestaurants() {
       var _this3 = this;
 
+      this.active = true;
       this.categorySelected = [];
       this.restaurants = [];
       this.skip = 0;
@@ -195,7 +199,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
+module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\welcome.js */"./resources/js/welcome.js");
 
 
 /***/ })

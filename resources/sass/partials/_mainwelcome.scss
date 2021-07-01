@@ -1,5 +1,5 @@
 main {
-  margin-top: 93px;
+    margin-top: 100px;
 }
 
 #main-welcome {
@@ -58,9 +58,46 @@ main {
             margin-left: 0;
 
             .content-category {
+                align-items: center;
                 display: flex;
                 overflow-x: scroll;
                 width: 93%;
+
+                .icon-category.all {
+                    color: #585858;
+                    font-weight: 900;
+                    text-align: center;
+                    justify-content: center;
+                    display: flex;
+                    width: 124px;
+                    height: 75px;
+
+                    &.selected {
+                        .img-div-icon {
+                            opacity: 0.7;
+                            background: #AAA;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &:hover {
+                        color: $my-green;
+                        cursor: pointer;
+                    }
+
+                    &:hover .img-div-icon {
+                        box-shadow: 1px 1px 8px #888888;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+
+                    .img-div {
+                        img {
+                            width: 90px;
+                        }
+                    }
+                }
 
                 .icon-category {
                     padding: 30px 24px;
@@ -70,9 +107,40 @@ main {
                     flex-direction: column;
                     align-items: center;
 
-                    img {
-                        width: 60px;
+                    &.selected {
+                        .img-div-icon {
+                            opacity: 0.7;
+                            background: #AAA;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
                     }
+
+                    &:hover .img-div-icon {
+                        opacity: 0.7;
+                        box-shadow: 1px 1px 8px #888888;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        color: $my-green;
+                        cursor: pointer;
+                    }
+
+
+
+                        &:hover .img-div-icon{
+                            opacity: 0.7;
+                            box-shadow: 1px 1px 8px #888888;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+
+                        img {
+                            width: 60px;
+                        }
+
                 }
             }
         }
@@ -85,6 +153,23 @@ main {
         }
 
         .row {
+            .catecory-selected {
+                h3 {
+                    text-align: center;
+                }
+
+                ul {
+                  padding: 0 10px;
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    li{
+                      padding-right: 15px;
+                    }
+                }
+            }
+
             .content-restaurants {
                 display: flex;
                 justify-content: center;
@@ -362,7 +447,6 @@ main {
             .row {
                 .content-category {
                     display: flex;
-                    justify-content: center;
                     align-items: center;
                     overflow-x: scroll;
 
@@ -375,13 +459,22 @@ main {
                         width: 124px;
                         height: 75px;
 
+                        &.selected {
+                            .img-div-icon {
+                                opacity: 0.7;
+                                background: #AAA;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+                        }
+
                         &:hover {
                             color: $my-green;
                             cursor: pointer;
                         }
 
                         &:hover .img-div {
-                            background: #AAA;
+                            box-shadow: 1px 1px 8px #888888;
                             border-radius: 50%;
                             cursor: pointer;
                         }
@@ -403,9 +496,18 @@ main {
                         padding: 5px;
                         margin: 19px;
 
+                        &.selected {
+                            .img-div-icon {
+                                opacity: 0.7;
+                                background: #AAA;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+                        }
+
                         &:hover .img-div-icon {
                             opacity: 0.7;
-                            background: #AAA;
+                            box-shadow: 1px 1px 8px #888888;
                             border-radius: 50%;
                             cursor: pointer;
                         }
@@ -420,7 +522,7 @@ main {
 
                             &:hover {
                                 opacity: 0.7;
-                                background: #AAA;
+                                box-shadow: 1px 1px 8px #888888;
                                 border-radius: 50%;
                                 cursor: pointer;
                             }
