@@ -93,7 +93,14 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+Vue.config.devtools = true;
+var app = new Vue({
+  el: '#main_success',
+  data: {},
+  created: function created() {
+    window.sessionStorage.clear();
+  }
+});
 
 /***/ }),
 
@@ -104,7 +111,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\success.js */"./resources/js/success.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\success.js */"./resources/js/success.js");
 
 
 /***/ })

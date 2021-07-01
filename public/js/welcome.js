@@ -127,6 +127,11 @@ var app = new Vue({
     });
   },
   methods: {
+    prova: function prova() {
+      console.log(sessionStorage);
+      window.sessionStorage.clear();
+      console.log(sessionStorage);
+    },
     //al click vediamo tutti i ristoranti della categoria selezionata
     restaurantByCategory: function restaurantByCategory(category) {
       var _this2 = this;
