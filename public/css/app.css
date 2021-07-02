@@ -10030,23 +10030,6 @@ h3 {
   background: none;
 }
 
-<<<<<<< HEAD
-.btn-dark {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-  outline: #000;
-}
-.btn-dark:hover {
-  color: #fff;
-  background-color: #3e9920;
-  border-color: #3e9920;
-}
-
-.card,
-.btn {
-  border-radius: 0;
-=======
 .my-btn-main {
   color: #fff;
   width: 100%;
@@ -10092,7 +10075,21 @@ a.my-btn:hover {
 }
 .my-btn-create:hover {
   opacity: 0.7;
->>>>>>> dev
+}
+.my-btn-create .btn-dark {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  outline: #000;
+}
+.my-btn-create .btn-dark:hover {
+  color: #fff;
+  background-color: #3e9920;
+  border-color: #3e9920;
+}
+.my-btn-create .btn,
+.my-btn-create .card {
+  border-radius: 0;
 }
 
 nav .container .navbar-brand img {
@@ -10204,118 +10201,180 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-admin-restaurants {
   padding-top: 50px;
 }
-#main-admin-restaurants .my-btn-create {
-  color: #fff;
-  width: 200px;
-  background-color: #3e9920;
-  border-color: #3e9920;
-  height: 48px;
-  font-size: 16px;
-  border-style: none;
-}
-#main-admin-restaurants .my-btn-create:hover {
-  opacity: 0.7;
-}
 #main-admin-restaurants h1 {
-  color: #000;
   font-weight: 900;
+  margin-bottom: 7px;
+  font-size: 25px;
 }
-#main-admin-restaurants a i.fas.fa-plus {
-  opacity: 0.8;
-  color: #3e9920;
-  font-size: 30px;
-}
-#main-admin-restaurants a i.fas.fa-plus:hover {
-  opacity: 1;
+#main-admin-restaurants a {
+  font-size: 29px;
+  padding-right: 10px;
 }
 #main-admin-restaurants .card {
+  margin-bottom: 40px;
   box-shadow: 0 0 30px -15px #888888;
-  border-radius: 0;
-  margin-top: 5px;
-  margin-bottom: 25px;
 }
-#main-admin-restaurants .card:hover {
-  border: 1px solid black;
-}
-#main-admin-restaurants .card .card-body .card-img img {
-  width: 100%;
-}
-#main-admin-restaurants .card .card-body ul {
-  list-style: none;
-  font-size: 14px;
-}
-#main-admin-restaurants .card .card-body ul strong {
-  font-size: 23px;
-  font-weight: 900;
-  color: #292929;
-}
-#main-admin-restaurants .card .card-body .my-btn-card {
-  min-width: 118px;
+#main-admin-restaurants .card .card-img {
   text-align: center;
-  font-size: 12px;
-  color: #fff;
-  border: none;
-  background: #000;
-  padding: 10px 25px;
-  text-transform: uppercase;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
-#main-admin-restaurants .card .card-body .my-btn-card:hover {
-  text-decoration: none;
-  opacity: 0.8;
+#main-admin-restaurants .card ul {
+  list-style: none;
 }
-#main-admin-restaurants .card .card-body .container-buttons {
+#main-admin-restaurants .card ul li {
+  text-align: center;
+  padding-bottom: 10px;
+}
+#main-admin-restaurants .card ul li strong {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+#main-admin-restaurants .card ul li:first {
+  font-size: 18px;
+}
+#main-admin-restaurants .card .container-buttons {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
 }
-#main-admin-restaurants .card .card-body .container-buttons i {
+#main-admin-restaurants .card .container-buttons i {
   opacity: 0.7;
   border: none;
   font-size: 27px;
 }
-#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-store-alt {
+#main-admin-restaurants .card .container-buttons i.fas.fa-store-alt {
   color: #f6993f;
   background: none;
   font-size: 23px;
 }
-#main-admin-restaurants .card .card-body .container-buttons i.far.fa-chart-bar {
+#main-admin-restaurants .card .container-buttons i.far.fa-chart-bar {
   color: #3490dc;
   background: none;
 }
-#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-edit {
+#main-admin-restaurants .card .container-buttons i.fas.fa-edit {
   color: #3e9920;
   background: none;
   font-size: 25px;
 }
-#main-admin-restaurants .card .card-body .container-buttons i:hover {
+#main-admin-restaurants .card .container-buttons i:hover {
   opacity: 1;
 }
-#main-admin-restaurants .card .card-body .container-buttons form input.trash-icon {
+#main-admin-restaurants .card .container-buttons form input.trash-icon {
   color: #f00;
   background: none;
   opacity: 0.7;
   border: none;
   font-size: 24px;
+  padding-top: 3px;
 }
-#main-admin-restaurants .card .card-body .container-buttons form input.trash-icon:hover {
+#main-admin-restaurants .card .container-buttons form input.trash-icon:hover {
   opacity: 1;
 }
-@media screen and (max-width: 767px) {
-  #main-admin-restaurants .card .card-body .container-buttons {
-    flex-direction: row;
+@media (min-width: 1200px) {
+  #main-admin-restaurants {
+    padding-top: 50px;
+  }
+  #main-admin-restaurants .my-btn-create {
+    color: #fff;
+    width: 200px;
+    background-color: #3e9920;
+    border-color: #3e9920;
+    height: 48px;
+    font-size: 16px;
+    border-style: none;
+  }
+  #main-admin-restaurants .my-btn-create:hover {
+    opacity: 0.7;
+  }
+  #main-admin-restaurants h1 {
+    color: #000;
+    font-weight: 900;
+  }
+  #main-admin-restaurants a i.fas.fa-plus {
+    opacity: 0.8;
+    color: #3e9920;
+    font-size: 30px;
+  }
+  #main-admin-restaurants a i.fas.fa-plus:hover {
+    opacity: 1;
+  }
+  #main-admin-restaurants .card {
+    box-shadow: 0 0 30px -15px #888888;
+    border-radius: 0;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+  #main-admin-restaurants .card:hover {
+    border: 1px solid black;
   }
   #main-admin-restaurants .card .card-body .card-img img {
-    width: 100px;
+    width: 100%;
   }
-  #main-admin-restaurants .card .card-body .card-img {
+  #main-admin-restaurants .card .card-body ul {
+    list-style: none;
+    font-size: 14px;
+  }
+  #main-admin-restaurants .card .card-body ul strong {
+    font-size: 23px;
+    font-weight: 900;
+    color: #292929;
+  }
+  #main-admin-restaurants .card .card-body .my-btn-card {
+    min-width: 118px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    border: none;
+    background: #000;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #main-admin-restaurants .card .card-body .my-btn-card:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  #main-admin-restaurants .card .card-body .container-buttons {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #main-admin-restaurants .card .card-body .container-buttons i {
+    opacity: 0.7;
+    border: none;
+    font-size: 27px;
+  }
+  #main-admin-restaurants .card .card-body .container-buttons i.fas.fa-store-alt {
+    color: #f6993f;
+    background: none;
+    font-size: 23px;
+  }
+  #main-admin-restaurants .card .card-body .container-buttons i.far.fa-chart-bar {
+    color: #3490dc;
+    background: none;
+  }
+  #main-admin-restaurants .card .card-body .container-buttons i.fas.fa-edit {
+    color: #3e9920;
+    background: none;
+    font-size: 25px;
+  }
+  #main-admin-restaurants .card .card-body .container-buttons i:hover {
+    opacity: 1;
+  }
+  #main-admin-restaurants .card .card-body .container-buttons form input.trash-icon {
+    color: #f00;
+    background: none;
+    opacity: 0.7;
+    border: none;
+    font-size: 24px;
+  }
+  #main-admin-restaurants .card .card-body .container-buttons form input.trash-icon:hover {
+    opacity: 1;
   }
 }
+
 #main-restaurants-create {
   font-size: 16px;
   padding-top: 100px;
