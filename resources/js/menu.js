@@ -9,6 +9,7 @@ let app = new Vue({
     cart: [],
     actualCart: [],
     completeButton: false,
+    background: '',
   },
   created(){
 
@@ -43,15 +44,17 @@ let app = new Vue({
       });
     }
 
-    console.log(this.dishes);
+    // console.log(this.dishes);
 
 
   },
 
   methods: {
     total: function(){
+      let cart = this.cart.filter(obj => obj.restaurantSlug == this.slug);
+
       let total = 0;
-      this.cart.forEach((dish, i) => {
+      cart.forEach((dish, i) => {
         total += (dish.price * dish.quantity);
       });
       return total;
@@ -64,7 +67,7 @@ let app = new Vue({
       let tot = 0;
       cart.forEach((dish, i) => {
         tot += dish.quantity;
-        console.log(dish.quantity);
+        // console.log(dish.quantity);
       });
       sessionStorage.setItem('session', JSON.stringify(this.cart));
       return tot;
@@ -76,7 +79,10 @@ let app = new Vue({
       axios.get(`http://localhost:8000/api/restaurants/slug/${this.slug}`,{
       }).then((response)=>{
         this.restaurant = response.data.data;
-        console.log(response.data.data);
+        // console.log(response.data.data);
+        console.log(this.restaurant);
+        this.background = 'background-image: url(' + this.restaurant.cover_image + ')'
+
       });
 
     },
