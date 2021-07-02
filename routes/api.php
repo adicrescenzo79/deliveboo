@@ -26,4 +26,3 @@ Route::get('/dishes/{slug}', 'DishController@dishesByRestaurant');
 Route::get('/restaurants/slug/{slug}', 'RestaurantController@restaurantBySlug');
 Route::post('checkout', 'CheckoutController@pay');
 Route::post('orders', 'OrderController@store');
-Route::post('mails', 'SendNewMail@build');

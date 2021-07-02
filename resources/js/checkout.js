@@ -109,11 +109,6 @@ let app = new Vue({
       .then((risposta)=> {
         console.log(risposta);
         if (risposta.data.success) {
-          //Mando i dati del cliente e ordine per la mail
-          axios.post('http://localhost:8000/api/mails', dati)
-          .then((risposta) => {
-            
-          })
           //Funzione
           this.cartDelete;
           window.location.href = '/success';
