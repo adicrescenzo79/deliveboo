@@ -2,7 +2,7 @@
 
 @section('content')
   <div id="main-restaurants-create">
-    <div class="container">
+    <div class="container pb-5">
       <div class="row justify-content-center">
         <div class="col-md-10">
           <h3>Crea Ristorante</h3>
@@ -73,7 +73,7 @@
                             @endforeach
                           </div>
 
-                          <div class="d-flex justify-content-center pt-3">
+                          <div class="d-flex justify-content-center py-5">
                             <input class="my-btn-create" type="submit" name="" value="Crea">
                           </div>
                         </form>
