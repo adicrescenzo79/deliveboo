@@ -8,6 +8,7 @@
       <div class="col-md-12 d-flex justify-content-center mb-3">
         <a href="{{route('admin.restaurants.create')}}"><button class="my-btn-create" type="button" name="button">Crea</button></a>
       </div>
+      
       @foreach ($restaurants as $restaurant)
         <div class="col-md-8">
           <div class="card">
