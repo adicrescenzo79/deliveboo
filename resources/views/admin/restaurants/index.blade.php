@@ -8,7 +8,7 @@
       <div class="col-md-12 d-flex justify-content-center mb-3">
         <a href="{{route('admin.restaurants.create')}}"><button class="my-btn-create" type="button" name="button">Crea</button></a>
       </div>
-      
+
       @foreach ($restaurants as $restaurant)
         <div class="col-md-8">
           <div class="card">
@@ -32,7 +32,7 @@
                 {{-- <a href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->id])}}"><button class="my-btn-card" type="button" name="button">Ristorante</button></a>
                 <a href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->id])}}"><button class="my-btn-card" type="button" name="button">Statistiche</button></a> --}}
                 <a href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->id])}}"><i class="fas fa-utensils" title="Ristorante"></i></a>
-                <a href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->id])}}"><i class="far fa-chart-bar" title="Statistiche"></i></a>
+                <a href="{{ route('admin.restaurants.statistics.index', ['restaurant' => $restaurant->id]) }}"><i class="far fa-chart-bar" title="Statistiche"></i></a>
                 <a href="{{route('admin.restaurants.edit', ['restaurant'=>$restaurant->id])}}"><i class="fas fa-edit" title="Modifica"></i></a>
                 <form class="form-delete" action="{{route('admin.restaurants.destroy', ['restaurant'=>$restaurant->id])}}" method="POST">
                   @csrf

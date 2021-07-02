@@ -41,7 +41,7 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->name('admin.')
         Route::get('/', 'HomeController@index')->name('index');
         Route::resource('restaurants', 'RestaurantController');
         Route::resource('restaurants.dishes', 'DishController')->shallow();
-        Route::resource('restaurants.statistics', 'StatisticController');
+        Route::resource('restaurants.statistics', 'StatisticController')->shallow();
     });
 
 // Route::get('/payment/make', 'PaymentController@make')->name('payment.make');
