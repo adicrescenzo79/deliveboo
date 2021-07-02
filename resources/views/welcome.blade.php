@@ -81,7 +81,7 @@
 
         <div class="container" v-if="more">
             <div class="row justify-content-center">
-                <div class="col-md-8 text-center py-5">
+                <div class="col-md-8 text-center pb-5">
                     <button @click="allRestaurantsPlus" class="my-btn-create my-5" type="button" name="button">Carica altri ristoranti</button>
                 </div>
             </div>

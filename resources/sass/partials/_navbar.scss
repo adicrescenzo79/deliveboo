@@ -15,10 +15,10 @@ nav {
       }
     }
     ul {
-      position: absolute;
-      right: 0px;
+      // position: absolute;
+      // right: 0px;
       li {
-        margin-left: 20px;
+        //margin-left: 20px;
         a {
           &.my-btn {
             text-align: center;
@@ -55,11 +55,44 @@ nav {
 
 // Small devices (landscape phones, less than 768px)
 @media screen and (max-width: 767px) {
-  nav .container ul li a.my-btn {
-    float: right;
-    min-width: 163px;
+  nav {
+    .container {
+      .navbar-brand {
+        img {
+          width: 130px;
+        }
+      }
+      ul {
+        li {
+          a {
+            &.my-btn {
+              text-align: center;
+              font-size: 11px;
+              color: #fff;
+              background: #000;
+              padding: 12px;
+              text-transform: uppercase;
+              cursor: pointer;
+              width: fit-content;
+              transition: 0.2s;
+              &:hover {
+                text-decoration: none;
+                //opacity: 0.8;
+                background-color: $my-green;
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
-  .navbar-nav.ml-auto {
-    padding-top: 15px;
-  }
+
+  // nav .container ul li a.my-btn {
+  //   float: right;
+  //   min-width: 163px;
+  // }
+  // .navbar-nav.ml-auto {
+  //   padding-top: 15px;
+  // }
 }
