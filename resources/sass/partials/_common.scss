@@ -31,12 +31,12 @@
   font-size: 16px;
   border-style: none;
   transition: 0.2s;
-  &:hover {
-    background-color: #000;
-    border-color: #000;
+    &:hover {
+      background-color: #000;
+      border-color: #000;
 
+    }
   }
-}
 
 //classe utilizzata per i tag <a></a> nella navbar (bottone nero che all'hover diventa verde)
 a.my-btn {
@@ -49,11 +49,11 @@ a.my-btn {
   cursor: pointer;
   width: fit-content;
   transition: 0.2s;
-  &:hover {
-    text-decoration: none;
-    background-color: $my-green;
+    &:hover {
+      text-decoration: none;
+      background-color: $my-green;
+    }
   }
-}
 
 //bottone verde che all'hover diventa opaco
 .my-btn-create {
@@ -81,8 +81,25 @@ a.my-btn {
     }
   }
 
+  a.btn-dark {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    outline: #000;
+    &:hover{
+      color: #fff;
+      background-color: $my-green;
+      border-color: $my-green;
+    }
+  }
+
+
   .card,
   .btn{
     border-radius: 0;
 
-}
+  }}
+
+  a.btn{
+    border-radius: 0;
+  }
