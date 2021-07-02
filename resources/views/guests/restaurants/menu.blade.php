@@ -2,10 +2,31 @@
 
 @section('content')
   <div id="main_menu" class="pb-5">
-    <div class="jumbo flex flex-row justify-content-center align-items-center" :style="background">
-      <img class="logo" :src="restaurant.logo" alt="logo">
-      <h1>@{{restaurant.name}}</h1>
+    <div class="jumbo flex flex-row justify-content-center align-items-center" :style="background"></div>
+    <div class="container-restaurant">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+
+
+          <div class="card text-center">
+            <div class="card-body">
+              <div class="img-overflow">
+                <img class="" :src="restaurant.logo" alt="logo">
+
+              </div>
+
+              <h1 class="card-title my-3">@{{restaurant.name}}</h1>
+              <p class="card-text text-secondary">@{{restaurant.category}}</p>
+
+              <p class="card-text">@{{restaurant.address}}</p>
+              <p class="card-text">Tel: @{{restaurant.telephone}}</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     {{-- Sezione dei piatti --}}
     <section id="dishes" class="pt-5">
       <div class="container">
@@ -17,12 +38,14 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-6 menu-dish mt-1" v-for="dish in dishes" v-if="dish.visibility">
-            <div @click="addCart(dish)" class="card flex-column justify-content-between align-items-center">
+          <div class="col-md-12 col-lg-6 menu-dish mt-1" v-for="dish in dishes" v-if="dish.visibility">
+            <div @click="addCart(dish)" class="card flex flex-row justify-content-between align-items-center">
+              <div class="text py-1 flex flex-column justify-content-between align-items-flex-start">
+                <span class="text-capitalize"><strong>@{{dish.name}}</strong></span>
+                <span class="text-capitalize desc">@{{dish.description}}</span>
+                <span class="text-capitalize"><strong>€ @{{dish.price.toFixed(2)}}</strong></span>
+              </div>
               <img :src="dish.image" alt="">
-                <span class="text-capitalize d-block"><strong>@{{dish.name}}</strong></span>
-                <span class="text-capitalize d-block">@{{dish.description}}</span>
-              <span class="text-capitalize"><strong>€ @{{dish.price.toFixed(2)}}</strong></span>
             </div>
           </div>
         </div>
@@ -41,13 +64,15 @@
             </h4>
             <ul class="list-group mb-3">
               <li v-for="dish in cart"  v-if="dish.restaurantSlug == slug" class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
+                <div class="left">
                   <span><i class="fas fa-minus" @click="minusCart(dish)"></i></span>
                   <input type="number" name="" value="" v-model.number="dish.quantity">
-                  <h6 class="my-0">@{{dish.name}}</h6>
                 </div>
-                <span class="text-muted">€ @{{dish.price.toFixed(2)}}</span>
-                <span><i class="fas fa-plus" @click="addCart(dish)"></i></span>
+                <span class="my-0">@{{dish.name}}</span>
+                <div class="right">
+                  <span class="text-muted text-right">€ @{{dish.price.toFixed(2)}}</span>
+                  <span><i class="fas fa-plus" @click="addCart(dish)"></i></span>
+                </div>
               </li>
               <li class="list-group-item d-flex justify-content-between">
                 <span>Totale (EUR)</span>

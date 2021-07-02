@@ -10042,6 +10042,11 @@ h3 {
   border-color: #3e9920;
 }
 
+.card,
+.btn {
+  border-radius: 0;
+}
+
 nav .container .navbar-brand img {
   width: 160px;
 }
@@ -10959,31 +10964,69 @@ main {
 }
 
 #main_menu .jumbo {
-  height: 115px;
+  height: 200px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-#main_menu .jumbo .logo {
-  border-radius: 50%;
+#main_menu .container-restaurant .card {
+  margin-top: -120px;
+  border-radius: 0;
+  font-size: 16px;
+  margin-bottom: 150px;
 }
-#main_menu .jumbo h1 {
-  color: #fff;
-  text-shadow: 2px 2px #000;
-  font-size: 25px;
+#main_menu .container-restaurant .card .card-body .img-overflow {
+  margin-top: -80px;
+}
+#main_menu .container-restaurant .card .card-body .img-overflow img {
+  border: 1px solid #000;
+}
+#main_menu .container-restaurant .card .card-body h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #262626;
+}
+#main_menu .container-restaurant .card .card-body .container-icon i {
+  opacity: 0.7;
+  border: none;
+  font-size: 27px;
+  transition: 0.2s;
+}
+#main_menu .container-restaurant .card .card-body .container-icon i.fas.fa-edit {
+  color: #3e9920;
+}
+#main_menu .container-restaurant .card .card-body .container-icon i:hover {
+  opacity: 1;
+}
+#main_menu .container-restaurant .card .card-body .container-icon form input.trash-icon {
+  color: #f00;
+  opacity: 0.7;
+  border: none;
+  font-size: 27px;
+  transition: 0.2s;
+}
+#main_menu .container-restaurant .card .card-body .container-icon form input.trash-icon:hover {
+  opacity: 1;
+}
+#main_menu #dishes {
+  margin-top: -10rem;
 }
 #main_menu #dishes .menu-dish .card {
-  padding: 0 10px;
+  height: 65px;
+  padding-left: 10px;
+}
+#main_menu #dishes .menu-dish .card .text {
+  height: 100%;
+}
+#main_menu #dishes .menu-dish .card .text .desc {
+  display: none;
 }
 #main_menu #dishes .menu-dish .card:hover {
   cursor: pointer;
   border: 2px solid #000;
 }
 #main_menu #dishes .menu-dish .card img {
-  width: 100px;
-}
-#main_menu #dishes .menu-dish .card .flex-column {
-  flex-direction: column;
+  height: 100%;
 }
 #main_menu #cart input {
   width: 60px;
@@ -10991,47 +11034,30 @@ main {
 }
 
 @media (min-width: 767px) {
-  .jumbo {
-    height: 250px;
+  #main_menu .jumbo {
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    height: 350px;
   }
-  .jumbo .logo {
-    border-radius: 50%;
-    position: absolute;
-    top: 80%;
-    left: 15%;
+  #main_menu #dishes {
+    margin-top: -10rem;
   }
-  .jumbo h1 {
-    color: #fff;
-    text-shadow: 2px 2px #000;
-    font-size: 35px;
-    position: absolute;
-    top: 90%;
-    left: 15%;
+  #main_menu #dishes .menu-dish .card {
+    height: 120px;
+    padding-left: 10px;
   }
-}
-@media (min-width: 992px) {
-  .jumbo {
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  #main_menu #dishes .menu-dish .card:hover {
+    cursor: pointer;
+    border: 2px solid #000;
   }
-  .jumbo .logo {
-    border-radius: 50%;
-    position: absolute;
-    top: 80%;
-    left: 15%;
+  #main_menu #dishes .menu-dish .card .text {
+    height: 100%;
   }
-  .jumbo h1 {
-    color: #fff;
-    text-shadow: 2px 2px #000;
-    font-size: 35px;
-    position: absolute;
-    top: 90%;
-    left: 15%;
+  #main_menu #dishes .menu-dish .card .text .desc {
+    display: block;
+  }
+  #main_menu #dishes .menu-dish .card img {
+    height: 100%;
   }
 }
 footer {
