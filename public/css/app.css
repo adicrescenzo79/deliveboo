@@ -10030,6 +10030,23 @@ h3 {
   background: none;
 }
 
+.btn-dark {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  outline: #000;
+}
+.btn-dark:hover {
+  color: #fff;
+  background-color: #3e9920;
+  border-color: #3e9920;
+}
+
+.card,
+.btn {
+  border-radius: 0;
+}
+
 nav .container .navbar-brand img {
   width: 160px;
 }
@@ -10946,23 +10963,103 @@ main {
   text-align: center;
 }
 
+#main_menu .jumbo {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#main_menu .container-restaurant .card {
+  margin-top: -120px;
+  border-radius: 0;
+  font-size: 16px;
+  margin-bottom: 150px;
+}
+#main_menu .container-restaurant .card .card-body .img-overflow {
+  margin-top: -80px;
+}
+#main_menu .container-restaurant .card .card-body .img-overflow img {
+  border: 1px solid #000;
+}
+#main_menu .container-restaurant .card .card-body h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #262626;
+}
+#main_menu .container-restaurant .card .card-body .container-icon i {
+  opacity: 0.7;
+  border: none;
+  font-size: 27px;
+  transition: 0.2s;
+}
+#main_menu .container-restaurant .card .card-body .container-icon i.fas.fa-edit {
+  color: #3e9920;
+}
+#main_menu .container-restaurant .card .card-body .container-icon i:hover {
+  opacity: 1;
+}
+#main_menu .container-restaurant .card .card-body .container-icon form input.trash-icon {
+  color: #f00;
+  opacity: 0.7;
+  border: none;
+  font-size: 27px;
+  transition: 0.2s;
+}
+#main_menu .container-restaurant .card .card-body .container-icon form input.trash-icon:hover {
+  opacity: 1;
+}
+#main_menu #dishes {
+  margin-top: -10rem;
+}
 #main_menu #dishes .menu-dish .card {
-  padding: 0 10px;
+  height: 65px;
+  padding-left: 10px;
+}
+#main_menu #dishes .menu-dish .card .text {
+  height: 100%;
+}
+#main_menu #dishes .menu-dish .card .text .desc {
+  display: none;
 }
 #main_menu #dishes .menu-dish .card:hover {
   cursor: pointer;
+  border: 2px solid #000;
 }
 #main_menu #dishes .menu-dish .card img {
-  width: 100px;
-}
-#main_menu #dishes .menu-dish .card span {
-  padding: 35px 0;
+  height: 100%;
 }
 #main_menu #cart input {
   width: 60px;
   padding-left: 10px;
 }
 
+@media (min-width: 767px) {
+  #main_menu .jumbo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+  }
+  #main_menu #dishes {
+    margin-top: -10rem;
+  }
+  #main_menu #dishes .menu-dish .card {
+    height: 120px;
+    padding-left: 10px;
+  }
+  #main_menu #dishes .menu-dish .card:hover {
+    cursor: pointer;
+    border: 2px solid #000;
+  }
+  #main_menu #dishes .menu-dish .card .text {
+    height: 100%;
+  }
+  #main_menu #dishes .menu-dish .card .text .desc {
+    display: block;
+  }
+  #main_menu #dishes .menu-dish .card img {
+    height: 100%;
+  }
+}
 footer {
   height: 400px;
   width: 100%;

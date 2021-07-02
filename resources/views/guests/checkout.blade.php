@@ -110,7 +110,7 @@
               </div>
             </div>
             <hr class="mb-4">
-            <a class="btn btn-dark btn-md btn-block" @click="pay">Continue to checkout</a>
+            <a class="btn btn-dark btn-md btn-block mb-5" @click="pay">Completa il pagamento</a>
           </form>
         </div>
       </div>

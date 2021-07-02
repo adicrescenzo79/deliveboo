@@ -20,3 +20,20 @@
 .my-b-none {
   background: none;
 }
+
+.btn-dark {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  outline: #000;
+  &:hover{
+    color: #fff;
+    background-color: $my-green;
+    border-color: $my-green;
+  }
+}
+
+.card,
+.btn{
+  border-radius: 0;
+}
