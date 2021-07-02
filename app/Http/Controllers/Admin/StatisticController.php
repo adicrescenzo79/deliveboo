@@ -3,12 +3,8 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-
-
-
-use App\Order;
 use App\Restaurant;
-
+use App\Order;
 
 
 use Illuminate\Http\Request;
@@ -18,17 +14,17 @@ use Illuminate\Http\Request;
 
 class StatisticController extends Controller
 {
-  public function index()
+  public function index($restaurant)
   {
       // $orders = Order::where('restaurant_id', '=', $restaurant)->get();
 
       $id = Auth::id();
 
-      $orders = Order::with('restaurants')->where('user_id', '=', $id)->get();
+      $orders = Order::where('restaurant_id', '=', $restaurant)->get();
 
-      $restaurants = Restaurant::all();
+      $thisrestaurant = Restaurant::where('id', '=', $restaurant)->first();
 
-      return view('admin.statistics.index', compact('orders', 'restaurants'));
+      return view('admin.statistics.index', compact('orders', 'thisrestaurant'));
   }
 
   // public function show(Restaurant $restaurant)
