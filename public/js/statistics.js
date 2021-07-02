@@ -96,10 +96,82 @@
 Vue.config.devtools = true;
 var app = new Vue({
   el: '#statistics_index_main',
-  data: {},
+  data: {
+    currentUrl: window.location.href,
+    restaurant_id: '',
+    labels: [],
+    months: [],
+    orders: []
+  },
   mounted: function mounted() {
+    var _this = this;
+
+    var stringSplitted = this.currentUrl.split('/');
+    this.restaurant_id = parseInt(stringSplitted[5]);
+    var id = JSON.stringify(this.restaurant_id);
+    console.log(id);
+    axios.get("http://localhost:8000/api/orders/".concat(id), {}).then(function (response) {
+      _this.orders = response.data.data;
+
+      _this.orders.forEach(function (order, i) {
+        var month = order.created_at.split('-')[1];
+
+        switch (month) {
+          case '01':
+            order.created_at = 'Gennaio';
+            break;
+
+          case '02':
+            order.created_at = 'Febbraio';
+            break;
+
+          case '03':
+            order.created_at = 'Marzo';
+            break;
+
+          case '04':
+            order.created_at = 'Aprile';
+            break;
+
+          case '05':
+            order.created_at = 'Maggio';
+            break;
+
+          case '06':
+            order.created_at = 'Giugno';
+            break;
+
+          case '07':
+            order.created_at = 'Luglio';
+            break;
+
+          case '08':
+            order.created_at = 'Agosto';
+            break;
+
+          case '09':
+            order.created_at = 'Settembre';
+            break;
+
+          case '10':
+            order.created_at = 'Ottobre';
+            break;
+
+          case '11':
+            order.created_at = 'Novembre';
+            break;
+
+          case '12':
+            order.created_at = 'Dicembre';
+            break;
+        }
+      });
+
+      console.log(_this.orders);
+    });
+    this.labels = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
     var data = {
-      labels: labels,
+      labels: this.labels,
       datasets: [{
         label: 'My First dataset',
         backgroundColor: 'rgb(255, 99, 132)',
@@ -112,7 +184,6 @@ var app = new Vue({
       data: data,
       options: {}
     };
-    var labels = ['January', 'February', 'March', 'April', 'May', 'June'];
     var myChart = new Chart(document.getElementById('myChart'), config);
   }
 });
