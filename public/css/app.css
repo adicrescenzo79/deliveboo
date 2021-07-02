@@ -10086,13 +10086,6 @@ nav .container .navbar-toggler {
 nav .container .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-nav .container ul {
-  position: absolute;
-  right: 0px;
-}
-nav .container ul li {
-  margin-left: 20px;
-}
 nav .container ul li a.my-btn {
   text-align: center;
   font-size: 13px;
@@ -10123,13 +10116,25 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 
 @media screen and (max-width: 767px) {
-  nav .container ul li a.my-btn {
-    float: right;
-    min-width: 163px;
+  nav .container .navbar-brand img {
+    width: 130px;
   }
-
-  .navbar-nav.ml-auto {
-    padding-top: 15px;
+  nav .container ul li a.my-btn {
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+    background: #000;
+    padding: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: 0.2s;
+  }
+  nav .container ul li a.my-btn:hover {
+    text-decoration: none;
+    background-color: #3e9920;
   }
 }
 #main-log-reg {
@@ -10360,6 +10365,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
+  transition: 0.2s;
 }
 #main-restaurants-show .container .card {
   margin-top: -120px;
