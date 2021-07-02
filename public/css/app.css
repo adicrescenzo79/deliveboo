@@ -10030,23 +10030,6 @@ h3 {
   background: none;
 }
 
-<<<<<<< HEAD
-.btn-dark {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-  outline: #000;
-}
-.btn-dark:hover {
-  color: #fff;
-  background-color: #3e9920;
-  border-color: #3e9920;
-}
-
-.card,
-.btn {
-  border-radius: 0;
-=======
 .my-btn-main {
   color: #fff;
   width: 100%;
@@ -10092,7 +10075,21 @@ a.my-btn:hover {
 }
 .my-btn-create:hover {
   opacity: 0.7;
->>>>>>> dev
+}
+.my-btn-create .btn-dark {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  outline: #000;
+}
+.my-btn-create .btn-dark:hover {
+  color: #fff;
+  background-color: #3e9920;
+  border-color: #3e9920;
+}
+.my-btn-create .card,
+.my-btn-create .btn {
+  border-radius: 0;
 }
 
 nav .container .navbar-brand img {

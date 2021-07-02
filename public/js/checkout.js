@@ -193,6 +193,9 @@ var app = new Vue({
         console.log(risposta);
 
         if (risposta.data.success) {
+          //Mando i dati del cliente e ordine per la mail
+          axios.post('http://localhost:8000/api/mails', dati).then(function (risposta) {}); //Funzione
+
           _this3.cartDelete;
           window.location.href = '/success';
         }
