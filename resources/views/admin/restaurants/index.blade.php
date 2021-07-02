@@ -19,7 +19,7 @@
                         <img src="{{$restaurant->logo}}" alt="">
                     </div>
 
-                    <div class="col-sm-12 col-xl-6">
+                    <div class="col-sm-12 col-xl-6 pt-3">
                         <ul>
                             <li class="pb-4"><strong>{{$restaurant->name}}</strong></li>
                             <li><i class="fas fa-map-marker-alt pr-2"></i>{{$restaurant->address}}</li>
@@ -28,7 +28,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-sm-12 col-xl-3 container-buttons py-2 ">
+                    <div class="col-12 col-sm-8 offset-sm-2 col-xl-3 offset-xl-0 container-buttons  py-2 ">
                         <a href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->id])}}"><i class="fas fa-store-alt" title="Ristorante"></i></a>
                         <a href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->id])}}"><i class="far fa-chart-bar" title="Statistiche"></i></a>
                         <a href="{{route('admin.restaurants.edit', ['restaurant'=>$restaurant->id])}}"><i class="fas fa-edit" title="Modifica"></i></a>

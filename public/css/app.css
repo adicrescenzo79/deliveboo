@@ -10233,7 +10233,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 #main-admin-restaurants .card .container-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 #main-admin-restaurants .card .container-buttons i {

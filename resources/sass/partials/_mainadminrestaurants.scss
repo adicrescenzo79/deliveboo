@@ -38,7 +38,7 @@
 
         .container-buttons {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
 
             i {
@@ -82,7 +82,9 @@
             }
         }
     }
-    @media (min-width: 576px) {}
+    @media (min-width: 576px) {
+      
+    }
     @media (min-width: 768px) {
 
     }
