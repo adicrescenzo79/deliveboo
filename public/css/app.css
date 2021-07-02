@@ -10178,6 +10178,9 @@ nav .container .dropdown-menu .dropdown-item:hover {
   color: #3e9920;
 }
 
+#main-admin-restaurants {
+  padding-top: 50px;
+}
 #main-admin-restaurants .my-btn-create {
   color: #fff;
   width: 200px;
@@ -10186,13 +10189,24 @@ nav .container .dropdown-menu .dropdown-item:hover {
   height: 48px;
   font-size: 16px;
   border-style: none;
-  transition: 0.2s;
 }
 #main-admin-restaurants .my-btn-create:hover {
   opacity: 0.7;
 }
+#main-admin-restaurants h1 {
+  color: #000;
+  font-weight: 900;
+}
+#main-admin-restaurants a i.fas.fa-plus {
+  opacity: 0.8;
+  color: #3e9920;
+  font-size: 30px;
+}
+#main-admin-restaurants a i.fas.fa-plus:hover {
+  opacity: 1;
+}
 #main-admin-restaurants .card {
-  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 30px -15px #888888;
   border-radius: 0;
   margin-top: 5px;
   margin-bottom: 25px;
@@ -10205,10 +10219,12 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 #main-admin-restaurants .card .card-body ul {
   list-style: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 #main-admin-restaurants .card .card-body ul strong {
-  font-size: 18px;
+  font-size: 23px;
+  font-weight: 900;
+  color: #292929;
 }
 #main-admin-restaurants .card .card-body .my-btn-card {
   min-width: 118px;
@@ -10223,7 +10239,6 @@ nav .container .dropdown-menu .dropdown-item:hover {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  transition: 0.2s;
 }
 #main-admin-restaurants .card .card-body .my-btn-card:hover {
   text-decoration: none;
@@ -10238,11 +10253,11 @@ nav .container .dropdown-menu .dropdown-item:hover {
   opacity: 0.7;
   border: none;
   font-size: 27px;
-  transition: 0.2s;
 }
-#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-utensils {
+#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-store-alt {
   color: #f6993f;
   background: none;
+  font-size: 23px;
 }
 #main-admin-restaurants .card .card-body .container-buttons i.far.fa-chart-bar {
   color: #3490dc;
@@ -10251,6 +10266,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-admin-restaurants .card .card-body .container-buttons i.fas.fa-edit {
   color: #3e9920;
   background: none;
+  font-size: 25px;
 }
 #main-admin-restaurants .card .card-body .container-buttons i:hover {
   opacity: 1;
@@ -10260,8 +10276,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
   background: none;
   opacity: 0.7;
   border: none;
-  font-size: 27px;
-  transition: 0.2s;
+  font-size: 24px;
 }
 #main-admin-restaurants .card .card-body .container-buttons form input.trash-icon:hover {
   opacity: 1;
