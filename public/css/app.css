@@ -10375,8 +10375,85 @@ nav .container .dropdown-menu .dropdown-item:hover {
   }
 }
 
+#main_checkout {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
 #main_checkout .container {
   max-width: 960px;
+}
+#main_checkout .container .row div h4 span.badge {
+  background-color: #000;
+}
+#main_checkout .container .row div ul li div span i:hover {
+  cursor: pointer;
+}
+#main_checkout .container .row div ul li a.add-articoli {
+  color: #3e9920;
+}
+#main_checkout .container .row div ul li span i:hover {
+  cursor: pointer;
+}
+#main_checkout .container .row div ul li:last-child {
+  background-color: #000;
+  color: #fff;
+}
+#main_checkout .dish-quantity {
+  padding-left: 7px;
+  font-size: 12px;
+}
+#main_checkout .dish-price {
+  padding-right: 7px;
+  font-size: 12px;
+}
+#main_checkout .dish-name {
+  font-size: 12px;
+}
+#main_checkout .dish-minus {
+  font-size: 11px;
+}
+#main_checkout .dish-plus {
+  font-size: 11px;
+}
+#main_checkout .form-control {
+  background-color: #fff !important;
+  border-radius: 0;
+  font-size: 16px !important;
+  height: 48px !important;
+  line-height: 24px !important;
+  color: #262626 !important;
+  border: 1px solid #E0E0E0 !important;
+}
+#main_checkout .form-control:focus {
+  border-color: #262626 !important;
+  box-shadow: none;
+}
+#main_checkout .custom-control-input :focus {
+  color: red;
+}
+#main_checkout .label-nero:before {
+  color: #fff;
+  border-color: #000;
+  background-color: #000;
+}
+#main_checkout .my-btn {
+  border-radius: 0px;
+  border: none;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  background: #000;
+  padding: 16px 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.2s;
+}
+#main_checkout .my-btn:hover {
+  text-decoration: none;
+  background-color: #3e9920;
 }
 #main_checkout .lh-condensed {
   line-height: 1.25;
@@ -10433,6 +10510,21 @@ nav .container .dropdown-menu .dropdown-item:hover {
 @media (min-width: 768px) {
   #main_checkout .bd-placeholder-img-lg {
     font-size: 3.5rem;
+  }
+  #main_checkout .dish-quantity {
+    font-size: 14.4px;
+  }
+  #main_checkout .dish-price {
+    font-size: 14.4px;
+  }
+  #main_checkout .dish-name {
+    font-size: 14.4px;
+  }
+  #main_checkout .dish-minus {
+    font-size: 14.4px;
+  }
+  #main_checkout .dish-plus {
+    font-size: 14.4px;
   }
 }
 
