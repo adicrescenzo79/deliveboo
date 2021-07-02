@@ -68,21 +68,8 @@ a.my-btn {
         opacity: 0.7;
     }
 
-    .btn-dark {
-        color: #fff;
-        background-color: #000;
-        border-color: #000;
-        outline: #000;
-
-        &:hover {
-            color: #fff;
-            background-color: $my-green;
-            border-color: $my-green;
-        }
-    }
-
-    .btn,
-    .card {
-        border-radius: 0;
-    }
+  .card,
+  .btn{
+    border-radius: 0;
+  }
 }

@@ -10087,8 +10087,13 @@ a.my-btn:hover {
   background-color: #3e9920;
   border-color: #3e9920;
 }
+<<<<<<< HEAD
+.my-btn-create .card,
+.my-btn-create .btn {
+=======
 .my-btn-create .btn,
 .my-btn-create .card {
+>>>>>>> dev
   border-radius: 0;
 }
 
