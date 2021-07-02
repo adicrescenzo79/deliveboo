@@ -193,6 +193,7 @@ var app = new Vue({
         console.log(risposta);
 
         if (risposta.data.success) {
+          //Funzione
           _this3.cartDelete;
           window.location.href = '/success';
         }

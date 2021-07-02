@@ -109,6 +109,7 @@ let app = new Vue({
       .then((risposta)=> {
         console.log(risposta);
         if (risposta.data.success) {
+          //Funzione
           this.cartDelete;
           window.location.href = '/success';
         }
