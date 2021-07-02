@@ -119,11 +119,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\payment.js */"./resources/js/payment.js");
-=======
-module.exports = __webpack_require__(/*! C:\Users\cerne\Git_Hub_Progetti\LARAVEL\deliveboo\resources\js\payment.js */"./resources/js/payment.js");
->>>>>>> dev
 
 
 /***/ })

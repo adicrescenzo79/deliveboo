@@ -48,7 +48,7 @@ a.my-btn {
   text-transform: uppercase;
   cursor: pointer;
   width: fit-content;
-  transition: 0.2s;
+transition: 0.2s;
   &:hover {
     text-decoration: none;
     background-color: $my-green;
@@ -68,21 +68,62 @@ a.my-btn {
   &:hover {
     opacity: 0.7;
   }
+}
 
-  .btn-dark {
-    color: #fff;
-    background-color: #000;
-    border-color: #000;
-    outline: #000;
-    &:hover{
-      color: #fff;
-      background-color: $my-green;
-      border-color: $my-green;
-    }
+input[type=file] {
+  height: auto;
+}
+
+input[type=file]::file-selector-button {
+  color: #fff;
+  width: 200px;
+  background-color: $my-green;
+  border-color: $my-green;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.7;
   }
+}
 
-  .card,
-  .btn{
-    border-radius: 0;
+.btn-dark {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  outline: #000;
+  &:hover{
+    color: #fff;
+    background-color: $my-green;
+    border-color: $my-green;
+  }
+}
 
+a.btn-dark {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  outline: #000;
+  &:hover{
+    color: #fff;
+    background-color: $my-green;
+    border-color: $my-green;
+  }
+}
+
+
+.card,
+.btn{
+  border-radius: 0;
+
+}
+
+a.btn{
+  border-radius: 0;
+}
+
+.no-border{
+  border: 0;
+  padding: 0;
 }

@@ -7,6 +7,10 @@ let app = new Vue({
   created(){
     window.sessionStorage.clear();
 
+    setTimeout(function(){
+      window.location.href = '/';
+    }, 3000);
+
   }
 
 });

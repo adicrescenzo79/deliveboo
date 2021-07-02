@@ -81,40 +81,52 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/success.js":
-/*!*********************************!*\
-  !*** ./resources/js/success.js ***!
-  \*********************************/
+/***/ "./resources/js/statistics.js":
+/*!************************************!*\
+  !*** ./resources/js/statistics.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 Vue.config.devtools = true;
 var app = new Vue({
-  el: '#main_success',
+  el: '#statistics_index_main',
   data: {},
-  created: function created() {
-    window.sessionStorage.clear();
-    setTimeout(function () {
-      window.location.href = '/';
-    }, 3000);
+  mounted: function mounted() {
+    var data = {
+      labels: labels,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [0, 10, 5, 2, 20, 30, 45]
+      }]
+    };
+    var config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+    var labels = ['January', 'February', 'March', 'April', 'May', 'June'];
+    var myChart = new Chart(document.getElementById('myChart'), config);
   }
 });
 
 /***/ }),
 
-/***/ 5:
-/*!***************************************!*\
-  !*** multi ./resources/js/success.js ***!
-  \***************************************/
+/***/ 6:
+/*!******************************************!*\
+  !*** multi ./resources/js/statistics.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\success.js */"./resources/js/success.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\statistics.js */"./resources/js/statistics.js");
 
 
 /***/ })
