@@ -31,7 +31,7 @@
                         <div class="img-div-icon">
                             <img src="https://d4p17acsd5wyj.cloudfront.net/shortcuts/deals.png" alt="All Restaurants">
                         </div>
-                        All
+                      <span>Tutti</span>
                     </div>
                     <div class="icon-category" v-for="category in categories"  @click="restaurantByCategory(category.id)" :class="(categorySelected.includes(category.id)) ? 'selected' : '' ">
                         <div class="img-div-icon">
@@ -51,7 +51,7 @@
         <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 catecory-selected">
-                <h3>Le categorie selezionate</h3>
+                <h3 v-if="(categorySelected.length)">Le categorie selezionate</h3>
                 <ul>
                   <li v-for="category in categories" v-if="(categorySelected.includes(category.id))">@{{category.name}}</li>
                 </ul>
@@ -81,8 +81,8 @@
 
         <div class="container" v-if="more">
             <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <button @click="allRestaurantsPlus" class="my-btn-create" type="button" name="button">Carica altri ristoranti</button>
+                <div class="col-md-8 text-center pb-5">
+                    <button @click="allRestaurantsPlus" class="my-btn-create my-5" type="button" name="button">Carica altri ristoranti</button>
                 </div>
             </div>
         </div>

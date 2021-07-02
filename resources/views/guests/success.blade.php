@@ -5,7 +5,7 @@
     <img src="{{ asset('img/consegna.jpg')}}" alt="">
     <div class="msg flex-center flex-column">
       <h1>Stiamo arrivandooo!</h1>
-      <a class="btn btn-primary" href="{{route('welcome')}}">Torna alla HomePage</a>
+      <a class="btn btn-dark" href="{{route('welcome')}}">Torna alla HomePage</a>
     </div>
 
   </div>

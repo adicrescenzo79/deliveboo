@@ -10030,6 +10030,71 @@ h3 {
   background: none;
 }
 
+<<<<<<< HEAD
+.btn-dark {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  outline: #000;
+}
+.btn-dark:hover {
+  color: #fff;
+  background-color: #3e9920;
+  border-color: #3e9920;
+}
+
+.card,
+.btn {
+  border-radius: 0;
+=======
+.my-btn-main {
+  color: #fff;
+  width: 100%;
+  background-color: #3e9920;
+  border-color: #3e9920;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+.my-btn-main:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
+a.my-btn {
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  background: #000;
+  padding: 16px 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.2s;
+}
+a.my-btn:hover {
+  text-decoration: none;
+  background-color: #3e9920;
+}
+
+.my-btn-create {
+  color: #fff;
+  width: 200px;
+  background-color: #3e9920;
+  border-color: #3e9920;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+.my-btn-create:hover {
+  opacity: 0.7;
+>>>>>>> dev
+}
+
 nav .container .navbar-brand img {
   width: 160px;
 }
@@ -10038,13 +10103,6 @@ nav .container .navbar-toggler {
 }
 nav .container .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-nav .container ul {
-  position: absolute;
-  right: 0px;
-}
-nav .container ul li {
-  margin-left: 20px;
 }
 nav .container ul li a.my-btn {
   text-align: center;
@@ -10076,13 +10134,25 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 
 @media screen and (max-width: 767px) {
-  nav .container ul li a.my-btn {
-    float: right;
-    min-width: 163px;
+  nav .container .navbar-brand img {
+    width: 130px;
   }
-
-  .navbar-nav.ml-auto {
-    padding-top: 15px;
+  nav .container ul li a.my-btn {
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+    background: #000;
+    padding: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: 0.2s;
+  }
+  nav .container ul li a.my-btn:hover {
+    text-decoration: none;
+    background-color: #3e9920;
   }
 }
 #main-log-reg {
@@ -10131,6 +10201,9 @@ nav .container .dropdown-menu .dropdown-item:hover {
   color: #3e9920;
 }
 
+#main-admin-restaurants {
+  padding-top: 50px;
+}
 #main-admin-restaurants .my-btn-create {
   color: #fff;
   width: 200px;
@@ -10139,13 +10212,24 @@ nav .container .dropdown-menu .dropdown-item:hover {
   height: 48px;
   font-size: 16px;
   border-style: none;
-  transition: 0.2s;
 }
 #main-admin-restaurants .my-btn-create:hover {
   opacity: 0.7;
 }
+#main-admin-restaurants h1 {
+  color: #000;
+  font-weight: 900;
+}
+#main-admin-restaurants a i.fas.fa-plus {
+  opacity: 0.8;
+  color: #3e9920;
+  font-size: 30px;
+}
+#main-admin-restaurants a i.fas.fa-plus:hover {
+  opacity: 1;
+}
 #main-admin-restaurants .card {
-  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 30px -15px #888888;
   border-radius: 0;
   margin-top: 5px;
   margin-bottom: 25px;
@@ -10158,10 +10242,12 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 #main-admin-restaurants .card .card-body ul {
   list-style: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 #main-admin-restaurants .card .card-body ul strong {
-  font-size: 18px;
+  font-size: 23px;
+  font-weight: 900;
+  color: #292929;
 }
 #main-admin-restaurants .card .card-body .my-btn-card {
   min-width: 118px;
@@ -10176,7 +10262,6 @@ nav .container .dropdown-menu .dropdown-item:hover {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  transition: 0.2s;
 }
 #main-admin-restaurants .card .card-body .my-btn-card:hover {
   text-decoration: none;
@@ -10191,11 +10276,11 @@ nav .container .dropdown-menu .dropdown-item:hover {
   opacity: 0.7;
   border: none;
   font-size: 27px;
-  transition: 0.2s;
 }
-#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-utensils {
+#main-admin-restaurants .card .card-body .container-buttons i.fas.fa-store-alt {
   color: #f6993f;
   background: none;
+  font-size: 23px;
 }
 #main-admin-restaurants .card .card-body .container-buttons i.far.fa-chart-bar {
   color: #3490dc;
@@ -10204,6 +10289,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-admin-restaurants .card .card-body .container-buttons i.fas.fa-edit {
   color: #3e9920;
   background: none;
+  font-size: 25px;
 }
 #main-admin-restaurants .card .card-body .container-buttons i:hover {
   opacity: 1;
@@ -10213,8 +10299,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
   background: none;
   opacity: 0.7;
   border: none;
-  font-size: 27px;
-  transition: 0.2s;
+  font-size: 24px;
 }
 #main-admin-restaurants .card .card-body .container-buttons form input.trash-icon:hover {
   opacity: 1;
@@ -10313,6 +10398,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
+  transition: 0.2s;
 }
 #main-restaurants-show .container .card {
   margin-top: -120px;
@@ -10529,7 +10615,7 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 93px;
 }
 
 #main-welcome {
@@ -10596,7 +10682,6 @@ main {
   height: 75px;
 }
 #main-welcome #categories .row .content-category .icon-category.all.selected .img-div-icon {
-  opacity: 0.7;
   background: #AAA;
   border-radius: 50%;
   cursor: pointer;
@@ -10622,13 +10707,11 @@ main {
   align-items: center;
 }
 #main-welcome #categories .row .content-category .icon-category.selected .img-div-icon {
-  opacity: 0.7;
   background: #AAA;
   border-radius: 50%;
   cursor: pointer;
 }
 #main-welcome #categories .row .content-category .icon-category:hover .img-div-icon {
-  opacity: 0.7;
   box-shadow: 1px 1px 8px #888888;
   border-radius: 50%;
   cursor: pointer;
@@ -10638,7 +10721,6 @@ main {
   cursor: pointer;
 }
 #main-welcome #categories .row .content-category .icon-category:hover .img-div-icon {
-  opacity: 0.7;
   box-shadow: 1px 1px 8px #888888;
   border-radius: 50%;
   cursor: pointer;
@@ -10679,16 +10761,8 @@ main {
   color: #292929;
   font-weight: 900;
 }
-#main-welcome #restaurants .row .content-restaurants .card a .card-title:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
 #main-welcome #restaurants .row .content-restaurants .card a .card-text {
   color: black;
-  opacity: 0.7;
-}
-#main-welcome #restaurants .row .content-restaurants .card a .card-text:hover {
-  opacity: 1;
 }
 #main-welcome #restaurants .row .content-restaurants .card a .card-text .card-text fas .fa-mapmarker-alt {
   color: #7B7B7B;
@@ -10786,16 +10860,8 @@ main {
     color: #292929;
     font-weight: 900;
   }
-  #main-welcome #restaurants .card a .card-title:hover {
-    cursor: pointer;
-    opacity: 0.7;
-  }
   #main-welcome #restaurants .card a .card-text {
     color: black;
-    opacity: 0.7;
-  }
-  #main-welcome #restaurants .card a .card-text:hover {
-    opacity: 1;
   }
   #main-welcome #restaurants .card a .card-text .card-text fas .fa-mapmarker-alt {
     color: #7B7B7B;
@@ -10897,7 +10963,7 @@ main {
   #main-welcome #categories .row .content-category {
     display: flex;
     align-items: center;
-    overflow-x: scroll;
+    overflow-x: unset;
   }
   #main-welcome #categories .row .content-category .icon-category.all {
     color: #585858;
@@ -10909,7 +10975,6 @@ main {
     height: 75px;
   }
   #main-welcome #categories .row .content-category .icon-category.all.selected .img-div-icon {
-    opacity: 0.7;
     background: #AAA;
     border-radius: 50%;
     cursor: pointer;
@@ -10918,13 +10983,16 @@ main {
     color: #3e9920;
     cursor: pointer;
   }
-  #main-welcome #categories .row .content-category .icon-category.all:hover .img-div {
+  #main-welcome #categories .row .content-category .icon-category.all:hover .img-div-icon {
     box-shadow: 1px 1px 8px #888888;
     border-radius: 50%;
     cursor: pointer;
   }
-  #main-welcome #categories .row .content-category .icon-category.all .img-div img {
-    width: 90px;
+  #main-welcome #categories .row .content-category .icon-category.all .img-div-icon {
+    padding: 5px;
+  }
+  #main-welcome #categories .row .content-category .icon-category.all .img-div-icon img {
+    width: 51px;
   }
   #main-welcome #categories .row .content-category .icon-category {
     width: calc(100%/9);
@@ -10937,13 +11005,11 @@ main {
     margin: 19px;
   }
   #main-welcome #categories .row .content-category .icon-category.selected .img-div-icon {
-    opacity: 0.7;
     background: #AAA;
     border-radius: 50%;
     cursor: pointer;
   }
   #main-welcome #categories .row .content-category .icon-category:hover .img-div-icon {
-    opacity: 0.7;
     box-shadow: 1px 1px 8px #888888;
     border-radius: 50%;
     cursor: pointer;
@@ -10956,13 +11022,16 @@ main {
     text-align: center;
   }
   #main-welcome #categories .row .content-category .icon-category .img-div-icon:hover {
-    opacity: 0.7;
     box-shadow: 1px 1px 8px #888888;
     border-radius: 50%;
     cursor: pointer;
   }
   #main-welcome #categories .row .content-category .icon-category .img-div-icon img {
-    width: 90px;
+    width: 60px;
+  }
+  #main-welcome #restaurants h3 {
+    font-weight: 900;
+    color: #3c3b48;
   }
   #main-welcome #restaurants div.card {
     width: 100%;
@@ -10983,16 +11052,8 @@ main {
     color: #292929;
     font-weight: 900;
   }
-  #main-welcome #restaurants div.card a h5.card-title:hover {
-    cursor: pointer;
-    opacity: 0.7;
-  }
   #main-welcome #restaurants div.card a .card-text {
     color: black;
-    opacity: 0.7;
-  }
-  #main-welcome #restaurants div.card a .card-text:hover {
-    opacity: 1;
   }
   #main-welcome #restaurants div.card a .card-text .card-text fas .fa-mapmarker-alt {
     color: #7B7B7B;
@@ -11038,23 +11099,103 @@ main {
   text-align: center;
 }
 
+#main_menu .jumbo {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#main_menu .container-restaurant .card {
+  margin-top: -120px;
+  border-radius: 0;
+  font-size: 16px;
+  margin-bottom: 150px;
+}
+#main_menu .container-restaurant .card .card-body .img-overflow {
+  margin-top: -80px;
+}
+#main_menu .container-restaurant .card .card-body .img-overflow img {
+  border: 1px solid #000;
+}
+#main_menu .container-restaurant .card .card-body h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #262626;
+}
+#main_menu .container-restaurant .card .card-body .container-icon i {
+  opacity: 0.7;
+  border: none;
+  font-size: 27px;
+  transition: 0.2s;
+}
+#main_menu .container-restaurant .card .card-body .container-icon i.fas.fa-edit {
+  color: #3e9920;
+}
+#main_menu .container-restaurant .card .card-body .container-icon i:hover {
+  opacity: 1;
+}
+#main_menu .container-restaurant .card .card-body .container-icon form input.trash-icon {
+  color: #f00;
+  opacity: 0.7;
+  border: none;
+  font-size: 27px;
+  transition: 0.2s;
+}
+#main_menu .container-restaurant .card .card-body .container-icon form input.trash-icon:hover {
+  opacity: 1;
+}
+#main_menu #dishes {
+  margin-top: -10rem;
+}
 #main_menu #dishes .menu-dish .card {
-  padding: 0 10px;
+  height: 65px;
+  padding-left: 10px;
+}
+#main_menu #dishes .menu-dish .card .text {
+  height: 100%;
+}
+#main_menu #dishes .menu-dish .card .text .desc {
+  display: none;
 }
 #main_menu #dishes .menu-dish .card:hover {
   cursor: pointer;
+  border: 2px solid #000;
 }
 #main_menu #dishes .menu-dish .card img {
-  width: 100px;
-}
-#main_menu #dishes .menu-dish .card span {
-  padding: 35px 0;
+  height: 100%;
 }
 #main_menu #cart input {
   width: 60px;
   padding-left: 10px;
 }
 
+@media (min-width: 767px) {
+  #main_menu .jumbo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+  }
+  #main_menu #dishes {
+    margin-top: -10rem;
+  }
+  #main_menu #dishes .menu-dish .card {
+    height: 120px;
+    padding-left: 10px;
+  }
+  #main_menu #dishes .menu-dish .card:hover {
+    cursor: pointer;
+    border: 2px solid #000;
+  }
+  #main_menu #dishes .menu-dish .card .text {
+    height: 100%;
+  }
+  #main_menu #dishes .menu-dish .card .text .desc {
+    display: block;
+  }
+  #main_menu #dishes .menu-dish .card img {
+    height: 100%;
+  }
+}
 footer {
   height: 400px;
   width: 100%;

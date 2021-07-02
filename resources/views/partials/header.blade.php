@@ -3,28 +3,24 @@
     <a class="navbar-brand" href="{{ url('/') }}">
       <img src="{{ asset('img/logo-seven-eats.png')}}" alt="">
     </a>
-    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+    {{-- <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
       <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> --}}
 
-    <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
-      <!-- Left Side Of Navbar -->
-      {{-- <ul class="navbar-nav mr-auto">
-
-      </ul> --}}
+    <div class="" id="navbarSupportedContent">
 
       <!-- Right Side Of Navbar -->
       <ul class="navbar-nav ml-auto">
         <!-- Authentication Links -->
         @guest
           <li class="nav-item">
-            <a class="my-btn" href="{{ route('login') }}">{{ __('Accedi') }}</a>
+            <a class="my-btn" href="{{ route('login') }}">{{ __('Area Ristoratori') }}</a>
           </li>
-          @if (Route::has('register'))
+          {{-- @if (Route::has('register'))
             <li class="nav-item">
               <a class="my-btn" href="{{ route('register') }}">{{ __('Registrati') }}</a>
             </li>
-          @endif
+          @endif --}}
         @else
           <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle text-capitalize" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

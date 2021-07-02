@@ -9,7 +9,7 @@ class RestaurantController extends Controller
 {
   public function restaurantsNr($skip)
   {
-    $restaurants = Restaurant::skip($skip)->limit(8)->get();
+    $restaurants = Restaurant::skip($skip)->limit(6)->get();
 
     return response()->json([
       'data' => $restaurants,
