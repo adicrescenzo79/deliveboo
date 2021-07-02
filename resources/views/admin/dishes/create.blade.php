@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="home">
-    <div class="container">
+<div id="home ">
+    <div class="container py-3">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h3>Crea Piatto</h3>
@@ -38,7 +38,7 @@
 
                     <div class="form-group">
                         <label for="image">Imagine</label>
-                        <input class="form-control @error('image') is-invalid @enderror" id="image" type="file" name="image" value="{{old('image')}}">
+                        <input class="form-control no-border @error('image') is-invalid @enderror" id="image" type="file" name="image" value="{{old('image')}}">
                         @error('image')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="visibility" id="invisible" value="0">
+                            <input class=" form-check-input" type="radio" name="visibility" id="invisible" value="0">
                             <label class="form-check-label" for="invisible">
                               Non Visibile
                             </label>
@@ -67,7 +67,7 @@
 
 
 
-                    <input class="btn btn-primary" type="submit" name="" value="Crea">
+                    <input class="my-btn my-btn-create" type="submit" name="" value="Crea">
                 </form>
             </div>
         </div>

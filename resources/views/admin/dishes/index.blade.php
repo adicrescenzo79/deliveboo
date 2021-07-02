@@ -13,7 +13,7 @@
         <div class="col-md-8">
           <div class="card">
             {{-- <div class="card-header"><h5>{{$restaurant->name}}</h5></div> --}}
-            <div class="card-body row">
+            <div class="card-body row align-items-center">
 
               <div class="card-img col-md-3 col-sm-12">
                 <img src="{{$dish->image}}" alt="">
