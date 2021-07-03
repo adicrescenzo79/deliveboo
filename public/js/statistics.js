@@ -100,8 +100,10 @@ var app = new Vue({
     currentUrl: window.location.href,
     restaurant_id: '',
     labels: [],
-    months: [],
-    orders: []
+    months: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
+    orders: [],
+    startArray: [],
+    total_paids: []
   },
   mounted: function mounted() {
     var _this = this;
@@ -179,23 +181,77 @@ var app = new Vue({
 
       _this.orders = ordersNew;
       console.log(_this.orders);
+      var helper = {};
+
+      var result = _this.orders.reduce(function (r, o) {
+        var key = o.created_at;
+
+        if (!helper[key]) {
+          helper[key] = Object.assign({}, o); // create a copy of o
+
+          r.push(helper[key]);
+        } else {
+          helper[key].total_paid += o.total_paid;
+        }
+
+        return r;
+      }, []);
+
+      _this.orders = result;
+      var result = [];
+      var helper = {};
+
+      _this.months.forEach(function (month, i) {
+        helper = {
+          created_at: month,
+          total_paid: 0,
+          monthNr: i + 1
+        };
+        result.push(helper);
+      });
+
+      console.log(result);
+      _this.startArray = result;
+      var result = [];
+      var helper = {};
+
+      _this.startArray.forEach(function (start, i) {
+        _this.orders.forEach(function (order, j) {
+          if (start.created_at == order.created_at) {
+            start.total_paid = order.total_paid;
+          }
+        });
+      });
+
+      _this.orders = _this.startArray;
+
+      _this.orders.forEach(function (order, i) {
+        _this.total_paids.push(order.total_paid);
+      });
+
+      console.log(_this.total_paids);
     });
-    this.labels = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
-    var data = {
-      labels: this.labels,
-      datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45]
-      }]
-    };
-    var config = {
-      type: 'line',
-      data: data,
-      options: {}
-    };
-    var myChart = new Chart(document.getElementById('myChart'), config);
+    this.labels = this.months;
+  },
+  methods: {
+    carica: function carica() {
+      var data = {
+        labels: this.months,
+        datasets: [{
+          label: 'Incasso mensile',
+          backgroundColor: 'rgb(255, 99, 132)',
+          borderColor: 'rgb(255, 99, 132)',
+          data: this.total_paids
+        }]
+      };
+      console.log(this.total_paids);
+      var config = {
+        type: 'line',
+        data: data,
+        options: {}
+      };
+      var myChart = new Chart(document.getElementById('myChart'), config);
+    }
   }
 });
 

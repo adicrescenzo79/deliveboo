@@ -5,6 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
+          <button @click="carica()" type="button" name="button">Carica</button>
           <canvas id="myChart"></canvas>
         </div>
       </div>

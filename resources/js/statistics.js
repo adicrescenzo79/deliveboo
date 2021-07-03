@@ -6,8 +6,23 @@ let app = new Vue({
     currentUrl: window.location.href,
     restaurant_id: '',
     labels: [],
-    months: [],
+    months: [
+      'Gennaio',
+      'Febbraio',
+      'Marzo',
+      'Aprile',
+      'Maggio',
+      'Giugno',
+      'Luglio',
+      'Agosto',
+      'Settembre',
+      'Ottobre',
+      'Novembre',
+      'Dicembre',
+    ],
     orders: [],
+    startArray: [],
+    total_paids: [],
   },
   mounted(){
 
@@ -78,48 +93,93 @@ let app = new Vue({
       this.orders = ordersNew;
       console.log(this.orders);
 
+
+      var helper = {};
+      var result = this.orders.reduce(function(r, o) {
+        var key = o.created_at;
+
+        if(!helper[key]) {
+          helper[key] = Object.assign({}, o); // create a copy of o
+          r.push(helper[key]);
+        } else {
+          helper[key].total_paid += o.total_paid;
+        }
+
+        return r;
+      }, []);
+
+      this.orders = result;
+
+      var result = [];
+      var helper = {};
+      this.months.forEach((month, i) => {
+        helper = {
+          created_at: month,
+          total_paid: 0,
+          monthNr: i+1,
+        }
+        result.push(helper);
+      });
+      console.log(result);
+
+      this.startArray = result;
+
+      var result = [];
+      var helper = {};
+
+      this.startArray.forEach((start, i) => {
+        this.orders.forEach((order, j) => {
+          if (start.created_at == order.created_at) {
+            start.total_paid = order.total_paid;
+          }
+        });
+
+      });
+
+      this.orders = this.startArray;
+
+      this.orders.forEach((order, i) => {
+        this.total_paids.push(order.total_paid);
+      });
+
+
+
+      console.log(this.total_paids);
     });
 
 
 
-    this.labels = [
-      'Gennaio',
-      'Febbraio',
-      'Marzo',
-      'Aprile',
-      'Maggio',
-      'Giugno',
-      'Luglio',
-      'Agosto',
-      'Settembre',
-      'Ottobre',
-      'Novembre',
-      'Dicembre',
-    ];
-
-
-    const data = {
-      labels: this.labels,
-      datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
-      }]
-    };
-
-    const config = {
-      type: 'line',
-      data,
-      options: {}
-    };
+    this.labels = this.months;
 
 
 
-    var myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
+  },
+  methods: {
+    carica: function(){
+      const data = {
+        labels: this.months,
+        datasets: [{
+          label: 'Incasso mensile',
+          backgroundColor: 'rgb(255, 99, 132)',
+          borderColor: 'rgb(255, 99, 132)',
+          data: this.total_paids,
+        }]
+      };
+      console.log(this.total_paids);
+      const config = {
+        type: 'line',
+        data,
+        options: {}
+      };
+
+
+
+      var myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+      );
+
+    }
   }
 
 });
