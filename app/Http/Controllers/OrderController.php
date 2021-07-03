@@ -102,4 +102,20 @@ class OrderController extends Controller
 
 
   }
+
+
+
+  public function ordersByRestaurant(string $id)
+  {
+    // return response()->json([$data['orderForm']['customer_name']]);
+    // return response()->json(['ok']);
+
+    $orders = Order::where('restaurant_id', '=', $id)->get();
+
+    return response()->json([
+      'data' => $orders,
+      'success' => true,
+    ]);
+
+  }
 }
