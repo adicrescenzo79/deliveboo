@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="main-restaurants-create">
+<div id="main-restaurants-edit">
 
   <div class="container pb-5">
     <div class="row justify-content-center">
