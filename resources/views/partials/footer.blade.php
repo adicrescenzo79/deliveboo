@@ -4,10 +4,10 @@
       <div class="left-footer">
         <ul>
           <li><h5>Team 7</h5></li>
-          <li>Nicolò Alivernini</li>
-          <li>Vsevolod Cerneavschi</li>
-          <li>Alessandro Di Crescenzo</li>
-          <li>Andrea Marangon</li>
+          <li><a href="https://www.linkedin.com/in/nicol%C3%B2-alivernini-8b3067202/">Nicolò Alivernini</a></li>
+          <li><a href="https://www.linkedin.com/in/vsevolod-cerneavschi-50b796207/">Vsevolod Cerneavschi</a></li>
+          <li><a href="https://www.linkedin.com/in/adicrescenzo/">Alessandro Di Crescenzo</a></li>
+          <li><a href="https://www.linkedin.com/in/marangon-andrea/">Andrea Marangon</a> </li>
         </ul>
       </div>
 

@@ -22,6 +22,14 @@ footer {
       }
       .left-footer {
         width: calc(100% / 3);
+        ul {
+          li {
+            a {
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+        }
       }
       .central-footer {
         width: calc(100% / 3);

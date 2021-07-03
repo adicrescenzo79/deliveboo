@@ -10218,9 +10218,21 @@ nav .container .dropdown-menu .dropdown-item:hover {
   font-size: 29px;
   padding-right: 10px;
 }
+#main-admin-restaurants a i.fas.fa-plus {
+  opacity: 0.8;
+  color: #3e9920;
+  font-size: 30px;
+}
+#main-admin-restaurants a i.fas.fa-plus:hover {
+  opacity: 1;
+}
 #main-admin-restaurants .card {
   margin-bottom: 40px;
   box-shadow: 0 0 30px -15px #888888;
+  border-radius: 0;
+}
+#main-admin-restaurants .card:hover {
+  border: 1px solid black;
 }
 #main-admin-restaurants .card .card-img {
   text-align: center;
@@ -11419,6 +11431,10 @@ footer .container .container-footer h5 {
 }
 footer .container .container-footer .left-footer {
   width: calc(100% / 3);
+}
+footer .container .container-footer .left-footer ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 footer .container .container-footer .central-footer {
   width: calc(100% / 3);
