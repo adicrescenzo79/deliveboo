@@ -43,8 +43,8 @@
 
               </div>
             </div>
-          </div>
         @endforeach
+      </div>
         <div class="col-md-12 d-flex justify-content-center mb-5 py-5">
           <a href="{{route('admin.restaurants.create')}}"><button class="my-btn-create" type="button" name="button">Crea</button></a>
         </div>
