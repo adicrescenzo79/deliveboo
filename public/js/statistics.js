@@ -103,7 +103,10 @@ var app = new Vue({
     months: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
     orders: [],
     startArray: [],
-    total_paids: []
+    total_paids: [],
+    years: [],
+    yearChosen: '',
+    orderByYear: []
   },
   mounted: function mounted() {
     var _this = this;
@@ -111,12 +114,18 @@ var app = new Vue({
     var stringSplitted = this.currentUrl.split('/');
     this.restaurant_id = parseInt(stringSplitted[5]);
     var id = JSON.stringify(this.restaurant_id);
-    console.log(id);
     axios.get("http://localhost:8000/api/orders/".concat(id), {}).then(function (response) {
       _this.orders = response.data.data;
 
       _this.orders.forEach(function (order, i) {
         var month = order.created_at.split('-')[1];
+        var year = order.created_at.split('-')[0];
+
+        if (!_this.years.includes(year)) {
+          _this.years.push(year);
+        }
+
+        _this.years = _this.years.sort();
 
         switch (month) {
           case '01':
@@ -174,16 +183,28 @@ var app = new Vue({
       _this.orders.forEach(function (order, i) {
         var orderNew = {
           created_at: order.created_at,
-          total_paid: order.total_paid
+          total_paid: order.total_paid,
+          year: order.updated_at.split('-')[0]
         };
         ordersNew.push(orderNew);
       });
 
       _this.orders = ordersNew;
-      console.log(_this.orders);
-      var helper = {};
+    }); // scelta dell'anno
+  },
+  methods: {
+    scelta: function scelta(year) {
+      var _this2 = this;
 
-      var result = _this.orders.reduce(function (r, o) {
+      console.log(year);
+      this.yearChosen = year;
+      console.log(this.orders);
+      this.orderByYear = this.orders.filter(function (obj) {
+        return obj.year == _this2.yearChosen;
+      });
+      console.log(this.orderByYear);
+      var helper = {};
+      var result = this.orderByYear.reduce(function (r, o) {
         var key = o.created_at;
 
         if (!helper[key]) {
@@ -196,12 +217,10 @@ var app = new Vue({
 
         return r;
       }, []);
-
-      _this.orders = result;
+      this.orderByYear = result;
       var result = [];
       var helper = {};
-
-      _this.months.forEach(function (month, i) {
+      this.months.forEach(function (month, i) {
         helper = {
           created_at: month,
           total_paid: 0,
@@ -209,32 +228,28 @@ var app = new Vue({
         };
         result.push(helper);
       });
-
-      console.log(result);
-      _this.startArray = result;
+      this.startArray = result;
       var result = [];
       var helper = {};
-
-      _this.startArray.forEach(function (start, i) {
-        _this.orders.forEach(function (order, j) {
+      this.startArray.forEach(function (start, i) {
+        _this2.orderByYear.forEach(function (order, j) {
           if (start.created_at == order.created_at) {
             start.total_paid = order.total_paid;
           }
         });
       });
-
-      _this.orders = _this.startArray;
-
-      _this.orders.forEach(function (order, i) {
-        _this.total_paids.push(order.total_paid);
+      this.orderByYear = this.startArray;
+      this.orderByYear.forEach(function (order, i) {
+        _this2.total_paids.push(order.total_paid);
       });
-
-      console.log(_this.total_paids);
-    });
-    this.labels = this.months;
-  },
-  methods: {
+      this.labels = this.months;
+      this.carica();
+    },
     carica: function carica() {
+      if (myChart) {
+        myChart.destroy();
+      }
+
       var data = {
         labels: this.months,
         datasets: [{
@@ -244,7 +259,6 @@ var app = new Vue({
           data: this.total_paids
         }]
       };
-      console.log(this.total_paids);
       var config = {
         type: 'line',
         data: data,
