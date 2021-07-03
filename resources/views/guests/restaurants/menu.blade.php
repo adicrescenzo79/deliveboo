@@ -60,7 +60,7 @@
           <div class="col-md-6 order-md-2 mb-4 mt-5">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
               <span class="text-muted">Il tuo carrello</span>
-              <span class="badge badge-secondary badge-pill">@{{totDishes()}}</span>
+              <span class="badge badge-secondary badge-pill my-badge">@{{totDishes()}}</span>
             </h4>
             <ul class="list-group mb-3">
               <li v-for="dish in cart"  v-if="dish.restaurantSlug == slug" class="list-group-item d-flex justify-content-between lh-condensed">
@@ -85,9 +85,8 @@
 
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-6 order-md-2 mb-4 mt-3">
-
-            <a class="btn btn-dark btn-md btn-block" @click="completeOrder" href="{{route('checkout')}}" v-if="completeButton" type="button" name="button">Completa ordine</a>
+          <div class="col-md-6 order-md-2 mb-4 mt-3 btn-order">
+            <a class="btn btn-dark btn-md btn-block my-btn" @click="completeOrder" href="{{route('checkout')}}" v-if="completeButton" type="button" name="button">Completa ordine</a>
           </div>
 
         </div>
