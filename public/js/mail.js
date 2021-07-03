@@ -81,45 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/payment.js":
-/*!*********************************!*\
-  !*** ./resources/js/payment.js ***!
-  \*********************************/
+/***/ "./resources/js/mail.js":
+/*!******************************!*\
+  !*** ./resources/js/mail.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-Vue.config.devtools = true;
-var app = new Vue({
-  el: '#main_payment',
-  data: {
-    orderForm: {}
-  },
-  created: function created() {
-    this.orderForm = JSON.parse(sessionStorage.getItem('order'));
-    this.orderForm.total_paid = this.orderForm.total_paid.toFixed(2);
-    console.log(this.orderForm);
-  },
-  methods: {// requestPaymentMethod: function(err, payload){
-    //
-    // }
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/mail.js'");
 
 /***/ }),
 
-/***/ 4:
-/*!***************************************!*\
-  !*** multi ./resources/js/payment.js ***!
-  \***************************************/
+/***/ 6:
+/*!************************************!*\
+  !*** multi ./resources/js/mail.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/payment.js */"./resources/js/payment.js");
+module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/mail.js */"./resources/js/mail.js");
 
 
 /***/ })

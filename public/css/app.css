@@ -10076,19 +10076,8 @@ a.my-btn:hover {
 .my-btn-create:hover {
   opacity: 0.7;
 }
-.my-btn-create .btn-dark {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-  outline: #000;
-}
-.my-btn-create .btn-dark:hover {
-  color: #fff;
-  background-color: #3e9920;
-  border-color: #3e9920;
-}
-.my-btn-create .btn,
-.my-btn-create .card {
+.my-btn-create .card,
+.my-btn-create .btn {
   border-radius: 0;
 }
 
@@ -10100,6 +10089,9 @@ nav .container .navbar-toggler {
 }
 nav .container .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+nav .container ul li .dropdown-menu {
+  position: absolute;
 }
 nav .container ul li a.my-btn {
   text-align: center;
@@ -10741,7 +10733,7 @@ main {
   height: 75px;
 }
 #main-welcome #categories .row .content-category .icon-category.all.selected .img-div-icon {
-  background: #AAA;
+  background: rgba(62, 153, 32, 0.8);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -10766,7 +10758,7 @@ main {
   align-items: center;
 }
 #main-welcome #categories .row .content-category .icon-category.selected .img-div-icon {
-  background: #AAA;
+  background: rgba(62, 153, 32, 0.8);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -11034,7 +11026,7 @@ main {
     height: 75px;
   }
   #main-welcome #categories .row .content-category .icon-category.all.selected .img-div-icon {
-    background: #AAA;
+    background: rgba(62, 153, 32, 0.8);
     border-radius: 50%;
     cursor: pointer;
   }
@@ -11064,7 +11056,7 @@ main {
     margin: 19px;
   }
   #main-welcome #categories .row .content-category .icon-category.selected .img-div-icon {
-    background: #AAA;
+    background: rgba(62, 153, 32, 0.8);
     border-radius: 50%;
     cursor: pointer;
   }
@@ -11207,25 +11199,55 @@ main {
   margin-top: -10rem;
 }
 #main_menu #dishes .menu-dish .card {
+  border-radius: 0px;
   height: 65px;
   padding-left: 10px;
 }
 #main_menu #dishes .menu-dish .card .text {
   height: 100%;
+  overflow-y: auto;
+  padding-right: 5px;
 }
 #main_menu #dishes .menu-dish .card .text .desc {
   display: none;
 }
 #main_menu #dishes .menu-dish .card:hover {
   cursor: pointer;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 #main_menu #dishes .menu-dish .card img {
   height: 100%;
 }
+#main_menu #cart span.my-badge {
+  color: #fff;
+  background-color: #000;
+}
 #main_menu #cart input {
   width: 60px;
   padding-left: 10px;
+}
+#main_menu #cart div.btn-order {
+  display: flex;
+  justify-content: center;
+}
+#main_menu #cart div.btn-order a.my-btn {
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  background: #000;
+  padding: 16px 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.2s;
+  border: none;
+  border-radius: 0;
+}
+#main_menu #cart div.btn-order a.my-btn:hover {
+  text-decoration: none;
+  background-color: #3e9920;
 }
 
 @media (min-width: 767px) {
@@ -11243,7 +11265,7 @@ main {
   }
   #main_menu #dishes .menu-dish .card:hover {
     cursor: pointer;
-    border: 2px solid #000;
+    border: 1px solid #000;
   }
   #main_menu #dishes .menu-dish .card .text {
     height: 100%;

@@ -15,10 +15,11 @@ nav {
       }
     }
     ul {
-      // position: absolute;
-      // right: 0px;
       li {
-        //margin-left: 20px;
+        .dropdown-menu {
+          position: absolute;
+        }
+
         a {
           &.my-btn {
             text-align: center;

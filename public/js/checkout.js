@@ -193,6 +193,7 @@ var app = new Vue({
         console.log(risposta);
 
         if (risposta.data.success) {
+          //Funzione
           _this3.cartDelete;
           window.location.href = '/success';
         }
@@ -312,7 +313,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\checkout.js */"./resources/js/checkout.js");
+module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/checkout.js */"./resources/js/checkout.js");
 
 
 /***/ })
