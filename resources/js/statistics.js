@@ -91,6 +91,7 @@ let app = new Vue({
            break;
           }
       });
+
       let ordersNew = [];
       this.orders.forEach((order, i) => {
         let orderNew = {
@@ -110,14 +111,15 @@ let app = new Vue({
   },
   methods: {
     scelta: function(year){
-      console.log(year);
+
+      if (this.yearChosen) {
+        myChart.destroy();
+      }
+
 
       this.yearChosen = year;
-      console.log(this.orders);
 
       this.orderByYear = this.orders.filter(obj => obj.year == this.yearChosen);
-
-      console.log(this.orderByYear);
 
 
       var helper = {};
@@ -163,43 +165,41 @@ let app = new Vue({
       });
 
       this.orderByYear = this.startArray;
+      console.log(this.orderByYear);
+
 
       this.orderByYear.forEach((order, i) => {
         this.total_paids.push(order.total_paid);
       });
 
-
-
-
-
-
     this.labels = this.months;
+
 
     this.carica();
 
   },
     carica: function(){
-      if (myChart) {
-        myChart.destroy();
-      }
       const data = {
         labels: this.months,
         datasets: [{
           label: 'Incasso mensile',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          data: this.total_paids,
+          backgroundColor: '#3e9920',
+          borderColor: '#3e9920',
+          data: this.orderByYear,
         }]
       };
       const config = {
         type: 'line',
         data,
-        options: {}
+        options: {
+          parsing: {
+            xAxisKey: 'created_at',
+            yAxisKey: 'total_paid'
+          }
+        }
       };
 
-
-
-      var myChart = new Chart(
+      myChart = new Chart(
         document.getElementById('myChart'),
         config
       );

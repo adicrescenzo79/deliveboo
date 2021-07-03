@@ -13,7 +13,7 @@ class OrderSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 1000; $i++) {
+        for ($i = 0; $i < 10000; $i++) {
             $newOrder = new Order();
             $newOrder->customer_name = $faker->name();
             $newOrder->customer_email = $faker->email();
@@ -23,9 +23,8 @@ class OrderSeeder extends Seeder
             $newOrder->delivery_notes = $faker->sentence();
             $newOrder->order_number = '#' . $faker->randomNumber(4, true);
             $newOrder->total_paid = $faker->randomFloat(2, 25, 150);
-            $newOrder->total_paid = $faker->randomFloat(2, 25, 150);
             $newOrder->restaurant_id = $faker->numberBetween(1, 28);
-            $newOrder->created_at = $faker->dateTimeInInterval('-2 years', '+2 years');
+            $newOrder->created_at = $faker->dateTimeInInterval('-3 years', '+3 years');
             $newOrder->updated_at = $newOrder['created_at'];
             $newOrder->save();
         }

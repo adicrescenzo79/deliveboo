@@ -25,7 +25,11 @@ class CreateOrdersTable extends Migration
             $table->float('total_paid', 5, 2)->required();
             // $table->string('counter')->nullable();
             $table->unsignedBigInteger("restaurant_id");
-            $table->timestamps();
+            // $table->timestamps();
+            $table->date('created_at');
+            $table->date('updated_at');
+
+
 
             $table->foreign("restaurant_id")
                   ->references("id")
