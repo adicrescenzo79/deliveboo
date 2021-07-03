@@ -10076,8 +10076,24 @@ a.my-btn:hover {
 .my-btn-create:hover {
   opacity: 0.7;
 }
-.my-btn-create .card,
-.my-btn-create .btn {
+
+.my-btn-black {
+  color: #fff;
+  width: 200px;
+  background-color: #000;
+  border-color: #000;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+.my-btn-black:hover {
+  background-color: #3e9920;
+  border-color: #3e9920;
+}
+
+.card,
+.btn {
   border-radius: 0;
 }
 

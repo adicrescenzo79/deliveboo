@@ -196,13 +196,14 @@ var app = new Vue({
     scelta: function scelta(year) {
       var _this2 = this;
 
-      console.log(year);
+      if (this.yearChosen) {
+        myChart.destroy();
+      }
+
       this.yearChosen = year;
-      console.log(this.orders);
       this.orderByYear = this.orders.filter(function (obj) {
         return obj.year == _this2.yearChosen;
       });
-      console.log(this.orderByYear);
       var helper = {};
       var result = this.orderByYear.reduce(function (r, o) {
         var key = o.created_at;
@@ -239,6 +240,7 @@ var app = new Vue({
         });
       });
       this.orderByYear = this.startArray;
+      console.log(this.orderByYear);
       this.orderByYear.forEach(function (order, i) {
         _this2.total_paids.push(order.total_paid);
       });
@@ -246,25 +248,26 @@ var app = new Vue({
       this.carica();
     },
     carica: function carica() {
-      if (myChart) {
-        myChart.destroy();
-      }
-
       var data = {
         labels: this.months,
         datasets: [{
           label: 'Incasso mensile',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          data: this.total_paids
+          backgroundColor: '#3e9920',
+          borderColor: '#3e9920',
+          data: this.orderByYear
         }]
       };
       var config = {
         type: 'line',
         data: data,
-        options: {}
+        options: {
+          parsing: {
+            xAxisKey: 'created_at',
+            yAxisKey: 'total_paid'
+          }
+        }
       };
-      var myChart = new Chart(document.getElementById('myChart'), config);
+      myChart = new Chart(document.getElementById('myChart'), config);
     }
   }
 });
@@ -278,7 +281,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/statistics.js */"./resources/js/statistics.js");
+module.exports = __webpack_require__(/*! C:\Users\adicr\Documents\Boolean\deliveboo\resources\js\statistics.js */"./resources/js/statistics.js");
 
 
 /***/ })
