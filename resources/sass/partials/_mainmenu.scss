@@ -58,6 +58,7 @@
     margin-top: -10rem;
     .menu-dish{
       .card{
+        border-radius: 0px;
         .text{
           height: 100%;
 
@@ -68,7 +69,7 @@
         height: 65px;
         &:hover{
           cursor: pointer;
-          border: 2px solid #000;
+          border: 1px solid #000;
         }
         padding-left: 10px;
         img{
@@ -78,7 +79,7 @@
     }
   }
   #cart{
-    
+
     input{
       width: 60px;
       padding-left: 10px;
@@ -100,7 +101,7 @@
           height: 120px;
           &:hover{
             cursor: pointer;
-            border: 2px solid #000;
+            border: 1px solid #000;
           }
           .text{
             height: 100%;

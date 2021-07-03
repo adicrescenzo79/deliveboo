@@ -10076,24 +10076,8 @@ a.my-btn:hover {
 .my-btn-create:hover {
   opacity: 0.7;
 }
-.my-btn-create .btn-dark {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-  outline: #000;
-}
-.my-btn-create .btn-dark:hover {
-  color: #fff;
-  background-color: #3e9920;
-  border-color: #3e9920;
-}
-<<<<<<< HEAD
 .my-btn-create .card,
 .my-btn-create .btn {
-=======
-.my-btn-create .btn,
-.my-btn-create .card {
->>>>>>> dev
   border-radius: 0;
 }
 
@@ -11215,6 +11199,7 @@ main {
   margin-top: -10rem;
 }
 #main_menu #dishes .menu-dish .card {
+  border-radius: 0px;
   height: 65px;
   padding-left: 10px;
 }
@@ -11226,7 +11211,7 @@ main {
 }
 #main_menu #dishes .menu-dish .card:hover {
   cursor: pointer;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 #main_menu #dishes .menu-dish .card img {
   height: 100%;
@@ -11251,7 +11236,7 @@ main {
   }
   #main_menu #dishes .menu-dish .card:hover {
     cursor: pointer;
-    border: 2px solid #000;
+    border: 1px solid #000;
   }
   #main_menu #dishes .menu-dish .card .text {
     height: 100%;
