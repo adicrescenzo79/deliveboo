@@ -67,6 +67,15 @@ let app = new Vue({
            break;
           }
       });
+      let ordersNew = [];
+      this.orders.forEach((order, i) => {
+        let orderNew = {
+          created_at: order.created_at,
+          total_paid: order.total_paid,
+        }
+        ordersNew.push(orderNew);
+      });
+      this.orders = ordersNew;
       console.log(this.orders);
 
     });

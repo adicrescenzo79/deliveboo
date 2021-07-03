@@ -167,6 +167,17 @@ var app = new Vue({
         }
       });
 
+      var ordersNew = [];
+
+      _this.orders.forEach(function (order, i) {
+        var orderNew = {
+          created_at: order.created_at,
+          total_paid: order.total_paid
+        };
+        ordersNew.push(orderNew);
+      });
+
+      _this.orders = ordersNew;
       console.log(_this.orders);
     });
     this.labels = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
