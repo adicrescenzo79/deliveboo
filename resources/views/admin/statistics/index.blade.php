@@ -5,6 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
+          <button v-for="(year, i) in years" @click="scelta(years[i])" type="button" name="button">@{{years[i]}}</button>
           <canvas id="myChart"></canvas>
         </div>
       </div>
