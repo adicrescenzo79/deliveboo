@@ -11416,6 +11416,10 @@ footer .container .container-footer h5 {
 footer .container .container-footer .left-footer {
   width: calc(100% / 3);
 }
+footer .container .container-footer .left-footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
 footer .container .container-footer .central-footer {
   width: calc(100% / 3);
   height: 100%;
