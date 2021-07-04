@@ -24,7 +24,14 @@ class StatisticController extends Controller
 
       $thisrestaurant = Restaurant::where('id', '=', $restaurant)->first();
 
-      return view('admin.statistics.index', compact('orders', 'thisrestaurant'));
+      if ($thisrestaurant->user_id == Auth::id()) {
+        return view('admin.statistics.index', compact('orders', 'thisrestaurant'));
+
+      } else {
+        return view('security');
+      }
+
+
   }
 
   // public function show(Restaurant $restaurant)
