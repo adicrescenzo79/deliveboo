@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="home ">
-    <div class="container py-3">
+<div id="main-admin-dishes-create">
+    <div class="container pb-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h3>Crea Piatto</h3>
@@ -66,8 +66,9 @@
                     </div>
 
 
-
-                    <input class="my-btn my-btn-create" type="submit" name="" value="Crea">
+                    <div class="d-flex justify-content-center py-5">
+                      <input class="my-btn my-btn-create" type="submit" name="" value="Crea">
+                    </div>
                 </form>
             </div>
         </div>
