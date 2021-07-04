@@ -30,6 +30,7 @@
 
                     <div class="col-12 col-sm-8 offset-sm-2 col-xl-3 offset-xl-0 container-buttons  py-2 ">
                         <a href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->id])}}"><i class="fas fa-store-alt" title="Ristorante"></i></a>
+                        <a href="{{ route('admin.restaurants.dishes.index', ['restaurant' => $restaurant->id])}}"><i class="fas fa-utensils" title="Menu"></i></a>
                         <a href="{{ route('admin.restaurants.statistics.index', ['restaurant' => $restaurant->id])}}"><i class="far fa-chart-bar" title="Statistiche"></i></a>
                         <a href="{{route('admin.restaurants.edit', ['restaurant'=>$restaurant->id])}}"><i class="fas fa-edit" title="Modifica"></i></a>
                         <form class="form-delete" action="{{route('admin.restaurants.destroy', ['restaurant'=>$restaurant->id])}}" method="POST">

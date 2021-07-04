@@ -10272,6 +10272,11 @@ nav .container .dropdown-menu .dropdown-item:hover {
   background: none;
   font-size: 23px;
 }
+#main-admin-restaurants .card .container-buttons i.fas.fa-utensils {
+  color: #C0C0C0;
+  background: none;
+  font-size: 23px;
+}
 #main-admin-restaurants .card .container-buttons i.far.fa-chart-bar {
   color: #3490dc;
   background: none;
