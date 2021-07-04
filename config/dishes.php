@@ -5,7 +5,7 @@ return $dishes = [
     "name" => "vegetable samosa", //char
     "description" => "involtino con ripieno di patate e verdure speziate", //string
     "price" => 1.50,//number
-    "image" => "",//link
+    "image" => "https://i.pinimg.com/originals/e3/2c/b7/e32cb785452bbd096e1c5eb448ada283.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 25, //smallinteger
   ],
@@ -13,7 +13,7 @@ return $dishes = [
     "name" => "vegetarian curry", //char
     "description" => "verdure miste cotte in una miscela speciale con curry", //string
     "price" => 5.90,//number
-    "image" => "",//link
+    "image" => "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Slow-Cooked-Vegetable-Curry_EXPS_SDAS17_148481_D04_07_5b.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 25, //smallinteger
   ],
@@ -21,7 +21,7 @@ return $dishes = [
     "name" => "vegetable biryani", //char
     "description" => "fragrante di riso basmati cotto con verdure miste", //string
     "price" => 7.00,//number
-    "image" => "",//link
+    "image" => "https://www.easypeasyfoodie.com/wp-content/uploads/2019/01/IMG_2129-2.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 25, //smallinteger
   ],
@@ -29,7 +29,7 @@ return $dishes = [
     "name" => "riso bianco", //char
     "description" => "riso basmati cotto al vapore", //string
     "price" => 6.50,//number
-    "image" => "",//link
+    "image" => "https://s.alicdn.com/@sc04/kf/Ha8eff22f9d1947eaa1e3de21f139f5662.png_300x300.png",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 25, //smallinteger
   ],
@@ -61,12 +61,12 @@ return $dishes = [
     "name" => "seekh kebabs pollo", //char
     "description" => "involtini carne macinata di pollo spezie e cotti nel forno tandoori", //string
     "price" => 7.70,//number
-    "image" => "",//link
+    "image" => "https://i.pinimg.com/originals/06/39/1d/06391d0bd09d6493da5986bd4124320a.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 26, //smallinteger
   ],
   [
-    "name" => "menu seciale", //char
+    "name" => "menu speciale", //char
     "description" => "antipasto speciale, pollo o agnello o gamberoni tikka masala, riso verdure e cheese nan", //string
     "price" => 15.00,//number
     "image" => "",//link
@@ -85,7 +85,7 @@ return $dishes = [
     "name" => "insalata mista", //char
     "description" => "", //string
     "price" => 3.00,//number
-    "image" => "",//link
+    "image" => "https://levitum.it/wp-content/uploads/2019/10/levitum-_0001_2477717.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 27, //smallinteger
   ],
@@ -114,18 +114,18 @@ return $dishes = [
     "restaurant_id" => 28, //smallinteger
   ],
   [
-    "name" => "raj special biriany", //char
+    "name" => "raj special biryani", //char
     "description" => "agnello, pollo e gamberoni saltati con fragrante di riso basmati e con spezie indiane delicate, servite ocn salsa di verdure o salsa raitha a parte", //string
     "price" => 12.00,//number
-    "image" => "",//link
+    "image" => "https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/pqvi7d43znujvlzubbq5",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 28, //smallinteger
   ],
   [
-    "name" => "misto tandoore special", //char
+    "name" => "misto tandoori special", //char
     "description" => "assortimento di bocconicni di petto di pollo, coscia di pollo, agnello kebab e gambaroni argentini cotti al forno tandoor", //string
     "price" => 12.00,//number
-    "image" => "",//link
+    "image" => "https://media-cdn.tripadvisor.com/media/photo-s/09/59/69/20/raj-darbar.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 28, //smallinteger
   ],
@@ -407,7 +407,7 @@ return $dishes = [
     "name" => "Pasta fresca alla Valtellina", //char
     "description" => "Zafferano, zucchine, speck e panna", //string
     "price" => 10.00,//number
-    "image" => "",//link
+    "image" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2017/11/pizzoccheri-alla-valtellinese-300x300.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 1, //smallinteger
   ],
@@ -415,7 +415,7 @@ return $dishes = [
     "name" => "Gnocchi al Pesto Genovese", //char
     "description" => "Fagiolini, patate e pesto", //string
     "price" => 9.00,//number
-    "image" => "",//link
+    "image" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2017/07/gnocchi-al-pesto-300x300.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 1, //smallinteger
   ],
@@ -423,7 +423,7 @@ return $dishes = [
     "name" => "Paccheri al Tricolore", //char
     "description" => "Pomodoro, basilico, pistacchio e burrata", //string
     "price" => 12.00,//number
-    "image" => "",//link
+    "image" => "https://blog.giallozafferano.it/cucinadiclaudio/wp-content/uploads/2016/04/paccheri-tricolore-5-1200.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 1, //smallinteger
   ],
@@ -431,7 +431,7 @@ return $dishes = [
     "name" => "Risotto del Molo", //char
     "description" => "Gamberi, Scampi, zucchine e pistacchio", //string
     "price" => 11.50,//number
-    "image" => "",//link
+    "image" => "https://res.cloudinary.com/tf-lab/image/upload/f_auto,q_auto,w_800,c_limit/customer/03b5d04b-e0d5-4195-8f9c-8cd7aefd1497/8bbb37a5-95eb-4c68-bc83-a81737cf1f98.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 1, //smallinteger
   ],
@@ -439,7 +439,7 @@ return $dishes = [
     "name" => "Gran grigliata di Pesce", //char
     "description" => "Gamberone, Pesce spada, Salmone, Branzino", //string
     "price" => 15.00,//number
-    "image" => "",//link
+    "image" => "https://www.ristorantepark.com/wp-content/uploads/2019/05/GRIGLIATA-MISTA-DI-PESCE-min.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 2, //smallinteger
   ],
@@ -447,7 +447,7 @@ return $dishes = [
     "name" => "Penne al ragù", //char
     "description" => "", //string
     "price" => 10.00,//number
-    "image" => "",//link
+    "image" => "https://cdn.diredonna.it/app/uploads/2012/06/Ricetta-mezze-penne-al-sugo-di-salmone-fresco.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 2, //smallinteger
   ],
@@ -455,7 +455,7 @@ return $dishes = [
     "name" => "Lasagna all’Emiliana", //char
     "description" => "", //string
     "price" => 10.00,//number
-    "image" => "",//link
+    "image" => "https://cdn.craispesaonline.it/apps/images/catalog/eg-0090196/eg-0090196_1_big.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 2, //smallinteger
   ],
@@ -463,15 +463,15 @@ return $dishes = [
     "name" => "Risotto al Nero di Seppia", //char
     "description" => "", //string
     "price" => 10.00,//number
-    "image" => "",//link
+    "image" => "https://blog.giallozafferano.it/iltronodiforchette/wp-content/uploads/2018/08/39269281_683975788637251_5744117771663310848_n-945x945.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 2, //smallinteger
   ],
   [
-    "name" => "Pollo alla Cacciatore", //char
+    "name" => "Pollo alla Cacciatora", //char
     "description" => "Pollo, sale, pepe, rosmarino, aglio, aveto e vino bianco", //string
     "price" => 4.50,//number
-    "image" => "",//link
+    "image" => "https://www.soniaperonaci.it/wp-content/uploads/2016/10/Pollo-alla-cacciatora-quadrata-anteprima.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 3, //smallinteger
   ],
@@ -479,7 +479,7 @@ return $dishes = [
     "name" => "Polpette al sugo", //char
     "description" => "Macinato di manzo, aglio, cipolla, olio, sedano, uovo, carota", //string
     "price" => 4.50,//number
-    "image" => "",//link
+    "image" => "https://tuttofabrodoincucina.it/wp-content/uploads/2020/09/polpette-al-sugo-fan.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 3, //smallinteger
   ],
@@ -487,7 +487,7 @@ return $dishes = [
     "name" => "Seppie e piselli", //char
     "description" => "Seppie, aglio, scalogno, olio, prezzemolo, piselli e pomodoro", //string
     "price" => 4.50,//number
-    "image" => "",//link
+    "image" => "https://www.lamaggioranapersa.com/wp-content/uploads/2019/06/Seppie-con-piselli-dettaglio.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 3, //smallinteger
   ],
@@ -495,7 +495,7 @@ return $dishes = [
     "name" => "Doppia panna", //char
     "description" => "Panna sotto e sopra, stracciatella di burrata con alici", //string
     "price" => 4.50,//number
-    "image" => "",//link
+    "image" => "https://www.trapizzino.it/cms/wp-content/uploads/2019/01/trapizzino-doppia-panna-alici.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 3, //smallinteger
   ],
@@ -503,7 +503,7 @@ return $dishes = [
     "name" => "Tagliere goloso", //char
     "description" => "Salumi, formaggi e gnocco fritto", //string
     "price" => 14.00,//number
-    "image" => "",//link
+    "image" => "https://i.pinimg.com/originals/f1/9c/ee/f19cee21914eda5f0ec90eaa9485786e.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 4, //smallinteger
   ],
@@ -511,7 +511,7 @@ return $dishes = [
     "name" => "Tagliatelle ai porcini", //char
     "description" => "Tagliatelle ai funghi porcini", //string
     "price" => 14.00,//number
-    "image" => "",//link
+    "image" => "https://www.aiafood.com/sites/default/files/recipes/tagliatelle_ai_funghi_senza_panna.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 4, //smallinteger
   ],
@@ -519,7 +519,7 @@ return $dishes = [
     "name" => "Gnocchi alla Sorrentina", //char
     "description" => "", //string
     "price" => 10.00,//number
-    "image" => "",//link
+    "image" => "https://www.insidetherustickitchen.com/wp-content/uploads/2020/07/Gnocchi-alla-sorrentina-square-Inside-the-rustic-kitchen.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 4, //smallinteger
   ],
@@ -527,7 +527,7 @@ return $dishes = [
     "name" => "Spaghetti alla Carbonara", //char
     "description" => "", //string
     "price" => 12.00,//number
-    "image" => "",//link
+    "image" => "https://www.insidetherustickitchen.com/wp-content/uploads/2020/03/Spaghetti-alla-Carbonara-square-Inside-the-Rustic-Kitchen.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 4, //smallinteger
   ],
@@ -544,7 +544,7 @@ return $dishes = [
     "name" => "Bianca Pomodoro pachino e Alici", //char
     "description" => "Mozzarella, pachino e Alici", //string
     "price" => 5.90,//number
-    "image" => "",//link
+    "image" => "https://media-cdn.tripadvisor.com/media/photo-s/13/c3/4f/f9/pizza-bianca-rucola-pachino.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 13, //smallinteger
   ],
@@ -560,7 +560,7 @@ return $dishes = [
     "name" => "Mediterranea", //char
     "description" => "Verdure miste e mozzarella", //string
     "price" => 5.70,//number
-    "image" => "",//link
+    "image" => "https://equofood.it/wp-content/uploads/2019/10/Mediterranea-445x445.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 13, //smallinteger
   ],
@@ -568,7 +568,7 @@ return $dishes = [
     "name" => "Bolognese", //char
     "description" => "Pomodoro, mozzarella, ragù, grana e origano", //string
     "price" => 7.00,//number
-    "image" => "",//link
+    "image" => "https://upload.wikimedia.org/wikipedia/commons/6/65/Ganze_Pizza_Bolognese.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 14, //smallinteger
   ],
@@ -576,7 +576,7 @@ return $dishes = [
     "name" => "Braccio di Ferro", //char
     "description" => "Mozzarella, spinaci, scamorza e ricotta", //string
     "price" => 7.50,//number
-    "image" => "",//link
+    "image" => "https://www.pizzadapasquale.ch/wp-content/uploads/2020/06/14-BRACCIO-DI-FERRO-1.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 14, //smallinteger
   ],
@@ -584,7 +584,7 @@ return $dishes = [
     "name" => "Campagnola", //char
     "description" => "Pomodoro, mozzarella, scamorza affumicata, trevisana e speck", //string
     "price" => 6.00,//number
-    "image" => "",//link
+    "image" => "https://www.braceriarosalinda.it/wp-content/uploads/2020/08/LA-CAMPAGNOLA.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 14, //smallinteger
   ],
@@ -592,7 +592,7 @@ return $dishes = [
     "name" => "Capricciosa", //char
     "description" => "Pomodoro, mozzarella, prosciutto, funghi, carciofi capperi e origano", //string
     "price" => 7.50,//number
-    "image" => "",//link
+    "image" => "https://www.pizzanapoletanadoc.it/wp-content/uploads/2019/04/capricciosa-pizza-napoletana-doc.jpg",//link
     "visibility" => 1,// 0-1
     "restaurant_id" => 14, //smallinteger
   ],
