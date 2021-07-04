@@ -5,8 +5,9 @@
 
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-12 d-flex justify-content-center mb-3">
-
+      <div class="col-12 col-md-8 d-flex justify-content-between align-items-center pb-3">
+         <h1>I tuoi piatti in {{--{{$restaurant->name}}--}}</h1> 
+        {{-- <a href="{{route('admin.restaurants.dishes.create', ['restaurant' => $restaurant->id])}}"><i class="fas fa-plus" title="Crea piatto"></i></a> --}}
       </div>
 
       @foreach ($dishes as $dish)
@@ -37,13 +38,11 @@
                   <input class="fa trash-icon" type="submit" title="Cancella" name="" value="&#xf1f8;">
                 </form>
               </div>
-
             </div>
           </div>
         </div>
       @endforeach
-      <div class="col-md-12 d-flex justify-content-center mb-3">
-
+      <div class="col-md-12 d-flex justify-content-center mb-5 py-5">
         <a href="{{route('admin.restaurants.dishes.create', ['restaurant' => $dish->restaurant_id])}}"><button class="my-btn-create" type="button" name="button">Inserisci un nuovo piatto</button></a>
       </div>
 

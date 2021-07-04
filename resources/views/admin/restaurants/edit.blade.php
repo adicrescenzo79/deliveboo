@@ -2,7 +2,6 @@
 
 @section('content')
 <div id="main-restaurants-edit">
-
   <div class="container pb-5">
     <div class="row justify-content-center">
       <div class="col-md-10">
@@ -52,7 +51,7 @@
                     <small class="text-danger">Attuale</small>
                   </div>
                 @endif
-                <input class="form-control-file @error('logo') is-invalid @enderror" id="logo" type="file" name="logo"  placeholder="Logo">
+                <input class="form-control no-border @error('logo') is-invalid @enderror" id="logo" type="file" name="logo"  placeholder="Logo">
                   @error('logo')
                     <small class="text-danger">{{ $message }}</small>
                   @enderror
@@ -67,7 +66,7 @@
                     <small class="text-danger">Attuale</small>
                   </div>
                 @endif
-                <input class="form-control-file @error('cover_image') is-invalid @enderror" id="cover_image" type="file" name="cover_image" value="{{old('cover_image', $restaurant->cover_image)}}" placeholder="Immagine Cover">
+                <input class="form-control no-border @error('cover_image') is-invalid @enderror" id="cover_image" type="file" name="cover_image" value="{{old('cover_image', $restaurant->cover_image)}}" placeholder="Immagine Cover">
                   @error('cover_image')
                     <small class="text-danger">{{ $message }}</small>
                   @enderror
@@ -89,7 +88,7 @@
               </div>
 
               <div class="d-flex justify-content-center py-5">
-                <input class="my-btn-create" type="submit" name="" value="Modifica">
+                <input class="my-btn-create" type="submit" name="" value="Salva le modifiche">
               </div>
             </form>
       </div>
