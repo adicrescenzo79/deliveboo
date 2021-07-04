@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-  <div id="main_success" class="py-5">
+  <div id="main_success">
     <div class="cointaine">
       <div class="row justify-content-center">
-        <div class="col-md-8 flex justify-content-around align-items-center img-msg p-3">
+        <div class="col-md-6 d-flex flex-column justify-content-around align-items-center img-msg py-5">
           <i class="fas fa-receipt"></i>
           <div class="msg flex-center flex-column">
-            <h1>Ordine confermato.</h1>
+            <h1>Il tuo ordine è stato confermato</h1>
+            <h5>Stai per essere reindirizzato automaticamente alla Homepage...</h5>
             <a class="btn my-btn" href="{{route('welcome')}}">Torna alla HomePage</a>
           </div>
         </div>
