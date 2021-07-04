@@ -50,7 +50,7 @@
               <a href="{{ route('admin.restaurants.dishes.index', ['restaurant' => $restaurant->id]) }}"><button class="my-btn-main" type="button" name="button">Gestisci il tuo menù</button></a>
 
             </div>
-            <a class="green py-1" href="{{ route('admin.restaurants.index') }}"><i class="fas fa-arrow-left mr-1"></i> Torna ai ristoranti</a>
+            <a class="green py-2" href="{{ route('admin.restaurants.index') }}"><i class="fas fa-arrow-left mr-1"></i> Torna ai tuoi ristoranti</a>
           </div>
 
 
