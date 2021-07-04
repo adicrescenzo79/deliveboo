@@ -42,9 +42,14 @@
           </div>
         </div>
       @endforeach
-      <div class="col-md-12 d-flex justify-content-center mb-5 py-5">
+      <div class="col-md-12 d-flex justify-content-center  py-3">
         <a href="{{route('admin.restaurants.dishes.create', ['restaurant' => $dish->restaurant_id])}}"><button class="my-btn-create" type="button" name="button">Inserisci un nuovo piatto</button></a>
+
       </div>
+      <div class="pb-5">
+        <a class="green py-2" href="{{ route('admin.restaurants.index') }}"><i class="fas fa-arrow-left mr-1"></i> Torna ai tuoi ristoranti</a>
+      </div>
+
 
 
 

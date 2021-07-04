@@ -10638,6 +10638,9 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-restaurants-show .container .card .my-btn-main:hover {
   background-color: #3e9920;
 }
+#main-restaurants-show .container .card .green {
+  font-size: 14px;
+}
 @media screen and (max-width: 767px) {
   #main-restaurants-show .jumbo-restaurants-show {
     background-repeat: no-repeat;
@@ -11263,11 +11266,15 @@ main {
   }
 }
 
+#main_success {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
 #main_success .img-msg {
   border: 3px solid #3e9920;
 }
 #main_success .img-msg i {
-  font-size: 6vw;
+  font-size: 60px;
   color: #3e9920;
 }
 #main_success .img-msg img {
@@ -11275,12 +11282,24 @@ main {
   width: 50%;
 }
 #main_success .img-msg .msg h1 {
-  font-size: 6vw;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 30px;
   color: #000;
   text-align: center;
 }
+#main_success .img-msg .msg h5 {
+  font-size: 11px;
+  color: #505050;
+  width: 55%;
+  text-align: center;
+  padding: 15px 0;
+}
 #main_success .img-msg .msg a {
   text-align: center;
+}
+#main_success .img-msg .msg a:hover {
+  color: #fff;
 }
 
 #main_menu .jumbo {
@@ -11443,6 +11462,9 @@ main {
 #main-admin-dishes .my-btn-create:hover {
   opacity: 0.7;
 }
+#main-admin-dishes .green {
+  font-size: 14px;
+}
 #main-admin-dishes .card {
   border: 1px solid #e2e2e2;
   border-radius: 0;
@@ -11531,7 +11553,6 @@ main {
     justify-content: center;
   }
 }
-<<<<<<< HEAD
 #main_security img {
   width: 50%;
 }
@@ -11543,7 +11564,8 @@ main {
 }
 #main_security .msg a {
   text-align: center;
-=======
+}
+
 #main-admin-dishes-edit {
   font-size: 16px;
   padding-top: 100px;
@@ -11712,7 +11734,6 @@ main {
 }
 #main-admin-dishes-create .container form .my-btn-create:hover {
   opacity: 0.7;
->>>>>>> dev
 }
 
 #statistics_index_main {
