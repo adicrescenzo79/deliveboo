@@ -6,8 +6,8 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 d-flex justify-content-between align-items-center pb-3">
-         <h1>I tuoi piatti in {{--{{$restaurant->name}}--}}</h1> 
-        {{-- <a href="{{route('admin.restaurants.dishes.create', ['restaurant' => $restaurant->id])}}"><i class="fas fa-plus" title="Crea piatto"></i></a> --}}
+         <h1>I tuoi piatti in {{$actualRestaurant->name}}</h1>
+        <a href="{{route('admin.restaurants.dishes.create', ['restaurant' => $actualRestaurant->id])}}"><i class="fas fa-plus" title="Crea piatto"></i></a>
       </div>
 
       @foreach ($dishes as $dish)
