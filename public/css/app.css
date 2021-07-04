@@ -10236,6 +10236,9 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 #main-admin-restaurants .card .card-img {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #main-admin-restaurants .card ul {
   list-style: none;
@@ -11396,6 +11399,26 @@ main {
     height: 100%;
   }
 }
+#main-admin-dishes {
+  padding-top: 50px;
+}
+#main-admin-dishes h1 {
+  font-weight: 900;
+  margin-bottom: 7px;
+  font-size: 25px;
+}
+#main-admin-dishes a {
+  font-size: 29px;
+  padding-right: 10px;
+}
+#main-admin-dishes a i.fas.fa-plus {
+  opacity: 0.8;
+  color: #3e9920;
+  font-size: 30px;
+}
+#main-admin-dishes a i.fas.fa-plus:hover {
+  opacity: 1;
+}
 #main-admin-dishes .my-btn-create {
   color: #fff;
   width: 200px;
@@ -11450,9 +11473,10 @@ main {
 #main-admin-dishes .card .card-body .container-buttons {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 #main-admin-dishes .card .card-body .container-buttons i {
+  padding-right: 10px;
   opacity: 0.7;
   border: none;
   font-size: 27px;
