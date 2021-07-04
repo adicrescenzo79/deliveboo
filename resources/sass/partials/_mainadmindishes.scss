@@ -1,5 +1,27 @@
 //admin dishes page
 #main-admin-dishes {
+  padding-top: 50px;
+
+  h1 {
+    font-weight: 900;
+    margin-bottom: 7px;
+    font-size: 25px;
+  }
+
+  a {
+    font-size: 29px;
+    padding-right: 10px;
+  }
+  a i.fas.fa-plus {
+    opacity: 0.8;
+    color: $my-green;
+    font-size: 30px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   .my-btn-create {
     color: #fff;
     width: 200px;
@@ -54,8 +76,9 @@
       .container-buttons {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: flex-end;
         i {
+          padding-right: 10px;
           opacity: 0.7;
           border: none;
           font-size: 27px;

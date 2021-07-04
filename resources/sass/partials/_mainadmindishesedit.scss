@@ -1,4 +1,4 @@
-#main-restaurants-edit {
+#main-admin-dishes-edit {
   font-size: 16px;
   padding-top: 100px;
   .container {
@@ -10,36 +10,6 @@
     form {
       padding-top: 30px;
       .form-group {
-        input[type='checkbox']{
-          width: 10px !important;
-          height: 10px !important;
-          margin: 5px;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          -o-appearance: none;
-          appearance:none;
-          outline: 1px solid #E0E0E0;
-          box-shadow: none;
-          font-size: 2em;
-          &:hover {
-            cursor: pointer;
-          }
-        }
-        input[type='checkbox']:checked
-        {
-          background-color: $my-green;
-          color: red;
-          width: 10px !important;
-          height: 10px !important;
-          margin: 5px;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          -o-appearance: none;
-          appearance:none;
-          outline: 1px solid $my-green;
-          box-shadow: none;
-          font-size: 2em;
-        }
         input[type=file]::file-selector-button {
           border: 1px solid #E0E0E0;
           padding: .2em .4em;
@@ -47,11 +17,38 @@
           background-color: transparent;
           color: #000;
         }
+
         input[type=file]::file-selector-button:hover {
           background-color: $my-green;
           border: 1px solid $my-green;
           color: #fff;
           cursor: pointer;
+        }
+        input[type='radio']:after {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          background-color: #E0E0E0;
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 2px solid white;
+        }
+        input[type='radio']:checked:after {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          background-color: $my-green;
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 2px solid white;
         }
         .form-control {
           background-color: $body-bg!important;

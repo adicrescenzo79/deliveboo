@@ -10111,6 +10111,9 @@ nav .container .navbar-toggler {
 nav .container .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+nav .container ul li a#navbarDropdown {
+  color: #585858;
+}
 nav .container ul li .dropdown-menu {
   position: absolute;
 }
@@ -10241,6 +10244,9 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 #main-admin-restaurants .card .card-img {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #main-admin-restaurants .card ul {
   list-style: none;
@@ -10412,6 +10418,48 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-restaurants-create .container form {
   padding-top: 30px;
 }
+#main-restaurants-create .container form .form-group input[type=checkbox] {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 1px solid #E0E0E0;
+  box-shadow: none;
+  font-size: 2em;
+}
+#main-restaurants-create .container form .form-group input[type=checkbox]:hover {
+  cursor: pointer;
+}
+#main-restaurants-create .container form .form-group input[type=checkbox]:checked {
+  background-color: #3e9920;
+  color: red;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 1px solid #3e9920;
+  box-shadow: none;
+  font-size: 2em;
+}
+#main-restaurants-create .container form .form-group input[type=file]::file-selector-button {
+  border: 1px solid #E0E0E0;
+  padding: 0.2em 0.4em;
+  border-radius: 0;
+  background-color: transparent;
+  color: #000;
+}
+#main-restaurants-create .container form .form-group input[type=file]::file-selector-button:hover {
+  background-color: #3e9920;
+  border: 1px solid #3e9920;
+  color: #fff;
+  cursor: pointer;
+}
 #main-restaurants-create .container form .form-group .form-control {
   background-color: #fff !important;
   border-radius: 0;
@@ -10451,6 +10499,48 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-restaurants-edit .container form {
   padding-top: 30px;
 }
+#main-restaurants-edit .container form .form-group input[type=checkbox] {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 1px solid #E0E0E0;
+  box-shadow: none;
+  font-size: 2em;
+}
+#main-restaurants-edit .container form .form-group input[type=checkbox]:hover {
+  cursor: pointer;
+}
+#main-restaurants-edit .container form .form-group input[type=checkbox]:checked {
+  background-color: #3e9920;
+  color: red;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 1px solid #3e9920;
+  box-shadow: none;
+  font-size: 2em;
+}
+#main-restaurants-edit .container form .form-group input[type=file]::file-selector-button {
+  border: 1px solid #E0E0E0;
+  padding: 0.2em 0.4em;
+  border-radius: 0;
+  background-color: transparent;
+  color: #000;
+}
+#main-restaurants-edit .container form .form-group input[type=file]::file-selector-button:hover {
+  background-color: #3e9920;
+  border: 1px solid #3e9920;
+  color: #fff;
+  cursor: pointer;
+}
 #main-restaurants-edit .container form .form-group .form-control {
   background-color: #fff !important;
   border-radius: 0;
@@ -10463,6 +10553,13 @@ nav .container .dropdown-menu .dropdown-item:hover {
 #main-restaurants-edit .container form .form-group .form-control:focus {
   border-color: #262626 !important;
   box-shadow: none;
+}
+#main-restaurants-edit .container form .form-group .form-control.no-border {
+  padding: 7px 0;
+  border: none !important;
+}
+#main-restaurants-edit .container form .form-group .form-control.no-border:hover {
+  cursor: pointer;
 }
 #main-restaurants-edit .container form .my-btn-create {
   color: #fff;
@@ -11308,6 +11405,26 @@ main {
     height: 100%;
   }
 }
+#main-admin-dishes {
+  padding-top: 50px;
+}
+#main-admin-dishes h1 {
+  font-weight: 900;
+  margin-bottom: 7px;
+  font-size: 25px;
+}
+#main-admin-dishes a {
+  font-size: 29px;
+  padding-right: 10px;
+}
+#main-admin-dishes a i.fas.fa-plus {
+  opacity: 0.8;
+  color: #3e9920;
+  font-size: 30px;
+}
+#main-admin-dishes a i.fas.fa-plus:hover {
+  opacity: 1;
+}
 #main-admin-dishes .my-btn-create {
   color: #fff;
   width: 200px;
@@ -11362,9 +11479,10 @@ main {
 #main-admin-dishes .card .card-body .container-buttons {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 #main-admin-dishes .card .card-body .container-buttons i {
+  padding-right: 10px;
   opacity: 0.7;
   border: none;
   font-size: 27px;
@@ -11408,6 +11526,7 @@ main {
     justify-content: center;
   }
 }
+<<<<<<< HEAD
 #main_security img {
   width: 50%;
 }
@@ -11419,6 +11538,176 @@ main {
 }
 #main_security .msg a {
   text-align: center;
+=======
+#main-admin-dishes-edit {
+  font-size: 16px;
+  padding-top: 100px;
+}
+#main-admin-dishes-edit .container h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #262626;
+}
+#main-admin-dishes-edit .container form {
+  padding-top: 30px;
+}
+#main-admin-dishes-edit .container form .form-group input[type=file]::file-selector-button {
+  border: 1px solid #E0E0E0;
+  padding: 0.2em 0.4em;
+  border-radius: 0;
+  background-color: transparent;
+  color: #000;
+}
+#main-admin-dishes-edit .container form .form-group input[type=file]::file-selector-button:hover {
+  background-color: #3e9920;
+  border: 1px solid #3e9920;
+  color: #fff;
+  cursor: pointer;
+}
+#main-admin-dishes-edit .container form .form-group input[type=radio]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #E0E0E0;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+#main-admin-dishes-edit .container form .form-group input[type=radio]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #3e9920;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+#main-admin-dishes-edit .container form .form-group .form-control {
+  background-color: #fff !important;
+  border-radius: 0;
+  font-size: 16px !important;
+  height: 48px !important;
+  line-height: 24px !important;
+  color: #262626 !important;
+  border: 1px solid #E0E0E0 !important;
+}
+#main-admin-dishes-edit .container form .form-group .form-control:focus {
+  border-color: #262626 !important;
+  box-shadow: none;
+}
+#main-admin-dishes-edit .container form .form-group .form-control.no-border {
+  padding: 7px 0;
+  border: none !important;
+}
+#main-admin-dishes-edit .container form .form-group .form-control.no-border:hover {
+  cursor: pointer;
+}
+#main-admin-dishes-edit .container form .my-btn-create {
+  color: #fff;
+  width: 200px;
+  background-color: #3e9920;
+  border-color: #3e9920;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+#main-admin-dishes-edit .container form .my-btn-create:hover {
+  opacity: 0.7;
+}
+
+#main-admin-dishes-create {
+  font-size: 16px;
+  padding-top: 100px;
+}
+#main-admin-dishes-create .container h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #262626;
+}
+#main-admin-dishes-create .container form {
+  padding-top: 30px;
+}
+#main-admin-dishes-create .container form .form-group input[type=file]::file-selector-button {
+  border: 1px solid #E0E0E0;
+  padding: 0.2em 0.4em;
+  border-radius: 0;
+  background-color: transparent;
+  color: #000;
+}
+#main-admin-dishes-create .container form .form-group input[type=file]::file-selector-button:hover {
+  background-color: #3e9920;
+  border: 1px solid #3e9920;
+  color: #fff;
+  cursor: pointer;
+}
+#main-admin-dishes-create .container form .form-group input[type=radio]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #E0E0E0;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+#main-admin-dishes-create .container form .form-group input[type=radio]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #3e9920;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+#main-admin-dishes-create .container form .form-group .form-control {
+  background-color: #fff !important;
+  border-radius: 0;
+  font-size: 16px !important;
+  height: 48px !important;
+  line-height: 24px !important;
+  color: #262626 !important;
+  border: 1px solid #E0E0E0 !important;
+}
+#main-admin-dishes-create .container form .form-group .form-control:focus {
+  border-color: #262626 !important;
+  box-shadow: none;
+}
+#main-admin-dishes-create .container form .form-group .form-control.no-border {
+  padding: 7px 0;
+  border: none !important;
+}
+#main-admin-dishes-create .container form .form-group .form-control.no-border:hover {
+  cursor: pointer;
+}
+#main-admin-dishes-create .container form .my-btn-create {
+  color: #fff;
+  width: 200px;
+  background-color: #3e9920;
+  border-color: #3e9920;
+  height: 48px;
+  font-size: 16px;
+  border-style: none;
+  transition: 0.2s;
+}
+#main-admin-dishes-create .container form .my-btn-create:hover {
+  opacity: 0.7;
+>>>>>>> dev
 }
 
 footer {
