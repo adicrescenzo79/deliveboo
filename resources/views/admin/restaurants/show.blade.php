@@ -34,7 +34,8 @@
               <p class="card-text">{{$restaurant->address}}</p>
               <p class="card-text">Tel: {{$restaurant->telephone}}</p>
               <p class="card-text">Partita IVA: {{$restaurant->p_iva}}</p>
-              <div class="container-icon d-flex justify-content-center">
+              <div class="container-icon d-flex justify-content-center align-items-center">
+                <a class="m-4" href="{{ route('admin.restaurants.statistics.index', ['restaurant' => $restaurant->id])}}"><i class="far fa-chart-bar" title="Statistiche"></i></a>
                 <a class="m-4" href="{{route('admin.restaurants.edit', ['restaurant'=>$restaurant->id])}}"><i class="fas fa-edit" title="Modifica"></i></a>
 
                 <form class="form-delete m-4" action="{{route('admin.restaurants.destroy', ['restaurant'=>$restaurant->id])}}" method="POST">

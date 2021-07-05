@@ -2,13 +2,13 @@
 
 @section('content')
   <div id="main_security">
-    <div class="cointainer mt-5">
+    <div class="container mt-2">
       <div class="row justify-content-center">
-        <div class="col-md-12 flex justify-content-center align-items-center">
+        <div class="col-md-12 flex justify-content-center align-items-center flex-column">
           <img src="{{ asset('img/poliziotto.jpg')}}" alt="">
-          <div class="msg flex-center flex-column">
-            <h1>ALT! Non puoi accedere a questo elemento!</h1>
-            <a class="btn my-btn" href="{{route('welcome')}}">Torna alla HomePage</a>
+          <div class="msg flex-center flex-column mt-4">
+            <h1>ALT! <br> Non puoi accedere a questo elemento!</h1>
+            <a class="btn my-btn mt-5" href="{{route('welcome')}}">Torna alla HomePage</a>
           </div>
 
         </div>

@@ -29,8 +29,8 @@
           <li>Alessandro Lodigiani</li>
           <li>Fabrizio Mastrobattista</li>
           <li>Sofia Perlari</li>
-          <li>Marta Seminara</li>
           <li>Donato Riccio</li>
+          <li>Marta Seminara</li>
           <li>Simone Taccori</li>
         </ul>
       </div>

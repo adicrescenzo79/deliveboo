@@ -110,12 +110,12 @@ var app = new Vue({
     validationdelivery_time: null,
     wait: false,
     orderForm: {
-      customer_name: 'alessandro',
-      customer_email: 'limone79@gmail.com',
+      customer_name: 'Nicolò Alivernini',
+      customer_email: 'alivernininicolo@gmail.com',
       customer_telephone: '076631575',
-      delivery_address: 'via ciao, 7 00053 civitavecchia (rm)',
-      delivery_time: '17:53',
-      delivery_notes: 'ciaone',
+      delivery_address: 'Via Ciao, 7 20053 Milano (MI)',
+      delivery_time: '19:55',
+      delivery_notes: 'Scala B, Interno 6',
       total_paid: null,
       //prima di creare il json per l'api, calcolare il totale
       restaurant_id: null,
