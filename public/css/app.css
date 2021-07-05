@@ -10091,6 +10091,10 @@ a.my-btn:hover {
   border-style: none;
   transition: 0.2s;
 }
+.my-btn-black:focus {
+  background-color: #3e9920;
+  color: #fff;
+}
 .my-btn-black:hover {
   background-color: #3e9920;
   border-color: #3e9920;

@@ -84,6 +84,11 @@ a.my-btn {
   border-style: none;
   transition: 0.2s;
 
+  &:focus {
+    background-color: $my-green;
+    color: #fff;
+  }
+
   &:hover {
     background-color: $my-green;
     border-color: $my-green;
