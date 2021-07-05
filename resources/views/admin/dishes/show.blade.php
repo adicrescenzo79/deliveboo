@@ -19,7 +19,7 @@
                 <p>{{$dish->description}}</p>
               @endif
 
-              <p>{{$dish->price.'€'}}</p>
+              <p>{{number_format($dish->price, 2).'€'}}</p>
 
             </div>
           </div>

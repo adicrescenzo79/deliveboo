@@ -1,5 +1,6 @@
 main {
     margin-top: 93px;
+
 }
 
 #main-welcome {
@@ -166,6 +167,9 @@ main {
 
                     li {
                         padding-right: 15px;
+                        &:hover {
+                          cursor: pointer;
+                        }
                     }
                 }
             }
@@ -422,7 +426,7 @@ main {
                         p {
                             color: $my-green;
                             font-size: 32px;
-                            line-height: 39px;
+                            line-height: 50px;
                             font-weight: 900;
                         }
                     }
@@ -432,7 +436,6 @@ main {
         //Homepage section categories
         #categories {
             margin: 20px 0;
-            padding-bottom: 30px;
 
             .row {
                 .content-category {
