@@ -97,7 +97,7 @@ Vue.config.devtools = true;
 var app = new Vue({
   el: '#main_checkout',
   data: {
-    restaurant: {},
+    restaurant: '',
     // currentUrl: window.location.href,
     dishes: [],
     cart: [],
@@ -133,9 +133,11 @@ var app = new Vue({
     this.actualCart = JSON.parse(sessionStorage.getItem('session')); // console.log(this.actualCart);
 
     this.slug = sessionStorage.getItem('slug');
+    this.restaurant = this.slug.replace(/-/g, ' ');
     this.cart = this.actualCart.filter(function (obj) {
       return obj.restaurantSlug == _this.slug;
     });
+    console.log(this.restaurant);
     this.orderForm.restaurant_id = this.cart[0].restaurant_id;
     this.total(); // da cancelllare dopo
     // this.cartDelete();

@@ -16,7 +16,7 @@
               <div class="card-body row">
 
                 <div class="card-img col-sm-12 col-xl-3 ">
-                  <img src="{{$restaurant->logo}}" alt="">
+                  <img src="{{asset($restaurant->logo)}}" alt="">
                 </div>
 
                 <div class="col-sm-12 col-xl-6 pt-3">

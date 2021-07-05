@@ -2,7 +2,7 @@ Vue.config.devtools = true;
 let app = new Vue({
   el: '#main_checkout',
   data:{
-    restaurant: {},
+    restaurant: '',
     // currentUrl: window.location.href,
     dishes: [],
     cart: [],
@@ -39,8 +39,11 @@ let app = new Vue({
     // console.log(this.actualCart);
     this.slug = sessionStorage.getItem('slug');
 
+    this.restaurant = this.slug.replace(/-/g, ' ');
+
     this.cart = this.actualCart.filter(obj => obj.restaurantSlug == this.slug);
 
+    console.log(this.restaurant);
 
     this.orderForm.restaurant_id = this.cart[0].restaurant_id;
 

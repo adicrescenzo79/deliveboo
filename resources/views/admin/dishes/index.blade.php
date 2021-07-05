@@ -17,7 +17,7 @@
             <div class="card-body row align-items-center">
 
               <div class="card-img col-md-3 col-sm-12">
-                <img src="{{$dish->image}}" alt="">
+                <img src="{{asset($dish->image)}}" alt="">
               </div>
 
               <div class="col-md-5 col-sm-12">

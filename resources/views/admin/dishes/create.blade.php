@@ -12,23 +12,23 @@
                     @method('POST')
 
                     <div class="form-group">
-                        <label for="name">Nome del Piatto</label>
-                        <input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{old('name')}}" placeholder="Nome del Piatto">
+                        {{-- <label for="name">Nome del Piatto</label> --}}
+                        <input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{old('name')}}" placeholder="Nome del piatto">
                         @error('name')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
 
                     <div class="form-group">
-                        <label for="description">Descrizione</label>
-                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="8" cols="80" name="description"> {{ old('description') }} </textarea>
+                        {{-- <label for="description">Descrizione</label> --}}
+                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" rows="8" cols="80" placeholder="Descrizione" name="description">{{ old('description')}}</textarea>
                         @error('description')
                         <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
 
                     <div class="form-group">
-                        <label for="price">Prezzo</label>
+                        {{-- <label for="price">Prezzo</label> --}}
 
                         <input step="0.10" class="form-control @error('price') is-invalid @enderror" id="price" type="number" name="price" value="{{old('price')}}" placeholder="Prezzo">
                         @error('price')
@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="image">Imagine</label>
+                        <label for="image">Immagine</label>
                         <input class="form-control no-border @error('image') is-invalid @enderror" id="image" type="file" name="image" value="{{old('image')}}">
                         @error('image')
                         <small class="text-danger">{{ $message }}</small>

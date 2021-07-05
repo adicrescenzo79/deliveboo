@@ -33,7 +33,7 @@
 
         {{-- TRANSAZIONE --}}
         <div class="col-md-7 order-md-1">
-          <h4 class="mb-3">I dati del tuo ordine</h4>
+          <h4 class="mb-3">I dati del tuo ordine presso: <span class="text-capitalize">@{{restaurant}}</span></h4>
           <form class="needs-validation" novalidate>
             <div class="row">
               <div class="col-md-12 mb-3">
