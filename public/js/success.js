@@ -96,12 +96,24 @@
 Vue.config.devtools = true;
 var app = new Vue({
   el: '#main_success',
-  data: {},
+  data: {
+    countdown: ''
+  },
   created: function created() {
     window.sessionStorage.clear();
+    this.conto();
     setTimeout(function () {
       window.location.href = '/';
     }, 3000);
+  },
+  methods: {
+    conto: function conto() {
+      var self = this;
+      self.countdown = 3;
+      setInterval(function () {
+        self.countdown--;
+      }, 1000);
+    }
   }
 });
 

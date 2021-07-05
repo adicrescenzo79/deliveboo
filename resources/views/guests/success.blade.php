@@ -8,7 +8,7 @@
           <i class="fas fa-receipt"></i>
           <div class="msg flex-center flex-column">
             <h1>Il tuo ordine è stato confermato</h1>
-            <h5>Stai per essere reindirizzato automaticamente alla Homepage...</h5>
+            <h5>Sarai reindirizzato alla Homepage tra <strong>@{{countdown}}</strong> secondi</h5>
             <a class="btn my-btn" href="{{route('welcome')}}">Torna alla HomePage</a>
           </div>
         </div>

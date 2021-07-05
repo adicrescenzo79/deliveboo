@@ -52,6 +52,9 @@ let app = new Vue({
         });
 
       });
+      if (!this.categorySelected.length) {
+        this.allRestaurants();
+      }
     },
     //al click vediamo tutti i ristoranti
     allRestaurants: function() {

@@ -6,14 +6,13 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="middle-jumbo col-12 col-sm-8 offset-sm-4
-                              col-md-6 offset-md-6 col-lg-6 offset-lg-6">
-                    <div class="square-nice-blue"></div>
+                <div class="middle-jumbo col-12 col-sm-8 col-md-8 col-lg-8 ">
+                    {{-- <div class="square-nice-blue"></div> --}}
                     <div class="text-jumbo">
                         <div class="content-jumbo ">
                             <h1>I piatti che ami a domicilio.</h1>
                             <p>
-                                Veloci e puntuali, consegna in al massimo 25min.
+                                Veloci e puntuali, consegna <br>al massimo in 25min.
                             </p>
                         </div>
                     </div>
@@ -51,9 +50,9 @@
         <div class="container">
             <div class="row justify-content-center">
               <div class="col-12 catecory-selected">
-                <h3 v-if="(categorySelected.length)">Le categorie selezionate</h3>
+                <h3 class="pt-3" v-if="(categorySelected.length)">Le categorie selezionate</h3>
                 <ul>
-                  <li v-for="category in categories" v-if="(categorySelected.includes(category.id))">@{{category.name}}</li>
+                  <li v-for="category in categories" v-if="(categorySelected.includes(category.id))" @click="restaurantByCategory(category.id)">@{{category.name}}</li>
                 </ul>
               </div>
                 <div class="content-restaurants  col-sm-6 col-md-6 col-lg-4" v-for="restaurant in restaurants">

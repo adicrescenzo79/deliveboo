@@ -10008,6 +10008,10 @@ h3 {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fff;
+}
+
 .flex {
   display: flex;
 }
@@ -10807,17 +10811,16 @@ main {
   margin-top: 93px;
 }
 
-#main-welcome {
-  margin-top: -1.5rem;
-}
 #main-welcome #jumbo {
   display: flex;
   align-items: center;
   position: relative;
-  background-image: url("../img/jumbo.jpg");
-  background-size: cover;
+  background-image: url("../img/jumbo.png");
+  background-size: 205%;
   background-repeat: no-repeat;
   height: 150px;
+  background-position: center;
+  margin-top: -5px;
 }
 #main-welcome #jumbo .middle-jumbo {
   position: relative;
@@ -10836,19 +10839,17 @@ main {
   position: absolute;
   z-index: 10;
   top: -51px;
-  left: 68px;
+  left: 25px;
 }
 #main-welcome #jumbo .middle-jumbo .text-jumbo p {
   height: 150px;
-  color: #ffa5a5;
-  text-shadow: 0 0 0 #2e068e;
+  color: #3e9920;
   font-size: 16px;
   font-weight: 900;
 }
 #main-welcome #jumbo .middle-jumbo .text-jumbo h1 {
   font-size: 20px;
   font-weight: 900;
-  text-shadow: 1px 1px 4px #000000;
   color: white;
 }
 #main-welcome #categories .row {
@@ -10983,6 +10984,9 @@ main {
   opacity: 0.7;
 }
 @media (min-width: 576px) {
+  #main-welcome #jumbo {
+    background-size: 150%;
+  }
   #main-welcome #jumbo .middle-jumbo .square-nice-blue {
     left: 33px;
     border-top-left-radius: 50px;
@@ -11001,18 +11005,19 @@ main {
   #main-welcome .text-jumbo h1 {
     font-size: 24px;
     font-weight: 900;
-    text-shadow: 1px 1px 4px #000000;
     color: white;
   }
   #main-welcome .text-jumbo p {
     height: 150px;
-    color: #ffa5a5;
-    text-shadow: 0 0 0 #2e068e;
+    color: #3e9920;
     font-size: 19px;
     font-weight: 900;
   }
 }
 @media (min-width: 768px) {
+  #main-welcome #jumbo {
+    margin-top: 0px;
+  }
   #main-welcome #jumbo .middle-jumbo .square-nice-blue {
     left: 33px;
     border-top-left-radius: 50px;
@@ -11030,15 +11035,13 @@ main {
   }
   #main-welcome .text-jumbo p {
     height: 150px;
-    color: #ffa5a5;
-    text-shadow: 0 0 0 #2e068e;
+    color: #3e9920;
     font-size: 19px;
     font-weight: 900;
   }
   #main-welcome .text-jumbo h1 {
     font-size: 24px;
     font-weight: 900;
-    text-shadow: 1px 1px 4px #000000;
     color: white;
   }
   #main-welcome #restaurants .card a {
@@ -11057,6 +11060,9 @@ main {
   }
 }
 @media (min-width: 992px) {
+  #main-welcome #jumbo {
+    background-size: 100%;
+  }
   #main-welcome #jumbo .middle-jumbo {
     position: relative;
     height: 100%;
@@ -11074,18 +11080,16 @@ main {
     position: absolute;
     z-index: 10;
     top: -51px;
-    left: 127px;
+    left: 55px;
   }
   #main-welcome #jumbo .middle-jumbo .text-jumbo h1 {
     font-size: 24px;
     font-weight: 900;
-    text-shadow: 1px 1px 4px #000000;
     color: white;
   }
   #main-welcome #jumbo .middle-jumbo .text-jumbo p {
     height: 150px;
-    color: #ffa5a5;
-    text-shadow: 0 0 0 #2e068e;
+    color: #3e9920;
     font-size: 19px;
     font-weight: 900;
   }
@@ -11096,25 +11100,13 @@ main {
   }
 }
 @media (min-width: 1200px) {
-  #main-welcome {
-    margin-top: -1.5rem;
-  }
   #main-welcome #jumbo {
     display: flex;
     align-items: center;
     position: relative;
-    background-image: url("../img/jumbo.jpg");
-    background-size: cover;
+    background-size: 160%;
     background-repeat: no-repeat;
     height: 300px;
-  }
-  #main-welcome #jumbo .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
   }
   #main-welcome #jumbo .middle-jumbo {
     position: relative;
@@ -11125,7 +11117,7 @@ main {
     border-top-left-radius: 50px;
     background-color: #32325a;
     height: 218px;
-    top: -115px;
+    top: -80px;
     width: 100px;
     position: absolute;
   }
@@ -11137,12 +11129,13 @@ main {
   }
   #main-welcome #jumbo .middle-jumbo .text-jumbo .content-jumbo h1 {
     color: white;
-    font-size: 42px;
+    font-size: 45px;
     font-weight: 900;
   }
   #main-welcome #jumbo .middle-jumbo .text-jumbo .content-jumbo p {
-    color: #ffa5a5;
-    font-size: 29px;
+    color: #3e9920;
+    font-size: 32px;
+    line-height: 39px;
     font-weight: 900;
   }
   #main-welcome #categories {
@@ -11308,8 +11301,11 @@ main {
   background-size: cover;
   position: relative;
 }
+#main_menu .container-restaurant .row {
+  margin: 0;
+}
 #main_menu .container-restaurant .card {
-  margin-top: -120px;
+  margin-top: -70px;
   border-radius: 0;
   font-size: 16px;
   margin-bottom: 150px;
@@ -11375,7 +11371,7 @@ main {
   background-color: #000;
 }
 #main_menu #cart input {
-  width: 60px;
+  width: 50px;
   padding-left: 10px;
 }
 #main_menu #cart div.btn-order {
@@ -11401,12 +11397,19 @@ main {
   text-decoration: none;
   background-color: #3e9920;
 }
+#main_menu #cart .my-total-cart {
+  background-color: #000;
+  color: #fff;
+}
 
 @media (min-width: 767px) {
   #main_menu .jumbo {
     background-repeat: no-repeat;
     background-size: cover;
     height: 350px;
+  }
+  #main_menu .container-restaurant .card {
+    margin-top: -120px;
   }
   #main_menu #dishes {
     margin-top: -10rem;
@@ -11553,17 +11556,23 @@ main {
     justify-content: center;
   }
 }
+#main_security {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
 #main_security img {
-  width: 50%;
+  width: 40%;
 }
 #main_security .msg h1 {
-  font-size: 6vw;
-  color: #fff;
+  font-size: 60px;
+  color: red;
   text-align: center;
-  text-shadow: 2px 2px 4px #000;
 }
 #main_security .msg a {
   text-align: center;
+}
+#main_security .msg a:hover {
+  color: #fff;
 }
 
 #main-admin-dishes-edit {

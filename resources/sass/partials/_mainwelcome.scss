@@ -3,16 +3,18 @@ main {
 }
 
 #main-welcome {
-    margin-top: -1.5rem;
+
 
     #jumbo {
         display: flex;
         align-items: center;
         position: relative;
-        background-image: url("../img/jumbo.jpg");
-        background-size: cover;
+        background-image: url("../img/jumbo.png");
+        background-size: 205%;
         background-repeat: no-repeat;
         height: 150px;
+        background-position: center;
+        margin-top: -5px;
 
         .middle-jumbo {
             position: relative;
@@ -32,12 +34,12 @@ main {
                 position: absolute;
                 z-index: 10;
                 top: -51px;
-                left: 68px;
+                left: 25px;
 
                 p {
                     height: 150px;
-                    color: #ffa5a5;
-                    text-shadow: 0 0 0 #2e068e;
+                    color: $my-green;
+                    // text-shadow: 0 0 0 #2e068e;
                     font-size: 16px;
                     font-weight: 900;
                 }
@@ -45,7 +47,7 @@ main {
                 h1 {
                     font-size: 20px;
                     font-weight: 900;
-                    text-shadow: 1px 1px 4px #000000;
+                    // text-shadow: 1px 1px 4px #000000;
                     color: white;
                 }
             }
@@ -229,7 +231,9 @@ main {
         }
     }
     @media (min-width: 576px) {
-        #jumbo .middle-jumbo .square-nice-blue {
+        #jumbo {
+          background-size: 150%;
+          .middle-jumbo .square-nice-blue {
             left: 33px;
             border-top-left-radius: 50px;
             background-color: #32325a;
@@ -238,6 +242,7 @@ main {
             width: 60px;
             position: absolute;
         }
+      }
 
         .text-jumbo {
             position: absolute;
@@ -248,28 +253,31 @@ main {
             h1 {
                 font-size: 24px;
                 font-weight: 900;
-                text-shadow: 1px 1px 4px #000000;
+                // text-shadow: 1px 1px 4px #000000;
                 color: white;
             }
 
             p {
                 height: 150px;
-                color: #ffa5a5;
-                text-shadow: 0 0 0 #2e068e;
+                color: $my-green;
+                // text-shadow: 0 0 0 #2e068e;
                 font-size: 19px;
                 font-weight: 900;
             }
         }
     }
     @media (min-width: 768px) {
-        #jumbo .middle-jumbo .square-nice-blue {
-            left: 33px;
-            border-top-left-radius: 50px;
-            background-color: #32325a;
-            height: 122px;
-            top: -63px;
-            width: 60px;
-            position: absolute;
+        #jumbo{
+          margin-top: 0px;
+          .middle-jumbo .square-nice-blue {
+              left: 33px;
+              border-top-left-radius: 50px;
+              background-color: #32325a;
+              height: 122px;
+              top: -63px;
+              width: 60px;
+              position: absolute;
+          }
         }
 
         .text-jumbo {
@@ -280,8 +288,8 @@ main {
 
             p {
                 height: 150px;
-                color: #ffa5a5;
-                text-shadow: 0 0 0 #2e068e;
+                color: $my-green;
+                // text-shadow: 0 0 0 #2e068e;
                 font-size: 19px;
                 font-weight: 900;
             }
@@ -289,7 +297,7 @@ main {
             h1 {
                 font-size: 24px;
                 font-weight: 900;
-                text-shadow: 1px 1px 4px #000000;
+                // text-shadow: 1px 1px 4px #000000;
                 color: white;
             }
         }
@@ -317,6 +325,7 @@ main {
     }
     @media (min-width: 992px) {
         #jumbo {
+          background-size: 100%;
             .middle-jumbo {
                 position: relative;
                 height: 100%;
@@ -335,19 +344,19 @@ main {
                     position: absolute;
                     z-index: 10;
                     top: -51px;
-                    left: 127px;
+                    left: 55px;
 
                     h1 {
                         font-size: 24px;
                         font-weight: 900;
-                        text-shadow: 1px 1px 4px #000000;
+                        // text-shadow: 1px 1px 4px #000000;
                         color: white;
                     }
 
                     p {
                         height: 150px;
-                        color: #ffa5a5;
-                        text-shadow: 0 0 0 #2e068e;
+                        color: $my-green;
+                        // text-shadow: 0 0 0 #2e068e;
                         font-size: 19px;
                         font-weight: 900;
                     }
@@ -364,25 +373,24 @@ main {
         }
     }
     @media (min-width: 1200px) {
-        margin-top: -1.5rem;
+
 
         #jumbo {
             display: flex;
             align-items: center;
             position: relative;
-            background-image: url("../img/jumbo.jpg");
-            background-size: cover;
+            background-size: 160%;
             background-repeat: no-repeat;
             height: 300px;
 
-            .overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-            }
+            // .overlay {
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: rgba(0, 0, 0, 0.5);
+            // }
 
             .middle-jumbo {
                 position: relative;
@@ -393,7 +401,7 @@ main {
                     border-top-left-radius: 50px;
                     background-color: #32325a;
                     height: 218px;
-                    top: -115px;
+                    top: -80px;
                     width: 100px;
                     position: absolute;
                 }
@@ -407,13 +415,14 @@ main {
                     .content-jumbo {
                         h1 {
                             color: white;
-                            font-size: 42px;
+                            font-size: 45px;
                             font-weight: 900;
                         }
 
                         p {
-                            color: #ffa5a5;
-                            font-size: 29px;
+                            color: $my-green;
+                            font-size: 32px;
+                            line-height: 39px;
                             font-weight: 900;
                         }
                     }

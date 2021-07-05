@@ -2,7 +2,7 @@
 
 @section('content')
   <div id="main_menu" class="pb-5">
-    <div class="jumbo flex flex-row justify-content-center align-items-center" :style="background"></div>
+    <div class="jumbo" :style="background"></div>
     <div class="container-restaurant">
       <div class="row justify-content-center">
         <div class="col-md-8">
@@ -57,7 +57,7 @@
         <div class="row justify-content-center">
 
           {{-- nuovo cart --}}
-          <div class="col-md-6 order-md-2 mb-4 mt-5">
+          <div class="col-md-8 order-md-2 mb-4 mt-5">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
               <span class="text-muted">Il tuo carrello</span>
               <span class="badge badge-secondary badge-pill my-badge">@{{totDishes()}}</span>
@@ -66,15 +66,15 @@
               <li v-for="dish in cart"  v-if="dish.restaurantSlug == slug" class="list-group-item d-flex justify-content-between lh-condensed">
                 <div class="left">
                   <span><i class="fas fa-minus" @click="minusCart(dish)"></i></span>
-                  <input type="number" name="" value="" v-model.number="dish.quantity">
+                  <input type="number" name="" value="" v-model.number="dish.quantity" class="mx-2">
+                  <span><i class="fas fa-plus" @click="addCart(dish)"></i></span>
                 </div>
                 <span class="my-0">@{{dish.name}}</span>
                 <div class="right">
                   <span class="text-muted text-right">€ @{{dish.price.toFixed(2)}}</span>
-                  <span><i class="fas fa-plus" @click="addCart(dish)"></i></span>
                 </div>
               </li>
-              <li class="list-group-item d-flex justify-content-between">
+              <li class="list-group-item d-flex justify-content-between my-total-cart">
                 <span>Totale (EUR)</span>
                 <strong>€ @{{total().toFixed(2)}}</strong>
               </li>

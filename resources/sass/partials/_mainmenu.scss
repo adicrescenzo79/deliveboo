@@ -6,8 +6,11 @@
     position: relative;
   }
   .container-restaurant {
+    .row {
+      margin: 0;
+    }
     .card  {
-      margin-top: -120px;
+      margin-top: -70px;
       border-radius: 0;
       font-size: 16px;
       margin-bottom: 150px;
@@ -87,7 +90,7 @@
     }
   }
     input{
-      width: 60px;
+      width: 50px;
       padding-left: 10px;
     }
     div {
@@ -116,6 +119,10 @@
         }
       }
     }
+    .my-total-cart {
+      background-color: #000;
+      color: #fff;
+    }
 
   }
 }
@@ -126,6 +133,11 @@
       background-repeat: no-repeat;
       background-size: cover;
       height: 350px;
+    }
+    .container-restaurant {
+      .card  {
+        margin-top: -120px;
+      }
     }
     #dishes{
       margin-top: -10rem;
