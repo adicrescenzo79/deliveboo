@@ -12,7 +12,7 @@
                         <div class="content-jumbo ">
                             <h1>I piatti che ami a domicilio.</h1>
                             <p>
-                                Veloci e puntuali, consegna <br>al massimo in 25min.
+                                Veloci e puntuali, consegna <br>al massimo in 25 minuti.
                             </p>
                         </div>
                     </div>

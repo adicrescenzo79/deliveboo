@@ -119,6 +119,11 @@
         }
       }
     }
+    i {
+      &:hover {
+        cursor: pointer;
+      }
+    }
     .my-total-cart {
       background-color: #000;
       color: #fff;

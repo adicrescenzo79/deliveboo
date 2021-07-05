@@ -10938,6 +10938,9 @@ main {
 #main-welcome #restaurants .row .catecory-selected ul li {
   padding-right: 15px;
 }
+#main-welcome #restaurants .row .catecory-selected ul li:hover {
+  cursor: pointer;
+}
 #main-welcome #restaurants .row .content-restaurants {
   display: flex;
   justify-content: center;
@@ -11138,12 +11141,11 @@ main {
   #main-welcome #jumbo .middle-jumbo .text-jumbo .content-jumbo p {
     color: #3e9920;
     font-size: 32px;
-    line-height: 39px;
+    line-height: 50px;
     font-weight: 900;
   }
   #main-welcome #categories {
     margin: 20px 0;
-    padding-bottom: 30px;
   }
   #main-welcome #categories .row .content-category {
     display: flex;
@@ -11400,6 +11402,9 @@ main {
   text-decoration: none;
   background-color: #3e9920;
 }
+#main_menu #cart i:hover {
+  cursor: pointer;
+}
 #main_menu #cart .my-total-cart {
   background-color: #000;
   color: #fff;
@@ -11437,6 +11442,7 @@ main {
 }
 #main-admin-dishes {
   padding-top: 50px;
+  padding-bottom: 150px;
 }
 #main-admin-dishes h1 {
   font-weight: 900;
@@ -11761,7 +11767,6 @@ main {
 
 footer {
   height: 400px;
-  width: 100%;
   background-color: #000;
   color: #fff;
 }

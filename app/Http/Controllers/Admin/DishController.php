@@ -20,7 +20,13 @@ class DishController extends Controller
     public function index($restaurant)
     {
         $dishes = Dish::where('restaurant_id', '=', $restaurant)->get();
+
         $actualRestaurant = Restaurant::where('id', '=', $restaurant)->first();
+
+        if ($dishes->isEmpty()) {
+          $restaurant = Restaurant::where('id', '=', $restaurant)->first();
+          return view('admin.dishes.create', compact('restaurant'));
+        }
 
         return view('admin.dishes.index', compact('dishes', 'actualRestaurant'));
     }
@@ -126,8 +132,10 @@ class DishController extends Controller
         }
 
         $dish->update($data);
+        
+        $restaurant = Restaurant::where('id', '=', $dish['restaurant_id'])->first();
 
-        return redirect()->route('admin.dishes.show', compact('dish'));
+        return redirect()->route('admin.restaurants.dishes.index', compact('restaurant'));
     }
 
     /**
