@@ -113,7 +113,7 @@ var app = new Vue({
       customer_name: 'Nicolò Alivernini',
       customer_email: 'alivernininicolo@gmail.com',
       customer_telephone: '076631575',
-      delivery_address: 'Via Ciao, 7 20053 Milano (MI)',
+      delivery_address: 'Via Montenapoleone, 7 20053 Milano (MI)',
       delivery_time: '19:55',
       delivery_notes: 'Scala B, Interno 6',
       total_paid: null,
@@ -315,7 +315,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\progetto_finale\deliveboo\resources\js\checkout.js */"./resources/js/checkout.js");
+module.exports = __webpack_require__(/*! /Users/nico/Desktop/Boolean/Esercitazioni/deliveboo/resources/js/checkout.js */"./resources/js/checkout.js");
 
 
 /***/ })

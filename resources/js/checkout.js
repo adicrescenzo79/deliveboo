@@ -18,7 +18,7 @@ let app = new Vue({
       customer_name: 'Nicolò Alivernini',
       customer_email: 'alivernininicolo@gmail.com',
       customer_telephone: '076631575',
-      delivery_address: 'Via Ciao, 7 20053 Milano (MI)',
+      delivery_address: 'Via Montenapoleone, 7 20053 Milano (MI)',
       delivery_time: '19:55',
       delivery_notes: 'Scala B, Interno 6',
       total_paid: null, //prima di creare il json per l'api, calcolare il totale

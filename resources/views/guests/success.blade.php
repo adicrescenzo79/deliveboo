@@ -2,7 +2,7 @@
 
 @section('content')
   <div id="main_success">
-    <div class="cointaine">
+    <div class="cointainer">
       <div class="row justify-content-center">
         <div class="col-md-6 d-flex flex-column justify-content-around align-items-center img-msg py-5">
           <i class="fas fa-receipt"></i>

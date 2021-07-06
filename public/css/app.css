@@ -10682,20 +10682,9 @@ nav .container .dropdown-menu .dropdown-item:hover {
 }
 #main_checkout .dish-quantity {
   padding-left: 7px;
-  font-size: 12px;
 }
 #main_checkout .dish-price {
   padding-right: 7px;
-  font-size: 12px;
-}
-#main_checkout .dish-name {
-  font-size: 12px;
-}
-#main_checkout .dish-minus {
-  font-size: 11px;
-}
-#main_checkout .dish-plus {
-  font-size: 11px;
 }
 #main_checkout .form-control {
   background-color: #fff !important;
