@@ -1,0 +1,23 @@
+#main_security{
+  padding-top: 50px;
+  padding-bottom: 150px;
+  img{
+    width: 40%;
+    // margin-top: 10rem;
+  }
+  .msg{
+    // margin-top: 10rem;
+
+    h1{
+      font-size: 60px;
+      color: red;
+      text-align: center;
+    }
+    a{
+      text-align: center;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

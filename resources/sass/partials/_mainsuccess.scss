@@ -1,0 +1,46 @@
+#main_success{
+  // background-color: #F5F0E5;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  .img-msg{
+    border: 3px solid $my-green;
+    i{
+      font-size: 60px;
+      color: $my-green;
+    }
+
+    // position: relative;
+    img{
+      border-radius: 50%;
+      width: 50%;
+    }
+    .msg{
+      // margin-top: 10rem;
+      // position: absolute;
+      // left: 50%;
+      // top: 50%;
+      // transform: translate(-50%, -50%);
+
+      h1{
+        font-weight: bold;
+        font-size: 22px;
+        padding: 30px;
+        color: #000;
+        text-align: center;
+      }
+      h5 {
+        font-size: 11px;
+        color: #505050;
+        width: 55%;
+        text-align: center;
+        padding: 15px 0;
+      }
+      a{
+        text-align: center;
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+  }
+}

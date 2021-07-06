@@ -1,0 +1,49 @@
+//login page/register page
+#main-log-reg {
+  padding-top: 100px;
+  .card {
+    border: none;
+    background-color: $body-bg;
+    margin-bottom: 150px;
+    .card-header {
+      background-color: $body-bg;
+      font-size: 30px;
+      font-weight: 700;
+      color: #262626;
+      border-bottom: none;
+    }
+    .card-body{
+      .form-control {
+        background-color: $body-bg!important;
+        border-radius: 0;
+        font-size: 16px!important;
+        height: 48px!important;
+        line-height: 24px!important;
+        color: #262626!important;
+        border: 1px solid #E0E0E0!important;
+        &:focus {
+          border-color: #262626!important;
+          box-shadow: none;
+        }
+      }
+      .my-btn-main {
+        color: #fff;
+        width: 100%;
+        background-color: $my-green;
+        border-color: $my-green;
+        height: 48px;
+        font-size: 16px;
+        border-style: none;
+        transition: 0.2s;
+        &:hover {
+          background-color: #000;
+          border-color: #000;
+
+        }
+      }
+      .my-link {
+        color: $my-green;
+      }
+    }
+  }
+}

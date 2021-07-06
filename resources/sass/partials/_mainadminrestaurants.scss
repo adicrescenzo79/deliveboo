@@ -1,0 +1,241 @@
+#main-admin-restaurants {
+  padding-top: 50px;
+
+  h1 {
+    font-weight: 900;
+    margin-bottom: 7px;
+    font-size: 25px;
+  }
+
+  a {
+    font-size: 29px;
+    padding-right: 10px;
+  }
+  a i.fas.fa-plus {
+    opacity: 0.8;
+    color: $my-green;
+    font-size: 30px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
+  .card {
+    margin-bottom: 40px;
+    box-shadow: 0 0 30px -15px #888888;
+    border-radius: 0;
+
+    &:hover {
+      border: 1px solid black;
+    }
+    .card-img {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        strong{
+          font-size: 17px;
+          margin-bottom: 10px;
+        }
+        text-align: center;
+        padding-bottom: 10px;
+
+        &:first {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .container-buttons {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      i {
+        opacity: 0.7;
+        border: none;
+        font-size: 27px;
+
+        &.fas.fa-store-alt {
+          color: $orange;
+          background: none;
+          font-size: 23px;
+        }
+
+        &.fas.fa-utensils {
+          color: #C0C0C0;
+          background: none;
+          font-size: 23px;
+        }
+
+        &.far.fa-chart-bar {
+          color: $blue;
+          background: none;
+        }
+
+        &.fas.fa-edit {
+          color: $my-green;
+          background: none;
+          font-size: 25px;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      form input.trash-icon {
+        color: #f00;
+        background: none;
+        opacity: 0.7;
+        border: none;
+        font-size: 24px;
+        padding-top: 3px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) {
+
+  }
+  @media (min-width: 768px) {
+
+  }
+  @media (min-width: 992px) {}
+  @media (min-width: 1200px) {
+    padding-top: 50px;
+
+    .my-btn-create {
+      color: #fff;
+      width: 200px;
+      background-color: $my-green;
+      border-color: $my-green;
+      height: 48px;
+      font-size: 16px;
+      border-style: none;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    h1 {
+      color: #000;
+      font-weight: 900;
+    }
+
+    a i.fas.fa-plus {
+      opacity: 0.8;
+      color: $my-green;
+      font-size: 30px;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .card {
+      box-shadow: 0 0 30px -15px #888888;
+      border-radius: 0;
+      margin-top: 5px;
+      margin-bottom: 25px;
+
+      &:hover {
+        border: 1px solid black;
+      }
+
+      .card-body {
+        .card-img {
+          img {
+            width: 100%;
+          }
+        }
+
+        ul {
+          list-style: none;
+          font-size: 14px;
+
+          strong {
+            font-size: 23px;
+            font-weight: 900;
+            color: #292929;
+          }
+        }
+
+        .my-btn-card {
+          min-width: 118px;
+          text-align: center;
+          font-size: 12px;
+          color: #fff;
+          border: none;
+          background: #000;
+          padding: 10px 25px;
+          text-transform: uppercase;
+          cursor: pointer;
+          width: fit-content;
+
+          &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+          }
+        }
+
+        .container-buttons {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          i {
+            opacity: 0.7;
+            border: none;
+            font-size: 27px;
+
+            &.fas.fa-store-alt {
+              color: $orange;
+              background: none;
+              font-size: 23px;
+            }
+
+            &.far.fa-chart-bar {
+              color: $blue;
+              background: none;
+            }
+
+            &.fas.fa-edit {
+              color: $my-green;
+              background: none;
+              font-size: 25px;
+            }
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+
+          form input.trash-icon {
+            color: #f00;
+            background: none;
+            opacity: 0.7;
+            border: none;
+            font-size: 24px;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

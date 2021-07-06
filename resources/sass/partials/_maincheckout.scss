@@ -1,0 +1,185 @@
+#main_checkout{
+  padding-top: 100px;
+  padding-bottom: 150px;
+  .container {
+    max-width: 960px;
+    .row {
+      div {
+        h4 {
+          span {
+            &.badge {
+              background-color: #000;
+            }
+          }
+        }
+        ul {
+          li {
+            div {
+              span {
+                i {
+                  &:hover {
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+            a {
+              &.add-articoli {
+                color: $my-green;
+              }
+            }
+            span {
+              i {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+            &:last-child {
+              background-color: #000;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Gestione font mobile carrello
+  //Quantità dei piatti - Prezzi dei piatti
+  .dish-quantity {
+    padding-left: 7px;
+    // font-size: 12px;
+  }
+  .dish-price {
+    padding-right: 7px;
+    // font-size: 12px;
+  }
+  .dish-name {
+    // font-size: 12px;
+  }
+  .dish-minus {
+    // font-size: 11px;
+  }
+  .dish-plus {
+    // font-size: 11px;
+  }
+  //Input dei form
+  .form-control {
+    background-color: $body-bg!important;
+    border-radius: 0;
+    font-size: 16px!important;
+    height: 48px!important;
+    line-height: 24px!important;
+    color: #262626!important;
+    border: 1px solid #E0E0E0!important;
+    &:focus {
+      border-color: #262626!important;
+      box-shadow: none;
+    }
+  }
+  .custom-control-input {
+    &:focus {
+      color: red;
+    }
+  }
+  //Pallino scelta metodo di pagamento
+  .label-nero {
+    &:before {
+      color: #fff;
+      border-color: #000;
+      background-color: #000;
+    }
+  }
+  //Pulsante Checkout
+  .my-btn {
+    border-radius: 0px;
+    border: none;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    background: #000;
+    padding: 16px 45px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.2s;
+    &:hover {
+      text-decoration: none;
+      background-color: $my-green;
+    }
+  }
+
+
+
+  .lh-condensed { line-height: 1.25; }
+
+
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .wheel{
+    @keyframes ex10 {
+      0% {transform: rotate(0deg)}
+      100% {transform: rotate(-360deg)}
+    }
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+
+    .ex-10-icon{
+      animation-name: ex10;
+      animation-timing-function: linear;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      font-size: 20vw;
+      color: white;
+      opacity: 0.5;
+      // transform: translate(-50%,-50%);
+      // -ms-transform: translate(-50%,-50%);
+
+    }
+
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+
+    //Gestione font mobile carrello
+    .dish-quantity {
+      font-size: 14.4px;
+    }
+    .dish-price {
+      font-size: 14.4px;
+    }
+    .dish-name {
+      font-size: 14.4px;
+    }
+    .dish-minus {
+      font-size: 14.4px;
+    }
+    .dish-plus {
+      font-size: 14.4px;
+    }
+  }
+}

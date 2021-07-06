@@ -1,0 +1,91 @@
+#main-admin-dishes-edit {
+  font-size: 16px;
+  padding-top: 100px;
+  .container {
+    h3 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #262626;
+    }
+    form {
+      padding-top: 30px;
+      .form-group {
+        input[type=file]::file-selector-button {
+          border: 1px solid #E0E0E0;
+          padding: .2em .4em;
+          border-radius: 0;
+          background-color: transparent;
+          color: #000;
+        }
+
+        input[type=file]::file-selector-button:hover {
+          background-color: $my-green;
+          border: 1px solid $my-green;
+          color: #fff;
+          cursor: pointer;
+        }
+        input[type='radio']:after {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          background-color: #E0E0E0;
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 2px solid white;
+        }
+        input[type='radio']:checked:after {
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          top: -2px;
+          left: -1px;
+          position: relative;
+          background-color: $my-green;
+          content: '';
+          display: inline-block;
+          visibility: visible;
+          border: 2px solid white;
+        }
+        .form-control {
+          background-color: $body-bg!important;
+          border-radius: 0;
+          font-size: 16px!important;
+          height: 48px!important;
+          line-height: 24px!important;
+          color: #262626!important;
+          border: 1px solid #E0E0E0!important;
+          &:focus {
+            border-color: #262626!important;
+            box-shadow: none;
+          }
+          &.no-border {
+            padding: 7px 0;
+            border: none !important;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .my-btn-create {
+        color: #fff;
+        width: 200px;
+        background-color: $my-green;
+        border-color: $my-green;
+        height: 48px;
+        font-size: 16px;
+        border-style: none;
+        transition: 0.2s;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+  }
+
+}

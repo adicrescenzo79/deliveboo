@@ -9,9 +9,23 @@
 
 //CUSTOM
 @import 'partials/_variables.scss';
-@import 'partials_normalize.scss';
+@import 'partials/_normalize.scss';
 @import 'partials/_mixins.scss';
 @import 'partials/_common.scss';
 @import 'partials/_header.scss';
-@import 'partials/_main.scss';
+@import 'partials/_jumbo.scss';
+@import 'partials/_mainlogreg.scss';
+@import 'partials/_mainadminrestaurants.scss';
+@import 'partials/_mainrestaurantscreate.scss';
+@import 'partials/_mainrestaurantsedit.scss';
+@import 'partials/_mainrestaurantsshow.scss';
+@import 'partials/_maincheckout.scss';
+@import 'partials/_mainwelcome.scss';
+@import 'partials/_mainsuccess.scss';
+@import 'partials/_mainmenu.scss';
+@import 'partials/_mainadmindishes.scss';
+@import 'partials/_mainsecurity.scss';
+@import 'partials/_mainadmindishesedit.scss';
+@import 'partials/_mainadmindishescreate.scss';
+@import 'partials/_mainadminrestaurantsstatistics.scss';
 @import 'partials/_footer.scss';

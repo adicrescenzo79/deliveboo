@@ -1,0 +1,169 @@
+//admin dishes page
+#main-admin-dishes {
+  padding-top: 50px;
+  padding-bottom: 150px;
+
+  h1 {
+    font-weight: 900;
+    margin-bottom: 7px;
+    font-size: 25px;
+  }
+
+  a {
+    font-size: 29px;
+    padding-right: 10px;
+  }
+  a i.fas.fa-plus {
+    opacity: 0.8;
+    color: $my-green;
+    font-size: 30px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .my-btn-create {
+    color: #fff;
+    width: 200px;
+    background-color: $my-green;
+    border-color: $my-green;
+    height: 48px;
+    font-size: 16px;
+    border-style: none;
+    transition: 0.2s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .green {
+    font-size: 14px;
+  }
+
+  .card {
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 0;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    &:hover {
+      border: 1px solid black;
+    }
+    .card-body {
+      .card-img {
+        img {
+          width: 100%;
+        }
+      }
+      ul {
+        list-style: none;
+        font-size: 16px;
+        strong {
+          font-size: 18px;
+        }
+      }
+      .my-btn-card {
+        min-width: 118px;
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        border: none;
+        background: #000;
+        padding: 10px 25px;
+        text-transform: uppercase;
+        cursor: pointer;
+        width: fit-content;
+        transition: 0.2s;
+        &:hover {
+          text-decoration: none;
+          opacity: 0.8;
+        }
+      }
+      .container-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        i {
+          padding-right: 10px;
+          opacity: 0.7;
+          border: none;
+          font-size: 27px;
+          transition: 0.2s;
+          &.fas.fa-utensils {
+            color: $orange;
+            background: none;
+          }
+          &.far.fa-chart-bar {
+            color: $blue;
+            background: none;
+          }
+          &.fas.fa-edit {
+            color:  $my-green;
+            background: none;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+        form input.trash-icon {
+          color: #f00;
+          background: none;
+          opacity: 0.7;
+          border: none;
+          font-size: 27px;
+          transition: 0.2s;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+      // .container-icon-edit-trash {
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
+      //   justify-content: space-evenly;
+      //   i {
+      //     padding-left: 4px;
+      //     color: $my-green;
+      //     opacity: 0.7;
+      //     border: none;
+      //     font-size: 25px;
+      //     transition: 0.2s;
+      //     &:hover {
+      //       opacity: 1;
+      //     }
+      //   }
+      //   input.trash-icon {
+      //     color: #f00;
+      //     opacity: 0.7;
+      //     border: none;
+      //     font-size: 25px;
+      //     transition: 0.2s;
+      //     &:hover {
+      //       opacity: 1;
+      //     }
+      //   }
+      // }
+    }
+  }
+  // Small devices (landscape phones, less than 768px)
+  @media screen and (max-width: 767px) {
+    .card .card-body .container-buttons {
+      flex-direction: row;
+    }
+    .card .card-body .card-img img {
+      width: 100px;
+    }
+    .card .card-body .card-img {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+  // Medium devices (landscape phones, less than 992px)
+  @media screen and (max-width: 992px) {
+
+  }
+
+}
